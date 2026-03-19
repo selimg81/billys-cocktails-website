@@ -61,6 +61,10 @@ const TRANSLATIONS = {
     /* index — Refs */
     'ref-label':'Vertrauen uns bereits',
 
+    /* index — Reviews */
+    'rev-label':'Bewertungen','rev-h2':'Was unsere','rev-h2-em':'Kunden sagen',
+    'rev-count':'41 Bewertungen auf Google',
+
     /* index — Contact */
     'con-label':'Kontakt','con-h2':'Erzähl uns von','con-h2-em':'deinem Event',
     'con-sub':'Wir melden uns innerhalb von 24 Stunden.',
@@ -202,6 +206,10 @@ const TRANSLATIONS = {
     'form-name':'Name','form-email':'E-Mail','form-date':'Event date',
     'form-guests':'Number of guests','form-msg':'Tell us briefly about your event...',
     'form-submit':'Send inquiry',
+
+    /* Reviews */
+    'rev-label':'Reviews','rev-h2':'What our','rev-h2-em':'clients say',
+    'rev-count':'41 Google Reviews',
 
     /* Footer */
     'footer-desc':'Mobile Cocktail Catering',

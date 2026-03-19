@@ -17,34 +17,37 @@
   <div class="hdr-inner">
     <a href="index.html"><img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="hdr-logo" /></a>
     <nav class="hdr-nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="leistungen.html" class="nav-link">Leistungen</a>
-      <a href="cocktails.html" class="nav-link">Cocktails</a>
-      <a href="about.html" class="nav-link">Über uns</a>
-      <a href="referenzen.html" class="nav-link">Referenzen</a>
-      <a href="kontakt.html" class="nav-link nav-cta">Anfragen</a>
+      <a href="index.html" class="nav-link" data-i18n="nav-home">Home</a>
+      <a href="leistungen.html" class="nav-link" data-i18n="nav-services">Leistungen</a>
+      <a href="cocktails.html" class="nav-link" data-i18n="nav-cocktails">Cocktails</a>
+      <a href="about.html" class="nav-link" data-i18n="nav-about">Über uns</a>
+      <a href="referenzen.html" class="nav-link" data-i18n="nav-ref">Referenzen</a>
+      <a href="kontakt.html" class="nav-link nav-cta" data-i18n="nav-contact">Anfragen</a>
     </nav>
-    <button class="hdr-burger" aria-label="Menü">
-      <span class="burger-line"></span>
-      <span class="burger-line"></span>
-    </button>
+    <div class="hdr-actions">
+      <button class="lang-toggle" id="lang-toggle" title="Language / Sprache">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 010 20"/><path d="M12 2a15.3 15.3 0 000 20"/></svg>
+        <span class="lang-label">DE</span>
+      </button>
+      <button class="hdr-burger" aria-label="Menü"><span class="burger-line"></span><span class="burger-line"></span></button>
+    </div>
   </div>
 </header>
 
 <!-- Mobile Menu -->
 <nav class="mob-menu">
-  <a href="index.html" class="mob-link"><span class="mob-link-num">01</span>Home</a>
-  <a href="leistungen.html" class="mob-link"><span class="mob-link-num">02</span>Leistungen</a>
-  <a href="cocktails.html" class="mob-link"><span class="mob-link-num">03</span>Cocktails</a>
-  <a href="about.html" class="mob-link"><span class="mob-link-num">04</span>Über uns</a>
-  <a href="referenzen.html" class="mob-link"><span class="mob-link-num">05</span>Referenzen</a>
-  <a href="kontakt.html" class="mob-link"><span class="mob-link-num">06</span>Kontakt</a>
+  <a href="index.html" class="mob-link"><span class="mob-link-num">01</span><span data-i18n="mob-home">Home</span></a>
+  <a href="leistungen.html" class="mob-link"><span class="mob-link-num">02</span><span data-i18n="mob-services">Leistungen</span></a>
+  <a href="cocktails.html" class="mob-link"><span class="mob-link-num">03</span><span data-i18n="mob-cocktails">Cocktails</span></a>
+  <a href="about.html" class="mob-link"><span class="mob-link-num">04</span><span data-i18n="mob-about">Über uns</span></a>
+  <a href="referenzen.html" class="mob-link"><span class="mob-link-num">05</span><span data-i18n="mob-ref">Referenzen</span></a>
+  <a href="kontakt.html" class="mob-link"><span class="mob-link-num">06</span><span data-i18n="mob-contact">Kontakt</span></a>
 </nav>
 
 <!-- Fixed CTA -->
 <a href="kontakt.html" class="fixed-cta">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-  <span>Jetzt anfragen</span>
+  <span data-i18n="cta-float">Jetzt anfragen</span>
 </a>
 
 <!-- ═══════════════════════════════════════ -->
@@ -61,15 +64,15 @@
 
   <!-- Content (rechts auf Desktop, über Video auf Mobile) -->
   <div class="hero-content-col">
-    <div class="hero-tag">Cocktail Catering · Hamburg · Berlin · NRW</div>
+    <div class="hero-tag" data-i18n="hero-tag">Cocktail Catering · Hamburg · Berlin · NRW</div>
     <h1 class="hero-h1">
-      Dein Event.<br />
-      <em>Unsere Cocktails.</em>
+      <span data-i18n="hero-h1">Dein Event.</span><br />
+      <em data-i18n="hero-h1-em">Unsere Cocktails.</em>
     </h1>
-    <p class="hero-sub">Wir bringen die Bar zu dir — mit Drinks, die deine Gäste lieben werden.</p>
+    <p class="hero-sub" data-i18n="hero-sub">Wir bringen die Bar zu dir — mit Drinks, die deine Gäste lieben werden.</p>
     <div class="hero-btns">
-      <a href="kontakt.html" class="btn btn-primary btn-mag">Jetzt anfragen</a>
-      <a href="leistungen.html" class="btn btn-ghost btn-mag">Mehr erfahren</a>
+      <a href="kontakt.html" class="btn btn-primary btn-mag" data-i18n="hero-cta1">Jetzt anfragen</a>
+      <a href="leistungen.html" class="btn btn-ghost btn-mag" data-i18n="hero-cta2">Mehr erfahren</a>
     </div>
   </div>
 
@@ -109,33 +112,33 @@
 <section class="sec sec-warm">
   <div class="container">
     <div class="sec-header">
-      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)">Was wir mitbringen</span>
-      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms">Vier Versprechen<br><em>an dich</em></h2>
+      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)" data-i18n="srv-label">Was wir mitbringen</span>
+      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms"><span data-i18n="srv-h2">Vier Versprechen</span><br><em data-i18n="srv-h2-em">an dich</em></h2>
     </div>
     <div class="srv-grid">
       <div class="srv-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:100ms">
         <span class="srv-num">01</span>
-        <h3 class="srv-title">Charismatische Bartender</h3>
-        <p class="srv-text">Unser Team lebt Barkeeping — mit guter Laune, Stil und jahrelanger Erfahrung hinter der Bar.</p>
+        <h3 class="srv-title" data-i18n="srv1-title">Charismatische Bartender</h3>
+        <p class="srv-text" data-i18n="srv1-text">Unser Team lebt Barkeeping — mit guter Laune, Stil und jahrelanger Erfahrung hinter der Bar.</p>
       </div>
       <div class="srv-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:200ms">
         <span class="srv-num">02</span>
-        <h3 class="srv-title">Individuelle Kreationen</h3>
-        <p class="srv-text">Cocktails in deinen Firmenfarben, Signature Drinks für deinen Anlass — alles ist möglich.</p>
+        <h3 class="srv-title" data-i18n="srv2-title">Individuelle Kreationen</h3>
+        <p class="srv-text" data-i18n="srv2-text">Cocktails in deinen Firmenfarben, Signature Drinks für deinen Anlass — alles ist möglich.</p>
       </div>
       <div class="srv-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:300ms">
         <span class="srv-num">03</span>
-        <h3 class="srv-title">Stilvolle Mobile Bar</h3>
-        <p class="srv-text">Vollständig ausgestattet mit Marken-Spirituosen, hochwertigen Gläsern und allem Zubehör.</p>
+        <h3 class="srv-title" data-i18n="srv3-title">Stilvolle Mobile Bar</h3>
+        <p class="srv-text" data-i18n="srv3-text">Vollständig ausgestattet mit Marken-Spirituosen, hochwertigen Gläsern und allem Zubehör.</p>
       </div>
       <div class="srv-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:400ms">
         <span class="srv-num">04</span>
-        <h3 class="srv-title">Rundum-Sorglos-Paket</h3>
-        <p class="srv-text">Von der Planung über Auf- und Abbau bis zum letzten Cocktail — wir kümmern uns um alles.</p>
+        <h3 class="srv-title" data-i18n="srv4-title">Rundum-Sorglos-Paket</h3>
+        <p class="srv-text" data-i18n="srv4-text">Von der Planung über Auf- und Abbau bis zum letzten Cocktail — wir kümmern uns um alles.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:48px;" class="rv" style="--rv-delay:400ms">
-      <a href="leistungen.html" class="btn btn-primary btn-mag">Alle Leistungen</a>
+      <a href="leistungen.html" class="btn btn-primary btn-mag" data-i18n="cta-services">Alle Leistungen</a>
     </div>
   </div>
 </section>
@@ -146,57 +149,57 @@
 <section class="sec sec-white">
   <div class="container">
     <div class="sec-header">
-      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)">Für jeden Anlass</span>
-      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms">Dein Event.<br><em>Unser Einsatz.</em></h2>
-      <p class="sec-sub rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:140ms">Wir sind überall dort, wo gute Drinks und gute Stimmung gefragt sind.</p>
+      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)" data-i18n="evt-label">Für jeden Anlass</span>
+      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms"><span data-i18n="evt-h2">Dein Event.</span><br><em data-i18n="evt-h2-em">Unser Einsatz.</em></h2>
+      <p class="sec-sub rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:140ms" data-i18n="evt-sub">Wir sind überall dort, wo gute Drinks und gute Stimmung gefragt sind.</p>
     </div>
     <div class="evt-grid">
       <a href="leistungen.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:100ms">
         <div class="evt-icon">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="36" height="24" rx="3" stroke="#1A6E73" stroke-width="1.5"/><path d="M6 20h36" stroke="#1A6E73" stroke-width="1.5"/><rect x="14" y="8" width="8" height="6" rx="1" stroke="#1A6E73" stroke-width="1.5"/><rect x="26" y="8" width="8" height="6" rx="1" stroke="#1A6E73" stroke-width="1.5"/></svg>
         </div>
-        <h3 class="evt-title">Firmenevents</h3>
-        <p class="evt-text">Weihnachtsfeiern, Teambuildings, Kick-offs — wir passen uns an euren Vibe an.</p>
+        <h3 class="evt-title" data-i18n="evt1-title">Firmenevents</h3>
+        <p class="evt-text" data-i18n="evt1-text">Weihnachtsfeiern, Teambuildings, Kick-offs — wir passen uns an euren Vibe an.</p>
         <span class="evt-arrow">→</span>
       </a>
       <a href="leistungen.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:160ms">
         <div class="evt-icon">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 6c-3 4-10 10-10 18a10 10 0 0020 0c0-8-7-14-10-18z" stroke="#1A6E73" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 28a4 4 0 008 0" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="evt-title">Sommerfeste</h3>
-        <p class="evt-text">Erfrischende Cocktails unter freiem Himmel. Wir bringen Sommer-Vibes in jedes Glas.</p>
+        <h3 class="evt-title" data-i18n="evt2-title">Sommerfeste</h3>
+        <p class="evt-text" data-i18n="evt2-text">Erfrischende Cocktails unter freiem Himmel. Wir bringen Sommer-Vibes in jedes Glas.</p>
         <span class="evt-arrow">→</span>
       </a>
       <a href="leistungen.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:220ms">
         <div class="evt-icon">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 8l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z" stroke="#1A6E73" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 28h24v2a10 10 0 01-10 10h-4a10 10 0 01-10-10v-2z" stroke="#1A6E73" stroke-width="1.5"/></svg>
         </div>
-        <h3 class="evt-title">Hochzeiten</h3>
-        <p class="evt-text">Euer Tag, eure Drinks. Signature Cocktails die zu euch passen — von der Trauung bis zum letzten Tanz.</p>
+        <h3 class="evt-title" data-i18n="evt3-title">Hochzeiten</h3>
+        <p class="evt-text" data-i18n="evt3-text">Euer Tag, eure Drinks. Signature Cocktails die zu euch passen — von der Trauung bis zum letzten Tanz.</p>
         <span class="evt-arrow">→</span>
       </a>
       <a href="leistungen.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:280ms">
         <div class="evt-icon">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="12" width="32" height="28" rx="3" stroke="#1A6E73" stroke-width="1.5"/><path d="M8 20h32M16 8v8M32 8v8" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="evt-title">Messen & Großevents</h3>
-        <p class="evt-text">Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand.</p>
+        <h3 class="evt-title" data-i18n="evt4-title">Messen & Großevents</h3>
+        <p class="evt-text" data-i18n="evt4-text">Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand.</p>
         <span class="evt-arrow">→</span>
       </a>
       <a href="leistungen.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:340ms">
         <div class="evt-icon">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="26" r="10" stroke="#1A6E73" stroke-width="1.5"/><path d="M24 20v6l4 2" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 38h20" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="evt-title">Geburtstage</h3>
-        <p class="evt-text">Ob 30., 40. oder 50. — mach deinen Geburtstag zum Event. Wir bringen alles mit.</p>
+        <h3 class="evt-title" data-i18n="evt5-title">Geburtstage</h3>
+        <p class="evt-text" data-i18n="evt5-text">Ob 30., 40. oder 50. — mach deinen Geburtstag zum Event. Wir bringen alles mit.</p>
         <span class="evt-arrow">→</span>
       </a>
       <a href="leistungen.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:400ms">
         <div class="evt-icon">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M10 38V22l14-10 14 10v16" stroke="#1A6E73" stroke-width="1.5" stroke-linejoin="round"/><rect x="18" y="28" width="12" height="10" rx="1" stroke="#1A6E73" stroke-width="1.5"/></svg>
         </div>
-        <h3 class="evt-title">Private Feiern</h3>
-        <p class="evt-text">Jubiläen, Housewarmings oder einfach Lust auf eine gute Party — wir sind dabei.</p>
+        <h3 class="evt-title" data-i18n="evt6-title">Private Feiern</h3>
+        <p class="evt-text" data-i18n="evt6-text">Jubiläen, Housewarmings oder einfach Lust auf eine gute Party — wir sind dabei.</p>
         <span class="evt-arrow">→</span>
       </a>
     </div>
@@ -209,8 +212,8 @@
 <section class="sec sec-warm">
   <div class="container">
     <div class="sec-header">
-      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)">Unsere Cocktails</span>
-      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms">Crafted with<br><em>Passion</em></h2>
+      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)" data-i18n="ck-label">Unsere Cocktails</span>
+      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms"><span data-i18n="ck-h2">Crafted with</span><br><em data-i18n="ck-h2-em">Passion</em></h2>
     </div>
   </div>
   <div class="ck-hscroll-wrap">
@@ -223,7 +226,7 @@
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Aperol Spritz</h3>
-          <p class="ck-desc">Aperol · Prosecco · Soda · Orange</p>
+          <p class="ck-desc" data-i18n="hck1-desc">Aperol · Prosecco · Soda · Orange</p>
         </div>
       </div>
 
@@ -234,7 +237,7 @@
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Mojito</h3>
-          <p class="ck-desc">Rum · Minze · Limette · Zucker · Soda</p>
+          <p class="ck-desc" data-i18n="hck2-desc">Rum · Minze · Limette · Zucker · Soda</p>
         </div>
       </div>
 
@@ -245,7 +248,7 @@
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Espresso Martini</h3>
-          <p class="ck-desc">Vodka · Espresso · Kahlúa</p>
+          <p class="ck-desc" data-i18n="hck3-desc">Vodka · Espresso · Kahlúa</p>
         </div>
       </div>
 
@@ -256,7 +259,7 @@
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Negroni</h3>
-          <p class="ck-desc">Gin · Campari · Vermouth Rosso</p>
+          <p class="ck-desc" data-i18n="hck4-desc">Gin · Campari · Vermouth Rosso</p>
         </div>
       </div>
 
@@ -267,7 +270,7 @@
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Basil Smash</h3>
-          <p class="ck-desc">Gin · Basilikum · Zitrone · Zucker</p>
+          <p class="ck-desc" data-i18n="hck5-desc">Gin · Basilikum · Zitrone · Zucker</p>
         </div>
       </div>
 
@@ -278,14 +281,14 @@
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Peach Dreams</h3>
-          <p class="ck-desc">Vodka · Pfirsich · Maracuja · Limette</p>
+          <p class="ck-desc" data-i18n="hck6-desc">Vodka · Pfirsich · Maracuja · Limette</p>
         </div>
       </div>
 
     </div>
   </div>
   <div style="text-align:center;margin-top:32px;padding-bottom:8px;" class="rv" style="--rv-delay:300ms">
-    <a href="cocktails.html" class="btn btn-outline btn-mag">Alle Cocktails ansehen</a>
+    <a href="cocktails.html" class="btn btn-outline btn-mag" data-i18n="cta-allck">Alle Cocktails ansehen</a>
   </div>
 </section>
 
@@ -296,15 +299,15 @@
   <div class="stats-inner">
     <div class="stat rv" style="--rv-transform:translate3d(0,40px,0)">
       <div class="stat-val"><span class="counter" data-end="500" data-suffix="+">0+</span></div>
-      <div class="stat-label">Events</div>
+      <div class="stat-label" data-i18n="stat1-label">Events</div>
     </div>
     <div class="stat rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:120ms">
       <div class="stat-val"><span class="counter" data-end="15000" data-suffix="+">0+</span></div>
-      <div class="stat-label">Cocktails gemixt</div>
+      <div class="stat-label" data-i18n="stat2-label">Cocktails gemixt</div>
     </div>
     <div class="stat rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:240ms">
       <div class="stat-val"><span class="counter" data-end="100" data-suffix="%">0%</span></div>
-      <div class="stat-label">Gute-Laune-Garantie</div>
+      <div class="stat-label" data-i18n="stat3-label">Gute-Laune-Garantie</div>
     </div>
   </div>
 </section>
@@ -325,7 +328,7 @@
 <!-- ═══════════════════════════════════════ -->
 <section class="ref-strip">
   <div class="container">
-    <span class="label rv" style="--rv-transform:translate3d(0,30px,0);display:block;text-align:center;">Vertrauen uns bereits</span>
+    <span class="label rv" style="--rv-transform:translate3d(0,30px,0);display:block;text-align:center;" data-i18n="ref-label">Vertrauen uns bereits</span>
     <div class="ref-logos">
       <span class="ref-name rv" style="--rv-transform:scale(0.9);--rv-delay:80ms">STRÖER</span>
       <span class="ref-name rv" style="--rv-transform:scale(0.9);--rv-delay:160ms">THEy</span>
@@ -341,19 +344,19 @@
 <section class="sec sec-warm">
   <div class="container" style="max-width:720px;">
     <div class="sec-header">
-      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)">Kontakt</span>
-      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms">Erzähl uns von<br><em>deinem Event</em></h2>
-      <p class="sec-sub rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:140ms">Wir melden uns innerhalb von 24 Stunden.</p>
+      <span class="label rv" style="--rv-transform:translate3d(0,40px,0)" data-i18n="con-label">Kontakt</span>
+      <h2 class="sec-h2 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms"><span data-i18n="con-h2">Erzähl uns von</span><br><em data-i18n="con-h2-em">deinem Event</em></h2>
+      <p class="sec-sub rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:140ms" data-i18n="con-sub">Wir melden uns innerhalb von 24 Stunden.</p>
     </div>
     <form class="js-form rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:200ms" novalidate>
       <div class="form-grid">
-        <input type="text" placeholder="Name" class="input" />
-        <input type="email" placeholder="E-Mail" class="input" required />
-        <input type="date" placeholder="Eventdatum" class="input" />
-        <input type="number" placeholder="Gästeanzahl" class="input" min="1" />
+        <input type="text" data-i18n-ph="form-name" placeholder="Name" class="input" />
+        <input type="email" data-i18n-ph="form-email" placeholder="E-Mail" class="input" required />
+        <input type="date" data-i18n-ph="form-date" placeholder="Eventdatum" class="input" />
+        <input type="number" data-i18n-ph="form-guests" placeholder="Gästeanzahl" class="input" min="1" />
       </div>
-      <textarea placeholder="Erzähl uns kurz von deinem Event..." rows="4" class="input input-ta"></textarea>
-      <button type="submit" class="btn btn-primary btn-mag" style="width:100%">Anfrage senden</button>
+      <textarea data-i18n-ph="form-msg" placeholder="Erzähl uns kurz von deinem Event..." rows="4" class="input input-ta"></textarea>
+      <button type="submit" class="btn btn-primary btn-mag" style="width:100%" data-i18n="form-submit">Anfrage senden</button>
     </form>
   </div>
 </section>
@@ -364,20 +367,20 @@
     <div class="footer-top">
       <div>
         <img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="footer-logo" />
-        <p class="footer-desc">Mobiles Cocktail Catering<br />Hamburg · Berlin · NRW</p>
+        <p class="footer-desc"><span data-i18n="footer-desc">Mobiles Cocktail Catering</span><br />Hamburg · Berlin · NRW</p>
       </div>
       <div class="footer-links">
         <div>
-          <h4 class="footer-h4">Seiten</h4>
-          <a href="index.html" class="footer-link">Home</a>
-          <a href="leistungen.html" class="footer-link">Leistungen</a>
-          <a href="cocktails.html" class="footer-link">Cocktails</a>
-          <a href="about.html" class="footer-link">Über uns</a>
-          <a href="referenzen.html" class="footer-link">Referenzen</a>
-          <a href="kontakt.html" class="footer-link">Kontakt</a>
+          <h4 class="footer-h4" data-i18n="footer-pages">Seiten</h4>
+          <a href="index.html" class="footer-link" data-i18n="nav-home">Home</a>
+          <a href="leistungen.html" class="footer-link" data-i18n="nav-services">Leistungen</a>
+          <a href="cocktails.html" class="footer-link" data-i18n="nav-cocktails">Cocktails</a>
+          <a href="about.html" class="footer-link" data-i18n="nav-about">Über uns</a>
+          <a href="referenzen.html" class="footer-link" data-i18n="nav-ref">Referenzen</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="mob-contact">Kontakt</a>
         </div>
         <div>
-          <h4 class="footer-h4">Kontakt</h4>
+          <h4 class="footer-h4" data-i18n="footer-contact-h">Kontakt</h4>
           <div class="footer-contact">
             <a href="tel:+4917399277730">+49 173 9927773</a><br />
             <a href="mailto:info@billys-cocktails.de">info@billys-cocktails.de</a><br />
@@ -388,11 +391,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Billy's Cocktail Catering</span>
-      <div class="footer-legal"><span>Impressum</span><span>Datenschutz</span></div>
+      <div class="footer-legal"><span data-i18n="footer-imprint">Impressum</span><span data-i18n="footer-privacy">Datenschutz</span></div>
     </div>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

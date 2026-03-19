@@ -35,6 +35,44 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .rv.visible { opacity: 1; transform: translate3d(0,0,0) scale(1); }
 
+/* Stagger children animation */
+.rv-stagger > * {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.rv-stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay:0ms; }
+.rv-stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay:90ms; }
+.rv-stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay:180ms; }
+.rv-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:270ms; }
+.rv-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:360ms; }
+.rv-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:450ms; }
+
+/* Clip reveal (text lines) */
+.rv-clip {
+  overflow: hidden;
+}
+.rv-clip > span {
+  display: block;
+  opacity: 0; transform: translateY(100%);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: var(--rv-delay, 0ms);
+}
+.rv-clip.visible > span { opacity: 1; transform: translateY(0); }
+
+/* Split line reveal */
+@keyframes lineGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.rv-line {
+  height: 1px; background: var(--petrol); transform-origin: left;
+  opacity: 0; transform: scaleX(0);
+  transition: opacity 0.1s, transform 1.1s var(--ease);
+  transition-delay: var(--rv-delay, 0ms);
+}
+.rv-line.visible { opacity: 1; transform: scaleX(1); }
+
+/* Parallax wrapper */
+.parallax-wrap { overflow: hidden; }
+.parallax-img { will-change: transform; transition: none; }
+
 /* ── HEADER ── */
 .hdr {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -80,6 +118,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .nav-cta::after { display: none !important; }
 .nav-cta:hover { background: var(--petrol-dark); box-shadow: 0 6px 24px rgba(26,110,115,0.3); }
+
+/* ── LANGUAGE TOGGLE ── */
+.hdr-actions { display: flex; align-items: center; gap: 10px; }
+.lang-toggle {
+  display: flex; align-items: center; gap: 5px;
+  padding: 6px 13px; border-radius: 100px;
+  font-family: var(--f-body); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.8px; color: var(--dark);
+  border: 1.5px solid rgba(26,110,115,0.22);
+  background: transparent; cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+.lang-toggle:hover { border-color: var(--petrol); color: var(--petrol); }
+.lang-toggle svg { width: 14px; height: 14px; flex-shrink: 0; }
+.hdr.hero-transparent .lang-toggle { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
+.hdr.hero-transparent .lang-toggle:hover { border-color: #fff; color: #fff; }
+.hdr.solid .lang-toggle { color: var(--dark); border-color: rgba(26,110,115,0.22); }
 
 /* Burger */
 .hdr-burger {
@@ -302,9 +357,56 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ── SECTIONS ── */
 .sec { padding: 100px clamp(20px, 4vw, 60px); }
 .sec-warm { background: var(--warm); }
-.sec-white { background: var(--white); }
+.sec-white { background: var(--petrol); }
 .sec-dark { background: var(--dark); }
 .sec-teal { background: var(--petrol); }
+
+/* ── SEC-WHITE (petrol) child overrides ── */
+.sec-white .label { color: rgba(255,255,255,0.5); }
+.sec-white .sec-h2 { color: #fff; }
+.sec-white .sec-sub { color: rgba(255,255,255,0.68); }
+/* Event cards on petrol */
+.sec-white .evt-card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
+.sec-white .evt-card:hover { background: rgba(255,255,255,0.14); box-shadow: 0 20px 60px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.2); }
+.sec-white .evt-title { color: #fff; }
+.sec-white .evt-text { color: rgba(255,255,255,0.62); }
+.sec-white .evt-icon { filter: brightness(0) invert(1); opacity: 0.75; }
+.sec-white .evt-arrow { color: rgba(255,255,255,0.8); }
+/* Service cards on petrol */
+.sec-white .srv-card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
+.sec-white .srv-card:hover { background: rgba(255,255,255,0.14); box-shadow: 0 20px 60px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.2); }
+.sec-white .srv-num { color: rgba(255,255,255,0.1); }
+.sec-white .srv-title { color: #fff; }
+.sec-white .srv-text { color: rgba(255,255,255,0.65); }
+/* Cocktail cards on petrol (cocktails.html) */
+.sec-white .ck-full-card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
+.sec-white .ck-full-card:hover { box-shadow: 0 20px 60px rgba(0,0,0,0.3); background: rgba(255,255,255,0.12); }
+.sec-white .ck-full-name { color: #fff; }
+.sec-white .ck-full-desc { color: rgba(255,255,255,0.62); }
+/* About section on petrol */
+.sec-white .about-p { color: rgba(255,255,255,0.75); }
+.sec-white .about-quote { border-left-color: rgba(255,255,255,0.3); color: #fff; }
+.sec-white .about-quote cite { color: rgba(255,255,255,0.5); }
+.sec-white .about-photo { background: rgba(255,255,255,0.08); }
+.sec-white .about-photo span { color: rgba(255,255,255,0.3) !important; }
+/* Reference logos on petrol */
+.sec-white .ref-name { color: rgba(255,255,255,0.28); }
+.sec-white .ref-name:hover { color: rgba(255,255,255,0.9); }
+/* Contact section on petrol */
+.sec-white .kontakt-h3 { color: #fff; }
+.sec-white .kontakt-label { color: rgba(255,255,255,0.5); }
+.sec-white .kontakt-val { color: rgba(255,255,255,0.9); }
+.sec-white .kontakt-val:hover { color: rgba(255,255,255,0.6); }
+.sec-white .kontakt-cta-box { background: rgba(0,0,0,0.18); border: 1px solid rgba(255,255,255,0.1); }
+.sec-white .kontakt-cta-box p { color: rgba(255,255,255,0.75); }
+/* Form inputs on petrol */
+.sec-white .input { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+.sec-white .input::placeholder { color: rgba(255,255,255,0.42); }
+.sec-white .input:focus { border-color: rgba(255,255,255,0.6); box-shadow: 0 0 0 3px rgba(255,255,255,0.08); }
+.sec-white select.input option { background: var(--petrol-dark); color: #fff; }
+/* Buttons on petrol */
+.sec-white .btn-outline { color: #fff; border-color: rgba(255,255,255,0.4); }
+.sec-white .btn-outline:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.7); }
 
 .container { max-width: var(--max-w); margin: 0 auto; }
 

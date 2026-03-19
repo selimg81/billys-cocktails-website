@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', showFab, { passive: true });
 
   // ── SCROLL REVEAL ──
-  const revealEls = document.querySelectorAll('.rv');
+  const revealEls = document.querySelectorAll('.rv, .rv-stagger, .rv-clip, .rv-line');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -70,10 +70,25 @@ document.addEventListener('DOMContentLoaded', () => {
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => io.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // ── PARALLAX ──
+  const parallaxImgs = document.querySelectorAll('.parallax-img');
+  if (parallaxImgs.length) {
+    const onScroll = () => {
+      parallaxImgs.forEach(img => {
+        const rect = img.closest('.parallax-wrap')?.getBoundingClientRect();
+        if (!rect) return;
+        const center = rect.top + rect.height / 2 - window.innerHeight / 2;
+        img.style.transform = `translateY(${center * 0.12}px)`;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
   // ── ACTIVE NAV ──

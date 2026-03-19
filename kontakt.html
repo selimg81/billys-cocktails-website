@@ -15,30 +15,36 @@
   <div class="hdr-inner">
     <a href="index.html"><img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="hdr-logo" /></a>
     <nav class="hdr-nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="leistungen.html" class="nav-link">Leistungen</a>
-      <a href="cocktails.html" class="nav-link">Cocktails</a>
-      <a href="about.html" class="nav-link">Über uns</a>
-      <a href="referenzen.html" class="nav-link">Referenzen</a>
-      <a href="kontakt.html" class="nav-link nav-cta">Anfragen</a>
+      <a href="index.html" class="nav-link" data-i18n="nav-home">Home</a>
+      <a href="leistungen.html" class="nav-link" data-i18n="nav-services">Leistungen</a>
+      <a href="cocktails.html" class="nav-link" data-i18n="nav-cocktails">Cocktails</a>
+      <a href="about.html" class="nav-link" data-i18n="nav-about">Über uns</a>
+      <a href="referenzen.html" class="nav-link" data-i18n="nav-ref">Referenzen</a>
+      <a href="kontakt.html" class="nav-link nav-cta" data-i18n="nav-contact">Anfragen</a>
     </nav>
-    <button class="hdr-burger" aria-label="Menü"><span class="burger-line"></span><span class="burger-line"></span></button>
+    <div class="hdr-actions">
+      <button class="lang-toggle" id="lang-toggle" title="Language / Sprache">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 010 20"/><path d="M12 2a15.3 15.3 0 000 20"/></svg>
+        <span class="lang-label">DE</span>
+      </button>
+      <button class="hdr-burger" aria-label="Menü"><span class="burger-line"></span><span class="burger-line"></span></button>
+    </div>
   </div>
 </header>
 <nav class="mob-menu">
-  <a href="index.html" class="mob-link"><span class="mob-link-num">01</span>Home</a>
-  <a href="leistungen.html" class="mob-link"><span class="mob-link-num">02</span>Leistungen</a>
-  <a href="cocktails.html" class="mob-link"><span class="mob-link-num">03</span>Cocktails</a>
-  <a href="about.html" class="mob-link"><span class="mob-link-num">04</span>Über uns</a>
-  <a href="referenzen.html" class="mob-link"><span class="mob-link-num">05</span>Referenzen</a>
-  <a href="kontakt.html" class="mob-link"><span class="mob-link-num">06</span>Kontakt</a>
+  <a href="index.html" class="mob-link"><span class="mob-link-num">01</span><span data-i18n="mob-home">Home</span></a>
+  <a href="leistungen.html" class="mob-link"><span class="mob-link-num">02</span><span data-i18n="mob-services">Leistungen</span></a>
+  <a href="cocktails.html" class="mob-link"><span class="mob-link-num">03</span><span data-i18n="mob-cocktails">Cocktails</span></a>
+  <a href="about.html" class="mob-link"><span class="mob-link-num">04</span><span data-i18n="mob-about">Über uns</span></a>
+  <a href="referenzen.html" class="mob-link"><span class="mob-link-num">05</span><span data-i18n="mob-ref">Referenzen</span></a>
+  <a href="kontakt.html" class="mob-link"><span class="mob-link-num">06</span><span data-i18n="mob-contact">Kontakt</span></a>
 </nav>
 
 <div class="page-hero">
   <div class="container">
-    <span class="label rv" style="--rv-transform:translate3d(0,30px,0)">Anfrage</span>
-    <h1 class="page-h1 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms">Lass uns<br><em>sprechen</em></h1>
-    <p class="page-sub rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:160ms">Ruf an, schreib uns oder füll das Formular aus. Wir melden uns innerhalb von 24 Stunden.</p>
+    <span class="label rv" style="--rv-transform:translate3d(0,30px,0)" data-i18n="kon-label">Anfrage</span>
+    <h1 class="page-h1 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms"><span data-i18n="kon-h1">Lass uns</span><br><em data-i18n="kon-h1-em">sprechen</em></h1>
+    <p class="page-sub rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:160ms" data-i18n="kon-sub">Ruf an, schreib uns oder füll das Formular aus. Wir melden uns innerhalb von 24 Stunden.</p>
   </div>
 </div>
 
@@ -48,55 +54,55 @@
 
       <!-- Info -->
       <div class="rv" style="--rv-transform:translate3d(-60px,0,0)">
-        <h3 class="kontakt-h3">Direkt erreichen</h3>
+        <h3 class="kontakt-h3" data-i18n="kon-direct-h3">Direkt erreichen</h3>
         <div class="kontakt-row">
-          <span class="kontakt-label">Telefon</span>
+          <span class="kontakt-label" data-i18n="kon-tel">Telefon</span>
           <a href="tel:+4917399277730" class="kontakt-val">+49 173 9927773</a>
         </div>
         <div class="kontakt-row">
-          <span class="kontakt-label">E-Mail</span>
+          <span class="kontakt-label" data-i18n="kon-email-l">E-Mail</span>
           <a href="mailto:info@billys-cocktails.de" class="kontakt-val">info@billys-cocktails.de</a>
         </div>
         <div class="kontakt-row">
-          <span class="kontakt-label">Instagram</span>
+          <span class="kontakt-label" data-i18n="kon-insta">Instagram</span>
           <a href="https://www.instagram.com/billyscocktails" target="_blank" rel="noopener" class="kontakt-val">@billyscocktails</a>
         </div>
         <div class="kontakt-row">
-          <span class="kontakt-label">Standorte</span>
+          <span class="kontakt-label" data-i18n="kon-loc">Standorte</span>
           <span class="kontakt-val">Hamburg · Berlin · NRW</span>
         </div>
         <div class="kontakt-cta-box">
-          <p>Lieber direkt sprechen? Buche einen kostenlosen Gesprächstermin mit Vassili.</p>
-          <a href="mailto:info@billys-cocktails.de?subject=Terminanfrage" class="btn btn-outline btn-mag">Termin anfragen</a>
+          <p data-i18n="kon-cta-text">Lieber direkt sprechen? Buche einen kostenlosen Gesprächstermin mit Vassili.</p>
+          <a href="mailto:info@billys-cocktails.de?subject=Terminanfrage" class="btn btn-outline btn-mag" data-i18n="kon-cta-btn">Termin anfragen</a>
         </div>
       </div>
 
       <!-- Form -->
       <div class="rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:150ms">
-        <h3 class="kontakt-h3">Anfrage-Formular</h3>
+        <h3 class="kontakt-h3" data-i18n="kon-form-h3">Anfrage-Formular</h3>
         <form class="js-form" novalidate>
           <div class="form-grid">
-            <input type="text" placeholder="Vorname" class="input" required />
-            <input type="text" placeholder="Nachname" class="input" required />
-            <input type="email" placeholder="E-Mail" class="input" required />
-            <input type="tel" placeholder="Telefon" class="input" />
-            <input type="text" placeholder="Ort / Location" class="input" />
+            <input type="text" data-i18n-ph="kon-f-first" placeholder="Vorname" class="input" required />
+            <input type="text" data-i18n-ph="kon-f-last" placeholder="Nachname" class="input" required />
+            <input type="email" data-i18n-ph="kon-f-email" placeholder="E-Mail" class="input" required />
+            <input type="tel" data-i18n-ph="kon-f-phone" placeholder="Telefon" class="input" />
+            <input type="text" data-i18n-ph="kon-f-loc" placeholder="Ort / Location" class="input" />
             <input type="date" placeholder="Eventdatum" class="input" />
-            <input type="number" placeholder="Gästeanzahl" class="input" min="1" />
-            <input type="number" placeholder="Eventlänge (Std.)" class="input" min="1" />
+            <input type="number" data-i18n-ph="kon-f-guests" placeholder="Gästeanzahl" class="input" min="1" />
+            <input type="number" data-i18n-ph="kon-f-hours" placeholder="Eventlänge (Std.)" class="input" min="1" />
           </div>
           <select class="input" style="margin-bottom:14px;-webkit-appearance:none;cursor:pointer;">
-            <option value="">Art des Events wählen</option>
-            <option>Firmenevent</option>
-            <option>Hochzeit</option>
-            <option>Geburtstag</option>
-            <option>Messe / Großevent</option>
-            <option>Sommerfest</option>
-            <option>Private Feier</option>
-            <option>Sonstiges</option>
+            <option value="" data-i18n="kon-f-type">Art des Events wählen</option>
+            <option data-i18n="opt-firma">Firmenevent</option>
+            <option data-i18n="opt-hochzeit">Hochzeit</option>
+            <option data-i18n="opt-geburtstag">Geburtstag</option>
+            <option data-i18n="opt-messe">Messe / Großevent</option>
+            <option data-i18n="opt-sommer">Sommerfest</option>
+            <option data-i18n="opt-privat">Private Feier</option>
+            <option data-i18n="opt-sonstiges">Sonstiges</option>
           </select>
-          <textarea placeholder="Erzähl uns von deinem Event..." rows="5" class="input input-ta"></textarea>
-          <button type="submit" class="btn btn-primary btn-mag" style="width:100%">Anfrage absenden</button>
+          <textarea data-i18n-ph="kon-f-msg" placeholder="Erzähl uns von deinem Event..." rows="5" class="input input-ta"></textarea>
+          <button type="submit" class="btn btn-primary btn-mag" style="width:100%" data-i18n="kon-f-submit">Anfrage absenden</button>
         </form>
       </div>
 
@@ -109,20 +115,20 @@
     <div class="footer-top">
       <div>
         <img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="footer-logo" />
-        <p class="footer-desc">Mobiles Cocktail Catering<br />Hamburg · Berlin · NRW</p>
+        <p class="footer-desc"><span data-i18n="footer-desc">Mobiles Cocktail Catering</span><br />Hamburg · Berlin · NRW</p>
       </div>
       <div class="footer-links">
         <div>
-          <h4 class="footer-h4">Seiten</h4>
-          <a href="index.html" class="footer-link">Home</a>
-          <a href="leistungen.html" class="footer-link">Leistungen</a>
-          <a href="cocktails.html" class="footer-link">Cocktails</a>
-          <a href="about.html" class="footer-link">Über uns</a>
-          <a href="referenzen.html" class="footer-link">Referenzen</a>
-          <a href="kontakt.html" class="footer-link">Kontakt</a>
+          <h4 class="footer-h4" data-i18n="footer-pages">Seiten</h4>
+          <a href="index.html" class="footer-link" data-i18n="nav-home">Home</a>
+          <a href="leistungen.html" class="footer-link" data-i18n="nav-services">Leistungen</a>
+          <a href="cocktails.html" class="footer-link" data-i18n="nav-cocktails">Cocktails</a>
+          <a href="about.html" class="footer-link" data-i18n="nav-about">Über uns</a>
+          <a href="referenzen.html" class="footer-link" data-i18n="nav-ref">Referenzen</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="mob-contact">Kontakt</a>
         </div>
         <div>
-          <h4 class="footer-h4">Kontakt</h4>
+          <h4 class="footer-h4" data-i18n="footer-contact-h">Kontakt</h4>
           <div class="footer-contact">
             <a href="tel:+4917399277730">+49 173 9927773</a><br />
             <a href="mailto:info@billys-cocktails.de">info@billys-cocktails.de</a><br />
@@ -133,10 +139,11 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Billy's Cocktail Catering</span>
-      <div class="footer-legal"><span>Impressum</span><span>Datenschutz</span></div>
+      <div class="footer-legal"><span data-i18n="footer-imprint">Impressum</span><span data-i18n="footer-privacy">Datenschutz</span></div>
     </div>
   </div>
 </footer>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

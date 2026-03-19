@@ -620,10 +620,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .footer-links { gap: 40px; }
 }
 @media (max-width: 768px) {
+  /* Cocktail cards: peek next card */
+  .ck-card { width: calc(85vw); }
+
+  /* Reviews: vertical stack, tap to expand */
   .rev-scroll-wrap { overflow-x: visible; padding: 0; margin-top: 28px; }
   .rev-scroll-track { flex-direction: column; width: 100%; padding: 0 20px 32px; }
-  .rev-card { width: 100%; }
+  .rev-card { width: 100%; cursor: pointer; }
   .rev-card:nth-child(n+4) { display: none; }
+  .rev-card.expanded .rev-text { max-height: 800px; }
 }
 @media (max-width: 600px) {
   .sec { padding: 72px 20px; }

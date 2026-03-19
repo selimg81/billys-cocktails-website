@@ -100,6 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ── REVIEW CARDS: tap to expand on mobile ──
+  document.querySelectorAll('.rev-card').forEach(card => {
+    card.addEventListener('click', () => {
+      if (window.innerWidth <= 768) card.classList.toggle('expanded');
+    });
+  });
+
   // ── SMOOTH ANCHORS ──
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {

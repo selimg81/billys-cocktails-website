@@ -160,16 +160,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-video-col::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0; right: -2px; bottom: 0;
+  width: 55%;
   background: linear-gradient(
     to right,
     transparent 0%,
-    transparent 55%,
-    rgba(245, 242, 236, 0.6) 80%,
+    rgba(245, 242, 236, 0.5) 40%,
+    rgba(245, 242, 236, 0.85) 70%,
     rgba(245, 242, 236, 1) 100%
   );
   pointer-events: none;
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Content column */

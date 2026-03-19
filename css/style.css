@@ -52,8 +52,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex; align-items: center; justify-content: space-between;
   height: var(--header-h);
 }
-.hdr-logo { height: 48px; width: auto; transition: filter 0.4s, height 0.4s; cursor: pointer; }
-.hdr.solid .hdr-logo { height: 40px; }
+.hdr-logo { height: 64px; width: auto; transition: filter 0.4s, height 0.4s; cursor: pointer; }
+.hdr.solid .hdr-logo { height: 52px; }
 
 .hdr-nav { display: flex; align-items: center; gap: 4px; }
 .nav-link {
@@ -181,8 +181,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--warm);
 }
 .hero-logo {
-  height: 56px; width: auto;
-  margin-bottom: 24px; display: block;
+  height: 38px; width: auto;
+  margin-bottom: 20px; display: block;
   opacity: 0; transform: translateY(20px);
   animation: fadeUp 0.8s 0.1s var(--ease) forwards;
 }
@@ -228,6 +228,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-video-col::after {
     content: '';
     position: absolute; inset: 0;
+    width: 100%;
     background: linear-gradient(to top, rgba(20,18,14,0.85) 0%, rgba(20,18,14,0.4) 60%, rgba(20,18,14,0.15) 100%);
   }
   .hero-content-col {
@@ -237,7 +238,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     padding: calc(var(--header-h) + 20px) 28px 80px;
     justify-content: flex-end;
   }
-  .hero-logo { filter: brightness(0) invert(1); height: 44px; }
+  .hero-logo { display: none; }
   .hero-tag { color: rgba(255,255,255,0.7); }
   .hero-h1 { color: #fff; }
   .hero-h1 em { color: var(--sand); }

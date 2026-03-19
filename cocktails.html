@@ -3,261 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cocktails — Billy's Cocktails | Signature Drinks & individuelle Kreationen</title>
-  <meta name="description" content="Die Signature Cocktails von Billy's — Bloom Fizz, Apple Garden, White Pearl, Basil Smash, Negroni Classico, Rose Sour und viele mehr. Individuelle Kreationen nach Wunsch." />
+  <title>Cocktails — Billy's Cocktails</title>
+  <meta name="description" content="Alle 12 Signature Cocktails von Billy's — mit Hover-Effekt. Aperol Spritz, Mojito, Espresso Martini und mehr." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="index.html" class="logo">
-        <img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails Logo" />
-      </a>
-      <nav class="nav" aria-label="Hauptnavigation">
-        <ul class="nav__links">
-          <li><a href="index.html" class="nav__link">Home</a></li>
-          <li><a href="leistungen.html" class="nav__link">Leistungen</a></li>
-          <li><a href="cocktails.html" class="nav__link active">Cocktails</a></li>
-          <li><a href="about.html" class="nav__link">Über uns</a></li>
-          <li><a href="referenzen.html" class="nav__link">Referenzen</a></li>
-        </ul>
-        <a href="kontakt.html" class="nav__cta">Anfragen</a>
-        <button class="hamburger" aria-label="Menü öffnen">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
+<header class="hdr solid" id="hdr">
+  <div class="hdr-inner">
+    <a href="index.html"><img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="hdr-logo" /></a>
+    <nav class="hdr-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="leistungen.html" class="nav-link">Leistungen</a>
+      <a href="cocktails.html" class="nav-link active">Cocktails</a>
+      <a href="about.html" class="nav-link">Über uns</a>
+      <a href="referenzen.html" class="nav-link">Referenzen</a>
+      <a href="kontakt.html" class="nav-link nav-cta">Anfragen</a>
+    </nav>
+    <button class="hdr-burger" aria-label="Menü">
+      <span class="burger-line"></span><span class="burger-line"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mob-menu">
+  <a href="index.html" class="mob-link"><span class="mob-link-num">01</span>Home</a>
+  <a href="leistungen.html" class="mob-link"><span class="mob-link-num">02</span>Leistungen</a>
+  <a href="cocktails.html" class="mob-link"><span class="mob-link-num">03</span>Cocktails</a>
+  <a href="about.html" class="mob-link"><span class="mob-link-num">04</span>Über uns</a>
+  <a href="referenzen.html" class="mob-link"><span class="mob-link-num">05</span>Referenzen</a>
+  <a href="kontakt.html" class="mob-link"><span class="mob-link-num">06</span>Kontakt</a>
+</nav>
+
+<a href="kontakt.html" class="fixed-cta">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+  <span>Jetzt anfragen</span>
+</a>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="label rv" style="--rv-transform:translate3d(0,30px,0)">Unsere Kreationen</span>
+    <h1 class="page-h1 rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:80ms">Die<br><em>Cocktails</em></h1>
+    <p class="page-sub rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:160ms">Jeder Drink wird frisch für dich gemixt. Fahre mit der Maus über die Karten für eine zweite Ansicht. Individuelle Signature Cocktails? Natürlich.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- ALLE 12 COCKTAILS                      -->
+<!-- ═══════════════════════════════════════ -->
+<section class="sec sec-white">
+  <div class="container">
+    <div class="ck-grid">
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:60ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Aperol Spritz1.jpg" alt="Aperol Spritz" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Aperol Spritz2.jpg" alt="Aperol Spritz" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Aperol Spritz</h3>
+          <p class="ck-full-desc">Aperol · Prosecco · Soda · Orange</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:120ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Apple Fizz1.jpg" alt="Apple Fizz" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Apple Fizz2.jpg" alt="Apple Fizz" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Apple Fizz</h3>
+          <p class="ck-full-desc">Vodka · Apfel · Limette · Soda</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:180ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Caipirinha1.jpg" alt="Caipirinha" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Caipirinha2.jpg" alt="Caipirinha" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Caipirinha</h3>
+          <p class="ck-full-desc">Cachaça · Limette · Zucker</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:60ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Classic Margarita1.jpg" alt="Classic Margarita" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Classic Margarita2.jpg" alt="Classic Margarita" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Classic Margarita</h3>
+          <p class="ck-full-desc">Tequila · Triple Sec · Limette · Salzrand</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:120ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Espresso Martini1.jpg" alt="Espresso Martini" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Espresso Martini2.jpg" alt="Espresso Martini" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Espresso Martini</h3>
+          <p class="ck-full-desc">Vodka · Espresso · Kahlúa</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:180ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Gin Tonic1.jpg" alt="Gin Tonic" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Gin Tonic2.jpg" alt="Gin Tonic" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Gin Tonic</h3>
+          <p class="ck-full-desc">Gin · Premium Tonic · Limette</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:60ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Goin Basil Smash1.jpg" alt="Basil Smash" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Goin Basil Smash2.jpg" alt="Basil Smash" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Basil Smash</h3>
+          <p class="ck-full-desc">Gin · Basilikum · Zitrone · Zucker</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:120ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Lillet Wildberry1.jpg" alt="Lillet Wildberry" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Lillet Wildberry2.jpg" alt="Lillet Wildberry" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Lillet Wildberry</h3>
+          <p class="ck-full-desc">Lillet Blanc · Wildberry · Soda · Minze</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:180ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Limoncello Spritz1.jpg" alt="Limoncello Spritz" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Limoncello Spritz2.jpg" alt="Limoncello Spritz" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Limoncello Spritz</h3>
+          <p class="ck-full-desc">Limoncello · Prosecco · Soda · Zitrone</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:60ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Mojito1.jpg" alt="Mojito" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Mojito2.jpg" alt="Mojito" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Mojito</h3>
+          <p class="ck-full-desc">Rum · Minze · Limette · Zucker · Soda</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:120ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Negroni1.jpg" alt="Negroni" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Negroni2.jpg" alt="Negroni" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Negroni</h3>
+          <p class="ck-full-desc">Gin · Campari · Vermouth Rosso</p>
+        </div>
+      </div>
+
+      <div class="ck-full-card rv" style="--rv-transform:scale(0.95);--rv-delay:180ms">
+        <div class="ck-full-img">
+          <img class="ck-img-1" src="Website Bilder/Cocktails/Peach Dreams1.jpg" alt="Peach Dreams" loading="lazy" />
+          <img class="ck-img-2" src="Website Bilder/Cocktails/Peach Dreams2.jpg" alt="Peach Dreams" loading="lazy" />
+        </div>
+        <div class="ck-full-body">
+          <h3 class="ck-full-name">Peach Dreams</h3>
+          <p class="ck-full-desc">Vodka · Pfirsich · Maracuja · Limette</p>
+        </div>
+      </div>
+
     </div>
-  </header>
+  </div>
+</section>
 
-  <nav class="nav__drawer" aria-label="Mobile Navigation">
-    <a href="index.html" class="nav__link">Home</a>
-    <a href="leistungen.html" class="nav__link">Leistungen</a>
-    <a href="cocktails.html" class="nav__link">Cocktails</a>
-    <a href="about.html" class="nav__link">Über uns</a>
-    <a href="referenzen.html" class="nav__link">Referenzen</a>
-    <a href="kontakt.html" class="nav__cta btn btn--outline" style="margin-top:1rem;">Anfragen</a>
-  </nav>
+<!-- INDIVIDUELLE KREATIONEN -->
+<section class="sec sec-teal" style="text-align:center;">
+  <div class="container" style="max-width:640px;">
+    <p class="rv" style="--rv-transform:translate3d(0,40px,0);font-family:var(--f-display);font-size:clamp(22px,3vw,36px);font-weight:300;font-style:italic;color:#fff;line-height:1.5;margin-bottom:32px;">
+      „Du hast eine Idee für einen besonderen Cocktail? Wir kreieren ihn für dich."
+    </p>
+    <a href="kontakt.html" class="btn btn-white btn-mag rv" style="--rv-delay:160ms">Kreation anfragen</a>
+  </div>
+</section>
 
-  <a href="kontakt.html" class="cta-fab">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    Jetzt anfragen
-  </a>
-
-  <!-- ── PAGE HERO ── -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal">Crafted with care</span>
-      <h1 class="reveal reveal--delay-1">Unsere Cocktails</h1>
-      <p class="reveal reveal--delay-2">Signature Drinks mit Persönlichkeit — und individuelle Kreationen ganz nach deinem Wunsch.</p>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- SIGNATURE COCKTAILS                         -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Die Klassiker</span>
-        <h2>Signature Cocktails</h2>
-        <div class="divider" style="margin:1rem auto;"></div>
-        <p>Sechs Drinks, die sich bewährt haben — jeder mit einem eigenen Charakter, jeder ein kleines Kunstwerk.</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="footer-logo" />
+        <p class="footer-desc">Mobiles Cocktail Catering<br />Hamburg · Berlin · NRW</p>
       </div>
-
-      <div class="cocktail-grid">
-
-        <div class="cocktail-full-card reveal">
-          <div class="cocktail-full-card__img">
-            <img src="Website Bilder/Cocktails/BILLYINSTA-2.jpg" alt="Bloom Fizz" loading="lazy" />
+      <div class="footer-links">
+        <div>
+          <h4 class="footer-h4">Seiten</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="leistungen.html" class="footer-link">Leistungen</a>
+          <a href="cocktails.html" class="footer-link">Cocktails</a>
+          <a href="about.html" class="footer-link">Über uns</a>
+          <a href="referenzen.html" class="footer-link">Referenzen</a>
+          <a href="kontakt.html" class="footer-link">Kontakt</a>
+        </div>
+        <div>
+          <h4 class="footer-h4">Kontakt</h4>
+          <div class="footer-contact">
+            <a href="tel:+4917399277730">+49 173 9927773</a><br />
+            <a href="mailto:info@billys-cocktails.de">info@billys-cocktails.de</a><br />
+            <a href="https://www.instagram.com/billyscocktails" target="_blank" rel="noopener">@billyscocktails</a>
           </div>
-          <div class="cocktail-full-card__body">
-            <div class="cocktail-full-card__name">Bloom Fizz</div>
-            <div class="cocktail-full-card__ingredients">Gin · Holunderblüte · Hibiskus · Soda</div>
-            <p class="cocktail-full-card__desc">Leicht, floral und erfrischend. Der Bloom Fizz ist unser Signature-Opener — perfekt für warme Abende und erste Begegnungen.</p>
-          </div>
-        </div>
-
-        <div class="cocktail-full-card reveal reveal--delay-1">
-          <div class="cocktail-full-card__img">
-            <img src="Website Bilder/Cocktails/BILLYINSTA-5.jpg" alt="Apple Garden" loading="lazy" />
-          </div>
-          <div class="cocktail-full-card__body">
-            <div class="cocktail-full-card__name">Apple Garden</div>
-            <div class="cocktail-full-card__ingredients">Vodka · Apfel · Ingwer · Limette</div>
-            <p class="cocktail-full-card__desc">Frisch, leicht scharf vom Ingwer — der Apple Garden bringt die Ernte direkt ins Glas. Unsere beliebteste Kreation auf Firmenevents.</p>
-          </div>
-        </div>
-
-        <div class="cocktail-full-card reveal reveal--delay-2">
-          <div class="cocktail-full-card__img">
-            <img src="Website Bilder/Cocktails/BILLYINSTA-6.jpg" alt="White Pearl" loading="lazy" />
-          </div>
-          <div class="cocktail-full-card__body">
-            <div class="cocktail-full-card__name">White Pearl</div>
-            <div class="cocktail-full-card__ingredients">Rum · Kokos · Limette · Zuckerrand</div>
-            <p class="cocktail-full-card__desc">Cremig, tropisch, mit dem perfekten Zuckerrand — der White Pearl ist Urlaub im Glas. Ein Dauerbrenner auf Hochzeiten.</p>
-          </div>
-        </div>
-
-        <div class="cocktail-full-card reveal">
-          <div class="cocktail-full-card__img">
-            <img src="Website Bilder/Cocktails/BILLYINSTA-8.jpg" alt="Basil Smash" loading="lazy" />
-          </div>
-          <div class="cocktail-full-card__body">
-            <div class="cocktail-full-card__name">Basil Smash</div>
-            <div class="cocktail-full-card__ingredients">Gin · Basilikum · Zitrone · Zucker</div>
-            <p class="cocktail-full-card__desc">Herb, frisch, aromatisch. Der Basil Smash ist für alle, die Cocktails ernst nehmen. Ein Drink mit echtem Charakter.</p>
-          </div>
-        </div>
-
-        <div class="cocktail-full-card reveal reveal--delay-1">
-          <div class="cocktail-full-card__img">
-            <img src="Website Bilder/Cocktails/BILLYINSTA-10.jpg" alt="Negroni Classico" loading="lazy" />
-          </div>
-          <div class="cocktail-full-card__body">
-            <div class="cocktail-full-card__name">Negroni Classico</div>
-            <div class="cocktail-full-card__ingredients">Gin · Campari · Vermouth Rosso</div>
-            <p class="cocktail-full-card__desc">Der Klassiker unter den Klassikern. Bitter, komplex, ausbalanciert — der Negroni ist zeitlos und lässt sich bei uns perfekt zubereitet genießen.</p>
-          </div>
-        </div>
-
-        <div class="cocktail-full-card reveal reveal--delay-2">
-          <div class="cocktail-full-card__img">
-            <img src="Website Bilder/Cocktails/BILLYINSTA-12.jpg" alt="Rose Sour" loading="lazy" />
-          </div>
-          <div class="cocktail-full-card__body">
-            <div class="cocktail-full-card__name">Rose Sour</div>
-            <div class="cocktail-full-card__ingredients">Bourbon · Rosensirup · Zitrone · Eiweiß</div>
-            <p class="cocktail-full-card__desc">Seidig, blumig, mit dem perfekten Säure-Süße-Verhältnis. Der Rose Sour ist unser elegantester Drink — und ein absoluter Hingucker.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- MEHR DRINKS                                 -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Noch mehr</span>
-        <h2>Aus unserer Bar</h2>
-        <div class="divider" style="margin:1rem auto;"></div>
-        <p>Unsere Fotogalerie — ein Blick hinter die Bar und auf die Drinks, die deine Gäste begeistern werden.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-item reveal">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-15.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-        <div class="gallery-item reveal reveal--delay-1">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-16.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-        <div class="gallery-item reveal reveal--delay-2">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-17.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-        <div class="gallery-item reveal reveal--delay-3">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-18.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-        <div class="gallery-item reveal">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-20.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-        <div class="gallery-item reveal reveal--delay-1">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-21.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-        <div class="gallery-item reveal reveal--delay-2">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-23.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-        <div class="gallery-item reveal reveal--delay-3">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-25.jpg" alt="Billy's Cocktails" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- INDIVIDUELLE KREATIONEN                     -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="section">
-    <div class="container">
-      <div class="intro-split" style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-hover);">
-        <div class="intro-split__image" style="min-height:400px;">
-          <img src="Website Bilder/Cocktails/BILLYINSTA-26.jpg" alt="Individuelle Cocktailkreation" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
-        </div>
-        <div class="intro-split__content" style="background-color: var(--anthracite); color: var(--warm-white);">
-          <span class="eyebrow reveal" style="color: var(--sand);">Nach deinem Wunsch</span>
-          <h2 class="reveal" style="color: var(--white);">Dein eigener Signature Drink</h2>
-          <p class="reveal reveal--delay-1" style="color: rgba(247,245,240,0.75);">Du hast eine Idee, eine Lieblingsfarbe, einen Geschmack — oder einfach den Wunsch nach etwas Besonderem? Wir entwickeln mit dir einen Cocktail, der zu deinem Event und deiner Marke passt. Komplett individuell, nur für dich.</p>
-          <a href="kontakt.html" class="btn btn--outline-white reveal reveal--delay-2" style="margin-top: 0.5rem;">Kreation anfragen</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CTA ── -->
-  <section class="cta-band">
-    <div class="container">
-      <h2 class="reveal">Welche Drinks sollen es sein?</h2>
-      <p class="reveal reveal--delay-1">Wir besprechen gemeinsam, was zu deinem Event passt.</p>
-      <div class="reveal reveal--delay-2">
-        <a href="kontakt.html" class="btn btn--outline-white">Jetzt anfragen</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <a href="index.html" class="logo"><img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" /></a>
-          <p>Mobiles Cocktail-Catering mit Leidenschaft — für Events, die in Erinnerung bleiben. Hamburg · Berlin · NRW</p>
-        </div>
-        <div class="footer__col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="cocktails.html">Cocktails</a></li>
-            <li><a href="about.html">Über uns</a></li>
-            <li><a href="referenzen.html">Referenzen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Events</h4>
-          <ul>
-            <li><a href="leistungen.html">Firmenevents</a></li>
-            <li><a href="leistungen.html">Hochzeiten</a></li>
-            <li><a href="leistungen.html">Messen</a></li>
-            <li><a href="leistungen.html">Private Feiern</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Kontakt</h4>
-          <ul>
-            <li><a href="tel:+4917399277730">+49 173 9927773</a></li>
-            <li><a href="mailto:info@billys-cocktails.de">info@billys-cocktails.de</a></li>
-            <li><a href="https://www.instagram.com/billyscocktails" target="_blank" rel="noopener">@billyscocktails</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">© 2026 Billy's Cocktail Catering. Alle Rechte vorbehalten.</p>
-        <div class="footer__legal">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
         </div>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <span>© 2026 Billy's Cocktail Catering</span>
+      <div class="footer-legal"><span>Impressum</span><span>Datenschutz</span></div>
+    </div>
+  </div>
+</footer>
 
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

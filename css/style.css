@@ -605,16 +605,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .rev-count { font-size: 13px; color: var(--gray); letter-spacing: 0.03em; }
 .rev-scroll-wrap { overflow-x: auto; padding: 4px 0 28px; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 40px; }
 .rev-scroll-wrap::-webkit-scrollbar { display: none; }
-.rev-scroll-track { display: flex; align-items: flex-start; gap: 20px; padding: 12px clamp(20px, 5vw, calc((100vw - 1200px) / 2 + 60px)); width: max-content; }
-.rev-card { background: #fff; border-radius: 20px; padding: 28px; width: 320px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 2px 20px rgba(0,0,0,0.06); transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); align-self: flex-start; }
-.rev-card:hover { transform: translateY(-5px); box-shadow: 0 10px 36px rgba(0,0,0,0.14); }
-.rev-card:hover .rev-text { -webkit-line-clamp: unset; }
+.rev-scroll-track { display: flex; align-items: stretch; gap: 20px; padding: 12px clamp(20px, 5vw, calc((100vw - 1200px) / 2 + 60px)); width: max-content; }
+.rev-card { background: #fff; border-radius: 20px; padding: 28px; width: 320px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.05); border: 1.5px solid transparent; transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease); }
+.rev-card:hover { transform: translateY(-3px) scale(1.015); box-shadow: 0 12px 40px rgba(26,110,115,0.13), 0 2px 8px rgba(0,0,0,0.06); border-color: rgba(26,110,115,0.25); }
 .rev-top { display: flex; align-items: center; gap: 12px; }
 .rev-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 600; color: #fff; flex-shrink: 0; font-family: var(--f-body); }
 .rev-meta { flex: 1; min-width: 0; }
 .rev-name { font-size: 14px; font-weight: 600; color: var(--dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rev-stars { color: #F5A623; font-size: 12px; letter-spacing: 2px; margin-top: 3px; }
-.rev-text { font-size: 14px; color: #555; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; flex: 1; transition: all 0.4s var(--ease); }
+.rev-text { font-size: 14px; color: #555; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
 .rev-gicon { margin-left: auto; flex-shrink: 0; }
 
 /* ── RESPONSIVE ── */

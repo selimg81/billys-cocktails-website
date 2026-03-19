@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billy's Cocktails — Mobile Cocktail Catering | Hamburg · Berlin · NRW</title>
+  <meta name="description" content="Billy's Cocktail Catering — professionelles mobiles Cocktail-Catering für Firmenevents, Hochzeiten, Messen und private Feiern in Hamburg, Berlin und NRW." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="header header--dark" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails Logo" />
+      </a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="leistungen.html" class="nav__link">Leistungen</a></li>
+          <li><a href="cocktails.html" class="nav__link">Cocktails</a></li>
+          <li><a href="about.html" class="nav__link">Über uns</a></li>
+          <li><a href="referenzen.html" class="nav__link">Referenzen</a></li>
+        </ul>
+        <a href="kontakt.html" class="nav__cta">Anfragen</a>
+        <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav__drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="leistungen.html" class="nav__link">Leistungen</a>
+    <a href="cocktails.html" class="nav__link">Cocktails</a>
+    <a href="about.html" class="nav__link">Über uns</a>
+    <a href="referenzen.html" class="nav__link">Referenzen</a>
+    <a href="kontakt.html" class="nav__cta btn btn--outline" style="margin-top:1rem;">Anfragen</a>
+  </nav>
+
+  <!-- Fixed CTA -->
+  <a href="kontakt.html" class="cta-fab" aria-label="Jetzt anfragen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    Jetzt anfragen
+  </a>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HERO                                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero__bg">
+      <img src="Website Bilder/Cocktails/BILLYINSTA-1.jpg" alt="Billy's Cocktails — Mobile Bar" fetchpriority="high" />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="container">
+        <span class="hero__tag">Hamburg · Berlin · NRW</span>
+        <h1 class="hero__title">Drinks, die <em>bleiben</em></h1>
+        <p class="hero__sub">Mobiles Cocktail-Catering für Firmenevents, Hochzeiten, Messen und private Feiern — mit Leidenschaft gemixt, professionell geliefert.</p>
+        <div class="hero__actions">
+          <a href="kontakt.html" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Event anfragen
+          </a>
+          <a href="leistungen.html" class="btn btn--outline-white">Leistungen ansehen</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- WAS BILLY'S MITBRINGT                       -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section" aria-label="Was wir mitbringen">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Das Rundum-Paket</span>
+        <h2>Alles, was dein Event braucht</h2>
+        <div class="divider"></div>
+        <p>Du kümmerst dich um die Gäste — wir kümmern uns um den Rest. Von der Planung bis zum letzten Drink.</p>
+      </div>
+
+      <div class="services-grid stagger">
+        <!-- Card 1 -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
+            </svg>
+          </div>
+          <h3>Professionelle Barkeeper</h3>
+          <p>Erfahrene, freundliche Barkeeper — die nicht nur mixen, sondern auch für Stimmung sorgen.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+            </svg>
+          </div>
+          <h3>Mobile Bar</h3>
+          <p>Edle, flexible Barstationen — passend für jeden Veranstaltungsort und jede Größe.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Premium Spirituosen</h3>
+          <p>Sorgfältig ausgewählte Spirituosen und Zutaten — für Cocktails, die man nicht vergisst.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/>
+            </svg>
+          </div>
+          <h3>Hochwertiges Gläser-Set</h3>
+          <p>Das passende Glas zum richtigen Drink — inklusive Transport und Reinigung.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3>Individuelle Cocktailkarte</h3>
+          <p>Maßgeschneiderte Drinks für deinen Anlass — von Classics bis zu eigenen Kreationen.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3>Auf- & Abbau inklusive</h3>
+          <p>Wir kommen, bauen auf, machen alles sauber und gehen — ohne Stress für dich.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- EVENT KATEGORIEN                            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section section--alt" aria-label="Event-Kategorien">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Für jeden Anlass</span>
+        <h2>Dein Event, unser Einsatz</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="event-grid">
+        <div class="event-card reveal">
+          <div class="event-card__bg" style="background: linear-gradient(135deg, #1A6E73 0%, #145559 100%);">
+          </div>
+          <div class="event-card__overlay">
+            <div class="event-card__icon">🏢</div>
+            <h3>Firmenevents</h3>
+            <p>Sommerfeste, Weihnachtsfeiern, Teambuilding — wir machen deinen Firmenevent unvergesslich.</p>
+          </div>
+        </div>
+
+        <div class="event-card reveal reveal--delay-1">
+          <div class="event-card__bg" style="background: linear-gradient(135deg, #2d8a6e 0%, #1A6E73 100%);">
+          </div>
+          <div class="event-card__overlay">
+            <div class="event-card__icon">💍</div>
+            <h3>Hochzeiten</h3>
+            <p>Der schönste Tag verdient die besten Drinks. Wir passen uns eurem Stil an.</p>
+          </div>
+        </div>
+
+        <div class="event-card reveal reveal--delay-2">
+          <div class="event-card__bg" style="background: linear-gradient(135deg, #C4B9A8 0%, #1A6E73 100%);">
+          </div>
+          <div class="event-card__overlay">
+            <div class="event-card__icon">☀️</div>
+            <h3>Sommerfeste</h3>
+            <p>Erfrischende Drinks unter freiem Himmel — perfekt für große Open-Air-Events.</p>
+          </div>
+        </div>
+
+        <div class="event-card reveal reveal--delay-1">
+          <div class="event-card__bg" style="background: linear-gradient(135deg, #145559 0%, #2A2A2A 100%);">
+          </div>
+          <div class="event-card__overlay">
+            <div class="event-card__icon">🎪</div>
+            <h3>Messen</h3>
+            <p>Professionelle Bar für Messen und Großveranstaltungen — auch für mehrere Tage.</p>
+          </div>
+        </div>
+
+        <div class="event-card reveal reveal--delay-2">
+          <div class="event-card__bg" style="background: linear-gradient(135deg, #1A6E73 0%, #2d8a6e 100%);">
+          </div>
+          <div class="event-card__overlay">
+            <div class="event-card__icon">🎂</div>
+            <h3>Geburtstage</h3>
+            <p>Großer runder Geburtstag? Wir machen die Party zu etwas ganz Besonderem.</p>
+          </div>
+        </div>
+
+        <div class="event-card reveal reveal--delay-3">
+          <div class="event-card__bg" style="background: linear-gradient(135deg, #C4B9A8 0%, #145559 100%);">
+          </div>
+          <div class="event-card__overlay">
+            <div class="event-card__icon">🏡</div>
+            <h3>Private Feiern</h3>
+            <p>Ob Gartenparty oder Dinner — wir bringen die Bar zu dir nach Hause.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- COCKTAIL SHOWCASE                           -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section section--dark" aria-label="Cocktail Showcase">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;">
+        <span class="eyebrow" style="color: var(--sand);">Unsere Signature Drinks</span>
+        <h2 style="color: var(--white);">Crafted with care</h2>
+        <div class="divider" style="margin:1rem auto;"></div>
+      </div>
+
+      <div class="cocktail-showcase">
+        <div class="cocktail-card reveal">
+          <div class="cocktail-card__img">
+            <img src="Website Bilder/Cocktails/BILLYINSTA-2.jpg" alt="Bloom Fizz" loading="lazy" />
+          </div>
+          <div class="cocktail-card__info">
+            <div class="cocktail-card__name">Bloom Fizz</div>
+            <div class="cocktail-card__ingredients">Gin · Holunderblüte · Hibiskus · Soda</div>
+          </div>
+        </div>
+
+        <div class="cocktail-card reveal reveal--delay-1">
+          <div class="cocktail-card__img">
+            <img src="Website Bilder/Cocktails/BILLYINSTA-5.jpg" alt="Apple Garden" loading="lazy" />
+          </div>
+          <div class="cocktail-card__info">
+            <div class="cocktail-card__name">Apple Garden</div>
+            <div class="cocktail-card__ingredients">Vodka · Apfel · Ingwer · Limette</div>
+          </div>
+        </div>
+
+        <div class="cocktail-card reveal reveal--delay-2">
+          <div class="cocktail-card__img">
+            <img src="Website Bilder/Cocktails/BILLYINSTA-6.jpg" alt="White Pearl" loading="lazy" />
+          </div>
+          <div class="cocktail-card__info">
+            <div class="cocktail-card__name">White Pearl</div>
+            <div class="cocktail-card__ingredients">Rum · Kokos · Limette · Zuckerrand</div>
+          </div>
+        </div>
+
+        <div class="cocktail-card reveal">
+          <div class="cocktail-card__img">
+            <img src="Website Bilder/Cocktails/BILLYINSTA-8.jpg" alt="Basil Smash" loading="lazy" />
+          </div>
+          <div class="cocktail-card__info">
+            <div class="cocktail-card__name">Basil Smash</div>
+            <div class="cocktail-card__ingredients">Gin · Basilikum · Zitrone · Zucker</div>
+          </div>
+        </div>
+
+        <div class="cocktail-card reveal reveal--delay-1">
+          <div class="cocktail-card__img">
+            <img src="Website Bilder/Cocktails/BILLYINSTA-10.jpg" alt="Negroni Classico" loading="lazy" />
+          </div>
+          <div class="cocktail-card__info">
+            <div class="cocktail-card__name">Negroni Classico</div>
+            <div class="cocktail-card__ingredients">Gin · Campari · Vermouth Rosso</div>
+          </div>
+        </div>
+
+        <div class="cocktail-card reveal reveal--delay-2">
+          <div class="cocktail-card__img">
+            <img src="Website Bilder/Cocktails/BILLYINSTA-12.jpg" alt="Rose Sour" loading="lazy" />
+          </div>
+          <div class="cocktail-card__info">
+            <div class="cocktail-card__name">Rose Sour</div>
+            <div class="cocktail-card__ingredients">Bourbon · Rosensirup · Zitrone · Eiweiß</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="cocktails.html" class="btn btn--outline-white">Alle Cocktails entdecken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- REFERENZ-LOGOS                              -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section" aria-label="Referenzen">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 3rem;">
+        <span class="eyebrow">Vertrauen seit Tag 1</span>
+        <h2>Bekannte Gesichter</h2>
+        <div class="divider" style="margin:1rem auto;"></div>
+        <p>Brands, die auf Billy's vertrauen — und das nicht ohne Grund.</p>
+      </div>
+
+      <div class="ref-logos reveal">
+        <div class="ref-logo">Ströer</div>
+        <div class="ref-logo">THEy</div>
+        <div class="ref-logo">HRS</div>
+        <div class="ref-logo">Rockfish Games</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- KONTAKT TEASER                              -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="cta-band" aria-label="Kontakt CTA">
+    <div class="container">
+      <h2 class="reveal">Bereit für deinen Event?</h2>
+      <p class="reveal reveal--delay-1">Erzähl uns von deinem Anlass — wir melden uns innerhalb von 24 Stunden.</p>
+      <div class="reveal reveal--delay-2">
+        <a href="kontakt.html" class="btn btn--outline-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Jetzt anfragen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- KOMPAKTES KONTAKT-FORMULAR                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section section--alt" id="kontakt-quick" aria-label="Schnellanfrage">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Schnell & unkompliziert</span>
+        <h2>Stell uns deine Frage</h2>
+        <div class="divider" style="margin:1rem auto;"></div>
+      </div>
+
+      <form class="form js-contact-form" style="max-width: 680px; margin: 0 auto;" novalidate>
+        <div class="form-row reveal">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Dein Name" required />
+          </div>
+          <div class="form-field">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="deine@email.de" required />
+          </div>
+        </div>
+        <div class="form-field reveal">
+          <label for="eventdatum">Eventdatum</label>
+          <input type="date" id="eventdatum" name="eventdatum" />
+        </div>
+        <div class="form-field reveal">
+          <label for="nachricht">Nachricht</label>
+          <textarea id="nachricht" name="nachricht" placeholder="Erzähl uns von deinem Event — Ort, Gästeanzahl, Wünsche…" rows="4" required></textarea>
+        </div>
+        <div class="reveal">
+          <button type="submit" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Nachricht senden
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" />
+          </a>
+          <p>Mobiles Cocktail-Catering mit Leidenschaft — für Events, die in Erinnerung bleiben. Hamburg · Berlin · NRW</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="cocktails.html">Cocktails</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="referenzen.html">Referenzen</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Events</h4>
+          <ul>
+            <li><a href="leistungen.html">Firmenevents</a></li>
+            <li><a href="leistungen.html">Hochzeiten</a></li>
+            <li><a href="leistungen.html">Messen</a></li>
+            <li><a href="leistungen.html">Private Feiern</a></li>
+            <li><a href="leistungen.html">Geburtstage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="tel:+4917399277730">+49 173 9927773</a></li>
+            <li><a href="mailto:info@billys-cocktails.de">info@billys-cocktails.de</a></li>
+            <li><a href="https://www.instagram.com/billyscocktails" target="_blank" rel="noopener">@billyscocktails</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Billy's Cocktail Catering. Alle Rechte vorbehalten.</p>
+        <div class="footer__legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

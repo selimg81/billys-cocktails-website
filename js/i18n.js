@@ -10,6 +10,8 @@ const TRANSLATIONS = {
     'mob-home':'Home','mob-services':'Leistungen','mob-cocktails':'Cocktails',
     'mob-about':'Über uns','mob-ref':'Referenzen','mob-contact':'Kontakt',
     'cta-float':'Jetzt anfragen',
+    'mqt-firm':'Firmenevents','mqt-wed':'Hochzeiten','mqt-fair':'Messen',
+    'mqt-priv':'Private Feiern','mqt-bday':'Geburtstage','mqt-sum':'Sommerfeste',
 
     /* index — Hero */
     'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
@@ -149,6 +151,8 @@ const TRANSLATIONS = {
     'mob-home':'Home','mob-services':'Services','mob-cocktails':'Cocktails',
     'mob-about':'About us','mob-ref':'References','mob-contact':'Contact',
     'cta-float':'Inquire now',
+    'mqt-firm':'Corporate Events','mqt-wed':'Weddings','mqt-fair':'Trade Fairs',
+    'mqt-priv':'Private Parties','mqt-bday':'Birthdays','mqt-sum':'Summer Parties',
 
     /* index — Hero */
     'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',

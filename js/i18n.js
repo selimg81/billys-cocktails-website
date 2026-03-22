@@ -17,7 +17,7 @@ const TRANSLATIONS = {
     'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
     'hero-h1':'Dein Event.',
     'hero-h1-em':'Unsere Cocktails.',
-    'hero-sub':'Wir bringen die Bar zu dir — mit Drinks, die deine Gäste lieben werden.',
+    'hero-sub':'Wir bringen die Bar zu dir, mit Drinks, die deine Gäste lieben werden.',
     'hero-cta1':'Jetzt anfragen',
     'hero-cta2':'Mehr erfahren',
 
@@ -25,14 +25,14 @@ const TRANSLATIONS = {
     'srv-label':'Was wir mitbringen',
     'srv-h2':'Vier Versprechen',
     'srv-h2-em':'an dich',
-    'srv1-title':'Charismatische Bartender',
-    'srv1-text':'Unser Team lebt Barkeeping — mit guter Laune, Stil und jahrelanger Erfahrung hinter der Bar.',
-    'srv2-title':'Individuelle Kreationen',
-    'srv2-text':'Cocktails in deinen Firmenfarben, Signature Drinks für deinen Anlass — alles ist möglich.',
+    'srv1-title':'Professionelle Barkeeperinnen',
+    'srv1-text':'Unser Team bringt jahrelange Erfahrung, Stil und echte Leidenschaft für das Handwerk mit. Jeder Gast verdient denselben Anspruch an Qualität und persönlichem Service.',
+    'srv2-title':'Individuelle Cocktailkreationen',
+    'srv2-text':'Cocktails in deinen Firmenfarben, Signature Drinks für deinen Anlass. Von klassisch bis kreativ. Alles ist möglich.',
     'srv3-title':'Stilvolle Mobile Bar',
-    'srv3-text':'Vollständig ausgestattet mit Marken-Spirituosen, hochwertigen Gläsern und allem Zubehör.',
+    'srv3-text':'Vollständig ausgestattet kommt unsere mobile Bar direkt zu dir. Mit Marken-Spirituosen, hochwertigen Gläsern und professionellem Equipment.',
     'srv4-title':'Rundum-Sorglos-Paket',
-    'srv4-text':'Von der Planung über Auf- und Abbau bis zum letzten Cocktail — wir kümmern uns um alles.',
+    'srv4-text':'Von der ersten Beratung über Auf- und Abbau bis zum letzten Drink des Abends. Wir kümmern uns um alles, damit du dich auf deine Gäste konzentrieren kannst.',
     'cta-services':'Alle Leistungen',
 
     /* index — Events */
@@ -40,12 +40,12 @@ const TRANSLATIONS = {
     'evt-h2':'Dein Event.',
     'evt-h2-em':'Unser Einsatz.',
     'evt-sub':'Wir sind überall dort, wo gute Drinks und gute Stimmung gefragt sind.',
-    'evt1-title':'Firmenevents','evt1-text':'Weihnachtsfeiern, Teambuildings, Kick-offs — wir passen uns an euren Vibe an.',
+    'evt1-title':'Firmenevents','evt1-text':'Weihnachtsfeiern, Teambuildings, Kick-offs. Wir passen uns an euren Vibe an.',
     'evt2-title':'Sommerfeste','evt2-text':'Erfrischende Cocktails unter freiem Himmel. Wir bringen Sommer-Vibes in jedes Glas.',
-    'evt3-title':'Hochzeiten','evt3-text':'Euer Tag, eure Drinks. Signature Cocktails die zu euch passen — von der Trauung bis zum letzten Tanz.',
+    'evt3-title':'Hochzeiten','evt3-text':'Euer Tag, eure Drinks. Signature Cocktails die zu euch passen, von der Trauung bis zum letzten Tanz.',
     'evt4-title':'Messen & Großevents','evt4-text':'Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand.',
-    'evt5-title':'Geburtstage','evt5-text':'Ob 30., 40. oder 50. — mach deinen Geburtstag zum Event. Wir bringen alles mit.',
-    'evt6-title':'Private Feiern','evt6-text':'Jubiläen, Housewarmings oder einfach Lust auf eine gute Party — wir sind dabei.',
+    'evt5-title':'Geburtstage','evt5-text':'Ob 30., 40. oder 50.: Mach deinen Geburtstag zum Event. Wir bringen alles mit.',
+    'evt6-title':'Private Feiern','evt6-text':'Jubiläen, Housewarmings oder einfach Lust auf eine gute Party. Wir sind dabei.',
 
     /* index — Cocktails */
     'ck-label':'Unsere Cocktails','ck-h2':'Crafted with','ck-h2-em':'Passion',
@@ -70,6 +70,8 @@ const TRANSLATIONS = {
     /* index — Contact */
     'con-label':'Kontakt','con-h2':'Erzähl uns von','con-h2-em':'deinem Event',
     'con-sub':'Wir melden uns innerhalb von 24 Stunden.',
+    'vorlauf-q':'Wie viel Vorlaufzeit brauche ich?',
+    'vorlauf-a':'Grundsätzlich sind wir flexibel. Kurzfristige Buchungen sind bei freien Kapazitäten jederzeit möglich. Für die beste Verfügbarkeit empfehlen wir, uns so früh wie möglich zu kontaktieren.',
     'form-name':'Name','form-email':'E-Mail','form-date':'Eventdatum',
     'form-guests':'Gästeanzahl','form-msg':'Erzähl uns kurz von deinem Event...',
     'form-submit':'Anfrage senden',
@@ -81,24 +83,24 @@ const TRANSLATIONS = {
 
     /* leistungen.html */
     'srv-page-label':'Was wir bieten','srv-page-h1':'Unsere','srv-page-h1-em':'Leistungen',
-    'srv-page-sub':'Egal ob groß oder klein — wir stellen uns komplett auf dein Event ein.',
+    'srv-page-sub':'Egal ob groß oder klein. Wir stellen uns komplett auf dein Event ein.',
     'srvp1-title':'Firmenevents',
-    'srvp1-text':'Weihnachtsfeiern, Teambuildings, Kick-offs — wir passen uns an euren Vibe an und sorgen für den perfekten Mix.',
+    'srvp1-text':'Weihnachtsfeiern, Teambuildings, Kick-offs. Wir passen uns an euren Vibe an und sorgen für den perfekten Mix.',
     'srvp2-title':'Hochzeiten & Geburtstage',
     'srvp2-text':'Euer Tag, eure Drinks. Wir kreieren Signature Cocktails die zu eurem Anlass passen.',
     'srvp3-title':'Messen & Großevents',
-    'srvp3-text':'Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand — mit Drinks die Gespräche starten.',
+    'srvp3-text':'Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand, mit Drinks die Gespräche starten.',
     'srvp4-title':'Private Feiern',
-    'srvp4-text':'Jubiläen, Housewarmings oder einfach Bock auf Party — verleihe deinem Event den gewissen Touch.',
+    'srvp4-text':'Jubiläen, Housewarmings oder einfach Bock auf Party. Verleihe deinem Event den gewissen Touch.',
     'incl-h2':'Alles','incl-h2-em':'inklusive',
-    'incl1':'Professionelle Barkeeper','incl2':'Stilvolle Mobile Bar',
+    'incl1':'Professionelle Barkeeperinnen','incl2':'Stilvolle Mobile Bar',
     'incl3':'Marken-Spirituosen & Zutaten','incl4':'Hochwertige Gläser',
     'incl5':'Individuelle Cocktailkarte','incl6':'Kompletter Auf- & Abbau',
     'incl-cta':'Jetzt anfragen',
 
     /* cocktails.html */
     'ck-page-label':'Unsere Kreationen','ck-page-h1':'Die','ck-page-h1-em':'Cocktails',
-    'ck-page-sub':'Jeder Drink wird frisch für dich gemixt. Fahre mit der Maus über die Karten für eine zweite Ansicht. Individuelle Signature Cocktails? Natürlich.',
+    'ck-page-sub':'Jeder Drink wird frisch gemixt, mit hochwertigen Zutaten und Liebe zum Detail. Von Klassikern wie Mojito und Espresso Martini bis hin zu individuellen Signature Cocktails, die wir speziell für dein Event kreieren.',
     'ck-quote':'„Du hast eine Idee für einen besonderen Cocktail? Wir kreieren ihn für dich."',
     'ck-cta':'Kreation anfragen',
     'ck1-desc':'Aperol · Prosecco · Soda · Orange',
@@ -116,11 +118,11 @@ const TRANSLATIONS = {
 
     /* about.html */
     'abt-label':'Über uns','abt-h1':'Hi, ich bin','abt-h1-em':'Vassili',
-    'abt-p1':'Meine Reise in die Cocktailwelt begann vor einigen Jahren bei einem großen Event-Caterer mit Fokus auf Cocktail-Catering. Dort habe ich das Handwerk von Grund auf gelernt — von der Pike auf.',
+    'abt-p1':'Meine Reise in die Cocktailwelt begann vor einigen Jahren bei einem großen Event-Caterer mit Fokus auf Cocktail-Catering. Dort habe ich das Handwerk von Grund auf gelernt, von der Pike auf.',
     'abt-p2':'Ich reiste mit der mobilen Bar von Event zu Event, lernte was funktioniert und was nicht, und verfeinerte meine Skills parallel als Barkeeper in einem bekannten Hamburger Club.',
     'abt-p3':'Aus dieser Erfahrung, meiner Liebe zum Kundenkontakt und einer ordentlichen Portion Gründergeist ist Billy\'s Cocktail Catering entstanden. Heute sorgen wir mit unserem Team auf Events jeder Größe für richtig gute Drinks und noch bessere Stimmung.',
     'abt-quote':'„Unser Anspruch: Jeder Gast soll den Abend mit einem Lächeln verlassen."',
-    'abt-cite':'— Vassili, Gründer',
+    'abt-cite':'Vassili, Gründer',
     'abt-stat1':'Events','abt-stat2':'Städte','abt-stat3':'Gute-Laune-Garantie',
 
     /* referenzen.html */
@@ -158,7 +160,7 @@ const TRANSLATIONS = {
     'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
     'hero-h1':'Your Event.',
     'hero-h1-em':'Our Cocktails.',
-    'hero-sub':'We bring the bar to you — with drinks your guests will love.',
+    'hero-sub':'We bring the bar to you, with drinks your guests will love.',
     'hero-cta1':'Inquire now',
     'hero-cta2':'Learn more',
 
@@ -166,14 +168,14 @@ const TRANSLATIONS = {
     'srv-label':'What we bring',
     'srv-h2':'Four promises',
     'srv-h2-em':'to you',
-    'srv1-title':'Charismatic Bartenders',
-    'srv1-text':'Our team lives and breathes bartending — with great vibes, style and years of experience behind the bar.',
-    'srv2-title':'Custom Creations',
-    'srv2-text':'Cocktails in your brand colours, signature drinks for your occasion — anything is possible.',
+    'srv1-title':'Professional Bartenders',
+    'srv1-text':'Our team brings years of experience, style and genuine passion for the craft. Every guest deserves the same level of quality and personal service.',
+    'srv2-title':'Custom Cocktail Creations',
+    'srv2-text':'Cocktails in your brand colours, signature drinks for your occasion. From classic to creative. Anything is possible.',
     'srv3-title':'Stylish Mobile Bar',
-    'srv3-text':'Fully equipped with premium spirits, quality glassware and everything you need.',
+    'srv3-text':'Fully equipped, our mobile bar comes directly to you. With premium spirits, quality glassware and professional equipment.',
     'srv4-title':'All-Inclusive Package',
-    'srv4-text':'From planning to setup, breakdown and the last cocktail — we handle everything.',
+    'srv4-text':'From the first consultation through setup and breakdown to the last drink of the evening. We handle everything so you can focus on your guests.',
     'cta-services':'All Services',
 
     /* index — Events */
@@ -181,12 +183,12 @@ const TRANSLATIONS = {
     'evt-h2':'Your Event.',
     'evt-h2-em':'Our commitment.',
     'evt-sub':'We\'re wherever great drinks and great vibes are in demand.',
-    'evt1-title':'Corporate Events','evt1-text':'Christmas parties, team buildings, kick-offs — we adapt to your vibe.',
+    'evt1-title':'Corporate Events','evt1-text':'Christmas parties, team buildings, kick-offs. We adapt to your vibe.',
     'evt2-title':'Summer Parties','evt2-text':'Refreshing cocktails under the open sky. We bring summer vibes to every glass.',
-    'evt3-title':'Weddings','evt3-text':'Your day, your drinks. Signature cocktails that match you — from the ceremony to the last dance.',
+    'evt3-title':'Weddings','evt3-text':'Your day, your drinks. Signature cocktails that match you, from the ceremony to the last dance.',
     'evt4-title':'Trade Fairs & Events','evt4-text':'Stand out. Our mobile bar becomes a magnet at your booth.',
-    'evt5-title':'Birthdays','evt5-text':'Whether 30th, 40th or 50th — make your birthday an event. We bring everything.',
-    'evt6-title':'Private Parties','evt6-text':'Anniversaries, housewarmings or just a great party — we\'ll be there.',
+    'evt5-title':'Birthdays','evt5-text':'Whether 30th, 40th or 50th. Make your birthday an event. We bring everything.',
+    'evt6-title':'Private Parties','evt6-text':'Anniversaries, housewarmings or just a great party. We\'ll be there.',
 
     /* index — Cocktails */
     'ck-label':'Our Cocktails','ck-h2':'Crafted with','ck-h2-em':'Passion',
@@ -207,6 +209,8 @@ const TRANSLATIONS = {
     /* index — Contact */
     'con-label':'Contact','con-h2':'Tell us about','con-h2-em':'your event',
     'con-sub':'We\'ll get back to you within 24 hours.',
+    'vorlauf-q':'How much lead time do I need?',
+    'vorlauf-a':'We\'re flexible by nature. Last-minute bookings are possible whenever we have availability. For the best slot, we recommend reaching out as early as possible.',
     'form-name':'Name','form-email':'E-Mail','form-date':'Event date',
     'form-guests':'Number of guests','form-msg':'Tell us briefly about your event...',
     'form-submit':'Send inquiry',
@@ -222,15 +226,15 @@ const TRANSLATIONS = {
 
     /* leistungen.html */
     'srv-page-label':'What we offer','srv-page-h1':'Our','srv-page-h1-em':'Services',
-    'srv-page-sub':'Whether big or small — we fully adapt to your event.',
+    'srv-page-sub':'Whether big or small. We fully adapt to your event.',
     'srvp1-title':'Corporate Events',
-    'srvp1-text':'Christmas parties, team buildings, kick-offs — we adapt to your vibe and create the perfect mix.',
+    'srvp1-text':'Christmas parties, team buildings, kick-offs. We adapt to your vibe and create the perfect mix.',
     'srvp2-title':'Weddings & Birthdays',
     'srvp2-text':'Your day, your drinks. We create signature cocktails that suit your occasion.',
     'srvp3-title':'Trade Fairs & Large Events',
-    'srvp3-text':'Stand out. Our mobile bar becomes a magnet at your booth — with drinks that start conversations.',
+    'srvp3-text':'Stand out. Our mobile bar becomes a magnet at your booth, with drinks that start conversations.',
     'srvp4-title':'Private Parties',
-    'srvp4-text':'Anniversaries, housewarmings or just in the mood for a party — give your event that special touch.',
+    'srvp4-text':'Anniversaries, housewarmings or just in the mood for a party. Give your event that special touch.',
     'incl-h2':'Everything','incl-h2-em':'included',
     'incl1':'Professional bartenders','incl2':'Stylish mobile bar',
     'incl3':'Premium spirits & ingredients','incl4':'Quality glassware',
@@ -239,7 +243,7 @@ const TRANSLATIONS = {
 
     /* cocktails.html */
     'ck-page-label':'Our Creations','ck-page-h1':'The','ck-page-h1-em':'Cocktails',
-    'ck-page-sub':'Every drink is freshly mixed for you. Hover over the cards for a second view. Custom signature cocktails? Of course.',
+    'ck-page-sub':'Every drink is freshly mixed with premium ingredients and crafted with care. From classics like Mojito and Espresso Martini to bespoke signature cocktails created specifically for your event.',
     'ck-quote':'"Do you have an idea for a special cocktail? We\'ll create it for you."',
     'ck-cta':'Request a creation',
     'ck1-desc':'Aperol · Prosecco · Soda · Orange',
@@ -257,11 +261,11 @@ const TRANSLATIONS = {
 
     /* about.html */
     'abt-label':'About us','abt-h1':'Hi, I\'m','abt-h1-em':'Vassili',
-    'abt-p1':'My journey into the world of cocktails began some years ago at a large event caterer focused on cocktail catering. There I learned the craft from the ground up — from scratch.',
+    'abt-p1':'My journey into the world of cocktails began some years ago at a large event caterer focused on cocktail catering. There I learned the craft from the ground up, from scratch.',
     'abt-p2':'I travelled with the mobile bar from event to event, learned what works and what doesn\'t, and refined my skills as a bartender at a well-known Hamburg club.',
     'abt-p3':'From this experience, my love for customer contact and a healthy dose of entrepreneurial spirit, Billy\'s Cocktail Catering was born. Today we bring great drinks and even better vibes to events of every size with our team.',
     'abt-quote':'"Our standard: every guest should leave the evening with a smile."',
-    'abt-cite':'— Vassili, Founder',
+    'abt-cite':'Vassili, Founder',
     'abt-stat1':'Events','abt-stat2':'Cities','abt-stat3':'Good vibes guarantee',
 
     /* referenzen.html */

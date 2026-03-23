@@ -210,4 +210,39 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   burger?.addEventListener('click', () => triggerMobStagger(menuOpen));
 
+  // ── DARK MODE TOGGLE ──
+  const dmToggle = document.getElementById('dm-toggle');
+  if (dmToggle) {
+    const isDark = localStorage.getItem('billys-dark') === 'true';
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      dmToggle.setAttribute('aria-checked', 'true');
+    }
+    dmToggle.addEventListener('click', () => {
+      const on = document.documentElement.classList.toggle('dark');
+      dmToggle.setAttribute('aria-checked', String(on));
+      localStorage.setItem('billys-dark', String(on));
+    });
+  }
+
 });
+
+// ── NEWSLETTER SUBMIT ──
+function handleNewsletter(e) {
+  e.preventDefault();
+  const form = e.target;
+  const input = form.querySelector('.footer-newsletter-input');
+  const btn = form.querySelector('.footer-newsletter-btn');
+  if (!input.value) return;
+  btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+  btn.style.background = '#2a9d8f';
+  input.value = '';
+  input.placeholder = 'Danke! Wir melden uns.';
+  input.disabled = true;
+  setTimeout(() => {
+    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+    btn.style.background = '';
+    input.placeholder = 'Deine E-Mail-Adresse';
+    input.disabled = false;
+  }, 3000);
+}

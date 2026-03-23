@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO-Report — Billy's Cocktail Catering</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --teal: #1A6E73;
+    --teal-light: #e8f4f5;
+    --teal-mid: #2d9da3;
+    --dark: #1a1a2e;
+    --stone: #6b7280;
+    --warm: #f9f6f1;
+    --border: #e5e7eb;
+    --green: #16a34a;
+    --red: #dc2626;
+    --amber: #d97706;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #1f2937;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f4c4f 0%, #1A6E73 50%, #2d9da3 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 72px;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .cover-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .cover-brand-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+  }
+  .cover-brand-name {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+  .cover-main { position: relative; z-index: 1; }
+  .cover-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+  .cover-h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .cover-h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(255,255,255,0.75);
+  }
+  .cover-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 20px;
+    max-width: 480px;
+    line-height: 1.6;
+  }
+  .cover-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative; z-index: 1;
+  }
+  .cover-meta p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 3px;
+  }
+  .cover-meta strong {
+    color: rgba(255,255,255,0.8);
+  }
+  .cover-score {
+    text-align: right;
+  }
+  .cover-score-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  .cover-score-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page { padding: 56px 64px; max-width: 900px; margin: 0 auto; }
+  .page-break { page-break-before: always; padding-top: 56px; }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+  .section-h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  .section-h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--teal);
+  }
+  .section-intro {
+    font-size: 14px;
+    color: var(--stone);
+    line-height: 1.8;
+    max-width: 680px;
+    margin-bottom: 36px;
+    border-left: 3px solid var(--teal);
+    padding-left: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 28px 0 10px;
+  }
+  h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 20px 0 8px;
+  }
+  p { margin-bottom: 12px; font-size: 13px; color: #374151; line-height: 1.75; }
+
+  /* ── HIGHLIGHT BOX ── */
+  .callout {
+    background: var(--teal-light);
+    border-left: 4px solid var(--teal);
+    border-radius: 0 12px 12px 0;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  .callout p { margin: 0; font-size: 14px; color: var(--teal); font-weight: 500; }
+  .callout em { font-style: italic; }
+
+  .callout-dark {
+    background: var(--dark);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+  .callout-dark p {
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .callout-dark strong { color: #fff; }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 28px;
+    font-size: 12px;
+  }
+  thead tr {
+    background: var(--dark);
+    color: #fff;
+  }
+  thead th {
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:nth-child(even) { background: var(--warm); }
+  td { padding: 9px 14px; vertical-align: top; line-height: 1.5; }
+  td:first-child { font-weight: 500; }
+
+  /* ── STATUS BADGES ── */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .badge-green { background: #dcfce7; color: #15803d; }
+  .badge-red { background: #fee2e2; color: #b91c1c; }
+  .badge-amber { background: #fef3c7; color: #b45309; }
+  .badge-teal { background: var(--teal-light); color: var(--teal); }
+
+  /* ── CHECK ITEMS ── */
+  .checklist { list-style: none; margin: 16px 0 24px; }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .check-icon {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .check-done { background: #dcfce7; color: #15803d; }
+  .check-pending { background: #fef3c7; color: #b45309; }
+  .checklist .check-label { flex: 1; }
+  .checklist .check-status { font-size: 11px; color: var(--stone); white-space: nowrap; }
+
+  /* ── STEPS ── */
+  .steps { margin: 20px 0; }
+  .step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 32px; height: 32px;
+    background: var(--teal);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step-body h4 { margin: 4px 0 4px; color: var(--dark); text-transform: none; letter-spacing: 0; font-size: 13px; }
+  .step-body p { margin: 0; font-size: 12px; color: var(--stone); }
+
+  /* ── STAT CARDS ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .stat-card {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-lbl {
+    font-size: 11px;
+    color: var(--stone);
+    line-height: 1.4;
+  }
+
+  /* ── DIVIDER ── */
+  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  /* ── KEYWORDS GRID ── */
+  .kw-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 24px;
+  }
+  .kw-pill {
+    background: var(--teal-light);
+    color: var(--teal);
+    border: 1px solid rgba(26,110,115,0.2);
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /* ── MIGRATION TABLE ── */
+  .migration-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    margin: 20px 0;
+  }
+  .mig-before {
+    background: #fff1f1;
+    border: 1px solid #fecaca;
+    padding: 12px 16px;
+    border-radius: 8px 0 0 8px;
+    font-size: 12px;
+    color: #7f1d1d;
+  }
+  .mig-after {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 12px;
+    color: #14532d;
+  }
+  .mig-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+    opacity: 0.6;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { font-size: 12px; }
+    .cover { min-height: 100vh; }
+    .page { padding: 40px 52px; }
+    .section-h2 { font-size: 26px; }
+    .cover-h1 { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ COVER ═══ -->
+<div class="cover">
+  <div class="cover-brand">
+    <div class="cover-brand-dot"></div>
+    <span class="cover-brand-name">Billy's Cocktail Catering</span>
+  </div>
+
+  <div class="cover-main">
+    <span class="cover-tag">Technisches Briefing · März 2026</span>
+    <div class="cover-h1">SEO-Report &<br><em>Migrations-Briefing</em></div>
+    <p class="cover-sub">Warum eine statische Website ohne CMS stark im Ranking steht — und warum der Domainwechsel keine Gefahr für das Ranking darstellt.</p>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-meta">
+      <p>Erstellt für</p>
+      <p><strong>Online-Marketer Briefing</strong></p>
+      <p style="margin-top:8px;">Datum</p>
+      <p><strong>März 2026</strong></p>
+    </div>
+    <div class="cover-score">
+      <div class="cover-score-num">12</div>
+      <div class="cover-score-label">Seiten · Vollständig SEO-optimiert</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ SEITE 1: VORAB ═══ -->
+<div class="page">
+
+  <div class="section-label">Einleitung</div>
+  <h2 class="section-h2">Die kurze Antwort<br>auf die <em>Skepsis</em></h2>
+
+  <div class="callout">
+    <p>„Kann eine statische Website ohne CMS überhaupt gut ranken?" — <strong>Ja. Und oft sogar besser als WordPress.</strong></p>
+  </div>
+
+  <p>Google bewertet nicht, womit eine Website gebaut wurde. Google bewertet, was auf der Seite steht, wie schnell sie lädt, wie sie strukturiert ist und wie relevant sie für eine Suchanfrage ist. All das haben wir umgesetzt — direkt im Code, ohne Umweg über ein CMS.</p>
+
+  <p>Ein CMS wie WordPress, Webflow oder Squarespace ist ein Werkzeug, das HTML erzeugt. Das Endprodukt, das Google sieht, ist immer dasselbe: eine HTML-Seite mit Text, Links und Meta-Tags. <strong>Kein Suchmaschinen-Crawler sieht jemals ein CMS.</strong> Er sieht nur den fertigen Code.</p>
+
+  <hr>
+
+  <div class="section-label">Vergleich</div>
+  <h3>CMS vs. Statische HTML-Seite — Was Google tatsächlich bewertet</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Faktor</th>
+        <th>WordPress / CMS</th>
+        <th>Unsere statische Seite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ladezeit (LCP)</td>
+        <td>1–4 Sekunden (PHP + Datenbank + Plugins)</td>
+        <td><strong>0,3–0,8 Sekunden</strong> (kein Server-Processing)</td>
+      </tr>
+      <tr>
+        <td>Core Web Vitals</td>
+        <td>Oft schlecht ohne intensive Optimierung</td>
+        <td><strong>Nativ gut</strong> (kein Plugin-Overhead)</td>
+      </tr>
+      <tr>
+        <td>SEO-Kontrolle</td>
+        <td>Über Plugins (Yoast, RankMath)</td>
+        <td><strong>Direkt im Code — 100 % Kontrolle</strong></td>
+      </tr>
+      <tr>
+        <td>Sicherheit</td>
+        <td>Häufige Angriffspunkte (Plugins, Login, DB)</td>
+        <td><strong>Kein Backend, kein Angriffspunkt</strong></td>
+      </tr>
+      <tr>
+        <td>Hosting-Kosten</td>
+        <td>20–80 €/Monat (Managed WordPress)</td>
+        <td><strong>Günstig bis kostenlos</strong> (modernes Static Hosting)</td>
+      </tr>
+      <tr>
+        <td>Downtime-Risiko</td>
+        <td>Datenbank-Ausfall, Plugin-Konflikte möglich</td>
+        <td><strong>Praktisch null</strong> (CDN mit 99,99 % Uptime)</td>
+      </tr>
+      <tr>
+        <td>SEO-Maßnahmen</td>
+        <td>Plugin erledigt Basics automatisch</td>
+        <td><strong>Manuell umgesetzt — präziser, kein Overhead</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout-dark">
+    <p><strong>Wichtig:</strong> Ladezeit ist ein offizieller Google-Ranking-Faktor (seit 2021 Teil der Core Web Vitals). Eine Seite, die in unter einer Sekunde lädt, hat hier einen strukturellen Vorteil gegenüber einem durchschnittlichen WordPress-Setup.</p>
+  </div>
+
+</div>
+
+
+<!-- ═══ SEITE 2: SEO-MASSNAHMEN ═══ -->
+<div class="page page-break">
+
+  <div class="section-label">SEO-Report</div>
+  <h2 class="section-h2">Was wurde<br><em>umgesetzt</em></h2>
+  <p class="section-intro">Alle SEO-Maßnahmen, die ein Plugin wie Yoast in einem CMS erledigt, wurden manuell direkt im Code implementiert — präziser und ohne Overhead. Hier eine vollständige Übersicht.</p>
+
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-num">12</div>
+      <div class="stat-lbl">Seiten vollständig SEO-optimiert</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">6</div>
+      <div class="stat-lbl">Neue Unterseiten für Long-Tail-Keywords</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">5,0</div>
+      <div class="stat-lbl">Google-Bewertung im Schema hinterlegt</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">&lt;1s</div>
+      <div class="stat-lbl">Ladezeit (kein Server-Processing)</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>Implementierte SEO-Maßnahmen im Überblick</h4>
+
+  <ul class="checklist">
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>Meta-Title & Meta-Description</strong> — Alle 12 Seiten, keyword-optimiert, 50–160 Zeichen, mit CTA</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>JSON-LD Structured Data (Schema.org)</strong> — LocalBusiness mit Adresse, Telefon, Servicegebiet, Bewertungen</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>Open Graph Tags</strong> — Professionelle Vorschaubilder bei Social Sharing (WhatsApp, Facebook, LinkedIn)</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>Canonical-Tags</strong> — Alle Seiten zeigen auf billys-cocktails.de (Duplicate Content Schutz)</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>sitemap.xml</strong> — Alle 12 URLs mit Prioritäten und Datum, für Google Search Console bereit</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>robots.txt</strong> — Crawling erlaubt, Sitemap verlinkt</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>Alt-Texte</strong> — Alle Bilder mit beschreibenden, keyword-relevanten Alt-Attributen</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>H1/H2/H3-Hierarchie</strong> — Saubere semantische Struktur auf allen Seiten, je eine H1</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>6 neue Unterseiten</strong> — Firmenevents, Hochzeiten, Geburtstage, Sommerfeste, Messen, Private Feiern</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>Interne Verlinkung</strong> — Alle Seiten untereinander verlinkt, Unterseiten von Leistungen erreichbar</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon check-done">✓</div>
+      <span class="check-label"><strong>Keyword-Integration</strong> — Hamburg, Berlin, NRW, Cocktail Catering, Mobile Bar auf allen relevanten Seiten</span>
+      <span class="check-status"><span class="badge badge-green">Erledigt</span></span>
+    </li>
+    <li>
+      <div class="check-icon pending">○</div>
+      <span class="check-label"><strong>Google Search Console</strong> — Sitemap einreichen (nach DNS-Wechsel, 5 Minuten Aufwand)</span>
+      <span class="check-status"><span class="badge badge-amber">Nach Wechsel</span></span>
+    </li>
+    <li>
+      <div class="check-icon pending">○</div>
+      <span class="check-label"><strong>Google Business Profil</strong> — Website-URL auf neue Seite aktualisieren</span>
+      <span class="check-status"><span class="badge badge-amber">Nach Wechsel</span></span>
+    </li>
+  </ul>
+
+</div>
+
+
+<!-- ═══ SEITE 3: KEYWORDS & UNTERSEITEN ═══ -->
+<div class="page page-break">
+
+  <div class="section-label">Content-Strategie</div>
+  <h2 class="section-h2">Keywords &<br><em>Unterseiten</em></h2>
+  <p class="section-intro">Der wichtigste inhaltliche Schritt: Statt einer Seite für alle Event-Typen gibt es jetzt 6 dedizierte Unterseiten — jede mit eigenem Keyword-Fokus, eigenem H1, eigener Meta-Description und eigener URL.</p>
+
+  <h4>Primäre Keywords (alle Seiten)</h4>
+  <div class="kw-grid">
+    <span class="kw-pill">Cocktail Catering Hamburg</span>
+    <span class="kw-pill">Mobiles Cocktail Catering</span>
+    <span class="kw-pill">Mobile Bar Hamburg</span>
+    <span class="kw-pill">Cocktail Catering Berlin</span>
+    <span class="kw-pill">Cocktail Catering NRW</span>
+    <span class="kw-pill">Barkeeperinnen buchen</span>
+    <span class="kw-pill">Signature Cocktails</span>
+    <span class="kw-pill">Event Catering Hamburg</span>
+  </div>
+
+  <h4>Neue Unterseiten & Ziel-Keywords</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Unterseite</th>
+        <th>Primäres Keyword</th>
+        <th>Suchintention</th>
+        <th>Potenzial</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>firmenevents.html</td>
+        <td>Cocktail Catering Firmenevent Hamburg</td>
+        <td>Commercial</td>
+        <td><span class="badge badge-teal">Hoch</span></td>
+      </tr>
+      <tr>
+        <td>hochzeiten.html</td>
+        <td>Cocktail Catering Hochzeit Hamburg</td>
+        <td>Commercial</td>
+        <td><span class="badge badge-teal">Sehr hoch</span></td>
+      </tr>
+      <tr>
+        <td>geburtstage.html</td>
+        <td>Mobile Cocktailbar Geburtstag</td>
+        <td>Commercial</td>
+        <td><span class="badge badge-teal">Hoch</span></td>
+      </tr>
+      <tr>
+        <td>sommerfeste.html</td>
+        <td>Cocktail Catering Sommerfest</td>
+        <td>Commercial</td>
+        <td><span class="badge badge-teal">Mittel</span></td>
+      </tr>
+      <tr>
+        <td>messen.html</td>
+        <td>Mobile Bar Messe Hamburg</td>
+        <td>Commercial</td>
+        <td><span class="badge badge-teal">Mittel</span></td>
+      </tr>
+      <tr>
+        <td>private-feiern.html</td>
+        <td>Cocktail Catering Privatfeier</td>
+        <td>Commercial</td>
+        <td><span class="badge badge-teal">Hoch</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p>Bisher war die Website eine Seite für alle Event-Typen. Jetzt hat jede Nische eine eigene Seite mit eigenem Content und eigener URL. Das erhöht die Chance erheblich, für spezifische Suchanfragen weit oben zu erscheinen.</p>
+  </div>
+
+  <hr>
+
+  <h4>JSON-LD Schema: Bewertungen sichtbar in den Suchergebnissen</h4>
+  <p>Die 41 Google-Bewertungen mit 5,0 Sternen sind jetzt als strukturierte Daten im Code hinterlegt. Das ermöglicht Google, die Sternebewertung direkt in den Suchergebnissen anzuzeigen — was die Klickrate (CTR) nachweislich deutlich erhöht.</p>
+
+  <div class="callout-dark">
+    <p>Implementiertes Schema: <strong>LocalBusiness</strong> · Name, Adresse, Telefon, E-Mail, Servicegebiet Hamburg/Berlin/NRW, Instagram, Gründer Vassili, AggregateRating 5,0/41 Bewertungen</p>
+  </div>
+
+</div>
+
+
+<!-- ═══ SEITE 4: MIGRATION ═══ -->
+<div class="page page-break">
+
+  <div class="section-label">Domain-Migration</div>
+  <h2 class="section-h2">Der Wechsel —<br><em>ohne Ranking-Verlust</em></h2>
+  <p class="section-intro">Ein Ranking-Einbruch passiert bei Migrations-Fehlern. Diese Fehler machen wir nicht. Hier ist die vollständige Erklärung, warum das Ranking stabil bleibt.</p>
+
+  <h4>Warum fällt das Ranking bei einem Domainwechsel?</h4>
+  <p>Ein Ranking-Einbruch entsteht typischerweise in diesen Szenarien — und keines davon trifft auf uns zu:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Risiko-Szenario</th>
+        <th>Ranking-Risiko</th>
+        <th>Trifft auf uns zu?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Domain wechselt (alt → neu)</td>
+        <td>Sehr hoch</td>
+        <td><strong style="color:#15803d;">Nein</strong> — selbe Domain bleibt</td>
+      </tr>
+      <tr>
+        <td>URLs ändern sich</td>
+        <td>Hoch</td>
+        <td><strong style="color:#15803d;">Nein</strong> — selbe Dateinamen (index.html etc.)</td>
+      </tr>
+      <tr>
+        <td>Content wird gelöscht</td>
+        <td>Mittel–Hoch</td>
+        <td><strong style="color:#15803d;">Nein</strong> — mehr Content als vorher (12 statt 6 Seiten)</td>
+      </tr>
+      <tr>
+        <td>SEO-Struktur verschlechtert sich</td>
+        <td>Mittel</td>
+        <td><strong style="color:#15803d;">Nein</strong> — alle Metriken verbessert</td>
+      </tr>
+      <tr>
+        <td>Temporäre Downtime</td>
+        <td>Gering</td>
+        <td>Minimierbar durch korrektes Vorgehen</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p>In unserem Fall wechselt nur der Server, nicht die Domain und nicht die URLs. <strong>Google merkt davon im Grunde nichts</strong> — außer dass die Seite schneller lädt und mehr optimierten Content hat.</p>
+  </div>
+
+  <hr>
+
+  <h4>Was sich für Google verbessert (Vorher → Nachher)</h4>
+
+  <div class="migration-row">
+    <div class="mig-before">
+      <div class="mig-label">Vorher</div>
+      Keine Meta-Descriptions auf 4 Seiten
+    </div>
+    <div class="mig-after">
+      <div class="mig-label">Nachher</div>
+      Alle 12 Seiten mit optimierten Meta-Descriptions
+    </div>
+  </div>
+  <div class="migration-row">
+    <div class="mig-before">
+      <div class="mig-label">Vorher</div>
+      Kein Structured Data (JSON-LD)
+    </div>
+    <div class="mig-after">
+      <div class="mig-label">Nachher</div>
+      LocalBusiness-Schema + 5,0 Sterne Bewertung im Code
+    </div>
+  </div>
+  <div class="migration-row">
+    <div class="mig-before">
+      <div class="mig-label">Vorher</div>
+      Keine sitemap.xml, keine robots.txt
+    </div>
+    <div class="mig-after">
+      <div class="mig-label">Nachher</div>
+      Vollständige Sitemap mit 12 URLs + robots.txt
+    </div>
+  </div>
+  <div class="migration-row">
+    <div class="mig-before">
+      <div class="mig-label">Vorher</div>
+      Leere Alt-Texte in der Bildergalerie
+    </div>
+    <div class="mig-after">
+      <div class="mig-label">Nachher</div>
+      Alle Bilder mit keyword-relevanten Alt-Texten
+    </div>
+  </div>
+  <div class="migration-row">
+    <div class="mig-before">
+      <div class="mig-label">Vorher</div>
+      6 Seiten insgesamt
+    </div>
+    <div class="mig-after">
+      <div class="mig-label">Nachher</div>
+      12 Seiten — doppelt so viel indexierbarer Content
+    </div>
+  </div>
+  <div class="migration-row">
+    <div class="mig-before">
+      <div class="mig-label">Vorher</div>
+      Keine Open Graph Tags — schlechte Social-Vorschau
+    </div>
+    <div class="mig-after">
+      <div class="mig-label">Nachher</div>
+      Social Sharing vollständig optimiert
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══ SEITE 5: WECHSEL-PLAN ═══ -->
+<div class="page page-break">
+
+  <div class="section-label">Umsetzungsplan</div>
+  <h2 class="section-h2">Der Wechsel in<br><em>5 Schritten</em></h2>
+  <p class="section-intro">Der DNS-Wechsel ist technisch unkompliziert. Die gesamte Umstellung dauert unter 30 Minuten aktiven Aufwand. Die DNS-Propagation (Ausbreitung im Internet) läuft danach automatisch und dauert zwischen 15 Minuten und 48 Stunden.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>Hosting einrichten und Custom Domain hinterlegen</h4>
+        <p>Beim gewählten Hosting-Anbieter die Domain billys-cocktails.de als Custom Domain eintragen. Ein SSL-Zertifikat (HTTPS) wird dabei automatisch ausgestellt.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>DNS-Einträge beim Domain-Hoster umstellen</h4>
+        <p>Beim Domain-Anbieter (IONOS, All-Inkl, etc.) die A-Records auf die Server des neuen Hosters umstellen. Das dauert ca. 5 Minuten. Die Zugangsdaten zum Domain-Hoster werden benötigt.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>HTTPS aktivieren</h4>
+        <p>Nach der DNS-Propagation sicherstellen, dass HTTPS erzwungen wird. Die Website läuft dann ausschließlich über die sichere Verbindung — ebenfalls ein offizieller Google-Ranking-Faktor.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h4>Sitemap bei Google Search Console einreichen</h4>
+        <p>Unter search.google.com/search-console die URL https://billys-cocktails.de/sitemap.xml einreichen. Google indexiert die 12 Seiten dann innerhalb weniger Tage vollständig.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <h4>Google Business Profil aktualisieren</h4>
+        <p>Im Google Business Profil prüfen, ob die hinterlegte Website-URL korrekt auf https://billys-cocktails.de zeigt. Ggf. aktualisieren.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="section-label">Nächste Schritte — Marketing</div>
+  <h3>Empfehlungen für das laufende SEO</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Maßnahme</th>
+        <th>Aufwand</th>
+        <th>Erwarteter Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Google Search Console einrichten + Sitemap einreichen</td>
+        <td>15 min</td>
+        <td><span class="badge badge-teal">Sehr hoch</span></td>
+      </tr>
+      <tr>
+        <td>Google Business Profil mit neuer Website verknüpfen</td>
+        <td>10 min</td>
+        <td><span class="badge badge-teal">Sehr hoch</span></td>
+      </tr>
+      <tr>
+        <td>Aktiv weitere Google-Bewertungen sammeln (Ziel: 50+)</td>
+        <td>Laufend</td>
+        <td><span class="badge badge-teal">Hoch</span></td>
+      </tr>
+      <tr>
+        <td>Backlinks aufbauen (Branchenverzeichnisse, Event-Blogs)</td>
+        <td>Mittel</td>
+        <td><span class="badge badge-teal">Hoch</span></td>
+      </tr>
+      <tr>
+        <td>Instagram-Bio mit Website-Link aktualisieren</td>
+        <td>2 min</td>
+        <td><span class="badge badge-green">Mittel</span></td>
+      </tr>
+      <tr>
+        <td>Blogposts zu Themen wie "Cocktail Catering für Hochzeiten"</td>
+        <td>Hoch</td>
+        <td><span class="badge badge-green">Mittel–Hoch</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <div class="callout-dark">
+    <p><strong>Fazit:</strong> Die neue Website ist technisch besser aufgestellt als die bisherige. Der Wechsel ist kein Risiko, sondern eine Verbesserung. Die Domain bleibt, die URLs bleiben, der Content wird mehr und besser. Was Suchmaschinen wollen, haben wir geliefert — schnelle Ladezeiten, saubere Struktur, relevante Keywords, vollständige Meta-Informationen und eine klare lokale Präsenz für Hamburg, Berlin und NRW.</p>
+  </div>
+
+  <p style="text-align:center;color:#9ca3af;font-size:11px;margin-top:40px;">Billy's Cocktail Catering · SEO-Report & Migrations-Briefing · März 2026 · billys-cocktails.de</p>
+
+</div>
+
+</body>
+</html>

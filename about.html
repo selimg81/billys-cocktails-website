@@ -96,6 +96,18 @@
 
 <footer class="footer">
   <div class="container">
+    <div class="footer-newsletter-wrap">
+      <div class="footer-newsletter-text">
+        <h3 data-i18n="footer-nl-h">Stay Connected</h3>
+        <p class="footer-newsletter-sub" data-i18n="footer-nl-sub">Neuigkeiten und exklusive Angebote direkt in dein Postfach.</p>
+      </div>
+      <form class="footer-newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" class="footer-newsletter-input" placeholder="Deine E-Mail-Adresse" data-i18n-placeholder="footer-nl-placeholder" required />
+        <button type="submit" class="footer-newsletter-btn" aria-label="Abonnieren">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
     <div class="footer-top">
       <div>
         <img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="footer-logo" />
@@ -115,8 +127,27 @@
           <h4 class="footer-h4" data-i18n="footer-contact-h">Kontakt</h4>
           <div class="footer-contact">
             <a href="tel:+4917399277730">+49 173 9927773</a><br />
-            <a href="mailto:info@billys-cocktails.de">info@billys-cocktails.de</a><br />
-            <a href="https://www.instagram.com/billyscocktails" target="_blank" rel="noopener">@billyscocktails</a>
+            <a href="mailto:info@billys-cocktails.de">info@billys-cocktails.de</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-h4" data-i18n="footer-social-h">Folge uns</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/billyscocktails" class="footer-social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+          <div class="footer-darkmode">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <button class="footer-dm-toggle" id="dm-toggle" role="switch" aria-checked="false" aria-label="Dark Mode umschalten"><span class="footer-dm-thumb"></span></button>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span class="footer-dm-label" data-i18n="footer-dm-label">Dark Mode</span>
           </div>
         </div>
       </div>

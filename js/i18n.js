@@ -104,6 +104,11 @@ const TRANSLATIONS = {
     /* Footer */
     'footer-desc':'Mobiles Cocktail Catering',
     'footer-pages':'Seiten','footer-contact-h':'Kontakt',
+    'footer-social-h':'Folge uns',
+    'footer-nl-h':'Stay Connected',
+    'footer-nl-sub':'Neuigkeiten und exklusive Angebote direkt in dein Postfach.',
+    'footer-nl-placeholder':'Deine E-Mail-Adresse',
+    'footer-dm-label':'Dark Mode',
     'footer-imprint':'Impressum','footer-privacy':'Datenschutz',
 
     /* leistungen.html */
@@ -287,6 +292,11 @@ const TRANSLATIONS = {
     /* Footer */
     'footer-desc':'Mobile Cocktail Catering',
     'footer-pages':'Pages','footer-contact-h':'Contact',
+    'footer-social-h':'Follow Us',
+    'footer-nl-h':'Stay Connected',
+    'footer-nl-sub':'Get the latest updates and exclusive offers in your inbox.',
+    'footer-nl-placeholder':'Your email address',
+    'footer-dm-label':'Dark Mode',
     'footer-imprint':'Imprint','footer-privacy':'Privacy',
 
     /* leistungen.html */

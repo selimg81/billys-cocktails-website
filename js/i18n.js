@@ -175,7 +175,7 @@ const TRANSLATIONS = {
     'hero-tag':'Where Elegance Meets Mixology · Hamburg · Berlin · NRW',
     'hero-h1':'Your Event.',
     'hero-h1-em':'Our Cocktails.',
-    'hero-sub':'We bring the full bar experience to you — crafted drinks, expert hands, and a setup your guests will remember.',
+    'hero-sub':'We bring the full bar experience to you: crafted drinks, expert hands, and a setup your guests will remember.',
     'hero-cta1':'Get in touch',
     'hero-cta2':'See what we do',
 

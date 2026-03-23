@@ -360,12 +360,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sec-white .evt-text { color: rgba(255,255,255,0.62); }
 .sec-white .evt-icon { filter: brightness(0) invert(1); opacity: 0.75; }
 .sec-white .evt-arrow { color: rgba(255,255,255,0.8); }
-/* Service cards on petrol */
-.sec-white .srv-card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
-.sec-white .srv-card:hover { background: rgba(255,255,255,0.14); box-shadow: 0 20px 60px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.2); }
-.sec-white .srv-num { color: rgba(255,255,255,0.1); }
-.sec-white .srv-title { color: #fff; }
-.sec-white .srv-text { color: rgba(255,255,255,0.65); }
+/* Service cards on petrol — Altweiss */
+.sec-white .srv-card { background: #F5F2EC; border-color: rgba(245,242,236,0.2); }
+.sec-white .srv-card:hover { background: #FAF8F4; box-shadow: 0 20px 60px rgba(0,0,0,0.2); border-color: rgba(245,242,236,0.4); transform: translateY(-4px); }
+.sec-white .srv-num { color: rgba(26,110,115,0.12); }
+.sec-white .srv-title { color: var(--dark); }
+.sec-white .srv-text { color: var(--gray); }
 /* Cocktail cards on petrol (cocktails.html) */
 .sec-white .ck-full-card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
 .sec-white .ck-full-card:hover { box-shadow: 0 20px 60px rgba(0,0,0,0.3); background: rgba(255,255,255,0.12); }
@@ -414,7 +414,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sec-header-center .sec-sub { margin: 0 auto 48px; }
 
 /* ── SERVICE CARDS ── */
-.srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 20px; margin-top: 48px; }
+.srv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
 .srv-card {
   background: var(--white); border-radius: 20px; padding: 36px 32px;
   position: relative; overflow: hidden;

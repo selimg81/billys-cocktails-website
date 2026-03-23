@@ -14,7 +14,8 @@ const TRANSLATIONS = {
     'mqt-priv':'Private Feiern','mqt-bday':'Geburtstage','mqt-sum':'Sommerfeste',
 
     /* index — Hero */
-    'usp-badge':'Nur was ihr trinkt',
+    'usp-badge':'Verbrauchsgarantie',
+    'usp-badge-sub':'Ihr zahlt am Ende nur, was wirklich getrunken wurde.',
     'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
     'hero-h1':'Dein Event.',
     'hero-h1-em':'Unsere Cocktails.',
@@ -196,7 +197,8 @@ const TRANSLATIONS = {
     'mqt-priv':'Private Parties','mqt-bday':'Birthdays','mqt-sum':'Summer Parties',
 
     /* index — Hero */
-    'usp-badge':'Pay only what you drink',
+    'usp-badge':'Consumption Guarantee',
+    'usp-badge-sub':'You only pay for what was actually consumed.',
     'hero-tag':'Where Elegance Meets Mixology · Hamburg · Berlin · NRW',
     'hero-h1':'Your Event.',
     'hero-h1-em':'Our Cocktails.',

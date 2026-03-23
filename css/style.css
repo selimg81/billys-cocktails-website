@@ -272,18 +272,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   animation: fadeUp 0.9s 1s var(--ease) forwards;
 }
 .hero-usp {
-  display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 20px;
-  padding: 8px 16px;
-  background: rgba(26,110,115,0.12);
-  border: 1px solid rgba(26,110,115,0.25);
-  border-radius: 100px;
-  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  display: inline-flex; align-items: flex-start; gap: 10px;
+  margin-top: 24px;
+  padding: 12px 18px;
+  background: rgba(26,110,115,0.1);
+  border: 1px solid rgba(26,110,115,0.22);
+  border-radius: 12px;
   color: var(--petrol);
   opacity: 0; transform: translateY(12px);
   animation: fadeUp 0.8s 1.2s var(--ease) forwards;
 }
-.hero-usp svg { flex-shrink: 0; }
+.hero-usp svg { flex-shrink: 0; margin-top: 3px; }
+.hero-usp-title { font-size: 13px; font-weight: 600; letter-spacing: 0.05em; line-height: 1.3; }
+.hero-usp-sub { font-size: 12px; font-weight: 400; opacity: 0.75; margin-top: 2px; line-height: 1.4; }
 
 /* Mobile Hero: video as background */
 @media (max-width: 768px) {

@@ -755,6 +755,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .mob-link-icon { width: 28px; height: 28px; display: inline-block; vertical-align: middle; margin-right: 18px; opacity: 0.65; flex-shrink: 0; }
 
 /* ── BAR COMPARISON SLIDER ── */
+.bar-compare-layout { display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center; }
+.bar-compare-text .sec-h2 { margin-bottom: 20px; }
+.bar-seo-p { font-size: 15px; color: var(--stone); line-height: 1.8; margin-bottom: 16px; }
+.bar-seo-p strong { color: var(--dark); font-weight: 600; }
+.bar-features { list-style: none; padding: 0; margin: 24px 0 32px; display: flex; flex-direction: column; gap: 10px; }
+.bar-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--stone); }
+.bar-features li svg { color: var(--petrol); flex-shrink: 0; }
 .bar-compare { border-radius: 16px; overflow: hidden; cursor: ew-resize; user-select: none; touch-action: pan-y; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
 .bar-compare-inner { position: relative; width: 100%; aspect-ratio: 4/5; max-height: 80vh; }
 .bar-compare-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -764,14 +771,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .bar-compare-label { position: absolute; top: 16px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: rgba(0,0,0,0.35); padding: 5px 13px; border-radius: 100px; backdrop-filter: blur(8px); pointer-events: none; }
 .bar-compare-label-l { left: 16px; }
 .bar-compare-label-r { right: 16px; }
-.bar-specs { display: flex; gap: 0; justify-content: center; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid rgba(0,0,0,0.07); padding-top: 40px; }
-.bar-spec { text-align: center; padding: 0 40px; border-right: 1px solid rgba(0,0,0,0.07); }
-.bar-spec:last-child { border-right: none; }
+.bar-specs { display: flex; gap: 0; flex-wrap: wrap; border-top: 1px solid rgba(0,0,0,0.07); padding-top: 28px; margin-top: 0; }
+.bar-spec { text-align: center; padding: 0 28px 0 0; margin-right: 28px; border-right: 1px solid rgba(0,0,0,0.07); }
+.bar-spec:first-child { padding-left: 0; }
+.bar-spec:last-child { border-right: none; margin-right: 0; }
 .bar-spec-val { display: block; font-size: clamp(22px,3vw,28px); font-weight: 600; color: var(--petrol); font-family: var(--f-display); line-height: 1.1; }
 .bar-spec-label { display: block; font-size: 11px; color: var(--stone); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 6px; }
+@media (max-width: 960px) {
+  .bar-compare-layout { grid-template-columns: 1fr; gap: 40px; }
+  .bar-compare-text .sec-h2 { text-align: center !important; }
+  .bar-compare-text .label { display: block; text-align: center; }
+  .bar-specs { justify-content: center; }
+  .bar-spec { padding: 0 20px; margin-right: 0; }
+}
 @media (max-width: 600px) {
-  .bar-specs { gap: 20px; }
-  .bar-spec { border-right: none; padding: 0 20px; }
   .bar-compare-handle-pill { width: 36px; height: 36px; }
 }
 

@@ -288,31 +288,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const barCompare = document.getElementById('bar-compare');
   if (barCompare) {
     const inner = barCompare.querySelector('.bar-compare-inner');
-    const afterImg = barCompare.querySelector('.bar-compare-after');
+    const beforeImg = barCompare.querySelector('.bar-compare-before');
     const handle = barCompare.querySelector('.bar-compare-handle');
     let dragging = false;
     let animated = false;
 
-    const setPos = (p) => {
-      p = Math.min(100, Math.max(0, p));
-      afterImg.style.clipPath = `inset(0 0 0 ${p}%)`;
-      handle.style.left = `${p}%`;
+    // x = handle position from left (0–100%)
+    // before (image 2, top layer): clips inset(0 0 0 x%) → hides x% from left
+    //   x=0  → before fully visible (image 2 everywhere)
+    //   x=50 → before visible on right half only, image 1 shows on left half
+    //   x=100 → before hidden, image 1 (after) fully visible
+    const setPos = (x) => {
+      x = Math.min(100, Math.max(0, x));
+      beforeImg.style.clipPath = `inset(0 0 0 ${x}%)`;
+      handle.style.left = `${x}%`;
     };
-    setPos(50);
+    setPos(0); // start: image 2 fully visible
 
     const animateIntro = () => {
       if (animated) return;
       animated = true;
-      const dur1 = 1600, dur2 = 1000;
-      // phase 1: center → right (100)
+      const dur1 = 1800, dur2 = 1000;
+      // phase 1: 0 → 100 (handle sweeps left→right, revealing image 1)
       const t1 = performance.now();
       const phase1 = (now) => {
         const p = Math.min((now - t1) / dur1, 1);
         const e = p < 0.5 ? 2*p*p : -1+(4-2*p)*p;
-        setPos(50 + e * 50);
+        setPos(e * 100);
         if (p < 1) requestAnimationFrame(phase1);
         else {
-          // phase 2: right (100) → center (50)
+          // phase 2: 100 → 50 (return to center)
           const t2 = performance.now();
           const phase2 = (now2) => {
             const p2 = Math.min((now2 - t2) / dur2, 1);
@@ -331,15 +336,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.3 });
     ioCompare.observe(barCompare);
 
-    const getP = (clientX) => {
+    const getX = (clientX) => {
       const rect = inner.getBoundingClientRect();
       return ((clientX - rect.left) / rect.width) * 100;
     };
-    inner.addEventListener('mousedown', (e) => { dragging = true; setPos(getP(e.clientX)); });
-    window.addEventListener('mousemove', (e) => { if (dragging) setPos(getP(e.clientX)); });
+    inner.addEventListener('mousedown', (e) => { dragging = true; setPos(getX(e.clientX)); });
+    window.addEventListener('mousemove', (e) => { if (dragging) setPos(getX(e.clientX)); });
     window.addEventListener('mouseup', () => { dragging = false; });
-    inner.addEventListener('touchstart', (e) => { setPos(getP(e.touches[0].clientX)); }, { passive: true });
-    inner.addEventListener('touchmove', (e) => { e.preventDefault(); setPos(getP(e.touches[0].clientX)); }, { passive: false });
+    inner.addEventListener('touchstart', (e) => { setPos(getX(e.touches[0].clientX)); }, { passive: true });
+    inner.addEventListener('touchmove', (e) => { e.preventDefault(); setPos(getX(e.touches[0].clientX)); }, { passive: false });
   }
 
 });

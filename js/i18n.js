@@ -16,7 +16,7 @@ const TRANSLATIONS = {
     /* index — Hero */
     'usp-badge':'Verbrauchsgarantie',
     'usp-badge-sub':'Ihr zahlt am Ende nur, was wirklich getrunken wurde.',
-    'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
+    'hero-tag':'Cocktail Catering',
     'hero-h1':'Dein Event.',
     'hero-h1-em':'Unsere Cocktails.',
     'hero-sub':'Wir bringen die Bar zu dir, mit Drinks, die deine Gäste lieben werden.',
@@ -204,7 +204,7 @@ const TRANSLATIONS = {
     /* index — Hero */
     'usp-badge':'Consumption Guarantee',
     'usp-badge-sub':'You only pay for what was actually consumed.',
-    'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
+    'hero-tag':'Cocktail Catering',
     'hero-h1':'Your Event.',
     'hero-h1-em':'Our Cocktails.',
     'hero-sub':'We bring the full bar experience to you: crafted drinks, expert hands, and a setup your guests will remember.',

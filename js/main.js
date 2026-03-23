@@ -284,6 +284,64 @@ document.addEventListener('DOMContentLoaded', () => {
   localStorage.removeItem('billys-dark');
   document.documentElement.classList.remove('dark');
 
+  // ── BAR COMPARISON SLIDER ──
+  const barCompare = document.getElementById('bar-compare');
+  if (barCompare) {
+    const inner = barCompare.querySelector('.bar-compare-inner');
+    const afterImg = barCompare.querySelector('.bar-compare-after');
+    const handle = barCompare.querySelector('.bar-compare-handle');
+    let dragging = false;
+    let animated = false;
+
+    const setPos = (p) => {
+      p = Math.min(100, Math.max(0, p));
+      afterImg.style.clipPath = `inset(0 0 0 ${p}%)`;
+      handle.style.left = `${p}%`;
+    };
+    setPos(50);
+
+    const animateIntro = () => {
+      if (animated) return;
+      animated = true;
+      const dur1 = 1600, dur2 = 1000;
+      // phase 1: center → right (100)
+      const t1 = performance.now();
+      const phase1 = (now) => {
+        const p = Math.min((now - t1) / dur1, 1);
+        const e = p < 0.5 ? 2*p*p : -1+(4-2*p)*p;
+        setPos(50 + e * 50);
+        if (p < 1) requestAnimationFrame(phase1);
+        else {
+          // phase 2: right (100) → center (50)
+          const t2 = performance.now();
+          const phase2 = (now2) => {
+            const p2 = Math.min((now2 - t2) / dur2, 1);
+            const e2 = 1 - Math.pow(1 - p2, 3);
+            setPos(100 - e2 * 50);
+            if (p2 < 1) requestAnimationFrame(phase2);
+          };
+          requestAnimationFrame(phase2);
+        }
+      };
+      requestAnimationFrame(phase1);
+    };
+
+    const ioCompare = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setTimeout(animateIntro, 400); ioCompare.unobserve(barCompare); }
+    }, { threshold: 0.3 });
+    ioCompare.observe(barCompare);
+
+    const getP = (clientX) => {
+      const rect = inner.getBoundingClientRect();
+      return ((clientX - rect.left) / rect.width) * 100;
+    };
+    inner.addEventListener('mousedown', (e) => { dragging = true; setPos(getP(e.clientX)); });
+    window.addEventListener('mousemove', (e) => { if (dragging) setPos(getP(e.clientX)); });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    inner.addEventListener('touchstart', (e) => { setPos(getP(e.touches[0].clientX)); }, { passive: true });
+    inner.addEventListener('touchmove', (e) => { e.preventDefault(); setPos(getP(e.touches[0].clientX)); }, { passive: false });
+  }
+
 });
 
 // ── NEWSLETTER SUBMIT ──

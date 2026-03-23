@@ -25,7 +25,7 @@ const TRANSLATIONS = {
     'srv-label':'Was wir mitbringen',
     'srv-h2':'Vier Versprechen',
     'srv-h2-em':'an dich',
-    'srv1-title':'Professionelle Barkeeperinnen',
+    'srv1-title':'Professionelle Barkeeper:innen',
     'srv1-text':'Unser Team bringt jahrelange Erfahrung, Stil und echte Leidenschaft für das Handwerk mit. Jeder Gast verdient denselben Anspruch an Qualität und persönlichem Service.',
     'srv2-title':'Individuelle Cocktailkreationen',
     'srv2-text':'Cocktails in deinen Firmenfarben, individuelle Kreationen für deinen Anlass. Von klassisch bis kreativ. Alles ist möglich.',
@@ -80,7 +80,7 @@ const TRANSLATIONS = {
     /* index — FAQ */
     'faq-label':'Häufige Fragen',
     'faq-h2':'Alles, was du','faq-h2-em':'wissen willst',
-    'faq1-q':'Was kostet es, einen Barkeeper oder eine Barkeeeperin zu mieten?',
+    'faq1-q':'Was kostet es, eine:n Barkeeper:in zu mieten?',
     'faq1-a':'Die Kosten hängen von Eventdauer, Gästeanzahl und gewünschtem Paket ab. Wir bieten transparente Paketpreise und erstellen dir gerne ein individuelles Angebot. Kontaktiere uns einfach für ein kostenloses Erstgespräch.',
     'faq2-q':'Ist es möglich, ausschließlich Barpersonal zu buchen?',
     'faq2-a':'Ja, das ist möglich. Wenn du bereits eine eigene Bar oder Equipment hast, stellen wir dir erfahrenes Barpersonal ohne Ausstattungspaket zur Verfügung. Sprich uns gerne an.',
@@ -95,7 +95,7 @@ const TRANSLATIONS = {
     'faq7-q':'Woher kommt ihr und wohin fahrt ihr?',
     'faq7-a':'Wir sind in Hamburg ansässig und aktiv in Hamburg, Berlin und NRW. Für besondere Events kommen wir auch bundesweit und auf Anfrage international zu euch.',
     'faq8-q':'Was empfehlt ihr für eine private Feier?',
-    'faq8-a':'Unser All-inclusive-Paket eignet sich perfekt: mobile Bar, professionelle Barkeeperinnen, Marken-Spirituosen und individuelle Cocktailkreationen. Ideal für 20 bis 200 Gäste.',
+    'faq8-a':'Unser All-inclusive-Paket eignet sich perfekt: mobile Bar, professionelle Barkeeper:innen, Marken-Spirituosen und individuelle Cocktailkreationen. Ideal für 20 bis 200 Gäste.',
 
     /* Footer */
     'footer-desc':'Mobiles Cocktail Catering',
@@ -127,7 +127,7 @@ const TRANSLATIONS = {
     'srvlist-priv':'Private Feiern',
     'srvlist-priv-text':'Jubiläen, Housewarmings, Geburtstagsfeiern. Wir bringen das gewisse Extra zu eurer Feier.',
     'incl-h2':'Alles','incl-h2-em':'inklusive',
-    'incl1':'Professionelle Barkeeperinnen','incl2':'Stilvolle Mobile Bar',
+    'incl1':'Professionelle Barkeeper:innen','incl2':'Stilvolle Mobile Bar',
     'incl3':'Marken-Spirituosen & Zutaten','incl4':'Hochwertige Gläser',
     'incl5':'Individuelle Cocktailkarte','incl6':'Kompletter Auf- & Abbau',
     'incl-cta':'Jetzt anfragen',
@@ -153,7 +153,7 @@ const TRANSLATIONS = {
     /* about.html */
     'abt-label':'Über uns','abt-h1':'Hi, ich bin','abt-h1-em':'Vassili',
     'abt-p1':'Meine Reise in die Cocktailwelt begann vor einigen Jahren bei einem großen Event-Caterer mit Fokus auf Cocktail-Catering. Dort habe ich das Handwerk von Grund auf gelernt, von der Pike auf.',
-    'abt-p2':'Ich reiste mit der mobilen Bar von Event zu Event, lernte was funktioniert und was nicht, und verfeinerte meine Skills parallel als Barkeeper in einem bekannten Hamburger Club.',
+    'abt-p2':'Ich reiste mit der mobilen Bar von Event zu Event, lernte was funktioniert und was nicht, und verfeinerte meine Skills parallel als Barkeeper:in in einem bekannten Hamburger Club.',
     'abt-p3':'Aus dieser Erfahrung, meiner Liebe zum Kundenkontakt und einer ordentlichen Portion Gründergeist ist Billy\'s Cocktail Catering entstanden. Heute sorgen wir mit unserem Team auf Events jeder Größe für richtig gute Drinks und noch bessere Stimmung.',
     'abt-quote':'„Unser Anspruch: Jeder Gast soll den Abend mit einem Lächeln verlassen."',
     'abt-cite':'Vassili, Gründer',

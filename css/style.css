@@ -631,6 +631,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .rev-text { font-size: 14px; color: #555; line-height: 1.7; overflow: hidden; max-height: 142px; transition: max-height 0.65s var(--ease); }
 .rev-card:hover .rev-text { max-height: 800px; }
 .rev-gicon { margin-left: auto; flex-shrink: 0; }
+.rev-hidden { display: none !important; }
+.rev-nav-dots { display: flex; justify-content: center; gap: 10px; padding: 28px 0 0; }
+.rev-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(26,110,115,0.2); cursor: pointer; transition: background 0.3s, transform 0.3s; border: none; padding: 0; }
+.rev-dot.active { background: var(--petrol); transform: scale(1.35); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {

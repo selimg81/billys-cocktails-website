@@ -88,11 +88,95 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hdr-inner {
   max-width: var(--max-w); margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  height: var(--header-h);
+  height: var(--header-h); position: relative;
 }
 .hdr-logo { height: 64px; width: auto; transition: filter 0.4s, height 0.4s; cursor: pointer; }
 .hdr.solid .hdr-logo { height: 52px; }
 
+/* Old hdr-nav hidden on desktop — replaced by tube-nav */
+.hdr-nav { display: none; }
+
+/* ── TUBE NAV (desktop pill inside header) ── */
+.tube-nav {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.tube-nav-inner {
+  display: flex; align-items: center; gap: 2px;
+  background: rgba(26,24,20,0.55);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-radius: 100px; padding: 4px;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+.hdr.solid .tube-nav-inner {
+  background: rgba(245,242,236,0.7);
+  border-color: rgba(26,110,115,0.12);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.tube-active-pill {
+  position: absolute; top: 4px; height: calc(100% - 8px);
+  border-radius: 100px;
+  background: rgba(26,110,115,0.18);
+  transition: left 0.4s cubic-bezier(0.34,1.56,0.64,1), width 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  pointer-events: none; z-index: 0;
+}
+.hdr.solid .tube-active-pill { background: rgba(26,110,115,0.12); }
+.tube-item {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; gap: 5px;
+  padding: 7px 15px; border-radius: 100px;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.2px;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.25s; white-space: nowrap;
+}
+.hdr.solid .tube-item { color: rgba(30,30,30,0.45); }
+.tube-item svg { width: 14px; height: 14px; flex-shrink: 0; }
+.tube-item:hover { color: rgba(255,255,255,0.9); }
+.hdr.solid .tube-item:hover { color: var(--dark); }
+.tube-item.active { color: #fff; font-weight: 600; }
+.hdr.solid .tube-item.active { color: var(--petrol); }
+/* Lamp bar */
+.tube-item.active::before {
+  content: ''; position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 26px; height: 2px;
+  background: var(--petrol); border-radius: 0 0 3px 3px;
+  box-shadow: 0 0 8px rgba(26,110,115,0.8), 0 0 20px rgba(26,110,115,0.4);
+}
+/* Lamp glow */
+.tube-item.active::after {
+  content: ''; position: absolute;
+  top: -10px; left: 50%; transform: translateX(-50%);
+  width: 50px; height: 20px;
+  background: radial-gradient(ellipse, rgba(26,110,115,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+/* ── TUBE BOTTOM NAV (mobile) ── */
+.tube-bottom {
+  display: none;
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 95;
+}
+.tube-bottom .tube-nav-inner {
+  background: rgba(20,18,14,0.88);
+  border-color: rgba(255,255,255,0.12);
+}
+.tube-bottom .tube-item { padding: 10px 16px; color: rgba(255,255,255,0.45); }
+.tube-bottom .tube-item span { display: none; }
+.tube-bottom .tube-item.active { color: var(--petrol); }
+/* Bottom lamp appears at bottom edge */
+.tube-bottom .tube-item.active::before {
+  top: auto; bottom: 0;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 0 8px rgba(26,110,115,0.8), 0 0 20px rgba(26,110,115,0.4);
+}
+.tube-bottom .tube-item.active::after {
+  top: auto; bottom: -10px;
+  background: radial-gradient(ellipse, rgba(26,110,115,0.25) 0%, transparent 70%);
+}
 .hdr-nav { display: flex; align-items: center; gap: 4px; }
 .nav-link {
   font-family: var(--f-body); font-size: 14px; font-weight: 500;
@@ -729,6 +813,10 @@ html.dark .hdr { background: rgba(20,18,14,0.97); border-bottom-color: rgba(255,
 @media (max-width: 840px) {
   .hdr-nav { display: none; }
   .hdr-burger { display: flex; }
+  .tube-nav { display: none; }
+  .tube-bottom { display: flex; }
+  .fixed-cta { display: none; }
+  body { padding-bottom: 80px; }
   .srv-grid { grid-template-columns: 1fr 1fr; }
   .footer-links { gap: 40px; }
 }

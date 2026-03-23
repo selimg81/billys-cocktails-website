@@ -210,6 +210,40 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   burger?.addEventListener('click', () => triggerMobStagger(menuOpen));
 
+  // ── TUBE NAV ──
+  (function() {
+    var path = window.location.pathname;
+    var page = path === '/' || path.endsWith('index.html') ? 'index'
+      : path.endsWith('leistungen.html') ? 'leistungen'
+      : path.endsWith('cocktails.html') ? 'cocktails'
+      : path.endsWith('about.html') ? 'about'
+      : path.endsWith('referenzen.html') ? 'referenzen'
+      : path.endsWith('kontakt.html') || path.endsWith('firmenevents.html') || path.endsWith('hochzeiten.html') ? 'kontakt'
+      : 'index';
+
+    function initTube(innerEl, pillEl) {
+      if (!innerEl || !pillEl) return;
+      var items = innerEl.querySelectorAll('.tube-item');
+      items.forEach(function(item) {
+        item.classList.toggle('active', item.dataset.tube === page);
+      });
+      function movePill() {
+        var active = innerEl.querySelector('.tube-item.active');
+        if (!active) return;
+        var innerRect = innerEl.getBoundingClientRect();
+        var activeRect = active.getBoundingClientRect();
+        pillEl.style.left = (activeRect.left - innerRect.left) + 'px';
+        pillEl.style.width = activeRect.width + 'px';
+      }
+      // Delay to let layout settle
+      setTimeout(movePill, 60);
+      window.addEventListener('resize', movePill);
+    }
+
+    initTube(document.getElementById('tube-inner'), document.getElementById('tube-pill'));
+    initTube(document.getElementById('tube-inner-mob'), document.getElementById('tube-pill-mob'));
+  })();
+
   // ── DARK MODE TOGGLE ──
   const dmToggle = document.getElementById('dm-toggle');
   if (dmToggle) {

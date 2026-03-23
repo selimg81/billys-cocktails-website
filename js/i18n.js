@@ -44,7 +44,7 @@ const TRANSLATIONS = {
     'evt-sub':'Wir sind überall dort, wo gute Drinks und gute Stimmung gefragt sind.',
     'evt1-title':'Firmenevents','evt1-text':'Weihnachtsfeiern, Teambuildings, Kick-offs. Wir passen uns an euren Vibe an.',
     'evt2-title':'Sommerfeste','evt2-text':'Erfrischende Cocktails unter freiem Himmel. Wir bringen Sommer-Vibes in jedes Glas.',
-    'evt3-title':'Hochzeiten','evt3-text':'Euer Tag, eure Drinks. Hauscocktails die zu euch passen, von der Trauung bis zum letzten Tanz.',
+    'evt3-title':'Hochzeiten','evt3-text':'Euer Tag, eure Drinks. Hauscocktails, die zu euch passen, von der Trauung bis zum letzten Tanz.',
     'evt4-title':'Messen & Großevents','evt4-text':'Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand.',
     'evt5-title':'Geburtstage','evt5-text':'Ob 30., 40. oder 50.: Mach deinen Geburtstag zum Event. Wir bringen alles mit.',
     'evt6-title':'Private Feiern','evt6-text':'Jubiläen, Housewarmings oder einfach Lust auf eine gute Party. Wir sind dabei.',
@@ -89,7 +89,7 @@ const TRANSLATIONS = {
     'faq3-q':'Wie früh sollte ich Billy\'s Cocktail Catering buchen?',
     'faq3-a':'Am besten so früh wie möglich, idealerweise 1 bis 2 Monate im Voraus, damit dein Wunschtermin sicher verfügbar ist. Gerade in der Hochzeitssaison und an Sommerwochenenden sind Termine schnell vergeben. Falls es kurzfristig ist, frag trotzdem gerne an. Schick uns eine kurze Anfrage und du erhältst schnell eine persönliche Rückmeldung.',
     'faq4-q':'Was ist bei Billy\'s alles im Service enthalten?',
-    'faq4-a':'Bei Billy\'s stellen wir uns genau auf dein Event ein. Du entscheidest, wie viel Unterstützung du benötigst, vom einzelnen Barkeeper:in bis zum kompletten Rundum-Service. Auf Wunsch bringen wir unsere mobile Bar mit, kümmern uns um Gläser, Zutaten sowie Auf- und Abbau, und stimmen die Cocktailauswahl gemeinsam mit dir ab. Damit du dich um nichts kümmern musst und dein Event einfach genießen kannst.',
+    'faq4-a':'Bei Billy\'s stellen wir uns genau auf dein Event ein. Du entscheidest, wie viel Unterstützung du benötigst, vom einzelnen Barkeeper:in bis zum kompletten Rundum-Service. Auf Wunsch bringen wir unsere mobile Bar mit, kümmern uns um Gläser, Zutaten sowie Auf- und Abbau und stimmen die Cocktailauswahl gemeinsam mit dir ab. Damit du dich um nichts kümmern musst und dein Event einfach genießen kannst.',
     'faq5-q':'Welche Cocktails und Longdrinks gibt es bei Billy\'s?',
     'faq5-a':'Bei Billy\'s erwartet dich eine vielseitige Auswahl an Klassikern und modernen Cocktails: Mojito, Moscow Mule, Whiskey Sour, Gin Basil Smash, fruchtige Sommerdrinks und vieles mehr. Gemeinsam stellen wir eine Karte zusammen, die perfekt zu deinem Event passt, inklusive ein bis zwei persönlicher Signature Cocktails, die deiner Bar eine besondere Note geben. Individuelle Wünsche und Lieblingsdrinks berücksichtigen wir selbstverständlich gerne.',
     'faq6-q':'Gibt es auch alkoholfreie Cocktails?',
@@ -119,7 +119,7 @@ const TRANSLATIONS = {
     'srvp2-title':'Hochzeiten & Geburtstage',
     'srvp2-text':'Euer Tag, eure Drinks. Wir kreieren individuelle Cocktailkreationen, die zu eurem Anlass passen.',
     'srvp3-title':'Messen & Großevents',
-    'srvp3-text':'Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand, mit Drinks die Gespräche starten.',
+    'srvp3-text':'Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand, mit Drinks, die Gespräche starten.',
     'srvp4-title':'Private Feiern',
     'srvp4-text':'Jubiläen, Housewarmings oder einfach Bock auf Party. Verleihe deinem Event den gewissen Touch.',
     /* leistungen.html — srv-list */
@@ -161,8 +161,8 @@ const TRANSLATIONS = {
 
     /* about.html */
     'abt-label':'Über uns','abt-h1':'Hi, ich bin','abt-h1-em':'Vassili',
-    'abt-p1':'Meine Reise in die Cocktailwelt begann vor einigen Jahren bei einem großen Event-Caterer mit Fokus auf Cocktail-Catering. Dort habe ich das Handwerk von Grund auf gelernt, von der Pike auf.',
-    'abt-p2':'Ich reiste mit der mobilen Bar von Event zu Event, lernte was funktioniert und was nicht, und verfeinerte meine Skills parallel als Barkeeper:in in einem bekannten Hamburger Club.',
+    'abt-p1':'Meine Reise in die Cocktailwelt begann vor einigen Jahren bei einem großen Event-Caterer mit Fokus auf Cocktail-Catering. Dort habe ich das Handwerk von der Pike auf gelernt.',
+    'abt-p2':'Ich reiste mit der mobilen Bar von Event zu Event, lernte was funktioniert und was nicht und verfeinerte meine Skills parallel als Barkeeper in einem bekannten Hamburger Club.',
     'abt-p3':'Aus dieser Erfahrung, meiner Liebe zum Kundenkontakt und einer ordentlichen Portion Gründergeist ist Billy\'s Cocktail Catering entstanden. Heute sorgen wir mit unserem Team auf Events jeder Größe für richtig gute Drinks und noch bessere Stimmung.',
     'abt-quote':'„Unser Anspruch: Jeder Gast soll den Abend mit einem Lächeln verlassen."',
     'abt-cite':'Vassili, Gründer',
@@ -204,7 +204,7 @@ const TRANSLATIONS = {
     /* index — Hero */
     'usp-badge':'Consumption Guarantee',
     'usp-badge-sub':'You only pay for what was actually consumed.',
-    'hero-tag':'Where Elegance Meets Mixology · Hamburg · Berlin · NRW',
+    'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
     'hero-h1':'Your Event.',
     'hero-h1-em':'Our Cocktails.',
     'hero-sub':'We bring the full bar experience to you: crafted drinks, expert hands, and a setup your guests will remember.',
@@ -252,7 +252,7 @@ const TRANSLATIONS = {
     'stat1-label':'Events','stat2-label':'Cocktails mixed','stat3-label':'Good vibes guarantee',
 
     /* index — Refs */
-    'ref-label':'Already trust us',
+    'ref-label':'Trusted by',
 
     /* index — Contact */
     'con-label':'Contact','con-h2':'Tell us about','con-h2-em':'your event',
@@ -267,7 +267,7 @@ const TRANSLATIONS = {
     'faq-label':'FAQ',
     'faq-h2':'Everything you','faq-h2-em':'want to know',
     'faq1-q':'How much does it cost to hire a bartender?',
-    'faq1-a':'Our bartender service starts from 450 euros net. Since every event is unique, we don\'t work with standard packages but develop individual concepts tailored to your occasion. From the first planning call to the stylish appearance on-site, we take care of everything. Transparently calculated, reliably delivered, impressively served.',
+    'faq1-a':'Our bartender service starts from 450 euros net. Since every event is unique, we don\'t work from a catalogue — we build something around you. From the first planning call to the last drink of the night, we take care of everything. Clear pricing, reliable execution, and a bar your guests will actually remember.',
     'faq2-q':'Can I book bar staff only at Billy\'s?',
     'faq2-a':'Yes, absolutely. If you only need professional bar staff, we\'ll provide experienced bartenders for your event. Whether supporting an existing bar or covering a full event, we adapt flexibly to your needs. Our hourly rates: service staff from €45, bartender from €60, head bartender from €80. We\'re happy to put together a personalised quote.',
     'faq3-q':'How far in advance should I book Billy\'s Cocktail Catering?',
@@ -358,11 +358,11 @@ const TRANSLATIONS = {
 
     /* referenzen.html */
     'ref-page-label':'Portfolio','ref-page-h1':'Our','ref-page-h1-em':'References',
-    'ref-logos-label':'Already trust us','ref-gallery-h2':'Impressions',
+    'ref-logos-label':'Trusted by','ref-gallery-h2':'Impressions',
 
     /* kontakt.html */
     'kon-label':'Inquiry','kon-h1':'Let\'s','kon-h1-em':'talk',
-    'kon-sub':'Drop us a call, send an email, or use the form below. We\'ll get back to you within 24 hours.',
+    'kon-sub':'Give us a call, send an email, or fill out the form below. We\'ll get back to you within 24 hours.',
     'kon-direct-h3':'Reach us directly','kon-form-h3':'Inquiry form',
     'kon-tel':'Phone','kon-email-l':'Email','kon-insta':'Instagram','kon-loc':'Where we work',
     'kon-cta-text':'Prefer to talk it through? Book a free consultation with Vassili.',

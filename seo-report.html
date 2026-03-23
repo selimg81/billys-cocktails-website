@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO & Marketing Report — Billy's Cocktails 2026</title>
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --petrol:      #1A6E73;
+      --petrol-dark: #134f53;
+      --petrol-light:#e8f4f5;
+      --cream:       #F5F2EC;
+      --cream-dark:  #ede8df;
+      --dark:        #1E1E1E;
+      --mid:         #4a4a4a;
+      --light:       #7a7a7a;
+      --border:      #d8d3ca;
+      --green:       #2d7a4a;
+      --green-bg:    #eaf6ee;
+      --orange:      #c26a00;
+      --orange-bg:   #fff4e5;
+      --red:         #b83232;
+      --red-bg:      #fdeaea;
+      --white:       #ffffff;
+    }
+
+    html { font-size: 14px; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: #e8e6e1;
+      color: var(--dark);
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ============================================================
+       PAGE WRAPPER — A4 SIMULATION
+    ============================================================ */
+    .report-page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--white);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+    }
+
+    /* Screen layout: stack pages with spacing */
+    @media screen {
+      .report-page { margin: 32px auto; }
+      .page-section { min-height: 297mm; position: relative; }
+    }
+
+    /* ============================================================
+       COVER PAGE
+    ============================================================ */
+    .cover {
+      background: var(--dark);
+      min-height: 297mm;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--petrol) 0%, #2aa8b0 50%, var(--petrol) 100%);
+    }
+
+    .cover-accent {
+      position: absolute;
+      top: 0; right: 0;
+      width: 160mm;
+      height: 160mm;
+      background: radial-gradient(ellipse at top right, rgba(26,110,115,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cover-accent-bottom {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 120mm;
+      height: 120mm;
+      background: radial-gradient(ellipse at bottom left, rgba(26,110,115,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cover-top {
+      padding: 14mm 16mm 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .cover-logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cover-logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--petrol);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .cover-logo-text {
+      color: var(--white);
+    }
+
+    .cover-logo-text strong {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .cover-logo-text span {
+      display: block;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .cover-badge {
+      background: rgba(26,110,115,0.25);
+      border: 1px solid rgba(26,110,115,0.5);
+      color: #7dd4d8;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .cover-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 16mm;
+    }
+
+    .cover-eyebrow {
+      color: var(--petrol);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cover-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--petrol);
+    }
+
+    .cover-title {
+      color: var(--white);
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .cover-title span {
+      color: var(--petrol);
+      display: block;
+    }
+
+    .cover-subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 40px;
+      max-width: 120mm;
+    }
+
+    .cover-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--petrol);
+      margin-bottom: 36px;
+      border-radius: 2px;
+    }
+
+    .cover-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 140mm;
+    }
+
+    .cover-meta-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .cover-meta-label {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .cover-meta-value {
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .cover-footer {
+      padding: 10mm 16mm;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cover-footer-left {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+    }
+
+    .cover-confidential {
+      background: rgba(184,50,50,0.2);
+      border: 1px solid rgba(184,50,50,0.4);
+      color: #e88;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* ============================================================
+       INNER PAGES
+    ============================================================ */
+    .inner-page {
+      background: var(--white);
+      min-height: 297mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-header {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .page-header-logo {
+      width: 28px;
+      height: 28px;
+      background: var(--petrol);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .page-header-brand {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: 0.02em;
+    }
+
+    .page-header-brand span {
+      color: var(--light);
+      font-weight: 400;
+    }
+
+    .page-header-right {
+      font-size: 0.7rem;
+      color: var(--light);
+      letter-spacing: 0.06em;
+    }
+
+    .page-content {
+      flex: 1;
+      padding: 10mm 16mm 6mm;
+    }
+
+    .page-footer {
+      border-top: 1px solid var(--border);
+      padding: 7px 16mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--cream);
+    }
+
+    .page-footer-text {
+      font-size: 0.65rem;
+      color: var(--light);
+      letter-spacing: 0.04em;
+    }
+
+    .page-number {
+      font-size: 0.65rem;
+      color: var(--light);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       TABLE OF CONTENTS
+    ============================================================ */
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 18px;
+    }
+
+    .toc-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: var(--cream);
+      border-radius: 6px;
+      border-left: 3px solid var(--petrol);
+      transition: background 0.15s;
+    }
+
+    .toc-num {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--petrol);
+      background: var(--petrol-light);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .toc-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+
+    .toc-sub {
+      font-size: 0.68rem;
+      color: var(--light);
+      font-weight: 400;
+    }
+
+    /* ============================================================
+       SECTION HEADINGS
+    ============================================================ */
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--petrol-light);
+    }
+
+    .section-num {
+      background: var(--petrol);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 800;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .section-title-block {}
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .section-desc {
+      font-size: 0.78rem;
+      color: var(--light);
+      margin-top: 2px;
+    }
+
+    /* ============================================================
+       EXECUTIVE SUMMARY
+    ============================================================ */
+    .exec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .exec-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px;
+      border-top: 3px solid var(--petrol);
+      text-align: center;
+    }
+
+    .exec-card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+    }
+
+    .exec-card-value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--petrol);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .exec-card-label {
+      font-size: 0.7rem;
+      color: var(--light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .health-bar-wrap {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .health-score {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--petrol);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .health-score-label {
+      font-size: 0.72rem;
+      color: var(--light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .health-details { flex: 1; }
+
+    .health-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .health-bar-outer {
+      height: 8px;
+      background: var(--border);
+      border-radius: 4px;
+      margin-bottom: 6px;
+      overflow: hidden;
+    }
+
+    .health-bar-inner {
+      height: 100%;
+      background: linear-gradient(90deg, var(--petrol) 0%, #2aa8b0 100%);
+      border-radius: 4px;
+      width: 68%;
+    }
+
+    .health-bar-text {
+      font-size: 0.7rem;
+      color: var(--light);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .info-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .info-card-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--petrol);
+      margin-bottom: 8px;
+    }
+
+    .info-card-list {
+      list-style: none;
+    }
+
+    .info-card-list li {
+      font-size: 0.8rem;
+      color: var(--mid);
+      padding: 3px 0;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .info-card-list li::before {
+      content: '›';
+      color: var(--petrol);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       STATUS BADGES
+    ============================================================ */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-green  { background: var(--green-bg);  color: var(--green);  }
+    .badge-orange { background: var(--orange-bg); color: var(--orange); }
+    .badge-red    { background: var(--red-bg);    color: var(--red);    }
+    .badge-petrol { background: var(--petrol-light); color: var(--petrol); }
+
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .dot-green  { background: var(--green); }
+    .dot-orange { background: var(--orange); }
+    .dot-red    { background: var(--red); }
+
+    /* ============================================================
+       TABLES
+    ============================================================ */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+      margin-bottom: 16px;
+    }
+
+    thead tr {
+      background: var(--petrol);
+      color: var(--white);
+    }
+
+    thead th {
+      padding: 9px 12px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    thead th:first-child { border-radius: 0; }
+
+    tbody tr:nth-child(odd)  { background: var(--white); }
+    tbody tr:nth-child(even) { background: var(--cream); }
+
+    tbody td {
+      padding: 8px 12px;
+      color: var(--mid);
+      border-bottom: 1px solid var(--cream-dark);
+      vertical-align: middle;
+    }
+
+    tbody tr:last-child td { border-bottom: none; }
+
+    .td-strong {
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    /* ============================================================
+       IMPLEMENTED / ISSUES LISTS
+    ============================================================ */
+    .check-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 9px 12px;
+      background: var(--green-bg);
+      border-radius: 6px;
+      font-size: 0.78rem;
+      color: var(--mid);
+      border-left: 3px solid var(--green);
+    }
+
+    .check-icon {
+      color: var(--green);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .subsection-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .subsection-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ============================================================
+       KEYWORD CARDS
+    ============================================================ */
+    .kw-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .kw-pill {
+      background: var(--petrol-light);
+      color: var(--petrol);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(26,110,115,0.2);
+    }
+
+    /* ============================================================
+       CONTENT STRATEGY CARDS
+    ============================================================ */
+    .content-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .content-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--petrol);
+    }
+
+    .content-card-num {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--petrol);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .content-card-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.35;
+    }
+
+    .content-card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .content-card-tag {
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       KPI CARDS
+    ============================================================ */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .kpi-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+      border-top: 3px solid var(--petrol);
+    }
+
+    .kpi-target {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--petrol);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .kpi-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 3px;
+    }
+
+    .kpi-tool {
+      font-size: 0.65rem;
+      color: var(--light);
+    }
+
+    /* ============================================================
+       SCHEMA CODE BLOCK
+    ============================================================ */
+    .code-block {
+      background: #1a1a1a;
+      color: #d4d4d4;
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+      font-size: 0.72rem;
+      line-height: 1.7;
+      overflow: hidden;
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+
+    .code-key   { color: #9cdcfe; }
+    .code-str   { color: #ce9178; }
+    .code-punct { color: #808080; }
+    .code-arr   { color: #4ec9b0; }
+
+    /* ============================================================
+       PRIORITY LEGEND
+    ============================================================ */
+    .priority-legend {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .priority-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--mid);
+    }
+
+    /* ============================================================
+       CALLOUT BOXES
+    ============================================================ */
+    .callout {
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .callout-info {
+      background: var(--petrol-light);
+      border-left: 4px solid var(--petrol);
+    }
+
+    .callout-warn {
+      background: var(--orange-bg);
+      border-left: 4px solid var(--orange);
+    }
+
+    .callout-icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .callout-body {}
+
+    .callout-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 3px;
+    }
+
+    .callout-text {
+      font-size: 0.76rem;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       BACKLINK STRATEGY
+    ============================================================ */
+    .strategy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .strategy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 11px 14px;
+      background: var(--cream);
+      border-radius: 7px;
+      font-size: 0.8rem;
+      color: var(--mid);
+    }
+
+    .strategy-num {
+      background: var(--petrol);
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       CONVERSION SECTION
+    ============================================================ */
+    .conv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .conv-col-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid currentColor;
+    }
+
+    .conv-col-title.strengths { color: var(--green); }
+    .conv-col-title.improvements { color: var(--orange); }
+
+    .conv-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .conv-list li {
+      font-size: 0.78rem;
+      color: var(--mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .conv-list li .icon { flex-shrink: 0; }
+
+    /* ============================================================
+       SOCIAL MEDIA
+    ============================================================ */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .social-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px;
+      border-top: 3px solid var(--petrol);
+    }
+
+    .social-card-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .social-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .social-list li {
+      font-size: 0.76rem;
+      color: var(--mid);
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+    }
+
+    .social-list li::before {
+      content: '›';
+      color: var(--petrol);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       QUICK WIN TABLE — colored priority column
+    ============================================================ */
+    .priority-now    { color: var(--red);    font-weight: 700; font-size: 0.8rem; }
+    .priority-soon   { color: var(--orange); font-weight: 700; font-size: 0.8rem; }
+    .priority-later  { color: var(--green);  font-weight: 700; font-size: 0.8rem; }
+
+    .effort-low    { background: var(--green-bg);  color: var(--green);  }
+    .effort-medium { background: var(--orange-bg); color: var(--orange); }
+    .effort-high   { background: var(--red-bg);    color: var(--red);    }
+    .effort-chip {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .impact-chip {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .impact-high      { background: var(--petrol-light); color: var(--petrol); }
+    .impact-veryhigh  { background: var(--petrol);        color: var(--white);  }
+    .impact-medium    { background: var(--cream-dark);    color: var(--mid);    }
+
+    /* ============================================================
+       PRINT STYLES
+    ============================================================ */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        background: var(--white);
+        font-size: 11pt;
+      }
+
+      .report-page {
+        width: 100%;
+        box-shadow: none;
+        margin: 0;
+      }
+
+      .cover,
+      .inner-page {
+        page-break-after: always;
+        page-break-inside: avoid;
+        min-height: 297mm;
+      }
+
+      .no-break { page-break-inside: avoid; }
+
+      .cover { background: var(--dark) !important; }
+      .cover::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     REPORT WRAPPER
+============================================================ -->
+<div class="report-page">
+
+  <!-- ============================================================
+       COVER PAGE
+  ============================================================ -->
+  <div class="cover page-section">
+    <div class="cover-accent"></div>
+    <div class="cover-accent-bottom"></div>
+
+    <div class="cover-top">
+      <div class="cover-logo-area">
+        <div class="cover-logo-icon">🍹</div>
+        <div class="cover-logo-text">
+          <strong>Billy's Cocktails</strong>
+          <span>billys-cocktails.de</span>
+        </div>
+      </div>
+      <div class="cover-badge">Vertraulich</div>
+    </div>
+
+    <div class="cover-body">
+      <div class="cover-eyebrow">Digitale Strategie · 2026</div>
+      <h1 class="cover-title">
+        SEO &amp;
+        <span>Marketing</span>
+        Report
+      </h1>
+      <p class="cover-subtitle">Vollständige Analyse und strategische Handlungsempfehlungen für Billy's Cocktail Catering</p>
+      <div class="cover-divider"></div>
+
+      <div class="cover-meta-grid">
+        <div class="cover-meta-item">
+          <div class="cover-meta-label">Erstellt am</div>
+          <div class="cover-meta-value">23. März 2026</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="cover-meta-label">Erstellt von</div>
+          <div class="cover-meta-value">Billy's Digital Team</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="cover-meta-label">Domain</div>
+          <div class="cover-meta-value">billys-cocktails.de</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="cover-meta-label">Primärmarkt</div>
+          <div class="cover-meta-value">Hamburg · Berlin · NRW</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="cover-meta-label">Seitentyp</div>
+          <div class="cover-meta-value">Statisches HTML</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="cover-meta-label">Seiten analysiert</div>
+          <div class="cover-meta-value">8 Seiten</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <div class="cover-footer-left">Billy's Cocktails &nbsp;·&nbsp; SEO &amp; Marketing Report 2026 &nbsp;·&nbsp; Vertraulich</div>
+      <div class="cover-confidential">Nur zur internen Verwendung</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 2: TABLE OF CONTENTS + EXECUTIVE SUMMARY
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <!-- TOC -->
+      <div class="section-header">
+        <div class="section-num" style="background:var(--dark);">☰</div>
+        <div class="section-title-block">
+          <div class="section-title">Inhaltsverzeichnis</div>
+          <div class="section-desc">Übersicht aller Analysebereiche und Empfehlungen</div>
+        </div>
+      </div>
+
+      <div class="toc-grid">
+        <div class="toc-item">
+          <div class="toc-num">1</div>
+          <div>
+            <div class="toc-label">Executive Summary</div>
+            <div class="toc-sub">Gesamtbewertung &amp; Übersicht</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">2</div>
+          <div>
+            <div class="toc-label">Technisches SEO</div>
+            <div class="toc-sub">Implementiert &amp; Handlungsbedarf</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">3</div>
+          <div>
+            <div class="toc-label">On-Page SEO Analyse</div>
+            <div class="toc-sub">Seitenweise Bewertung</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">4</div>
+          <div>
+            <div class="toc-label">Keyword-Strategie</div>
+            <div class="toc-sub">Primär-, Sekundär- &amp; Long-Tail</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">5</div>
+          <div>
+            <div class="toc-label">Local SEO</div>
+            <div class="toc-sub">Google Business &amp; Lokale Präsenz</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">6</div>
+          <div>
+            <div class="toc-label">Content-Marketing</div>
+            <div class="toc-sub">Blog &amp; Content-Strategie</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">7</div>
+          <div>
+            <div class="toc-label">Backlinks &amp; Autorität</div>
+            <div class="toc-sub">Linkbuilding-Strategie</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">8</div>
+          <div>
+            <div class="toc-label">Social Media &amp; Brand Signals</div>
+            <div class="toc-sub">Instagram &amp; Kanäle</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">9</div>
+          <div>
+            <div class="toc-label">Conversion-Optimierung</div>
+            <div class="toc-sub">CRO &amp; UX-Verbesserungen</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">10</div>
+          <div>
+            <div class="toc-label">Quick Win Checkliste</div>
+            <div class="toc-sub">Priorisierte Maßnahmen</div>
+          </div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num">11</div>
+          <div>
+            <div class="toc-label">KPIs &amp; Erfolgsmessung</div>
+            <div class="toc-sub">Ziele &amp; Tracking-Tools</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px;">
+
+        <!-- Section 1 -->
+        <div class="section-header">
+          <div class="section-num">1</div>
+          <div class="section-title-block">
+            <div class="section-title">Executive Summary</div>
+            <div class="section-desc">Gesamtbewertung des SEO- und Marketing-Status von billys-cocktails.de</div>
+          </div>
+        </div>
+
+        <div class="health-bar-wrap">
+          <div>
+            <div class="health-score">68</div>
+            <div class="health-score-label">SEO Score</div>
+          </div>
+          <div class="health-details">
+            <div class="health-title">Gute Grundlage — mehrere Quick Wins verfügbar</div>
+            <div class="health-bar-outer"><div class="health-bar-inner"></div></div>
+            <div class="health-bar-text">Die Website zeigt solide technische Grundlagen. Kritische Lücken wie LocalBusiness-Schema, Sitemap und Google Business Profile sind mit geringem Aufwand zu schließen und werden unmittelbar Wirkung zeigen.</div>
+          </div>
+        </div>
+
+        <div class="exec-grid">
+          <div class="exec-card">
+            <div class="exec-card-icon">📄</div>
+            <div class="exec-card-value">8</div>
+            <div class="exec-card-label">Seiten</div>
+          </div>
+          <div class="exec-card">
+            <div class="exec-card-icon">⭐</div>
+            <div class="exec-card-value">41</div>
+            <div class="exec-card-label">Google Reviews</div>
+          </div>
+          <div class="exec-card">
+            <div class="exec-card-icon">📍</div>
+            <div class="exec-card-value">3</div>
+            <div class="exec-card-label">Zielmärkte</div>
+          </div>
+          <div class="exec-card">
+            <div class="exec-card-icon">⚡</div>
+            <div class="exec-card-value">10</div>
+            <div class="exec-card-label">Quick Wins</div>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-card-title">Standort &amp; Märkte</div>
+            <ul class="info-card-list">
+              <li>Headquarter: Hamburg</li>
+              <li>Servicegebiet: Hamburg, Berlin, NRW</li>
+              <li>Erweiterung: Schleswig-Holstein, Niedersachsen, Hannover, Kiel</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-title">Services</div>
+            <ul class="info-card-list">
+              <li>Mobile Cocktail-Bar / Catering</li>
+              <li>Corporate Events &amp; Firmenevents</li>
+              <li>Hochzeiten &amp; Privatfeiern</li>
+              <li>Messen &amp; Trade Fairs</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-title">Stärken</div>
+            <ul class="info-card-list">
+              <li>Canonical + Open Graph auf allen Seiten</li>
+              <li>FAQPage JSON-LD Schema (9 FAQs)</li>
+              <li>Mobile-first responsive Design</li>
+              <li>Verbrauchsgarantie als Trust Signal</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-title">Dringendster Handlungsbedarf</div>
+            <ul class="info-card-list">
+              <li>Sitemap.xml + robots.txt fehlen</li>
+              <li>LocalBusiness JSON-LD Schema fehlt</li>
+              <li>Google Business Profile optimieren</li>
+              <li>Hreflang-Tags (DE/EN) ergänzen</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">2</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 3: TECHNICAL SEO
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-title-block">
+          <div class="section-title">Technisches SEO</div>
+          <div class="section-desc">Implementierte Features &amp; identifizierte Probleme</div>
+        </div>
+      </div>
+
+      <div class="subsection-title"><span style="color:var(--green);">✓</span> Bereits implementiert</div>
+
+      <ul class="check-list">
+        <li><span class="check-icon">✓</span> Canonical Tags auf allen 8 Seiten</li>
+        <li><span class="check-icon">✓</span> Open Graph Tags vollständig (og:title, og:description, og:image, og:url, og:type)</li>
+        <li><span class="check-icon">✓</span> FAQPage JSON-LD Schema auf index.html (9 FAQs — Google Rich Snippets eligible)</li>
+        <li><span class="check-icon">✓</span> Mobile-first Responsive Design</li>
+        <li><span class="check-icon">✓</span> Passive Scroll Event Listeners (Performance-Optimierung)</li>
+        <li><span class="check-icon">✓</span> IntersectionObserver für Lazy Animations</li>
+        <li><span class="check-icon">✓</span> Dark Mode Unterstützung</li>
+        <li><span class="check-icon">✓</span> Sprach-Toggle DE/EN</li>
+      </ul>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">ℹ️</div>
+        <div class="callout-body">
+          <div class="callout-title">FAQPage Schema — Rich Snippet Potenzial</div>
+          <div class="callout-text">Die 9 implementierten FAQs auf index.html sind direkt für Google Rich Snippets (aufklappbare Fragen in den Suchergebnissen) qualifiziert. Sobald Google die Seite ausreichend gecrawlt hat, können diese erscheinen — ein erheblicher Vorteil gegenüber Wettbewerbern ohne strukturierte Daten.</div>
+        </div>
+      </div>
+
+      <div class="subsection-title"><span style="color:var(--orange);">⚠</span> Handlungsbedarf</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:36%">Problem</th>
+            <th style="width:16%">Priorität</th>
+            <th style="width:48%">Auswirkung &amp; Empfehlung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-strong">Sitemap.xml fehlt</td>
+            <td><span class="badge badge-red"><span class="dot dot-red"></span>Hoch</span></td>
+            <td>Google kann nicht effizient crawlen. Sofort eine XML-Sitemap erstellen und in der Google Search Console einreichen.</td>
+          </tr>
+          <tr>
+            <td class="td-strong">robots.txt fehlt</td>
+            <td><span class="badge badge-red"><span class="dot dot-red"></span>Hoch</span></td>
+            <td>Ohne robots.txt können Crawler unerwünschte Bereiche indexieren. Minimalversion mit Sitemap-Verweis erstellen.</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Kein LocalBusiness Schema</td>
+            <td><span class="badge badge-red"><span class="dot dot-red"></span>Hoch</span></td>
+            <td>Für lokales SEO entscheidend. JSON-LD auf allen Seiten einfügen (Vorlage in Abschnitt 5).</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Fehlende Strukturdaten auf Service-Seiten</td>
+            <td><span class="badge badge-orange"><span class="dot dot-orange"></span>Mittel</span></td>
+            <td>Service-Seiten können mit Service/Offer-Schema angereichert werden für bessere SERP-Darstellung.</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Alt-Texte unvollständig</td>
+            <td><span class="badge badge-orange"><span class="dot dot-orange"></span>Mittel</span></td>
+            <td>Bilder ohne beschreibende Alt-Texte verlieren Accessibility-Punkte und Bild-SEO-Potenzial.</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Kein loading="lazy" auf Bildern</td>
+            <td><span class="badge badge-orange"><span class="dot dot-orange"></span>Mittel</span></td>
+            <td>Core Web Vitals (LCP) werden verbessert. Alle img-Tags mit loading="lazy" ergänzen.</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Keine hreflang-Tags (DE/EN)</td>
+            <td><span class="badge badge-orange"><span class="dot dot-orange"></span>Mittel</span></td>
+            <td>Da eine EN-Sprachvariante existiert, sollten hreflang-Tags für korrekte Indexierung beider Versionen gesetzt werden.</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Kein Breadcrumb Schema</td>
+            <td><span class="badge badge-petrol"><span class="dot" style="background:var(--petrol);"></span>Niedrig</span></td>
+            <td>Optionales Enhancement für verbesserte SERP-Darstellung mit Breadcrumb-Navigation.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">3</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 4: ON-PAGE SEO
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-title-block">
+          <div class="section-title">On-Page SEO Analyse</div>
+          <div class="section-desc">Seitenweise Bewertung aller 8 URLs</div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:18%">Seite</th>
+            <th style="width:20%">Title Tag</th>
+            <th style="width:20%">Meta Description</th>
+            <th style="width:14%">H1 Status</th>
+            <th style="width:14%">Primäres Keyword</th>
+            <th style="width:14%">Gesamt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-strong">index.html</td>
+            <td><span class="badge badge-green">✓ Stark</span></td>
+            <td><span class="badge badge-green">✓ Gut</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Cocktail Catering Hamburg</td>
+            <td><span class="badge badge-green">Stark</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">leistungen.html</td>
+            <td><span class="badge badge-green">✓ Gut</span></td>
+            <td><span class="badge badge-green">✓ Gut</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Mobile Bar mieten HH</td>
+            <td><span class="badge badge-orange">Ausbaufähig</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">cocktails.html</td>
+            <td><span class="badge badge-green">✓ Gut</span></td>
+            <td><span class="badge badge-orange">⚠ Verbesserbar</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Cocktail Catering Karte</td>
+            <td><span class="badge badge-orange">Gut</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">about.html</td>
+            <td><span class="badge badge-orange">⚠ Schwach</span></td>
+            <td><span class="badge badge-orange">⚠ Schwach</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Kein klares Keyword</td>
+            <td><span class="badge badge-red">Schwach</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">referenzen.html</td>
+            <td><span class="badge badge-orange">⚠ Mittel</span></td>
+            <td><span class="badge badge-orange">⚠ Mittel</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Referenzen Cocktail</td>
+            <td><span class="badge badge-orange">Potenzial</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">kontakt.html</td>
+            <td><span class="badge badge-green">✓ Gut</span></td>
+            <td><span class="badge badge-green">✓ Gut</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Cocktail Catering buchen</td>
+            <td><span class="badge badge-orange">Gut</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">firmenevents.html</td>
+            <td><span class="badge badge-orange">⚠ Mittel</span></td>
+            <td><span class="badge badge-orange">⚠ Mittel</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Cocktail Catering Firmenevent</td>
+            <td><span class="badge badge-petrol">Großes Potenzial</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">hochzeiten.html</td>
+            <td><span class="badge badge-orange">⚠ Mittel</span></td>
+            <td><span class="badge badge-orange">⚠ Mittel</span></td>
+            <td><span class="badge badge-green">✓ Vorhanden</span></td>
+            <td style="font-size:0.72rem;">Cocktail Catering Hochzeit</td>
+            <td><span class="badge badge-petrol">Großes Potenzial</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-warn">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body">
+          <div class="callout-title">Priorität: firmenevents.html &amp; hochzeiten.html optimieren</div>
+          <div class="callout-text">Diese beiden Seiten haben das höchste kommerzielle Potenzial — Nutzer, die aktiv nach "Cocktail Catering Hochzeit Hamburg" oder "Firmenevent Catering" suchen, haben eine sehr hohe Kaufabsicht. Gezielte SEO-Texte mit lokalem Bezug und Social Proof können die Konversionsrate erheblich steigern.</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">Detailbewertung: Stärkste und schwächste Seiten</div>
+
+      <div class="info-grid">
+        <div class="info-card" style="border-left: 4px solid var(--green);">
+          <div class="info-card-title" style="color:var(--green);">Stärkste Seite — index.html</div>
+          <ul class="info-card-list">
+            <li>Keyword "Cocktail Catering Hamburg" gut positioniert</li>
+            <li>FAQPage Schema für Rich Snippets vorhanden</li>
+            <li>Trust Signals (Verbrauchsgarantie, Reviews)</li>
+            <li>Klare CTA-Hierarchie vorhanden</li>
+          </ul>
+        </div>
+        <div class="info-card" style="border-left: 4px solid var(--red);">
+          <div class="info-card-title" style="color:var(--red);">Schwächste Seite — about.html</div>
+          <ul class="info-card-list">
+            <li>Kein gezieltes Keyword-Targeting</li>
+            <li>Title und Meta Description nicht SEO-optimiert</li>
+            <li>Empfehlung: "Über uns" mit Team-Expertise verknüpfen</li>
+            <li>Brand-Story + lokale Verankerung Hamburg nutzen</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">4</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 5: KEYWORD STRATEGY
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div class="section-title-block">
+          <div class="section-title">Keyword-Strategie</div>
+          <div class="section-desc">Primäre, sekundäre und Long-Tail Keywords für den deutschen Markt</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">Primäre Keywords — Sofort angehen</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Monatl. Volumen (DE)</th>
+            <th>Schwierigkeit</th>
+            <th>Aktueller Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-strong">Cocktail Catering Hamburg</td>
+            <td>~500 / Monat</td>
+            <td><span class="badge badge-orange">Mittel</span></td>
+            <td><span class="badge badge-green">✓ Aktiv</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Mobile Bar mieten Hamburg</td>
+            <td>~300 / Monat</td>
+            <td><span class="badge badge-orange">Mittel</span></td>
+            <td><span class="badge badge-orange">Teilweise</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Barkeeper buchen Hamburg</td>
+            <td>~200 / Monat</td>
+            <td><span class="badge badge-green">Niedrig</span></td>
+            <td><span class="badge badge-orange">Teilweise</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Cocktail Catering Hochzeit</td>
+            <td>~400 / Monat</td>
+            <td><span class="badge badge-orange">Mittel</span></td>
+            <td><span class="badge badge-red">Schwach</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Cocktail Catering Firmenevent</td>
+            <td>~250 / Monat</td>
+            <td><span class="badge badge-green">Niedrig</span></td>
+            <td><span class="badge badge-red">Schwach</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="subsection-title">Sekundäre Keywords — 6 bis 12 Monate Zeithorizont</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Monatl. Volumen (DE)</th>
+            <th>Opportunität</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-strong">Cocktail Catering Berlin</td>
+            <td>~350 / Monat</td>
+            <td><span class="badge badge-petrol">Hoch</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Mobile Bar NRW</td>
+            <td>~150 / Monat</td>
+            <td><span class="badge badge-orange">Mittel</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Barkeeper mieten Hochzeit</td>
+            <td>~180 / Monat</td>
+            <td><span class="badge badge-petrol">Hoch</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Event Catering Hamburg</td>
+            <td>~600 / Monat</td>
+            <td><span class="badge badge-orange">Mittel (kompetitiv)</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">Cocktailkurs Hamburg</td>
+            <td>~800 / Monat</td>
+            <td><span class="badge badge-green">Adjacent / Content</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="subsection-title">Long-Tail Opportunities — Hohe Konversionsrate</div>
+
+      <div class="kw-pills">
+        <div class="kw-pill">Cocktail Catering für Firmenfeier Hamburg</div>
+        <div class="kw-pill">mobile Cocktailbar Hochzeit mieten</div>
+        <div class="kw-pill">Barkeeper:in buchen Geburtstag Hamburg</div>
+        <div class="kw-pill">alkoholfreie Cocktails Catering</div>
+        <div class="kw-pill">Cocktailbar mieten Firmenjubiläum</div>
+        <div class="kw-pill">Hochzeitsbar Hamburg Kosten</div>
+        <div class="kw-pill">Barkeeper Sommerfest Hamburg</div>
+        <div class="kw-pill">Sekt Empfang Catering Hamburg</div>
+        <div class="kw-pill">Cocktail Service Messe Hamburg</div>
+        <div class="kw-pill">Gin Bar mieten Event Hamburg</div>
+      </div>
+
+      <div class="callout callout-info" style="margin-top:16px;">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body">
+          <div class="callout-title">Strategie-Tipp: Long-Tail zuerst</div>
+          <div class="callout-text">Long-Tail Keywords haben zwar geringeres Suchvolumen, aber deutlich höhere Konversionsraten und geringere Konkurrenz. Als neue Domain ist es strategisch sinnvoll, zunächst spezifische Long-Tail-Keywords zu besetzen, Autorität aufzubauen, und dann bei den Haupt-Keywords zu ranken.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">5</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 6: LOCAL SEO
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <div class="section-title-block">
+          <div class="section-title">Local SEO</div>
+          <div class="section-desc">Google Business Profile, lokale Präsenz &amp; strukturierte Daten</div>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body">
+          <div class="callout-title">Kein Google Business Profile auf Website verlinkt</div>
+          <div class="callout-text">Das Google Business Profile (GBP) ist der wichtigste einzelne Hebel für lokale Sichtbarkeit. Erscheint in der "Local Pack" Darstellung bei Google Maps-Suchanfragen — bei lokalen Suchbegriffen wie "Cocktail Catering Hamburg" erscheinen GBP-Einträge oft noch vor den organischen Ergebnissen.</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">Empfehlungen</div>
+
+      <ul class="strategy-list">
+        <li>
+          <div class="strategy-num">1</div>
+          <div><strong>Google Business Profile erstellen/optimieren</strong> — Vollständiges Profil mit Fotos, Öffnungszeiten, Services, Website-Link, Buchungslink. Kategorie: "Catering" + "Eventservice". Kritisch für Local Pack Sichtbarkeit.</div>
+        </li>
+        <li>
+          <div class="strategy-num">2</div>
+          <div><strong>LocalBusiness + FoodEstablishment JSON-LD Schema</strong> auf alle Seiten hinzufügen — Vorlage unten. Google kann damit den Business-Kontext besser verstehen.</div>
+        </li>
+        <li>
+          <div class="strategy-num">3</div>
+          <div><strong>Verzeichnis-Einträge erstellen</strong>: Das Örtliche, Yelp Germany, Partyservice-Verzeichnisse, Hochzeitsguide.de — konsistente NAP-Daten (Name, Adresse, Telefon) sind ein wichtiges Ranking-Signal.</div>
+        </li>
+        <li>
+          <div class="strategy-num">4</div>
+          <div><strong>Google Reviews aktiv anfragen</strong> — aktuell 41 Bewertungen. Ziel: 75+ mit konsequentem Antworten auf alle Reviews. Nach jedem Event kurz per WhatsApp oder E-Mail um Bewertung bitten.</div>
+        </li>
+        <li>
+          <div class="strategy-num">5</div>
+          <div><strong>Stadt-Landingpages erstellen</strong> für Berlin und Köln/NRW mit lokalen Keywords, lokalen Referenzen und ggf. lokalen Partnern als Backlink-Aufhänger.</div>
+        </li>
+      </ul>
+
+      <div class="subsection-title">Vorgeschlagenes LocalBusiness JSON-LD Schema</div>
+
+      <div class="code-block">
+<span class="code-punct">&lt;script type="application/ld+json"&gt;</span>
+<span class="code-punct">{</span>
+  <span class="code-key">"@context"</span><span class="code-punct">:</span> <span class="code-str">"https://schema.org"</span><span class="code-punct">,</span>
+  <span class="code-key">"@type"</span><span class="code-punct">:</span> <span class="code-arr">["LocalBusiness", "FoodEstablishment"]</span><span class="code-punct">,</span>
+  <span class="code-key">"name"</span><span class="code-punct">:</span> <span class="code-str">"Billy's Cocktail Catering"</span><span class="code-punct">,</span>
+  <span class="code-key">"url"</span><span class="code-punct">:</span> <span class="code-str">"https://billys-cocktails.de"</span><span class="code-punct">,</span>
+  <span class="code-key">"telephone"</span><span class="code-punct">:</span> <span class="code-str">"+49-XXX-XXXXXXX"</span><span class="code-punct">,</span>
+  <span class="code-key">"email"</span><span class="code-punct">:</span> <span class="code-str">"info@billys-cocktails.de"</span><span class="code-punct">,</span>
+  <span class="code-key">"address"</span><span class="code-punct">: {</span>
+    <span class="code-key">"@type"</span><span class="code-punct">:</span> <span class="code-str">"PostalAddress"</span><span class="code-punct">,</span>
+    <span class="code-key">"addressLocality"</span><span class="code-punct">:</span> <span class="code-str">"Hamburg"</span><span class="code-punct">,</span>
+    <span class="code-key">"addressCountry"</span><span class="code-punct">:</span> <span class="code-str">"DE"</span>
+  <span class="code-punct">},</span>
+  <span class="code-key">"areaServed"</span><span class="code-punct">:</span> <span class="code-arr">["Hamburg", "Berlin", "Nordrhein-Westfalen"]</span><span class="code-punct">,</span>
+  <span class="code-key">"priceRange"</span><span class="code-punct">:</span> <span class="code-str">"€€"</span><span class="code-punct">,</span>
+  <span class="code-key">"sameAs"</span><span class="code-punct">:</span> <span class="code-arr">["https://instagram.com/billyscocktails", "https://google.com/maps?cid=..."]</span>
+<span class="code-punct">}</span>
+<span class="code-punct">&lt;/script&gt;</span>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-title">Service-Gebiete auf Website</div>
+          <ul class="info-card-list">
+            <li>Hamburg &amp; Schleswig-Holstein</li>
+            <li>Niedersachsen (inkl. Hannover, Kiel)</li>
+            <li>Berlin &amp; Brandenburg</li>
+            <li>NRW (Köln, Düsseldorf)</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">Empfohlene Verzeichnisse</div>
+          <ul class="info-card-list">
+            <li>Das Örtliche / Gelbe Seiten</li>
+            <li>Yelp Germany</li>
+            <li>Hochzeitsguide.de</li>
+            <li>Partyservice-Verzeichnis.de</li>
+            <li>Eventdir.de</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">6</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 7: CONTENT MARKETING + BACKLINKS
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <div class="section-title-block">
+          <div class="section-title">Content-Marketing Strategie</div>
+          <div class="section-desc">Blog-Themen und Content-Opportunitäten mit hohem ROI</div>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body">
+          <div class="callout-title">Warum Content Marketing für Billy's Cocktails entscheidend ist</div>
+          <div class="callout-text">Die Website hat bereits eine starke FAQ-Sektion — das zeigt das Verständnis für informationelle Suchanfragen. Blog-Content erweitert dies massiv: jeder Artikel ist ein zusätzlicher Einstiegspunkt in die Website, baut thematische Autorität auf und bringt Nutzer mit hoher Kaufbereitschaft.</div>
+        </div>
+      </div>
+
+      <div class="content-cards">
+        <div class="content-card">
+          <div class="content-card-num">Artikel 01 · Hohe Priorität</div>
+          <div class="content-card-title">Wie viel kostet Cocktail Catering? Der vollständige Preisguide 2026</div>
+          <div class="content-card-tags">
+            <span class="content-card-tag badge-petrol badge">Hohe Nachfrage</span>
+            <span class="content-card-tag badge-green badge">Trust Builder</span>
+          </div>
+        </div>
+        <div class="content-card">
+          <div class="content-card-num">Artikel 02 · Seasonal</div>
+          <div class="content-card-title">Die 10 beliebtesten Hochzeitscocktails 2026 — Inspiration &amp; Ideen</div>
+          <div class="content-card-tags">
+            <span class="content-card-tag badge-petrol badge">Social-tauglich</span>
+            <span class="content-card-tag badge-orange badge">Saisonal</span>
+          </div>
+        </div>
+        <div class="content-card">
+          <div class="content-card-num">Artikel 03 · Vergleich</div>
+          <div class="content-card-title">Cocktail Catering vs. offene Bar: Was ist besser für dein Event?</div>
+          <div class="content-card-tags">
+            <span class="content-card-tag badge-petrol badge">Kaufentscheider</span>
+            <span class="content-card-tag badge-green badge">FAQ-Ergänzung</span>
+          </div>
+        </div>
+        <div class="content-card">
+          <div class="content-card-num">Artikel 04 · Unique Selling Point</div>
+          <div class="content-card-title">Unsere Verbrauchsgarantie erklärt: Nur zahlen, was getrunken wird</div>
+          <div class="content-card-tags">
+            <span class="content-card-tag badge-green badge">USP</span>
+            <span class="content-card-tag badge-petrol badge">Conversion</span>
+          </div>
+        </div>
+        <div class="content-card" style="grid-column: span 2;">
+          <div class="content-card-num">Artikel 05 · Lokaler Traffic</div>
+          <div class="content-card-title">Firmenevent Ideen Hamburg: 10 Tipps für unvergessliche Firmenveranstaltungen 2026</div>
+          <div class="content-card-tags">
+            <span class="content-card-tag badge-petrol badge">Lokales Keyword</span>
+            <span class="content-card-tag badge-petrol badge">B2B Zielgruppe</span>
+            <span class="content-card-tag badge-green badge">Hohe Kaufabsicht</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="section-header" style="margin-top: 20px;">
+        <div class="section-num">7</div>
+        <div class="section-title-block">
+          <div class="section-title">Backlinks &amp; Autorität</div>
+          <div class="section-desc">Linkbuilding-Strategie für eine neue Domain</div>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-title">Aktuelle Domain Authority</div>
+          <ul class="info-card-list">
+            <li>Geschätzt: Niedrig (neue Domain)</li>
+            <li>Ziel nach 12 Monaten: DA 20+</li>
+            <li>Fokus auf relevante, lokale Links</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">Schnellste Backlink-Quellen</div>
+          <ul class="info-card-list">
+            <li>Verzeichnis-Einträge (Yelp, Das Örtliche)</li>
+            <li>Google Reviews als Vertrauenssignal</li>
+            <li>Partner-Links (Hochzeitslocations)</li>
+            <li>Instagram-Profil → Website-Link</li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="strategy-list">
+        <li><div class="strategy-num">1</div><div><strong>Lokale Presse &amp; PR:</strong> Hamburg Event-Blogs, Hochzeitsguide.de, regionale Hochzeitszeitschriften — Gastbeiträge oder Erwähnungen in "Bester Cocktail-Caterer Hamburg" Artikeln anstreben.</div></li>
+        <li><div class="strategy-num">2</div><div><strong>Partner-Netzwerk aufbauen:</strong> Hochzeitslocations, Eventfotografen, Eventagenturen gegenseitig verlinken. Jeder Partner-Link ist ein relevanter, hochwertiger Backlink.</div></li>
+        <li><div class="strategy-num">3</div><div><strong>Instagram-Reichweite nutzen:</strong> Starke Social-Präsenz erzeugt branded Suchanfragen — ein indirektes positives Signal für Google. Link in Bio direkt zur Anfrage-Seite.</div></li>
+      </ul>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">7</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 8: SOCIAL MEDIA + CONVERSION
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <div class="section-title-block">
+          <div class="section-title">Social Media &amp; Brand Signals</div>
+          <div class="section-desc">Instagram als primärer Akquise-Kanal und Markenaufbau</div>
+        </div>
+      </div>
+
+      <div class="social-grid">
+        <div class="social-card">
+          <div class="social-card-title">📱 Instagram — Primärkanal</div>
+          <ul class="social-list">
+            <li>3–4 Posts pro Woche für Algorithmus-Boost</li>
+            <li>Reels mit Cocktail-Videos priorisieren</li>
+            <li>Immer Location-Tags setzen (Hamburg, Berlin, NRW)</li>
+            <li>Story Highlights: Events · Karte · Anfragen · Team</li>
+            <li>Link in Bio direkt zur Anfrage-Seite</li>
+          </ul>
+        </div>
+        <div class="social-card">
+          <div class="social-card-title">🎬 Content Mix Empfehlung</div>
+          <ul class="social-list">
+            <li>Behind-the-scenes (Setup, Vorbereitung)</li>
+            <li>Cocktail-Rezept Videos / Reels</li>
+            <li>Event-Highlights mit Kundenzustimmung</li>
+            <li>Kundenstimmen als Story oder Post</li>
+            <li>Saisonale Inhalte (Sommer, Weihnachten)</li>
+          </ul>
+        </div>
+        <div class="social-card">
+          <div class="social-card-title">📊 Brand-Signal Wirkung</div>
+          <ul class="social-list">
+            <li>Branded Suchen signalisieren Google Relevanz</li>
+            <li>Mehr Follower = mehr Markenbekanntheit</li>
+            <li>Viraler Content kann Domain-Autorität steigern</li>
+            <li>Social Proof beeinflusst Konversionsrate direkt</li>
+          </ul>
+        </div>
+        <div class="social-card">
+          <div class="social-card-title">✅ Aktuelle Stärken</div>
+          <ul class="social-list">
+            <li>41 Google Reviews bereits vorhanden</li>
+            <li>Freie Beratung mit Vassili buchbar</li>
+            <li>Verbrauchsgarantie als einzigartiges USP</li>
+            <li>Professionelles visuelles Erscheinungsbild</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 9 -->
+      <div class="section-header" style="margin-top: 20px;">
+        <div class="section-num">9</div>
+        <div class="section-title-block">
+          <div class="section-title">Conversion-Optimierung (CRO)</div>
+          <div class="section-desc">Stärken der Website und konkrete Verbesserungsmaßnahmen</div>
+        </div>
+      </div>
+
+      <div class="conv-grid">
+        <div>
+          <div class="conv-col-title strengths">Aktuelle Stärken</div>
+          <ul class="conv-list">
+            <li><span class="icon">✅</span> "Verbrauchsgarantie" Badge im Hero — starkes Trust-Signal</li>
+            <li><span class="icon">✅</span> Klare CTA-Hierarchie durchgehend</li>
+            <li><span class="icon">✅</span> Kontakt per Formular, Telefon und E-Mail</li>
+            <li><span class="icon">✅</span> 41 Google Reviews sichtbar auf der Seite</li>
+            <li><span class="icon">✅</span> FAQ-Bereich reduziert Einwände effektiv</li>
+            <li><span class="icon">✅</span> Kostenlose Beratung mit Vassili buchbar</li>
+          </ul>
+        </div>
+        <div>
+          <div class="conv-col-title improvements">Empfohlene Verbesserungen</div>
+          <ul class="conv-list">
+            <li><span class="icon">⚡</span> WhatsApp-Button hinzufügen — sehr hohe Conversion für deutsche KMU</li>
+            <li><span class="icon">⚡</span> A/B-Test CTA: "Jetzt anfragen" vs. "Angebot anfordern"</li>
+            <li><span class="icon">⚡</span> Hero um Bewertungsanzahl erweitern: "★ 4.9 · 41 Bewertungen"</li>
+            <li><span class="icon">⚡</span> Trust-Badges nahe dem Formular (Datenschutz, kein Spam)</li>
+            <li><span class="icon">⚡</span> Exit-Intent Popup für Anfragen (niedrige Hürde)</li>
+            <li><span class="icon">⚡</span> Antwortzeit im Formular kommunizieren ("Antwort in 24h")</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">8</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 9: QUICK WIN CHECKLIST
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">10</div>
+        <div class="section-title-block">
+          <div class="section-title">Quick Win Checkliste</div>
+          <div class="section-desc">Priorisierte Maßnahmen nach Aufwand und Impact sortiert</div>
+        </div>
+      </div>
+
+      <div class="priority-legend">
+        <div class="priority-legend-item"><span style="font-size:1rem;">🔴</span> Sofort umsetzen</div>
+        <div class="priority-legend-item"><span style="font-size:1rem;">🟡</span> Kurzfristig (4–8 Wochen)</div>
+        <div class="priority-legend-item"><span style="font-size:1rem;">🟢</span> Mittelfristig (2–4 Monate)</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:4%">#</th>
+            <th style="width:38%">Maßnahme</th>
+            <th style="width:14%">Aufwand</th>
+            <th style="width:14%">Impact</th>
+            <th style="width:14%">Priorität</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-strong">1</td>
+            <td class="td-strong">Sitemap.xml + robots.txt erstellen und in Google Search Console einreichen</td>
+            <td><span class="effort-chip effort-low">Niedrig</span></td>
+            <td><span class="impact-chip impact-high">Hoch</span></td>
+            <td><span class="priority-now">🔴 Sofort</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">2</td>
+            <td class="td-strong">LocalBusiness JSON-LD Schema auf alle Seiten hinzufügen</td>
+            <td><span class="effort-chip effort-low">Niedrig</span></td>
+            <td><span class="impact-chip impact-high">Hoch</span></td>
+            <td><span class="priority-now">🔴 Sofort</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">3</td>
+            <td class="td-strong">Google Business Profile einrichten &amp; vollständig optimieren</td>
+            <td><span class="effort-chip effort-low">Niedrig</span></td>
+            <td><span class="impact-chip impact-veryhigh">Sehr Hoch</span></td>
+            <td><span class="priority-now">🔴 Sofort</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">4</td>
+            <td class="td-strong">Hreflang-Tags für DE/EN Variante ergänzen</td>
+            <td><span class="effort-chip effort-low">Niedrig</span></td>
+            <td><span class="impact-chip impact-high">Mittel</span></td>
+            <td><span class="priority-soon">🟡 Bald</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">5</td>
+            <td class="td-strong">loading="lazy" auf alle Bilder setzen (Core Web Vitals)</td>
+            <td><span class="effort-chip effort-low">Niedrig</span></td>
+            <td><span class="impact-chip impact-high">Mittel</span></td>
+            <td><span class="priority-soon">🟡 Bald</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">6</td>
+            <td class="td-strong">Google Reviews aktiv anfragen (Ziel: 75+)</td>
+            <td><span class="effort-chip effort-low">Niedrig</span></td>
+            <td><span class="impact-chip impact-high">Hoch</span></td>
+            <td><span class="priority-soon">🟡 Bald</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">7</td>
+            <td class="td-strong">firmenevents.html + hochzeiten.html mit SEO-Text und lokalem Bezug ausbauen</td>
+            <td><span class="effort-chip effort-medium">Mittel</span></td>
+            <td><span class="impact-chip impact-high">Hoch</span></td>
+            <td><span class="priority-soon">🟡 Bald</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">8</td>
+            <td class="td-strong">Ersten Blog-Post schreiben: "Wie viel kostet Cocktail Catering? Preisguide 2026"</td>
+            <td><span class="effort-chip effort-medium">Mittel</span></td>
+            <td><span class="impact-chip impact-high">Hoch</span></td>
+            <td><span class="priority-soon">🟡 Bald</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">9</td>
+            <td class="td-strong">5 lokale Verzeichnis-Einträge erstellen (Yelp, Das Örtliche, Hochzeitsguide etc.)</td>
+            <td><span class="effort-chip effort-medium">Mittel</span></td>
+            <td><span class="impact-chip impact-medium">Mittel</span></td>
+            <td><span class="priority-later">🟢 Später</span></td>
+          </tr>
+          <tr>
+            <td class="td-strong">10</td>
+            <td class="td-strong">Berlin-Landingpage erstellen mit lokalen Keywords &amp; Referenzen</td>
+            <td><span class="effort-chip effort-medium" style="background:var(--red-bg);color:var(--red);">Hoch</span></td>
+            <td><span class="impact-chip impact-high">Hoch</span></td>
+            <td><span class="priority-later">🟢 Später</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">🎯</div>
+        <div class="callout-body">
+          <div class="callout-title">Empfohlener Start: 3 Maßnahmen in der ersten Woche</div>
+          <div class="callout-text">Maßnahmen 1, 2 und 3 (Sitemap, LocalBusiness Schema, Google Business Profile) haben zusammen den größten unmittelbaren Effekt auf die lokale Sichtbarkeit — und alle drei können in einem Nachmittag umgesetzt werden. Das allein kann binnen 4–6 Wochen zu messbaren Verbesserungen führen.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">9</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 10: KPIs
+  ============================================================ -->
+  <div class="inner-page page-section">
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-header-logo">🍹</div>
+        <div class="page-header-brand">Billy's Cocktails <span>· SEO &amp; Marketing Report 2026</span></div>
+      </div>
+      <div class="page-header-right">23. März 2026</div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="section-header">
+        <div class="section-num">11</div>
+        <div class="section-title-block">
+          <div class="section-title">KPIs &amp; Erfolgsmessung</div>
+          <div class="section-desc">Messbare Ziele für die nächsten 6 Monate (bis September 2026)</div>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-target">+150%</div>
+          <div class="kpi-label">Organische Impressionen</div>
+          <div class="kpi-tool">Google Search Console</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">+200%</div>
+          <div class="kpi-label">Organische Klicks</div>
+          <div class="kpi-tool">Google Search Console</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">Top 5</div>
+          <div class="kpi-label">"Cocktail Catering Hamburg"</div>
+          <div class="kpi-tool">Durchschnittliche Position</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">500+</div>
+          <div class="kpi-label">GBP-Aufrufe / Monat</div>
+          <div class="kpi-tool">Google Business Profile Insights</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">+80%</div>
+          <div class="kpi-label">Formular-Einsendungen</div>
+          <div class="kpi-tool">Google Analytics</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">75+</div>
+          <div class="kpi-label">Google Bewertungen</div>
+          <div class="kpi-tool">Manuelles Tracking</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">&gt;85</div>
+          <div class="kpi-label">PageSpeed Score Mobile</div>
+          <div class="kpi-tool">Google PageSpeed Insights</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">3+</div>
+          <div class="kpi-label">Blog-Artikel publiziert</div>
+          <div class="kpi-tool">Website / Analytics</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-target">10+</div>
+          <div class="kpi-label">Qualitätsbacklinks</div>
+          <div class="kpi-tool">Ahrefs / Search Console</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">Tracking-Tools &amp; Setup</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Zweck</th>
+            <th>Status</th>
+            <th>Empfehlung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-strong">Google Search Console</td>
+            <td>Impressionen, Klicks, Rankings, Crawl-Fehler</td>
+            <td><span class="badge badge-orange">Prüfen</span></td>
+            <td>Sitemap nach Erstellung sofort einreichen</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Google Analytics 4</td>
+            <td>Traffic, Conversions, Nutzerverhalten</td>
+            <td><span class="badge badge-orange">Prüfen</span></td>
+            <td>Conversion-Events für Formular einrichten</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Google Business Profile Insights</td>
+            <td>Lokale Sichtbarkeit, Anrufe, Routenanfragen</td>
+            <td><span class="badge badge-red">Einrichten</span></td>
+            <td>Nach GBP-Setup automatisch verfügbar</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Google PageSpeed Insights</td>
+            <td>Core Web Vitals, Ladezeiten</td>
+            <td><span class="badge badge-green">Kostenlos</span></td>
+            <td>Monatlich prüfen nach technischen Änderungen</td>
+          </tr>
+          <tr>
+            <td class="td-strong">Ubersuggest / Ahrefs (Free)</td>
+            <td>Keyword-Rankings, Backlinks</td>
+            <td><span class="badge badge-green">Empfohlen</span></td>
+            <td>Monatliches Ranking-Monitoring einrichten</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-info" style="margin-top: 20px;">
+        <div class="callout-icon">📈</div>
+        <div class="callout-body">
+          <div class="callout-title">Realistische Erwartungen</div>
+          <div class="callout-text">SEO ist ein mittel- bis langfristiger Kanal. Quick Wins (GBP, Schema, Sitemap) zeigen erste Ergebnisse in 4–8 Wochen. Content-Marketing und Backlinks zeigen ihren vollen Effekt nach 3–6 Monaten. Das Ziel ist nachhaltiges organisches Wachstum, das langfristig günstiger und stabiler ist als bezahlte Werbung.</div>
+        </div>
+      </div>
+
+      <!-- Closing Note -->
+      <div style="background: var(--dark); border-radius: 10px; padding: 22px 24px; margin-top: 20px;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;">
+          <div style="font-size:1.8rem;">🍹</div>
+          <div>
+            <div style="color: var(--white); font-size: 1rem; font-weight: 800; letter-spacing: -0.01em;">Nächste Schritte</div>
+            <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem;">Billy's Cocktails · billys-cocktails.de</div>
+          </div>
+        </div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.8rem; line-height: 1.7;">
+          Dieser Report bildet die Grundlage für eine strukturierte SEO-Strategie. Die empfohlenen Maßnahmen sind nach Priorität und Aufwand sortiert, um mit minimalem Ressourceneinsatz maximale Wirkung zu erzielen. Bei Fragen zur Umsetzung einzelner Punkte steht das Billy's Digital Team zur Verfügung.
+        </div>
+        <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <div style="background: rgba(26,110,115,0.3); border: 1px solid rgba(26,110,115,0.5); color: #7dd4d8; font-size: 0.72rem; font-weight: 600; padding: 5px 12px; border-radius: 6px;">billys-cocktails.de</div>
+          <div style="background: rgba(26,110,115,0.3); border: 1px solid rgba(26,110,115,0.5); color: #7dd4d8; font-size: 0.72rem; font-weight: 600; padding: 5px 12px; border-radius: 6px;">Erstellt: 23. März 2026</div>
+          <div style="background: rgba(26,110,115,0.3); border: 1px solid rgba(26,110,115,0.5); color: #7dd4d8; font-size: 0.72rem; font-weight: 600; padding: 5px 12px; border-radius: 6px;">Billy's Digital Team</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <div class="page-footer-text">Billy's Cocktails — SEO &amp; Marketing Report 2026 — Vertraulich</div>
+      <div class="page-number">10</div>
+    </div>
+  </div>
+
+</div><!-- end .report-page -->
+
+</body>
+</html>

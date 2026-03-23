@@ -244,20 +244,45 @@ document.addEventListener('DOMContentLoaded', () => {
     initTube(document.getElementById('tube-inner-mob'), document.getElementById('tube-pill-mob'));
   })();
 
-  // ── DARK MODE TOGGLE ──
-  const dmToggle = document.getElementById('dm-toggle');
-  if (dmToggle) {
-    const isDark = localStorage.getItem('billys-dark') === 'true';
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      dmToggle.setAttribute('aria-checked', 'true');
-    }
-    dmToggle.addEventListener('click', () => {
-      const on = document.documentElement.classList.toggle('dark');
-      dmToggle.setAttribute('aria-checked', String(on));
-      localStorage.setItem('billys-dark', String(on));
+  // ── FAN GALLERY ──
+  const fanGallery = document.getElementById('fan-gallery');
+  if (fanGallery) {
+    const pool = [
+      ['Website Bilder/BilderWebsiteEvents/cocktail-catering-firmenevent-hamburg.jpg', 'Cocktail Catering Firmenevent Hamburg'],
+      ['Website Bilder/BilderWebsiteEvents/bartender-mieten-hamburg.jpg', 'Barkeeper mieten Hamburg'],
+      ['Website Bilder/BilderWebsiteEvents/cocktails-anstossen-vogelperspektive-event-catering.jpg', 'Cocktails anstoßen Event Catering'],
+      ['Website Bilder/BilderWebsiteEvents/mobile-bar-mieten-firmenevent-nrw.jpg', 'Mobile Bar Firmenevent NRW'],
+      ['Website Bilder/BilderWebsiteEvents/bartender-serviert-brautpaar-cocktail-catering-hochzeit.jpg', 'Barkeeper Hochzeit Catering'],
+      ['Website Bilder/BilderWebsiteEvents/brautpaar-teilt-cocktail-hochzeit-catering-hamburg.jpg', 'Brautpaar Cocktail Hochzeit Hamburg'],
+      ['Website Bilder/BilderWebsiteEvents/cocktail-trolley-hochzeit-catering-outdoor-hamburg.jpg', 'Cocktail Trolley Outdoor Hochzeit'],
+      ['Website Bilder/BilderWebsiteEvents/mobile-bar-mieten-hochzeit-nrw.jpg', 'Mobile Bar Hochzeit NRW'],
+      ['Website Bilder/BilderWebsiteEvents/signature-drink-hochzeit-billys-cocktail-catering.jpg', 'Signature Drink Hochzeit'],
+      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-3.jpg', 'Cocktail Catering Mobile Bar Hamburg'],
+      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-4.jpg', 'Mobile Bar Hamburg Event'],
+      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-5.jpg', 'Mobile Cocktailbar Hamburg'],
+      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-6.jpg', 'Event Catering Hamburg'],
+      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-7.jpg', 'Cocktail Event Hamburg'],
+      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-8.jpg', 'Billy\'s Cocktail Catering Hamburg'],
+      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-9.jpg', 'Barkeeper Hamburg'],
+    ];
+    // Random pick of 5 on each page load
+    const shuffled = pool.slice().sort(() => Math.random() - 0.5);
+    fanGallery.querySelectorAll('.fan-photo img').forEach((img, i) => {
+      if (shuffled[i]) { img.src = shuffled[i][0]; img.alt = shuffled[i][1]; }
     });
+    // Trigger fan-out when scrolled into view
+    const fanIO = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => fanGallery.classList.add('loaded'), 80);
+        fanIO.unobserve(fanGallery);
+      }
+    }, { threshold: 0.2 });
+    fanIO.observe(fanGallery);
   }
+
+  // ── DARK MODE (deaktiviert) ──
+  localStorage.removeItem('billys-dark');
+  document.documentElement.classList.remove('dark');
 
 });
 

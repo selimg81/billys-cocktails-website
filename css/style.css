@@ -638,6 +638,35 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .rev-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(26,110,115,0.2); cursor: pointer; transition: background 0.3s, transform 0.3s; border: none; padding: 0; }
 .rev-dot.active { background: var(--petrol); transform: scale(1.35); }
 
+/* ── FAQ ── */
+.faq-wrap { max-width: 760px; margin: 48px auto 0; }
+.faq-item { border-bottom: 1px solid rgba(26,110,115,0.15); }
+.faq-item:first-child { border-top: 1px solid rgba(26,110,115,0.15); }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  padding: 22px 0;
+  font-size: 17px; font-weight: 500; color: var(--dark);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  transition: color 0.25s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; font-size: 24px; font-weight: 300; line-height: 1;
+  color: var(--petrol); flex-shrink: 0;
+  transition: transform 0.3s var(--ease);
+}
+.faq-item[open] summary { color: var(--petrol); }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-answer { padding: 0 32px 22px 0; font-size: 15px; color: var(--gray); line-height: 1.8; }
+/* FAQ on petrol background */
+.sec-white .faq-item { border-color: rgba(255,255,255,0.15); }
+.sec-white .faq-item:first-child { border-top-color: rgba(255,255,255,0.15); }
+.sec-white .faq-item summary { color: rgba(255,255,255,0.9); }
+.sec-white .faq-item summary::after { color: rgba(255,255,255,0.6); }
+.sec-white .faq-item[open] summary { color: #fff; }
+.sec-white .faq-item[open] summary::after { color: #fff; }
+.sec-white .faq-answer { color: rgba(255,255,255,0.68); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .ck-grid { grid-template-columns: repeat(2, 1fr); }

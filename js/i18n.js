@@ -77,6 +77,26 @@ const TRANSLATIONS = {
     'form-guests':'Gästeanzahl','form-msg':'Erzähl uns kurz von deinem Event...',
     'form-submit':'Anfrage senden',
 
+    /* index — FAQ */
+    'faq-label':'Häufige Fragen',
+    'faq-h2':'Alles, was du','faq-h2-em':'wissen willst',
+    'faq1-q':'Was kostet es, einen Barkeeper oder eine Barkeeeperin zu mieten?',
+    'faq1-a':'Die Kosten hängen von Eventdauer, Gästeanzahl und gewünschtem Paket ab. Wir bieten transparente Paketpreise und erstellen dir gerne ein individuelles Angebot. Kontaktiere uns einfach für ein kostenloses Erstgespräch.',
+    'faq2-q':'Ist es möglich, ausschließlich Barpersonal zu buchen?',
+    'faq2-a':'Ja, das ist möglich. Wenn du bereits eine eigene Bar oder Equipment hast, stellen wir dir erfahrenes Barpersonal ohne Ausstattungspaket zur Verfügung. Sprich uns gerne an.',
+    'faq3-q':'Wie frühzeitig sollte die Buchung erfolgen?',
+    'faq3-a':'Grundsätzlich sind wir flexibel. Kurzfristige Buchungen sind bei freien Kapazitäten jederzeit möglich. Für die beste Verfügbarkeit empfehlen wir, uns mindestens 4 bis 6 Wochen vor dem Event zu kontaktieren.',
+    'faq4-q':'Welche Services können wir von euch erwarten?',
+    'faq4-a':'Wir übernehmen alles: persönliche Beratung, Getränkeplanung, Auf- und Abbau, Bar-Service sowie die komplette Reinigung. Ein echter Rundum-Sorglos-Service, damit du dich voll auf deine Gäste konzentrieren kannst.',
+    'faq5-q':'Welche Cocktails und Longdrinks bietet ihr an?',
+    'faq5-a':'Unser Repertoire umfasst Klassiker wie Mojito, Espresso Martini und Aperol Spritz sowie individuelle Kreationen. Auf Wunsch entwickeln wir auch deinen persönlichen Signature Drink passend zum Event und zur Marke.',
+    'faq6-q':'Sind alkoholfreie Alternativen verfügbar?',
+    'faq6-a':'Absolut. Für jeden Cocktail bieten wir eine alkoholfreie Variante an. Mocktails, hausgemachte Shrubs und frisch gepresste Säfte sind fester Bestandteil unseres Angebots.',
+    'faq7-q':'Woher kommt ihr und wohin fahrt ihr?',
+    'faq7-a':'Wir sind in Hamburg ansässig und aktiv in Hamburg, Berlin und NRW. Für besondere Events kommen wir auch bundesweit und auf Anfrage international zu euch.',
+    'faq8-q':'Was empfehlt ihr für eine private Feier?',
+    'faq8-a':'Unser All-inclusive-Paket eignet sich perfekt: mobile Bar, professionelle Barkeeperinnen, Marken-Spirituosen und individuelle Cocktailkreationen. Ideal für 20 bis 200 Gäste.',
+
     /* Footer */
     'footer-desc':'Mobiles Cocktail Catering',
     'footer-pages':'Seiten','footer-contact-h':'Kontakt',
@@ -231,6 +251,26 @@ const TRANSLATIONS = {
     'form-name':'Name','form-email':'E-Mail','form-date':'Event date',
     'form-guests':'Number of guests','form-msg':'Tell us briefly about your event...',
     'form-submit':'Send inquiry',
+
+    /* index — FAQ */
+    'faq-label':'FAQ',
+    'faq-h2':'Everything you','faq-h2-em':'want to know',
+    'faq1-q':'What does it cost to hire a bartender?',
+    'faq1-a':'Pricing depends on the duration, number of guests, and your chosen package. We offer transparent package prices and are happy to provide a custom quote. Just reach out for a free initial consultation.',
+    'faq2-q':'Is it possible to book bar staff only?',
+    'faq2-a':'Yes, absolutely. If you already have your own bar or equipment, we can provide experienced bar staff without the equipment package. Just let us know.',
+    'faq3-q':'How far in advance should we book?',
+    'faq3-a':'We are flexible by nature. Last-minute bookings are possible whenever we have availability. For the best slot, we recommend reaching out at least 4 to 6 weeks before your event.',
+    'faq4-q':'What services can we expect from you?',
+    'faq4-a':'We handle everything: personal consultation, drink planning, setup, bar service, and full clean-up. A true all-inclusive experience so you can focus entirely on your guests.',
+    'faq5-q':'What cocktails and long drinks do you offer?',
+    'faq5-a':'Our repertoire includes classics like Mojito, Espresso Martini and Aperol Spritz alongside custom creations. We can also craft your very own signature drink tailored to your event or brand.',
+    'faq6-q':'Are non-alcoholic alternatives available?',
+    'faq6-a':'Absolutely. We offer an alcohol-free version of every cocktail on our menu. Mocktails, house-made shrubs and freshly pressed juices are a core part of our offering.',
+    'faq7-q':'Where are you based and how far do you travel?',
+    'faq7-a':'We are based in Hamburg and operate across Hamburg, Berlin, and NRW. For special events we also travel nationwide and internationally on request.',
+    'faq8-q':'What do you recommend for a private party?',
+    'faq8-a':'Our all-inclusive package is perfect: mobile bar, professional bartenders, premium spirits, and custom cocktail creations. Ideal for 20 to 200 guests.',
 
     /* Reviews */
     'rev-label':'Reviews','rev-h2':'What our','rev-h2-em':'clients say',

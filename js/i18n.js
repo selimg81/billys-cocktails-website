@@ -14,6 +14,7 @@ const TRANSLATIONS = {
     'mqt-priv':'Private Feiern','mqt-bday':'Geburtstage','mqt-sum':'Sommerfeste',
 
     /* index — Hero */
+    'usp-badge':'Nur was ihr trinkt',
     'hero-tag':'Cocktail Catering · Hamburg · Berlin · NRW',
     'hero-h1':'Dein Event.',
     'hero-h1-em':'Unsere Cocktails.',
@@ -96,6 +97,8 @@ const TRANSLATIONS = {
     'faq7-a':'Billy\'s Cocktail Catering ist in Hamburg zu Hause und hauptsächlich im norddeutschen Raum aktiv, unter anderem in Schleswig-Holstein, Niedersachsen sowie in Städten wie Kiel, Hannover, Köln und Düsseldorf. Auch in Berlin sind wir regelmäßig im Einsatz. Auf Anfrage kommen wir auch in weitere Regionen. Schick uns einfach eine Anfrage mit Veranstaltungsort und Termin und wir melden uns schnell persönlich bei dir.',
     'faq8-q':'Was empfehlt ihr für eine private Feier?',
     'faq8-a':'Unser All-inclusive-Paket eignet sich perfekt: mobile Bar, professionelle Barkeeper:innen, Marken-Spirituosen und individuelle Cocktailkreationen. Ideal für 20 bis 200 Gäste.',
+    'faq9-q':'Wie wird bei Billy\'s abgerechnet?',
+    'faq9-a':'Bei Billy\'s zahlst du nur, was tatsächlich getrunken wird. Keine Pauschalen, keine versteckten Kosten. Wir rechnen am Ende des Abends nach dem realen Verbrauch ab, transparent und fair. So behältst du die volle Kontrolle über dein Budget und zahlst nur für das, was deine Gäste wirklich genossen haben.',
 
     /* Footer */
     'footer-desc':'Mobiles Cocktail Catering',
@@ -193,6 +196,7 @@ const TRANSLATIONS = {
     'mqt-priv':'Private Parties','mqt-bday':'Birthdays','mqt-sum':'Summer Parties',
 
     /* index — Hero */
+    'usp-badge':'Pay only what you drink',
     'hero-tag':'Where Elegance Meets Mixology · Hamburg · Berlin · NRW',
     'hero-h1':'Your Event.',
     'hero-h1-em':'Our Cocktails.',
@@ -271,6 +275,8 @@ const TRANSLATIONS = {
     'faq7-a':'Billy\'s Cocktail Catering is based in Hamburg and operates primarily across northern Germany, including Schleswig-Holstein, Lower Saxony and cities such as Kiel, Hanover, Cologne and Dusseldorf. We are also regularly active in Berlin. On request we travel to other regions too. Simply send us your enquiry with venue and date and we\'ll get back to you personally.',
     'faq8-q':'What do you recommend for a private party?',
     'faq8-a':'Our all-inclusive package is perfect: mobile bar, professional bartenders, premium spirits, and custom cocktail creations. Ideal for 20 to 200 guests.',
+    'faq9-q':'How does billing work at Billy\'s?',
+    'faq9-a':'At Billy\'s, you only pay for what is actually consumed. No flat rates, no hidden costs. We settle the bill at the end of the evening based on real consumption, transparent and fair. That way you keep full control over your budget and only pay for what your guests truly enjoyed.',
 
     /* Reviews */
     'rev-label':'Reviews','rev-h2':'What our','rev-h2-em':'clients say',

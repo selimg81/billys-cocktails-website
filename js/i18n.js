@@ -50,12 +50,13 @@ const TRANSLATIONS = {
     /* index — Cocktails */
     'ck-label':'Unsere Cocktails','ck-h2':'Crafted with','ck-h2-em':'Passion',
     'cta-allck':'Alle Cocktails ansehen',
-    'hck1-desc':'Aperol · Prosecco · Soda · Orange',
-    'hck2-desc':'Rum · Minze · Limette · Zucker · Soda',
+    'hck1-desc':'Vodka · Pfirsich · Maracuja · Limette',
+    'hck2-desc':'Tequila · Triple Sec · Limette · Salzrand',
     'hck3-desc':'Vodka · Espresso · Kahlúa',
-    'hck4-desc':'Gin · Campari · Vermouth Rosso',
-    'hck5-desc':'Gin · Basilikum · Zitrone · Zucker',
-    'hck6-desc':'Vodka · Pfirsich · Maracuja · Limette',
+    'hck4-desc':'Gin · Basilikum · Zitrone · Zucker',
+    'hck5-desc':'Gin · Campari · Vermouth Rosso',
+    'hck6-desc':'Rum · Minze · Limette · Zucker · Soda',
+    'swipe-hint':'Wischen zum Entdecken',
 
     /* index — Stats */
     'stat1-label':'Events','stat2-label':'Cocktails gemixt','stat3-label':'Gute-Laune-Garantie',
@@ -208,12 +209,13 @@ const TRANSLATIONS = {
     /* index — Cocktails */
     'ck-label':'Our Cocktails','ck-h2':'Crafted with','ck-h2-em':'Passion',
     'cta-allck':'View all cocktails',
-    'hck1-desc':'Aperol · Prosecco · Soda · Orange',
-    'hck2-desc':'Rum · Mint · Lime · Sugar · Soda',
+    'hck1-desc':'Vodka · Peach · Passion fruit · Lime',
+    'hck2-desc':'Tequila · Triple Sec · Lime · Salt rim',
     'hck3-desc':'Vodka · Espresso · Kahlúa',
-    'hck4-desc':'Gin · Campari · Vermouth Rosso',
-    'hck5-desc':'Gin · Basil · Lemon · Sugar',
-    'hck6-desc':'Vodka · Peach · Passion fruit · Lime',
+    'hck4-desc':'Gin · Basil · Lemon · Sugar',
+    'hck5-desc':'Gin · Campari · Vermouth Rosso',
+    'hck6-desc':'Rum · Mint · Lime · Sugar · Soda',
+    'swipe-hint':'Swipe to Discover',
 
     /* index — Stats */
     'stat1-label':'Events','stat2-label':'Cocktails mixed','stat3-label':'Good vibes guarantee',

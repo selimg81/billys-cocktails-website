@@ -445,9 +445,35 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   overflow-x: auto; overflow-y: visible;
   padding: 32px 0 32px clamp(20px, 4vw, 60px);
   scrollbar-width: none; -ms-overflow-style: none;
+  position: relative;
 }
 .ck-hscroll-wrap::-webkit-scrollbar { display: none; }
+.ck-hscroll-wrap::after {
+  content: '';
+  position: sticky; right: 0;
+  display: block;
+  width: 120px; height: 100%;
+  margin-left: -120px;
+  background: linear-gradient(to left, var(--warm) 20%, transparent);
+  pointer-events: none;
+  flex-shrink: 0;
+}
 .ck-hscroll-track { display: flex; gap: 20px; width: max-content; padding-right: 60px; }
+.ck-swipe-hint {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--petrol);
+  opacity: 0.6;
+}
+@media (max-width: 840px) {
+  .ck-swipe-hint { display: flex; }
+}
 
 .ck-card {
   width: 300px; flex-shrink: 0;
@@ -610,6 +636,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .ck-grid { grid-template-columns: repeat(2, 1fr); }
   .evt-grid { grid-template-columns: repeat(2, 1fr); }
   .kontakt-grid { grid-template-columns: 1fr; }
+  .kontakt-grid > *:first-child { order: 2; }
+  .kontakt-grid > *:last-child { order: 1; }
   .about-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }

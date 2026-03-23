@@ -516,11 +516,25 @@
     </div>
     <form class="js-form rv" style="--rv-transform:translate3d(0,40px,0);--rv-delay:200ms" novalidate>
       <div class="form-grid">
-        <input type="text" data-i18n-ph="form-name" placeholder="Name" class="input" />
-        <input type="email" data-i18n-ph="form-email" placeholder="E-Mail" class="input" required />
-        <input type="date" data-i18n-ph="form-date" placeholder="Eventdatum" class="input" />
-        <input type="number" data-i18n-ph="form-guests" placeholder="Gästeanzahl" class="input" min="1" />
+        <input type="text" data-i18n-ph="kon-f-first" placeholder="Vorname" class="input" required />
+        <input type="text" data-i18n-ph="kon-f-last" placeholder="Nachname" class="input" required />
+        <input type="email" data-i18n-ph="kon-f-email" placeholder="E-Mail" class="input" required />
+        <input type="tel" data-i18n-ph="kon-f-phone" placeholder="Telefon" class="input" />
+        <input type="text" data-i18n-ph="kon-f-loc" placeholder="Ort / Location" class="input" />
+        <input type="date" placeholder="Eventdatum" class="input" />
+        <input type="number" data-i18n-ph="kon-f-guests" placeholder="Gästeanzahl" class="input" min="1" />
+        <input type="number" data-i18n-ph="kon-f-hours" placeholder="Eventlänge (Std.)" class="input" min="1" />
       </div>
+      <select class="input" style="margin-bottom:14px;-webkit-appearance:none;cursor:pointer;">
+        <option value="" data-i18n="kon-f-type">Art des Events wählen</option>
+        <option data-i18n="opt-firma">Firmenevent</option>
+        <option data-i18n="opt-hochzeit">Hochzeit</option>
+        <option data-i18n="opt-geburtstag">Geburtstag</option>
+        <option data-i18n="opt-messe">Messe / Großevent</option>
+        <option data-i18n="opt-sommer">Sommerfest</option>
+        <option data-i18n="opt-privat">Private Feier</option>
+        <option data-i18n="opt-sonstiges">Sonstiges</option>
+      </select>
       <textarea data-i18n-ph="form-msg" placeholder="Erzähl uns kurz von deinem Event..." rows="4" class="input input-ta"></textarea>
       <button type="submit" class="btn btn-primary btn-mag" style="width:100%" data-i18n="form-submit">Anfrage senden</button>
     </form>

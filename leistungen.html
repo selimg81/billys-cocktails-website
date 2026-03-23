@@ -55,73 +55,44 @@
   </div>
 </div>
 
-<section class="sec sec-white">
+<section class="sec sec-warm">
   <div class="container">
-    <style>
-.srv-list { display:flex; flex-direction:column; }
-.srv-list-item { display:grid; grid-template-columns:1fr 2fr auto; align-items:center; gap:32px; padding:32px 0; border-bottom:1px solid rgba(245,242,236,0.2); text-decoration:none; color:inherit; transition:opacity 0.2s; }
-.srv-list-item:first-child { border-top:1px solid rgba(245,242,236,0.2); }
-.srv-list-item:hover { opacity:0.75; }
-.srv-list-left h3 { font-family:'Cormorant Garamond',serif; font-size:clamp(22px,2.5vw,32px); font-weight:400; color:#F5F2EC; margin:0; }
-.srv-list-right p { font-family:'Outfit',sans-serif; font-size:16px; color:rgba(245,242,236,0.7); line-height:1.6; margin:0; }
-.srv-list-arrow { font-size:24px; color:rgba(245,242,236,0.8); transition:transform 0.2s; }
-.srv-list-item:hover .srv-list-arrow { transform:translateX(6px); }
-@media(max-width:640px){ .srv-list-item { grid-template-columns:1fr auto; } .srv-list-right { display:none; } }
-    </style>
-    <div class="srv-list">
-      <a href="firmenevents.html" class="srv-list-item rv" style="--rv-delay:80ms">
-        <div class="srv-list-left">
-          <h3 data-i18n="srvlist-firm">Firmenevents</h3>
-        </div>
-        <div class="srv-list-right">
-          <p data-i18n="srvlist-firm-text">Weihnachtsfeiern, Teambuildings, Kick-offs und Konferenzen. Wir passen uns an euren Vibe an.</p>
-        </div>
-        <span class="srv-list-arrow">→</span>
+    <div class="evt-grid">
+      <a href="firmenevents.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:100ms">
+        <div class="evt-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="18" width="36" height="24" rx="3" stroke="#1A6E73" stroke-width="1.5"/><path d="M16 18v-4a4 4 0 014-4h8a4 4 0 014 4v4" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/><path d="M6 30h36" stroke="#1A6E73" stroke-width="1.5"/><path d="M20 30v2M28 30v2" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3 class="evt-title" data-i18n="evt1-title">Firmenevents</h3>
+        <p class="evt-text" data-i18n="evt1-text">Weihnachtsfeiern, Teambuildings, Kick-offs. Wir passen uns an euren Vibe an.</p>
+        <span class="evt-arrow">→</span>
       </a>
-      <a href="hochzeiten.html" class="srv-list-item rv" style="--rv-delay:140ms">
-        <div class="srv-list-left">
-          <h3 data-i18n="srvlist-wed">Hochzeiten</h3>
-        </div>
-        <div class="srv-list-right">
-          <p data-i18n="srvlist-wed-text">Euer Tag, eure Drinks. Individuelle Cocktailkreationen, die zu eurem Anlass passen.</p>
-        </div>
-        <span class="srv-list-arrow">→</span>
+      <a href="hochzeiten.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:160ms">
+        <div class="evt-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="17" cy="26" r="9" stroke="#1A6E73" stroke-width="1.5"/><circle cx="31" cy="26" r="9" stroke="#1A6E73" stroke-width="1.5"/><path d="M24 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3 class="evt-title" data-i18n="evt3-title">Hochzeiten</h3>
+        <p class="evt-text" data-i18n="evt3-text">Euer Tag, eure Drinks. Hauscocktails die zu euch passen, von der Trauung bis zum letzten Tanz.</p>
+        <span class="evt-arrow">→</span>
       </a>
-      <a href="geburtstage.html" class="srv-list-item rv" style="--rv-delay:200ms">
-        <div class="srv-list-left">
-          <h3 data-i18n="srvlist-bday">Geburtstage</h3>
-        </div>
-        <div class="srv-list-right">
-          <p data-i18n="srvlist-bday-text">Ein runder Geburtstag verdient mehr als Sekt vom Tablett. Wir machen ihn unvergesslich.</p>
-        </div>
-        <span class="srv-list-arrow">→</span>
+      <a href="geburtstage.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:220ms">
+        <div class="evt-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="24" width="36" height="16" rx="2" stroke="#1A6E73" stroke-width="1.5"/><path d="M12 24v-4c0-2.2 1.8-4 4-4h16c2.2 0 4 1.8 4 4v4" stroke="#1A6E73" stroke-width="1.5"/><path d="M16 16v-4M24 16v-4M32 16v-4" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/><path d="M6 32h36" stroke="#1A6E73" stroke-width="1.5"/></svg></div>
+        <h3 class="evt-title" data-i18n="evt5-title">Geburtstage</h3>
+        <p class="evt-text" data-i18n="evt5-text">Ob 30., 40. oder 50.: Mach deinen Geburtstag zum Event. Wir bringen alles mit.</p>
+        <span class="evt-arrow">→</span>
       </a>
-      <a href="sommerfeste.html" class="srv-list-item rv" style="--rv-delay:260ms">
-        <div class="srv-list-left">
-          <h3 data-i18n="srvlist-sum">Sommerfeste</h3>
-        </div>
-        <div class="srv-list-right">
-          <p data-i18n="srvlist-sum-text">Erfrischende Drinks unter freiem Himmel. Perfekt für Gartenfeste, Betriebsfeste und Open-Air-Events.</p>
-        </div>
-        <span class="srv-list-arrow">→</span>
+      <a href="sommerfeste.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:280ms">
+        <div class="evt-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="9" stroke="#1A6E73" stroke-width="1.5"/><path d="M24 6v4M24 38v4M6 24h4M38 24h4M11.5 11.5l2.8 2.8M33.7 33.7l2.8 2.8M11.5 36.5l2.8-2.8M33.7 14.3l2.8-2.8" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3 class="evt-title" data-i18n="evt2-title">Sommerfeste</h3>
+        <p class="evt-text" data-i18n="evt2-text">Erfrischende Cocktails unter freiem Himmel. Wir bringen Sommer-Vibes in jedes Glas.</p>
+        <span class="evt-arrow">→</span>
       </a>
-      <a href="messen.html" class="srv-list-item rv" style="--rv-delay:320ms">
-        <div class="srv-list-left">
-          <h3 data-i18n="srvlist-fair">Messen & Großevents</h3>
-        </div>
-        <div class="srv-list-right">
-          <p data-i18n="srvlist-fair-text">Die mobile Bar als Eyecatcher an eurem Stand. Besucher kommen für den Drink, bleiben für das Gespräch.</p>
-        </div>
-        <span class="srv-list-arrow">→</span>
+      <a href="messen.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:340ms">
+        <div class="evt-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M6 30l8-8 6 4 6-6 6 4 8-8" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 38h36" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/><path d="M8 18V10h10M40 18V10H30" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 class="evt-title" data-i18n="evt4-title">Messen & Großevents</h3>
+        <p class="evt-text" data-i18n="evt4-text">Heb dich ab. Unsere mobile Bar wird zum Magnet an deinem Stand.</p>
+        <span class="evt-arrow">→</span>
       </a>
-      <a href="private-feiern.html" class="srv-list-item rv" style="--rv-delay:380ms">
-        <div class="srv-list-left">
-          <h3 data-i18n="srvlist-priv">Private Feiern</h3>
-        </div>
-        <div class="srv-list-right">
-          <p data-i18n="srvlist-priv-text">Jubiläen, Housewarmings, Geburtstagsfeiern. Wir bringen das gewisse Extra zu eurer Feier.</p>
-        </div>
-        <span class="srv-list-arrow">→</span>
+      <a href="private-feiern.html" class="evt-card rv" style="--rv-transform:translate3d(0,50px,0);--rv-delay:400ms">
+        <div class="evt-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 40L20 16l12 12L14 40z" stroke="#1A6E73" stroke-width="1.5" stroke-linejoin="round"/><path d="M28 12c2-2 5-2 7 0s2 5 0 7" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/><path d="M34 8l2-2M38 14h2M34 20l2 2" stroke="#1A6E73" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3 class="evt-title" data-i18n="evt6-title">Private Feiern</h3>
+        <p class="evt-text" data-i18n="evt6-text">Jubiläen, Housewarmings oder einfach Lust auf eine gute Party. Wir sind dabei.</p>
+        <span class="evt-arrow">→</span>
       </a>
     </div>
   </div>

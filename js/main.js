@@ -285,67 +285,77 @@ document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.remove('dark');
 
   // ── BAR COMPARISON SLIDER ──
-  const barCompare = document.getElementById('bar-compare');
-  if (barCompare) {
-    const inner = barCompare.querySelector('.bar-compare-inner');
-    const beforeImg = barCompare.querySelector('.bar-compare-before');
-    const handle = barCompare.querySelector('.bar-compare-handle');
-    let dragging = false;
-    let animated = false;
+  (function() {
+    var bc = document.getElementById('bar-compare');
+    if (!bc) return;
+    var inner   = bc.querySelector('.bar-compare-inner');
+    var before  = bc.querySelector('.bar-compare-before'); // image 2 — top layer
+    var handle  = bc.querySelector('.bar-compare-handle');
+    var dragging = false, animated = false;
 
-    // x = handle position from left (0–100%)
-    // before (image 2, top layer): clips inset(0 0 0 x%) → hides x% from left
-    //   x=0  → before fully visible (image 2 everywhere)
-    //   x=50 → before visible on right half only, image 1 shows on left half
-    //   x=100 → before hidden, image 1 (after) fully visible
-    const setPos = (x) => {
-      x = Math.min(100, Math.max(0, x));
-      beforeImg.style.clipPath = `inset(0 0 0 ${x}%)`;
-      handle.style.left = `${x}%`;
-    };
-    setPos(0); // start: image 2 fully visible
+    // pos = 0: before (img2) fully visible; pos = 100: before hidden, img1 shows
+    function setPos(pos) {
+      pos = Math.max(0, Math.min(100, pos));
+      before.style.clipPath = 'inset(0 0 0 ' + pos + '%)';
+      handle.style.left     = pos + '%';
+    }
+    setPos(0);
 
-    const animateIntro = () => {
+    // Auto-animation: sweep 0→100→50
+    function runAnim() {
       if (animated) return;
       animated = true;
-      const dur1 = 1800, dur2 = 1000;
-      // phase 1: 0 → 100 (handle sweeps left→right, revealing image 1)
-      const t1 = performance.now();
-      const phase1 = (now) => {
-        const p = Math.min((now - t1) / dur1, 1);
-        const e = p < 0.5 ? 2*p*p : -1+(4-2*p)*p;
+      var dur1 = 1800, dur2 = 900, t0 = null;
+      function ph1(ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur1, 1);
+        var e = p < 0.5 ? 2*p*p : -1+(4-2*p)*p;
         setPos(e * 100);
-        if (p < 1) requestAnimationFrame(phase1);
+        if (p < 1) { requestAnimationFrame(ph1); }
         else {
-          // phase 2: 100 → 50 (return to center)
-          const t2 = performance.now();
-          const phase2 = (now2) => {
-            const p2 = Math.min((now2 - t2) / dur2, 1);
-            const e2 = 1 - Math.pow(1 - p2, 3);
+          var t1 = null;
+          requestAnimationFrame(function ph2(ts) {
+            if (!t1) t1 = ts;
+            var p2 = Math.min((ts - t1) / dur2, 1);
+            var e2 = 1 - Math.pow(1 - p2, 3);
             setPos(100 - e2 * 50);
-            if (p2 < 1) requestAnimationFrame(phase2);
-          };
-          requestAnimationFrame(phase2);
+            if (p2 < 1) requestAnimationFrame(ph2);
+          });
         }
-      };
-      requestAnimationFrame(phase1);
-    };
+      }
+      requestAnimationFrame(ph1);
+    }
 
-    const ioCompare = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) { setTimeout(animateIntro, 400); ioCompare.unobserve(barCompare); }
-    }, { threshold: 0.3 });
-    ioCompare.observe(barCompare);
+    var io = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) { setTimeout(runAnim, 350); io.disconnect(); }
+    }, { threshold: 0.25 });
+    io.observe(bc);
 
-    const getX = (clientX) => {
-      const rect = inner.getBoundingClientRect();
-      return ((clientX - rect.left) / rect.width) * 100;
-    };
-    inner.addEventListener('mousedown', (e) => { dragging = true; setPos(getX(e.clientX)); });
-    window.addEventListener('mousemove', (e) => { if (dragging) setPos(getX(e.clientX)); });
-    window.addEventListener('mouseup', () => { dragging = false; });
-    inner.addEventListener('touchstart', (e) => { setPos(getX(e.touches[0].clientX)); }, { passive: true });
-    inner.addEventListener('touchmove', (e) => { e.preventDefault(); setPos(getX(e.touches[0].clientX)); }, { passive: false });
-  }
+    function posFromEvent(clientX) {
+      var r = inner.getBoundingClientRect();
+      return ((clientX - r.left) / r.width) * 100;
+    }
+
+    // Mouse
+    bc.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      dragging = true;
+      setPos(posFromEvent(e.clientX));
+    });
+    document.addEventListener('mousemove', function(e) {
+      if (dragging) setPos(posFromEvent(e.clientX));
+    });
+    document.addEventListener('mouseup', function() { dragging = false; });
+
+    // Touch
+    bc.addEventListener('touchstart', function(e) {
+      setPos(posFromEvent(e.touches[0].clientX));
+    }, { passive: true });
+    bc.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+      setPos(posFromEvent(e.touches[0].clientX));
+    }, { passive: false });
+  })();
 
 });
 

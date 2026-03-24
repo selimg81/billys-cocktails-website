@@ -171,7 +171,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .tube-bottom .tube-item { padding: 12px 20px; color: rgba(255,255,255,0.7); }
 .tube-bottom .tube-item svg { width: 17px; height: 17px; }
 .tube-bottom .tube-item span { display: none; }
-.tube-bottom .tube-item.active { color: var(--petrol); }
+.tube-bottom .tube-active-pill { background: rgba(255,255,255,0.12); }
+.tube-bottom .tube-item.active { color: #fff; }
 /* Bottom lamp appears at bottom edge */
 .tube-bottom .tube-item.active::before {
   top: auto; bottom: 0;

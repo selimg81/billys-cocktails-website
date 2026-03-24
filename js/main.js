@@ -280,6 +280,38 @@ document.addEventListener('DOMContentLoaded', () => {
     fanIO.observe(fanGallery);
   }
 
+  // ── BENTO GALLERY: clip-path wipe reveal + 3D tilt ──
+  (function() {
+    var items = document.querySelectorAll('.gal-item');
+    if (!items.length) return;
+
+    // Clip-path wipe: add .gal-on when in view
+    var wipeIO = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('gal-on');
+          wipeIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    items.forEach(function(el) { wipeIO.observe(el); });
+
+    // 3D tilt on hover (desktop only)
+    if (window.matchMedia('(hover: hover)').matches) {
+      items.forEach(function(item) {
+        item.addEventListener('mousemove', function(e) {
+          var r = item.getBoundingClientRect();
+          var x = (e.clientX - r.left) / r.width  - 0.5;
+          var y = (e.clientY - r.top)  / r.height - 0.5;
+          item.style.transform = 'perspective(700px) rotateY(' + (x * 7) + 'deg) rotateX(' + (-y * 7) + 'deg) scale(1.02)';
+        });
+        item.addEventListener('mouseleave', function() {
+          item.style.transform = '';
+        });
+      });
+    }
+  })();
+
   // ── DARK MODE (deaktiviert) ──
   localStorage.removeItem('billys-dark');
   document.documentElement.classList.remove('dark');

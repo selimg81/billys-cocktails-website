@@ -119,11 +119,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .tube-active-pill {
   position: absolute; top: 4px; height: calc(100% - 8px);
   border-radius: 100px;
-  background: rgba(26,110,115,0.18);
+  background: rgba(255,255,255,0.1);
   transition: left 0.4s cubic-bezier(0.34,1.56,0.64,1), width 0.4s cubic-bezier(0.34,1.56,0.64,1);
   pointer-events: none; z-index: 0;
 }
-.hdr.solid .tube-active-pill { background: rgba(26,110,115,0.12); }
+.hdr.solid .tube-active-pill { background: rgba(26,110,115,0.1); }
 .tube-item {
   position: relative; z-index: 1;
   display: flex; align-items: center; gap: 5px;
@@ -1148,3 +1148,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .bc-modal-box { padding: 24px; }
   .bc-modal-actions { flex-direction: column; }
 }
+
+/* ── LEGAL PAGES (Impressum / Datenschutz) ── */
+.legal-content { color: var(--gray); line-height: 1.8; }
+.legal-content h2 { font-family: var(--f-display); font-size: clamp(18px,2.5vw,22px); font-weight: 600; color: var(--dark); margin: 40px 0 10px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.07); }
+.legal-content h2:first-child { border-top: none; margin-top: 0; }
+.legal-content h3 { font-size: 15px; font-weight: 600; color: var(--dark); margin: 24px 0 8px; }
+.legal-content p { margin: 0 0 14px; font-size: 14px; }
+.legal-content ul { padding-left: 20px; margin: 0 0 14px; font-size: 14px; }
+.legal-content ul li { margin-bottom: 4px; }
+.legal-content a { color: var(--petrol); text-decoration: underline; text-underline-offset: 3px; }
+.legal-content a:hover { color: var(--petrol-dark); }

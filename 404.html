@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seite nicht gefunden | Billy's Cocktails</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .error-section {
+      min-height: 100svh;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--petrol);
+      text-align: center;
+      padding: clamp(80px, 12vw, 140px) clamp(20px, 4vw, 60px);
+    }
+    .error-inner { max-width: 560px; }
+    .error-code {
+      font-family: var(--f-display);
+      font-size: clamp(100px, 20vw, 180px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.12);
+      line-height: 1;
+      margin: 0;
+      letter-spacing: -4px;
+    }
+    .error-h1 {
+      font-family: var(--f-display);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 300;
+      color: #fff;
+      margin: 0 0 16px;
+    }
+    .error-h1 em { font-style: italic; color: var(--sand); }
+    .error-p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin: 0 0 40px;
+    }
+    .error-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff; color: var(--petrol);
+      padding: 14px 32px; border-radius: 100px;
+      font-size: 14px; font-weight: 600;
+      transition: all 0.3s;
+    }
+    .btn-white:hover { background: var(--warm); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent; color: rgba(255,255,255,0.8);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      padding: 14px 32px; border-radius: 100px;
+      font-size: 14px; font-weight: 500;
+      transition: all 0.3s;
+    }
+    .btn-ghost:hover { border-color: #fff; color: #fff; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-inner">
+    <a href="index.html"><img src="Website Bilder/Logo/billys-logo-white.png" onerror="this.src='Website Bilder/Logo/billys-logo-petrol.png';this.style.filter='brightness(0) invert(1)'" alt="Billy's Cocktails" class="hdr-logo" /></a>
+  </div>
+</header>
+
+<div class="error-section">
+  <div class="error-inner">
+    <p class="error-code">404</p>
+    <h1 class="error-h1">Diese Seite<br><em>existiert nicht.</em></h1>
+    <p class="error-p">Die Seite, die du suchst, wurde verschoben, gelöscht oder hat nie existiert. Aber wir sind noch da — und unsere Bar auch.</p>
+    <div class="error-btns">
+      <a href="index.html" class="btn-white">Zurück zur Startseite</a>
+      <a href="kontakt.html" class="btn-ghost">Jetzt anfragen</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/cookie-consent.js"></script>
+</body>
+</html>

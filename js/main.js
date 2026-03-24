@@ -116,21 +116,66 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
 
-  // ── CONTACT FORM ──
+  // ── CONTACT FORM (Web3Forms) ──
   document.querySelectorAll('.js-form').forEach(form => {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = form.querySelector('[type="submit"]');
-      const orig = btn.innerHTML;
-      btn.innerHTML = '✓ Gesendet!';
+      const result = form.querySelector('#form-result');
+      const origText = btn.innerHTML;
+
+      // Validate required fields
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        field.style.borderColor = '';
+        if (!field.value.trim()) {
+          field.style.borderColor = '#e55';
+          valid = false;
+        }
+      });
+      if (!valid) return;
+
+      btn.innerHTML = '⏳ Wird gesendet…';
       btn.disabled = true;
-      btn.style.background = '#2d8a6e';
-      setTimeout(() => {
-        btn.innerHTML = orig;
+
+      try {
+        const data = new FormData(form);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data
+        });
+        const json = await response.json();
+
+        if (json.success) {
+          btn.innerHTML = '✓ Erfolgreich gesendet!';
+          btn.style.background = '#2d8a6e';
+          if (result) {
+            result.style.display = 'block';
+            result.style.background = 'rgba(45,138,110,0.15)';
+            result.style.color = '#2d8a6e';
+            result.textContent = 'Vielen Dank! Wir melden uns so schnell wie möglich bei dir.';
+          }
+          form.reset();
+          setTimeout(() => {
+            btn.innerHTML = origText;
+            btn.disabled = false;
+            btn.style.background = '';
+            if (result) result.style.display = 'none';
+          }, 6000);
+        } else {
+          throw new Error(json.message || 'Fehler beim Senden');
+        }
+      } catch (err) {
+        btn.innerHTML = origText;
         btn.disabled = false;
-        btn.style.background = '';
-        form.reset();
-      }, 4000);
+        if (result) {
+          result.style.display = 'block';
+          result.style.background = 'rgba(229,85,85,0.15)';
+          result.style.color = '#e55';
+          result.textContent = 'Fehler beim Senden. Bitte ruf uns direkt an: +49 173 9927773';
+        }
+      }
     });
   });
 

@@ -11,9 +11,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://billys-cocktails.de/kontakt.html" />
   <meta property="og:image" content="https://billys-cocktails.de/Website%20Bilder/Logo/billys-logo-petrol.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -151,29 +148,65 @@
             <p style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;" data-i18n="vorlauf-a">Grundsätzlich sind wir flexibel. Kurzfristige Buchungen sind bei freien Kapazitäten jederzeit möglich. Für die beste Verfügbarkeit empfehlen wir, uns so früh wie möglich zu kontaktieren.</p>
           </div>
         </div>
-        <form class="js-form" novalidate>
+        <form class="js-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <!-- Web3Forms Access Key — kostenlos registrieren auf web3forms.com und KEY hier eintragen -->
+          <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-KEY-HIER" />
+          <input type="hidden" name="subject" value="Neue Anfrage über billys-cocktails.de" />
+          <input type="hidden" name="from_name" value="Billy's Cocktails Website" />
+          <input type="hidden" name="redirect" value="https://billys-cocktails.de/danke.html" />
           <div class="form-grid">
-            <input type="text" data-i18n-ph="kon-f-first" placeholder="Vorname" class="input" required />
-            <input type="text" data-i18n-ph="kon-f-last" placeholder="Nachname" class="input" required />
-            <input type="email" data-i18n-ph="kon-f-email" placeholder="E-Mail" class="input" required />
-            <input type="tel" data-i18n-ph="kon-f-phone" placeholder="Telefon" class="input" />
-            <input type="text" data-i18n-ph="kon-f-loc" placeholder="Ort / Location" class="input" />
-            <input type="date" placeholder="Eventdatum" class="input" />
-            <input type="number" data-i18n-ph="kon-f-guests" placeholder="Gästeanzahl" class="input" min="1" />
-            <input type="number" data-i18n-ph="kon-f-hours" placeholder="Eventlänge (Std.)" class="input" min="1" />
+            <div class="form-field">
+              <label for="f-first" class="form-label" data-i18n="kon-f-first">Vorname</label>
+              <input type="text" id="f-first" name="Vorname" data-i18n-ph="kon-f-first" placeholder="Vorname" class="input" required />
+            </div>
+            <div class="form-field">
+              <label for="f-last" class="form-label" data-i18n="kon-f-last">Nachname</label>
+              <input type="text" id="f-last" name="Nachname" data-i18n-ph="kon-f-last" placeholder="Nachname" class="input" required />
+            </div>
+            <div class="form-field">
+              <label for="f-email" class="form-label" data-i18n="kon-f-email">E-Mail</label>
+              <input type="email" id="f-email" name="E-Mail" data-i18n-ph="kon-f-email" placeholder="E-Mail" class="input" required />
+            </div>
+            <div class="form-field">
+              <label for="f-phone" class="form-label" data-i18n="kon-f-phone">Telefon</label>
+              <input type="tel" id="f-phone" name="Telefon" data-i18n-ph="kon-f-phone" placeholder="Telefon" class="input" />
+            </div>
+            <div class="form-field">
+              <label for="f-loc" class="form-label" data-i18n="kon-f-loc">Ort / Location</label>
+              <input type="text" id="f-loc" name="Ort" data-i18n-ph="kon-f-loc" placeholder="Ort / Location" class="input" />
+            </div>
+            <div class="form-field">
+              <label for="f-date" class="form-label">Eventdatum</label>
+              <input type="date" id="f-date" name="Eventdatum" class="input" />
+            </div>
+            <div class="form-field">
+              <label for="f-guests" class="form-label" data-i18n="kon-f-guests">Gästeanzahl</label>
+              <input type="number" id="f-guests" name="Gästeanzahl" data-i18n-ph="kon-f-guests" placeholder="Gästeanzahl" class="input" min="1" />
+            </div>
+            <div class="form-field">
+              <label for="f-hours" class="form-label" data-i18n="kon-f-hours">Eventlänge (Std.)</label>
+              <input type="number" id="f-hours" name="Eventlänge" data-i18n-ph="kon-f-hours" placeholder="Eventlänge (Std.)" class="input" min="1" />
+            </div>
           </div>
-          <select class="input" style="margin-bottom:14px;-webkit-appearance:none;cursor:pointer;">
-            <option value="" data-i18n="kon-f-type">Art des Events wählen</option>
-            <option data-i18n="opt-firma">Firmenevent</option>
-            <option data-i18n="opt-hochzeit">Hochzeit</option>
-            <option data-i18n="opt-geburtstag">Geburtstag</option>
-            <option data-i18n="opt-messe">Messe / Großevent</option>
-            <option data-i18n="opt-sommer">Sommerfest</option>
-            <option data-i18n="opt-privat">Private Feier</option>
-            <option data-i18n="opt-sonstiges">Sonstiges</option>
-          </select>
-          <textarea data-i18n-ph="kon-f-msg" placeholder="Erzähl uns von deinem Event..." rows="5" class="input input-ta"></textarea>
+          <div class="form-field" style="margin-bottom:14px;">
+            <label for="f-type" class="form-label" data-i18n="kon-f-type">Art des Events</label>
+            <select id="f-type" name="Eventart" class="input" style="-webkit-appearance:none;cursor:pointer;">
+              <option value="" data-i18n="kon-f-type">Art des Events wählen</option>
+              <option data-i18n="opt-firma">Firmenevent</option>
+              <option data-i18n="opt-hochzeit">Hochzeit</option>
+              <option data-i18n="opt-geburtstag">Geburtstag</option>
+              <option data-i18n="opt-messe">Messe / Großevent</option>
+              <option data-i18n="opt-sommer">Sommerfest</option>
+              <option data-i18n="opt-privat">Private Feier</option>
+              <option data-i18n="opt-sonstiges">Sonstiges</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="f-msg" class="form-label" data-i18n="kon-f-msg">Nachricht</label>
+            <textarea id="f-msg" name="Nachricht" data-i18n-ph="kon-f-msg" placeholder="Erzähl uns von deinem Event..." rows="5" class="input input-ta"></textarea>
+          </div>
           <button type="submit" class="btn btn-primary btn-mag" style="width:100%" data-i18n="kon-f-submit">Anfrage absenden</button>
+          <div id="form-result" style="display:none;margin-top:16px;padding:16px;border-radius:12px;text-align:center;font-weight:600;"></div>
         </form>
       </div>
 
@@ -209,9 +242,6 @@
           <div class="footer-social">
             <a href="https://www.instagram.com/billyscocktails" class="footer-social-btn" target="_blank" rel="noopener" aria-label="Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
           </div>
         </div>

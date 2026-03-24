@@ -540,8 +540,10 @@
   <div class="fan-gallery" id="fan-gallery">
     <div class="fan-photo"><img src="Website Bilder/BilderWebsiteEvents/cocktail-catering-firmenevent-hamburg.jpg" alt="Cocktail Catering Firmenevent Hamburg" loading="lazy" /></div>
     <div class="fan-photo"><img src="Website Bilder/BilderWebsiteEvents/bartender-mieten-hamburg.jpg" alt="Barkeeper mieten Hamburg" loading="lazy" /></div>
+    <div class="fan-photo"><img src="Website Bilder/BilderWebsiteEvents/bartender-serviert-brautpaar-cocktail-catering-hochzeit.jpg" alt="Barkeeper Hochzeit Catering" loading="lazy" /></div>
     <div class="fan-photo"><img src="Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-5.jpg" alt="Mobile Cocktailbar Hamburg" loading="lazy" /></div>
     <div class="fan-photo"><img src="Website Bilder/BilderWebsiteEvents/cocktails-anstossen-vogelperspektive-event-catering.jpg" alt="Cocktails anstoßen Event Catering" loading="lazy" /></div>
+    <div class="fan-photo"><img src="Website Bilder/BilderWebsiteEvents/signature-drink-hochzeit-billys-cocktail-catering.jpg" alt="Signature Drink Hochzeit" loading="lazy" /></div>
     <div class="fan-photo"><img src="Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-7.jpg" alt="Cocktail Catering Hamburg" loading="lazy" /></div>
   </div>
 </div>
@@ -549,7 +551,7 @@
 <!-- ═══════════════════════════════════════ -->
 <!-- BAR COMPARISON SLIDER                  -->
 <!-- ═══════════════════════════════════════ -->
-<section class="sec sec-warm bar-compare-section">
+<section class="sec sec-white bar-compare-section">
   <div class="container">
     <div class="bar-compare-layout">
 
@@ -607,36 +609,6 @@
 
     </div>
   </div>
-</section>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- REFERENZEN                             -->
-<!-- ═══════════════════════════════════════ -->
-<section class="ref-strip">
-  <div class="container">
-    <span class="label rv" style="--rv-transform:translate3d(0,30px,0);display:block;text-align:center;" data-i18n="ref-label">Vertrauen uns bereits</span>
-  </div>
-  <div class="logo-slider">
-    <div class="logo-track">
-        <img class="ref-logo-img" src="img/logos/stroeer.svg" alt="STRÖER" height="26">
-        <img class="ref-logo-img" src="img/logos/they.svg" alt="THEy" height="26">
-        <img class="ref-logo-img" src="img/logos/hrs.svg" alt="HRS" height="36">
-        <img class="ref-logo-img" src="img/logos/rockfish.png" alt="Rockfish Games" height="22">
-        <img class="ref-logo-img" src="img/logos/wilkenwerk.svg" alt="Wilkenwerk" height="30">
-        <img class="ref-logo-img" src="img/logos/vabali.svg" alt="Vabali Spa" height="34">
-        <img class="ref-logo-img" src="img/logos/veth.png" alt="Veth Propulsion" height="34">
-        <img class="ref-logo-img" src="img/logos/expliseat.svg" alt="Expliseat" height="26">
-        <!-- duplicate for seamless loop -->
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/stroeer.svg" alt="" height="26">
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/they.svg" alt="" height="26">
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/hrs.svg" alt="" height="36">
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/rockfish.png" alt="" height="22">
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/wilkenwerk.svg" alt="" height="30">
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/vabali.svg" alt="" height="34">
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/veth.png" alt="" height="34">
-        <img class="ref-logo-img" aria-hidden="true" src="img/logos/expliseat.svg" alt="" height="26">
-      </div>
-    </div>
 </section>
 
 <!-- ═══════════════════════════════════════ -->
@@ -755,31 +727,36 @@
 
     </div>
   </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- REFERENZEN                             -->
+<!-- ═══════════════════════════════════════ -->
+<section class="ref-strip">
   <div class="container">
-    <div class="rev-nav-dots">
-      <button class="rev-dot active" data-set="0" aria-label="Bewertungen 1-6"></button>
-      <button class="rev-dot" data-set="1" aria-label="Bewertungen 3-8"></button>
-    </div>
+    <span class="label rv" style="--rv-transform:translate3d(0,30px,0);display:block;text-align:center;" data-i18n="ref-label">Vertrauen uns bereits</span>
   </div>
-  <script>
-  (function(){
-    var cards = Array.from(document.querySelectorAll('.rev-scroll-track .rev-card'));
-    var dots  = Array.from(document.querySelectorAll('.rev-dot'));
-    var sets  = [[0,1,2,3,4,5],[2,3,4,5,6,7]];
-    var page  = 0;
-    function show(p){
-      page = p;
-      var vis = sets[p];
-      cards.forEach(function(c,i){ c.classList.toggle('rev-hidden', vis.indexOf(i)===-1); });
-      dots.forEach(function(d,i){ d.classList.toggle('active', i===p); });
-      var track = document.querySelector('.rev-scroll-track');
-      if(track) track.scrollLeft = 0;
-    }
-    dots.forEach(function(d,i){ d.addEventListener('click', function(){ show(i); }); });
-    setInterval(function(){ show((page+1)%sets.length); }, 8000);
-    show(0);
-  })();
-  </script>
+  <div class="logo-slider">
+    <div class="logo-track">
+        <img class="ref-logo-img" src="img/logos/stroeer.svg" alt="STRÖER" height="26">
+        <img class="ref-logo-img" src="img/logos/they.svg" alt="THEy" height="26">
+        <img class="ref-logo-img" src="img/logos/hrs.svg" alt="HRS" height="36">
+        <img class="ref-logo-img" src="img/logos/rockfish.png" alt="Rockfish Games" height="22">
+        <img class="ref-logo-img" src="img/logos/wilkenwerk.svg" alt="Wilkenwerk" height="30">
+        <img class="ref-logo-img" src="img/logos/vabali.svg" alt="Vabali Spa" height="34">
+        <img class="ref-logo-img" src="img/logos/veth.png" alt="Veth Propulsion" height="34">
+        <img class="ref-logo-img" src="img/logos/expliseat.svg" alt="Expliseat" height="26">
+        <!-- duplicate for seamless loop -->
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/stroeer.svg" alt="" height="26">
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/they.svg" alt="" height="26">
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/hrs.svg" alt="" height="36">
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/rockfish.png" alt="" height="22">
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/wilkenwerk.svg" alt="" height="30">
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/vabali.svg" alt="" height="34">
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/veth.png" alt="" height="34">
+        <img class="ref-logo-img" aria-hidden="true" src="img/logos/expliseat.svg" alt="" height="26">
+      </div>
+    </div>
 </section>
 
 <!-- ═══════════════════════════════════════ -->

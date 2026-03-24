@@ -257,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ['Website Bilder/BilderWebsiteEvents/cocktail-trolley-hochzeit-catering-outdoor-hamburg.jpg', 'Cocktail Trolley Outdoor Hochzeit'],
       ['Website Bilder/BilderWebsiteEvents/mobile-bar-mieten-hochzeit-nrw.jpg', 'Mobile Bar Hochzeit NRW'],
       ['Website Bilder/BilderWebsiteEvents/signature-drink-hochzeit-billys-cocktail-catering.jpg', 'Signature Drink Hochzeit'],
-      ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-3.jpg', 'Cocktail Catering Mobile Bar Hamburg'],
       ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-4.jpg', 'Mobile Bar Hamburg Event'],
       ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-5.jpg', 'Mobile Cocktailbar Hamburg'],
       ['Website Bilder/Bilder 3eins/Cocktail Catering Mobile Bar Hamburg 3eins-6.jpg', 'Event Catering Hamburg'],
@@ -279,6 +278,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     fanIO.observe(fanGallery);
   }
+
+  // ── GOOGLE REVIEWS: pick 5 random on each page load ──
+  (function() {
+    var cards = Array.from(document.querySelectorAll('.rev-scroll-track .rev-card'));
+    if (!cards.length) return;
+    var shuffled = cards.slice().sort(function() { return Math.random() - 0.5; });
+    cards.forEach(function(c) { c.classList.add('rev-hidden'); });
+    shuffled.slice(0, 5).forEach(function(c) { c.classList.remove('rev-hidden'); });
+  })();
 
   // ── BENTO GALLERY: clip-path wipe reveal + 3D tilt ──
   (function() {

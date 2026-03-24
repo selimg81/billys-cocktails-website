@@ -105,7 +105,7 @@ const TRANSLATIONS = {
     'footer-desc':'Mobiles Cocktail Catering',
     'footer-pages':'Seiten','footer-contact-h':'Kontakt',
     'footer-social-h':'Folge uns',
-    'footer-nl-h':'Stay Connected',
+    'footer-nl-h':'Bleib in Kontakt',
     'footer-nl-sub':'Neuigkeiten und exklusive Angebote direkt in dein Postfach.',
     'footer-nl-placeholder':'Deine E-Mail-Adresse',
     'footer-dm-label':'Dark Mode',
@@ -202,8 +202,8 @@ const TRANSLATIONS = {
     'mqt-priv':'Private Parties','mqt-bday':'Birthdays','mqt-sum':'Summer Parties',
 
     /* index — Hero */
-    'usp-badge':'Consumption Guarantee',
-    'usp-badge-sub':'You only pay for what was actually consumed.',
+    'usp-badge':'Pay as you drink',
+    'usp-badge-sub':'You only pay for what your guests actually drink — no flat rates, no minimums.',
     'hero-tag':'Cocktail Catering',
     'hero-h1':'Your Event.',
     'hero-h1-em':'Our Cocktails.',
@@ -223,7 +223,7 @@ const TRANSLATIONS = {
     'srv3-text':'A full setup that travels to you. Premium spirits, beautiful glassware, and everything needed for a seamless service.',
     'srv4-title':'Truly All-Inclusive',
     'srv4-text':'From the first call to the last glass. We handle planning, setup, service, and breakdown — so you can focus on your guests.',
-    'cta-services':'Full Services',
+    'cta-services':'All Services',
 
     /* index — Events */
     'evt-label':'For every occasion',
@@ -246,7 +246,7 @@ const TRANSLATIONS = {
     'hck4-desc':'Gin · Basil · Lemon · Sugar',
     'hck5-desc':'Gin · Campari · Vermouth Rosso',
     'hck6-desc':'Rum · Mint · Lime · Sugar · Soda',
-    'swipe-hint':'Swipe to Discover',
+    'swipe-hint':'Swipe to explore',
 
     /* index — Stats */
     'stat1-label':'Events','stat2-label':'Cocktails mixed','stat3-label':'Good vibes guarantee',
@@ -259,7 +259,7 @@ const TRANSLATIONS = {
     'con-sub':'We\'ll get back to you within 24 hours.',
     'vorlauf-q':'How much lead time do I need?',
     'vorlauf-a':'We\'re flexible by nature. Last-minute bookings are possible whenever we have availability. For the best slot, we recommend reaching out as early as possible.',
-    'form-name':'Name','form-email':'E-Mail','form-date':'Event date',
+    'form-name':'Name','form-email':'Email','form-date':'Event date',
     'form-guests':'Number of guests','form-msg':'Tell us briefly about your event...',
     'form-submit':'Send inquiry',
 
@@ -275,9 +275,9 @@ const TRANSLATIONS = {
     'faq4-q':'What\'s included in the Billy\'s service?',
     'faq4-a':'At Billy\'s we tailor everything to your event. You decide how much support you need, from a single bartender to a full all-inclusive service. On request we bring our mobile bar, handle glasses, ingredients, set-up and tear-down, and work with you on the perfect cocktail selection. So you don\'t have to worry about a thing and can simply enjoy your event.',
     'faq5-q':'What cocktails and long drinks does Billy\'s offer?',
-    'faq5-a':'At Billy\'s you can expect a versatile selection of classics and modern cocktails: Mojito, Moscow Mule, Whiskey Sour, Gin Basil Smash, fruity summer drinks and much more. Together we\'ll put together a menu that suits your event, including one or two signature cocktails that give your bar a personal touch. Individual requests and favourite drinks are always welcome.',
+    'faq5-a':'At Billy\'s you can expect a versatile selection of classics and modern cocktails: Mojito, Moscow Mule, Whiskey Sour, Gin Basil Smash, fruity summer drinks and much more. Together we\'ll put together a menu that suits your event, including one or two signature cocktails that give your bar a personal touch. Special requests and favourite drinks are always welcome.',
     'faq6-q':'Are non-alcoholic cocktails available?',
-    'faq6-a':'Yes, absolutely. Our mocktails are every bit as enjoyable as the classic cocktails and are a great option for guests who prefer to skip the alcohol. Whether fruity, refreshing or slightly bitter, we put together a selection that fits your event and your guests. If you have special requests, we\'re happy to plan them with you.',
+    'faq6-a':'Yes, absolutely. Our mocktails are every bit as enjoyable as the real thing and a great option for guests who prefer to skip the alcohol. Whether fruity, refreshing, or a little more complex — we put together a selection that suits your event and your crowd. Special requests are always welcome.',
     'faq7-q':'Which regions does Billy\'s Cocktail Catering serve?',
     'faq7-a':'Billy\'s Cocktail Catering is based in Hamburg and operates primarily across northern Germany, including Schleswig-Holstein, Lower Saxony and cities such as Kiel, Hanover, Cologne and Dusseldorf. We are also regularly active in Berlin. On request we travel to other regions too. Simply send us your enquiry with venue and date and we\'ll get back to you personally.',
     'faq8-q':'What do you recommend for a private party?',
@@ -368,8 +368,8 @@ const TRANSLATIONS = {
     'kon-cta-text':'Prefer to talk it through? Book a free consultation with Vassili.',
     'kon-cta-btn':'Book a call',
     'cal-label':'Free consultation','cal-h2':'By phone or','cal-h2-em':'Zoom',
-    'cal-sub':'Book a free 30-minute call with Vassili directly. We\'ll go over your event, answer all questions, and put together a tailored offer for you.',
-    'kon-f-first':'First name','kon-f-last':'Last name','kon-f-email':'E-Mail',
+    'cal-sub':'Book a free 30-minute call with Vassili directly. We\'ll go over your event, answer all your questions, and put together a tailored quote.',
+    'kon-f-first':'First name','kon-f-last':'Last name','kon-f-email':'Email',
     'kon-f-phone':'Phone','kon-f-loc':'Location / Venue','kon-f-date':'Event date',
     'kon-f-guests':'Number of guests','kon-f-hours':'Event duration (hrs)',
     'kon-f-type':'Choose event type','kon-f-msg':'Tell us about your event...',

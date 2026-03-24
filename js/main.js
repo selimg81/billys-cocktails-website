@@ -148,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const json = await response.json();
 
         if (json.success) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'contact_form_submit' });
           btn.innerHTML = '✓ Erfolgreich gesendet!';
           btn.style.background = '#2d8a6e';
           if (result) {

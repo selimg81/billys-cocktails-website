@@ -27,8 +27,11 @@
   }
 
   function applyConsent(consent) {
-    // Future: load analytics scripts here if consent.analytics === true
     setConsent(consent);
+    if (consent.analytics) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'consent_granted' });
+    }
   }
 
   function acceptAll() {

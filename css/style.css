@@ -689,11 +689,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .inc-item { font-size: 16px; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: rgba(255,255,255,0.08); border-radius: 12px; }
 .inc-check { flex-shrink: 0; width: 26px; height: 26px; }
 .inc-check svg { width: 26px; height: 26px; display: block; }
-.inc-check .check-bg {
-  fill: rgba(255,255,255,0.15);
-  transition: fill 0.3s ease calc(var(--rv-delay, 0ms) + 350ms);
-}
-.inc-item.visible .check-bg { fill: rgba(255,255,255,0.22); }
+.inc-check .check-bg { fill: rgba(255,255,255,0.15); }
 .inc-check .check-path {
   fill: none;
   stroke: #fff;
@@ -702,9 +698,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   stroke-linejoin: round;
   stroke-dasharray: 23;
   stroke-dashoffset: 23;
-  transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1) calc(var(--rv-delay, 0ms) + 250ms);
 }
-.inc-item.visible .check-path { stroke-dashoffset: 0; }
+@keyframes checkDraw {
+  to { stroke-dashoffset: 0; }
+}
+.inc-item.visible .check-path {
+  animation: checkDraw 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.inc-item.visible:nth-child(1) .check-path { animation-delay: 300ms; }
+.inc-item.visible:nth-child(2) .check-path { animation-delay: 480ms; }
+.inc-item.visible:nth-child(3) .check-path { animation-delay: 660ms; }
+.inc-item.visible:nth-child(4) .check-path { animation-delay: 840ms; }
+.inc-item.visible:nth-child(5) .check-path { animation-delay: 1020ms; }
+.inc-item.visible:nth-child(6) .check-path { animation-delay: 1200ms; }
 
 /* ── ABOUT ── */
 .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }

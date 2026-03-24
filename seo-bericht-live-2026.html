@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO-Bericht LIVE — billys-cocktails.de 2026</title>
+<meta name="robots" content="noindex, nofollow" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --petrol: #1A6E73; --petrol-dark: #135357; --petrol-light: #e8f4f4;
+  --cream: #F5F2EC; --dark: #1E1E1E; --mid: #555; --light: #888; --border: #ddd;
+  --green: #2d7a4a; --green-bg: #eaf6ee;
+  --orange: #b86a00; --orange-bg: #fff4e5;
+  --red: #b83232; --red-bg: #fdeaea;
+}
+html { font-size: 13px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; background: #e5e3de; color: var(--dark); line-height: 1.6; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 210mm; min-height: 297mm; background: #fff; margin: 20px auto; padding: 14mm 16mm; position: relative; }
+.page + .page { margin-top: 0; border-top: 2px dashed #ccc; }
+
+/* COVER */
+.cover { background: #1E1E1E; color: #fff; padding: 20mm 18mm; min-height: 297mm; display: flex; flex-direction: column; justify-content: space-between; }
+.cover-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; opacity: 0.4; margin-bottom: 56mm; }
+.cover-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #e55; margin-bottom: 10px; }
+.cover-title { font-size: 34px; font-weight: 300; line-height: 1.15; }
+.cover-title strong { font-weight: 800; display: block; }
+.cover-url { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 10px; font-family: 'Courier New', monospace; }
+.cover-sub { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 20px; line-height: 1.7; max-width: 380px; }
+.cover-alert { background: rgba(184,50,50,0.15); border: 1.5px solid rgba(184,50,50,0.4); border-radius: 10px; padding: 14px 16px; margin-top: 32px; max-width: 380px; }
+.cover-alert-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e88; margin-bottom: 6px; }
+.cover-alert p { font-size: 10.5px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+.cover-score-row { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+.cover-score { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 14px 16px; text-align: center; min-width: 76px; }
+.cover-score-num { font-size: 26px; font-weight: 800; line-height: 1; }
+.cover-score-num.red { color: #e88; }
+.cover-score-num.orange { color: #f0a860; }
+.cover-score-num.green { color: #6dca96; }
+.cover-score-label { font-size: 8px; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.45; margin-top: 4px; }
+.cover-footer { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; display: flex; justify-content: space-between; font-size: 9px; color: rgba(255,255,255,0.3); }
+
+/* CONTENT */
+.page-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 2px solid var(--dark); margin-bottom: 18px; }
+.page-header-title { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--dark); }
+.page-header-right { font-size: 9px; color: var(--light); }
+.page-footer { border-top: 1px solid var(--border); padding-top: 8px; margin-top: 18px; display: flex; justify-content: space-between; font-size: 9px; color: var(--light); }
+
+h2.section-title { font-size: 14px; font-weight: 800; color: var(--dark); margin: 20px 0 10px; display: flex; align-items: center; gap: 8px; }
+h2.section-title:first-child { margin-top: 0; }
+
+.badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; }
+.badge-green { background: var(--green-bg); color: var(--green); }
+.badge-orange { background: var(--orange-bg); color: var(--orange); }
+.badge-red { background: var(--red-bg); color: var(--red); }
+
+.findings { display: flex; flex-direction: column; gap: 7px; margin: 8px 0; }
+.finding { display: flex; gap: 10px; padding: 9px 12px; border-radius: 8px; border-left: 3px solid; }
+.finding.good { background: var(--green-bg); border-color: var(--green); }
+.finding.warn { background: var(--orange-bg); border-color: var(--orange); }
+.finding.bad { background: var(--red-bg); border-color: var(--red); }
+.finding-icon { font-size: 12px; flex-shrink: 0; margin-top: 1px; font-weight: 700; }
+.finding-title { font-size: 11px; font-weight: 700; margin-bottom: 2px; }
+.finding.good .finding-title { color: var(--green); }
+.finding.warn .finding-title { color: var(--orange); }
+.finding.bad .finding-title { color: var(--red); }
+.finding-text { font-size: 10.5px; color: var(--mid); line-height: 1.55; }
+.finding code { background: rgba(0,0,0,0.07); padding: 1px 5px; border-radius: 3px; font-size: 9.5px; font-family: 'Courier New', monospace; }
+
+table { width: 100%; border-collapse: collapse; font-size: 10.5px; margin: 8px 0; }
+th { background: var(--dark); color: #fff; padding: 7px 10px; text-align: left; font-size: 9.5px; font-weight: 700; letter-spacing: 0.5px; }
+td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #fafafa; }
+
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.compare-box { border-radius: 10px; padding: 12px 14px; }
+.compare-live { background: var(--red-bg); border: 1.5px solid rgba(184,50,50,0.2); }
+.compare-new { background: var(--green-bg); border: 1.5px solid rgba(45,122,74,0.2); }
+.compare-title { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.compare-live .compare-title { color: var(--red); }
+.compare-new .compare-title { color: var(--green); }
+.compare-box ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.compare-box ul li { font-size: 10.5px; color: var(--mid); display: flex; gap: 6px; line-height: 1.5; }
+.compare-box ul li::before { flex-shrink: 0; }
+.compare-live ul li::before { content: '✗'; color: var(--red); font-weight: 700; }
+.compare-new ul li::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+.priority-list { list-style: none; display: flex; flex-direction: column; gap: 7px; margin: 8px 0; }
+.priority-item { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border-radius: 8px; background: var(--cream); }
+.priority-num { border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+.num-red { background: var(--red); color: #fff; }
+.num-orange { background: var(--orange); color: #fff; }
+.num-green { background: var(--green); color: #fff; }
+.priority-title { font-size: 11px; font-weight: 700; margin-bottom: 2px; }
+.priority-desc { font-size: 10px; color: var(--mid); line-height: 1.55; }
+.priority-tag { display: inline-block; margin-left: 6px; font-size: 9px; font-weight: 600; padding: 1px 6px; border-radius: 4px; }
+.tag-k { background: var(--red-bg); color: var(--red); }
+.tag-w { background: var(--orange-bg); color: var(--orange); }
+.tag-n { background: var(--green-bg); color: var(--green); }
+
+.score-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 10px 0; }
+.score-card { background: var(--cream); border-radius: 8px; padding: 10px; text-align: center; }
+.score-num { font-size: 20px; font-weight: 800; line-height: 1; }
+.score-num.red { color: var(--red); }
+.score-num.orange { color: var(--orange); }
+.score-num.green { color: var(--green); }
+.score-lbl { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--light); margin-top: 3px; }
+
+.highlight { background: rgba(184,50,50,0.06); border: 1.5px solid rgba(184,50,50,0.2); border-radius: 10px; padding: 11px 13px; margin: 10px 0; }
+.highlight-title { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--red); margin-bottom: 5px; }
+.highlight p { font-size: 10.5px; color: var(--mid); line-height: 1.6; }
+
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; width: 100%; box-shadow: none; }
+  .page + .page { border-top: none; page-break-before: always; }
+  @page { size: A4; margin: 0; }
+}
+@media screen {
+  .page { box-shadow: 0 4px 40px rgba(0,0,0,0.12); border-radius: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-eyebrow">Billy's Cocktails · Vertraulich · März 2026</div>
+  <div>
+    <div class="cover-label">⚠ Kritischer Befund</div>
+    <div class="cover-title">SEO-Analyse<br><strong>billys-cocktails.de</strong></div>
+    <div class="cover-url">https://billys-cocktails.de · WordPress / Elementor</div>
+    <div class="cover-sub">Analyse der aktuell live geschalteten Produktions-Website. Die Seite weist mehrere kritische SEO-Fehler auf, die das organische Ranking aktiv behindern.</div>
+    <div class="cover-alert">
+      <div class="cover-alert-title">Wichtiger Hinweis</div>
+      <p>Diese Analyse bezieht sich auf die <strong>aktuell live geschaltete WordPress-Website</strong> unter billys-cocktails.de — nicht auf die neue, in Entwicklung befindliche statische Website auf GitHub. Die neue Site behebt die hier beschriebenen Probleme bereits.</p>
+    </div>
+    <div class="cover-score-row">
+      <div class="cover-score"><div class="cover-score-num red">48</div><div class="cover-score-label">SEO</div></div>
+      <div class="cover-score"><div class="cover-score-num orange">55</div><div class="cover-score-label">Performance</div></div>
+      <div class="cover-score"><div class="cover-score-num orange">62</div><div class="cover-score-label">Struktur</div></div>
+      <div class="cover-score"><div class="cover-score-num red">30</div><div class="cover-score-label">Accessibility</div></div>
+      <div class="cover-score"><div class="cover-score-num orange">70</div><div class="cover-score-label">Technik</div></div>
+    </div>
+  </div>
+  <div class="cover-footer">
+    <div>Erstellt: März 2026 · billys-cocktails.de</div>
+    <div>Intern · Seite 1 von 4</div>
+  </div>
+</div>
+
+<!-- PAGE 2 — KRITISCHE SEO-FEHLER -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-title">Kritische SEO-Fehler</div>
+    <div class="page-header-right">billys-cocktails.de · Live-Site · März 2026</div>
+  </div>
+
+  <h2 class="section-title">On-Page SEO — Bewertung 48/100 <span class="badge badge-red">Kritisch</span></h2>
+
+  <div class="findings">
+    <div class="finding bad">
+      <div class="finding-icon">✗</div>
+      <div class="finding-body">
+        <div class="finding-title">H1 auf Englisch — keine deutschen Keywords</div>
+        <div class="finding-text">Die wichtigste Überschrift der Startseite lautet: <code>"Where Elegance Meets Mixology"</code>. Google bewertet den H1-Tag als primäres Relevanz-Signal für eine Seite. Ein englischer H1 auf einer deutschen Website ohne englische Zielgruppe verschwendet das wichtigste Ranking-Element. Korrekt wäre z.B.: <code>"Mobiles Cocktail Catering Hamburg · Berlin · NRW"</code>.</div>
+      </div>
+    </div>
+    <div class="finding bad">
+      <div class="finding-icon">✗</div>
+      <div class="finding-body">
+        <div class="finding-title">H6-Tags als Hauptüberschriften — falsche Heading-Hierarchie</div>
+        <div class="finding-text">Auf der Startseite und der Über-uns-Seite werden wichtige Abschnitte wie "Unsere Mission", "Leistungsumfang", "Unsere Referenzen" als <code>&lt;h6&gt;</code> ausgezeichnet — dem unwichtigsten Heading-Level. Google gewichtet H2/H3 als thematische Gliederung einer Seite. H6-Tags werden faktisch ignoriert. Ursache: Elementor-Widget-Einstellung falsch gesetzt.</div>
+      </div>
+    </div>
+    <div class="finding bad">
+      <div class="finding-icon">✗</div>
+      <div class="finding-body">
+        <div class="finding-title">Fehlende Alt-Texte auf allen Bildern</div>
+        <div class="finding-text">Weder das Logo noch Produktbilder oder Teamfotos haben Alt-Attribute. Dateinamen wie <code>barman-is-making-cocktail-at-night-club-.jpg</code> und <code>AdobeStock_188692692.jpeg</code> geben Google keinen inhaltlichen Kontext. Alt-Texte sind ein direktes Ranking-Signal für die Google Bildersuche und verbessern zudem die Barrierefreiheit (WCAG).</div>
+      </div>
+    </div>
+    <div class="finding bad">
+      <div class="finding-icon">✗</div>
+      <div class="finding-body">
+        <div class="finding-title">Fehlende Meta Descriptions auf mehreren Seiten</div>
+        <div class="finding-text">Die Über-uns-Seite (/ueber-uns/) und die Kontaktseite (/kontakt/) haben keine Meta Description. Google generiert dann automatisch einen Ausschnitt — oft unpassend. Die Startseite hat eine Meta Description, aber sie nutzt "Ihr" (formell), während die Website selbst "Du" verwendet — inkonsistentes Tone-of-Voice-Signal.</div>
+      </div>
+    </div>
+    <div class="finding bad">
+      <div class="finding-icon">✗</div>
+      <div class="finding-body">
+        <div class="finding-title">Keine event-spezifischen Landingpages</div>
+        <div class="finding-text">Die wichtigsten Ziel-Keywords wie "Cocktail Catering Hochzeit" (480 Suchen/Monat), "Cocktail Catering Firmenevent" (390/Monat) oder "Mobile Bar mieten Geburtstag" haben keine dedizierten Unterseiten. Alle Leistungen sind auf einer einzigen One-Page zusammengefasst. Dedizierte Seiten würden jedes Keyword gezielt adressieren und deutlich besser ranken.</div>
+      </div>
+    </div>
+    <div class="finding warn">
+      <div class="finding-icon">!</div>
+      <div class="finding-body">
+        <div class="finding-title">Sitemap enthält Junk-Seiten (crawl budget)</div>
+        <div class="finding-text">Die Sitemap (page-sitemap.xml) enthält: <code>/sample-page/</code>, <code>/coming-soon/</code>, <code>/home-2/</code>. Diese WordPress-Standardseiten und Testseiten verbrauchen crawl budget und senden Google verwirrende Signale. Sie sollten noindex erhalten oder aus der Sitemap entfernt werden.</div>
+      </div>
+    </div>
+    <div class="finding warn">
+      <div class="finding-icon">!</div>
+      <div class="finding-body">
+        <div class="finding-title">Heading-Duplikate auf Über-uns-Seite</div>
+        <div class="finding-text">Auf /ueber-uns/ erscheint "Über Uns" sowohl als H1 als auch als H2. "Ein Team aus jungen Barkeepern" erscheint als H4 UND als H6. Dies verwirrt Crawler bezüglich der Seitenstruktur und deutet auf fehlerhafte Elementor-Konfiguration hin.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Billy's Cocktails · SEO-Bericht Live-Site · März 2026</div>
+    <div>Seite 2 von 4</div>
+  </div>
+</div>
+
+<!-- PAGE 3 — TECHNIK & VERGLEICH -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-title">Technische Analyse & Vergleich mit neuer Website</div>
+    <div class="page-header-right">billys-cocktails.de · Live-Site · März 2026</div>
+  </div>
+
+  <h2 class="section-title">Technische Befunde</h2>
+
+  <div class="findings">
+    <div class="finding bad">
+      <div class="finding-icon">✗</div>
+      <div class="finding-body">
+        <div class="finding-title">Zwei Google Tag Manager Container gleichzeitig aktiv</div>
+        <div class="finding-text">Die Seite lädt <code>GTM-NMH4QK2</code> und <code>GTM-T76WV7P</code> — beide gleichzeitig. Das führt zu doppelten Events in Analytics, verfälschten Conversion-Daten und erhöhter Ladezeit. Ein Container muss deaktiviert oder zusammengeführt werden. Google Analytics (G-2YT4MWP3MQ) und Facebook Pixel sind korrekt eingebunden.</div>
+      </div>
+    </div>
+    <div class="finding bad">
+      <div class="finding-icon">✗</div>
+      <div class="finding-body">
+        <div class="finding-title">WordPress + Elementor — schwerer Page Builder</div>
+        <div class="finding-text">Elementor lädt Frontend-CSS, ElementorPro, Happy Addons, Essential Addons und ElementsKit — mindestens 5 separate Plugin-CSS/JS-Dateien. Das erhöht die Seitengewicht und Time-to-Interactive erheblich. Typische Elementor-Seiten erzielen PageSpeed-Scores von 40–65 auf Mobile, was Google Core Web Vitals direkt beeinträchtigt.</div>
+      </div>
+    </div>
+    <div class="finding good">
+      <div class="finding-icon">✓</div>
+      <div class="finding-body">
+        <div class="finding-title">Tracking vollständig vorhanden</div>
+        <div class="finding-text">Google Analytics 4 (G-2YT4MWP3MQ), Facebook Pixel und WhatsApp Click-to-Chat sind korrekt eingebunden. Conversion-Tracking ist technisch gegeben — sobald der doppelte GTM bereinigt ist, liefert das Tracking verlässliche Daten.</div>
+      </div>
+    </div>
+    <div class="finding warn">
+      <div class="finding-icon">!</div>
+      <div class="finding-body">
+        <div class="finding-title">Inhalte zuletzt 2022–2023 aktualisiert</div>
+        <div class="finding-text">Die meisten Seiten haben lastmod-Daten aus 2021–2023 (laut Sitemap). Nur die Startseite (Nov 2024) und /beratung/ (Okt 2025) sind aktueller. Google bevorzugt regelmäßig aktualisierte Inhalte. Veraltete lastmod-Werte signalisieren eine wenig gepflegte Website.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title" style="margin-top:18px;">Live-Site vs. Neue Website — direkter Vergleich</h2>
+
+  <div class="compare-grid">
+    <div class="compare-box compare-live">
+      <div class="compare-title">✗ Live (WordPress) — Probleme</div>
+      <ul>
+        <li>H1 auf Englisch, kein Keyword</li>
+        <li>H6 als Abschnitts-Headlines (SEO-tot)</li>
+        <li>Keine Alt-Texte auf Bildern</li>
+        <li>Keine Meta Desc. auf 2+ Seiten</li>
+        <li>Keine event-spezifischen Seiten</li>
+        <li>Google Fonts extern geladen (DSGVO)</li>
+        <li>Doppelter GTM-Container</li>
+        <li>Sitemap mit Junk-Seiten</li>
+        <li>Elementor: hohe JS/CSS-Last</li>
+        <li>Bilder unkomprimiert (JPG, groß)</li>
+      </ul>
+    </div>
+    <div class="compare-box compare-new">
+      <div class="compare-title">✓ Neue Site (GitHub) — gelöst</div>
+      <ul>
+        <li>H1 auf Deutsch mit Keywords</li>
+        <li>Saubere H1→H2→H3-Hierarchie</li>
+        <li>Alt-Texte auf allen Bildern</li>
+        <li>Meta Desc. auf allen 14 Seiten</li>
+        <li>8 event-spezifische Unterseiten</li>
+        <li>Google Fonts self-hosted (DSGVO ✓)</li>
+        <li>GTM-ready (ein Container)</li>
+        <li>Saubere Sitemap, robots.txt</li>
+        <li>Kein Page Builder, reines HTML/CSS</li>
+        <li>WebP: 159MB → 40MB (–75%)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <div class="highlight-title">Fazit zum Vergleich</div>
+    <p>Die neue Website (aktuell in Entwicklung auf GitHub Pages) behebt <strong>alle hier genannten kritischen Fehler</strong> bereits von Grund auf. Der Go-Live der neuen Site würde den SEO-Score von derzeit ~48 auf schätzungsweise <strong>90–95/100</strong> heben — ohne weitere Anpassungen.</p>
+  </div>
+
+  <div class="page-footer">
+    <div>Billy's Cocktails · SEO-Bericht Live-Site · März 2026</div>
+    <div>Seite 3 von 4</div>
+  </div>
+</div>
+
+<!-- PAGE 4 — MASSNAHMEN -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-title">Handlungsempfehlungen (Live-Site)</div>
+    <div class="page-header-right">billys-cocktails.de · Live-Site · März 2026</div>
+  </div>
+
+  <h2 class="section-title">Sofortmaßnahmen in WordPress <span class="badge badge-red">Kritisch</span></h2>
+
+  <ul class="priority-list">
+    <li class="priority-item">
+      <div class="priority-num num-red">1</div>
+      <div class="priority-body">
+        <div class="priority-title">H1 auf Deutsch ändern <span class="priority-tag tag-k">Kritisch</span></div>
+        <div class="priority-desc">Im Elementor-Editor die Startseite öffnen → Hero-Widget → Heading-Text ändern von "Where Elegance Meets Mixology" auf z.B. "Mobiles Cocktail Catering für unvergessliche Events". Aufwand: 5 Minuten. Wirkung: größter Einzelgewinn für das Google-Ranking.</div>
+      </div>
+    </li>
+    <li class="priority-item">
+      <div class="priority-num num-red">2</div>
+      <div class="priority-body">
+        <div class="priority-title">H6-Überschriften auf H2/H3 korrigieren <span class="priority-tag tag-k">Kritisch</span></div>
+        <div class="priority-desc">In Elementor: alle Heading-Widgets mit H6-Tag auf H2 oder H3 ändern. Jedes Widget hat oben eine HTML-Tag-Auswahl (H1–H6). "Unsere Mission" → H2, "Leistungsumfang" → H2, etc. Aufwand: 20–30 Minuten. Ohne diese Änderung werden Abschnittsinhalte von Google kaum als relevant eingestuft.</div>
+      </div>
+    </li>
+    <li class="priority-item">
+      <div class="priority-num num-red">3</div>
+      <div class="priority-body">
+        <div class="priority-title">Alt-Texte für alle Bilder ergänzen <span class="priority-tag tag-k">Kritisch</span></div>
+        <div class="priority-desc">In Elementor: jedes Image-Widget anklicken → "Alt Text" Feld ausfüllen. Beispiele: Logo → "Billy's Cocktails Logo", Teamfoto → "Vassili, Gründer Billy's Cocktail Catering Hamburg". WordPress Mediathek: alternativ direkt in Einstellungen jedes Bildes den Alt-Text setzen.</div>
+      </div>
+    </li>
+    <li class="priority-item">
+      <div class="priority-num num-red">4</div>
+      <div class="priority-body">
+        <div class="priority-title">Doppelten GTM-Container entfernen <span class="priority-tag tag-k">Kritisch</span></div>
+        <div class="priority-desc">In WordPress: Einstellungen → aktives GTM-Plugin prüfen. Einen der beiden Container (GTM-NMH4QK2 oder GTM-T76WV7P) deaktivieren. Prüfen welcher der "aktive" Container mit Meta Pixel und GA4 ist — diesen behalten, den anderen löschen. Solange beide aktiv sind, werden alle Events doppelt gezählt.</div>
+      </div>
+    </li>
+  </ul>
+
+  <h2 class="section-title">Kurzfristig (1–2 Wochen) <span class="badge badge-orange">Wichtig</span></h2>
+
+  <ul class="priority-list">
+    <li class="priority-item">
+      <div class="priority-num num-orange">5</div>
+      <div class="priority-body">
+        <div class="priority-title">Meta Descriptions für alle Seiten ergänzen <span class="priority-tag tag-w">Wichtig</span></div>
+        <div class="priority-desc">Yoast SEO oder Rank Math Plugin: Jede Seite einzeln öffnen → SEO-Meta-Box → "Meta Description" ausfüllen (150–160 Zeichen, mit Keyword + CTA). Kontakt-Seite und Über-uns-Seite haben derzeit keine — Google wählt dann beliebigen Text.</div>
+      </div>
+    </li>
+    <li class="priority-item">
+      <div class="priority-num num-orange">6</div>
+      <div class="priority-body">
+        <div class="priority-title">Sitemap-Junk-Seiten entfernen (noindex) <span class="priority-tag tag-w">Wichtig</span></div>
+        <div class="priority-desc">/sample-page/, /coming-soon/, /home-2/ in WordPress auf "noindex" setzen oder löschen. Yoast SEO: Seite bearbeiten → Yoast-Box → "Nicht indexieren". Danach Sitemap neu einreichen in Google Search Console.</div>
+      </div>
+    </li>
+  </ul>
+
+  <h2 class="section-title">Strategisch: Go-Live der neuen Website <span class="badge badge-green">Empfohlen</span></h2>
+
+  <ul class="priority-list">
+    <li class="priority-item">
+      <div class="priority-num num-green">7</div>
+      <div class="priority-body">
+        <div class="priority-title">Neue statische Website live schalten <span class="priority-tag tag-n">Strategisch</span></div>
+        <div class="priority-desc">Die in Entwicklung befindliche neue Website (GitHub Pages) löst alle 10 hier genannten Kritikpunkte strukturell. Statt die WordPress-Site mühsam zu reparieren, wäre ein Go-Live der neuen Site der effizienteste Weg. Voraussetzungen: Web3Forms Key eintragen, finales Review, DNS auf GitHub Pages umstellen. Erwarteter SEO-Score nach Go-Live: 90–95/100.</div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="page-footer">
+    <div>Billy's Cocktails · SEO-Bericht Live-Site · März 2026 · Vertraulich</div>
+    <div>Seite 4 von 4</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -170,7 +170,7 @@ const TRANSLATIONS = {
 
     /* referenzen.html */
     'ref-page-label':'Portfolio','ref-page-h1':'Unsere','ref-page-h1-em':'Referenzen',
-    'ref-logos-label':'Vertrauen uns bereits','ref-gallery-h2':'Impressionen',
+    'ref-logos-label':'Vertrauen uns bereits','ref-gallery-h2':'Momente,','ref-gallery-h2-em':'die bleiben.',
 
     /* kontakt.html */
     'kon-label':'Anfrage','kon-h1':'Lass uns','kon-h1-em':'sprechen',
@@ -358,7 +358,7 @@ const TRANSLATIONS = {
 
     /* referenzen.html */
     'ref-page-label':'Portfolio','ref-page-h1':'Our','ref-page-h1-em':'References',
-    'ref-logos-label':'Trusted by','ref-gallery-h2':'Impressions',
+    'ref-logos-label':'Trusted by','ref-gallery-h2':'Moments','ref-gallery-h2-em':'worth remembering.',
 
     /* kontakt.html */
     'kon-label':'Inquiry','kon-h1':'Let\'s','kon-h1-em':'talk',

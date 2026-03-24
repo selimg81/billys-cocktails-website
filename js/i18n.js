@@ -50,7 +50,7 @@ const TRANSLATIONS = {
     'evt6-title':'Private Feiern','evt6-text':'Jubiläen, Housewarmings oder einfach Lust auf eine gute Party. Wir sind dabei.',
 
     /* index — Cocktails */
-    'ck-label':'Unsere Cocktails','ck-h2':'Crafted with','ck-h2-em':'Passion',
+    'ck-label':'Unsere Cocktails','ck-h2':'Gemixt mit','ck-h2-em':'Leidenschaft',
     'cta-allck':'Alle Cocktails ansehen',
     'hck1-desc':'Vodka · Pfirsich · Maracuja · Limette',
     'hck2-desc':'Tequila · Triple Sec · Limette · Salzrand',

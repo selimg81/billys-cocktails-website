@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danke für deine Anfrage | Billy's Cocktails</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .danke-section {
+      min-height: 100svh;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--petrol);
+      text-align: center;
+      padding: clamp(80px, 12vw, 140px) clamp(20px, 4vw, 60px);
+    }
+    .danke-inner { max-width: 560px; }
+    .danke-icon {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px;
+    }
+    .danke-icon svg { width: 32px; height: 32px; stroke: #fff; }
+    .danke-h1 {
+      font-family: var(--f-display);
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 300;
+      color: #fff;
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+    .danke-h1 em { font-style: italic; color: var(--sand); }
+    .danke-p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin: 0 0 40px;
+    }
+    .danke-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff; color: var(--petrol);
+      padding: 14px 32px; border-radius: 100px;
+      font-size: 14px; font-weight: 600;
+      transition: all 0.3s;
+    }
+    .btn-white:hover { background: var(--warm); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent; color: rgba(255,255,255,0.8);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      padding: 14px 32px; border-radius: 100px;
+      font-size: 14px; font-weight: 500;
+      transition: all 0.3s;
+    }
+    .btn-ghost:hover { border-color: #fff; color: #fff; transform: translateY(-2px); }
+    .danke-detail {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+    }
+    .danke-contact-item {
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,0.6); font-size: 14px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .danke-contact-item:hover { color: #fff; }
+    .danke-contact-item svg { flex-shrink: 0; opacity: 0.6; }
+  </style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-inner">
+    <a href="index.html"><img src="Website Bilder/Logo/billys-logo-petrol.png" alt="Billy's Cocktails" class="hdr-logo" style="filter:brightness(0) invert(1)" /></a>
+  </div>
+</header>
+
+<div class="danke-section">
+  <div class="danke-inner">
+    <div class="danke-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6L9 17l-5-5"/>
+      </svg>
+    </div>
+    <h1 class="danke-h1">Danke für<br><em>deine Anfrage!</em></h1>
+    <p class="danke-p">Wir haben deine Nachricht erhalten und melden uns so schnell wie möglich — in der Regel innerhalb von 24 Stunden.</p>
+    <div class="danke-btns">
+      <a href="index.html" class="btn-white">Zurück zur Startseite</a>
+      <a href="cocktails.html" class="btn-ghost">Unsere Cocktails</a>
+    </div>
+    <div class="danke-detail">
+      <a href="tel:+491739927773" class="danke-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.12 6.12l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +49 173 9927773
+      </a>
+      <a href="https://www.instagram.com/billyscocktails" target="_blank" rel="noopener" class="danke-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @billyscocktails
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="js/cookie-consent.js"></script>
+</body>
+</html>

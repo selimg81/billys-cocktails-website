@@ -7,10 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── HEADER ──
   const header = document.querySelector('.hdr');
   const hero = document.querySelector('.hero');
-  const burger = document.querySelector('.hdr-burger');
-  const mobMenu = document.querySelector('.mob-menu');
-  const burgerLines = document.querySelectorAll('.burger-line');
-
   const updateHeader = () => {
     const scrolled = window.scrollY > 60;
     header?.classList.toggle('solid', scrolled);
@@ -21,39 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
-
-  // ── MOBILE MENU ──
-  let menuOpen = false;
-  burger?.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    burger.classList.toggle('open', menuOpen);
-    mobMenu?.classList.toggle('open', menuOpen);
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    burgerLines.forEach(l => l.classList.toggle('w', !menuOpen && !document.querySelector('.hdr.solid')));
-  });
-
-  // Stagger mob links
-  document.querySelectorAll('.mob-link').forEach((link, i) => {
-    link.style.transitionDelay = menuOpen ? `${i * 60 + 120}ms` : '0ms';
-  });
-
-  mobMenu?.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('click', () => {
-      menuOpen = false;
-      burger?.classList.remove('open');
-      mobMenu?.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && menuOpen) {
-      menuOpen = false;
-      burger?.classList.remove('open');
-      mobMenu?.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
 
   // ── FIXED CTA ──
   const fab = document.querySelector('.fixed-cta');
@@ -200,15 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // ── MOB LINK STAGGER ──
-  const mobLinks = document.querySelectorAll('.mob-link');
-  const triggerMobStagger = (open) => {
-    mobLinks.forEach((link, i) => {
-      link.style.transitionDelay = open ? `${i * 60 + 100}ms` : '0ms';
-    });
-  };
-  burger?.addEventListener('click', () => triggerMobStagger(menuOpen));
 
   // ── TUBE NAV ──
   (function() {

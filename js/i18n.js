@@ -189,6 +189,120 @@ const TRANSLATIONS = {
     'opt-firma':'Firmenevent','opt-hochzeit':'Hochzeit','opt-geburtstag':'Geburtstag',
     'opt-messe':'Messe / Großevent','opt-sommer':'Sommerfest',
     'opt-privat':'Private Feier','opt-sonstiges':'Sonstiges',
+
+    /* Shared sub-page */
+    'page-hero-label':'Cocktail Catering für',
+    'footer-cookie':'Cookie-Einstellungen',
+
+    /* index — Bar section */
+    'bar-label':'Die mobile Bar',
+    'bar-h2':'Unsere','bar-h2-em':'Mobile Cocktailbar',
+    'bar-p1':'Unsere <strong>mobile Bar</strong> ist das Herzstück jedes Events. Kompakt gebaut, aber mit vollem Profi-Equipment ausgestattet: von der Eismaschine über frische Zutaten bis hin zu hochwertigen Markenspirituosen ist alles an Bord. Ob du eine <strong>mobile Bar für ein Firmenevent</strong>, eine <strong>Hochzeit</strong> oder eine <strong>private Feier</strong> mietest – wir liefern, bauen auf und räumen ab.',
+    'bar-p2':'Die Bar lässt sich in weniger als 30 Minuten auf- und abbauen und ist sowohl für <strong>Indoor- als auch Outdoor-Events</strong> geeignet. Dank kompakter Maße passt sie in nahezu jede Location in <strong>Hamburg, Berlin und NRW</strong> – vom Firmengebäude über den Eventgarten bis zur Messehalle.',
+    'bar-feat1':'Aufbau in unter 30 Minuten',
+    'bar-feat2':'Geeignet für 20 bis 500+ Gäste',
+    'bar-feat3':'Indoor & Outdoor einsetzbar',
+    'bar-feat4':'Inklusive Barkeeper, Gläser & Zutaten',
+    'bar-feat5':'Hamburg · Berlin · NRW & Umgebung',
+    'bar-spec-w':'Breite','bar-spec-d':'Tiefe','bar-spec-h':'Höhe',
+    'bar-slider-l':'Aufbau','bar-slider-r':'In Aktion',
+
+    /* firmenevents.html */
+    'firm-h1':'Firmen','firm-h1-em':'events',
+    'firm-hero-sub':'Weihnachtsfeiern, Kick-offs, Teambuildings. Wir sorgen dafür, dass dein nächstes Firmenevent in Erinnerung bleibt, und zwar aus den richtigen Gründen.',
+    'firm-srv-label':'Was wir bieten',
+    'firm-srv-h2':'Cocktail Catering das','firm-srv-h2-em':'begeistert',
+    'firm-srv-sub':'Ob kleine Teamfeier oder große Firmenveranstaltung: Billy\'s Cocktails bringt die professionelle Bar direkt zu dir. Mit erfahrenen Barkeeper:innen, erstklassigen Zutaten und einem Rundum-Sorglos-Paket, das von der Planung bis zum Abbau alles abdeckt.',
+    'firm-c1-title':'Maßgeschneiderte Cocktailkarte',
+    'firm-c1-text':'Wir kreieren Maßcocktails in euren Unternehmensfarben oder passend zum Thema der Veranstaltung. Ein unvergessliches Detail, das Eindruck hinterlässt.',
+    'firm-c2-title':'Professionelle Barkeeper:innen',
+    'firm-c2-text':'Unser Team ist charmant, zuverlässig und hinter der Bar in seinem Element. Wir sorgen für gute Stimmung und reibungslose Abläufe, damit ihr euch auf eure Gäste konzentrieren könnt.',
+    'firm-c3-title':'Alles aus einer Hand',
+    'firm-c3-text':'Vollständige Ausstattung, Auf- und Abbau, Marken-Spirituosen und Verbrauchsmaterial inklusive. Ihr müsst euch um nichts kümmern.',
+    'firm-c4-title':'Flexible Buchung',
+    'firm-c4-text':'Von der Kleingruppe bis zum Großevent. Kurzfristige Buchungen sind bei freien Kapazitäten möglich.',
+    'firm-quote':'„Wir bringen die Bar zu deinem Firmenevent, du kümmerst dich um den Rest."',
+
+    /* hochzeiten.html */
+    'wed-h1':'Hoch','wed-h1-em':'zeiten',
+    'wed-hero-sub':'Euer Tag, eure Drinks. Wir kreieren individuelle Kreationen speziell für eure Hochzeit, von der Sektempfangung bis zum letzten Tanz.',
+    'wed-srv-label':'Für euren besonderen Tag',
+    'wed-srv-h2':'Unvergessliche Drinks','wed-srv-h2-em':'für eure Hochzeit',
+    'wed-srv-sub':'Eine Hochzeit ist ein einzigartiger Moment, der von allen Details lebt. Wir entwickeln gemeinsam mit euch eine Cocktailkarte, die zu euch als Paar passt. Mit individuellen Kreationen, die eure Geschichte erzählen, und einem Service, der euren Gästen in Erinnerung bleibt.',
+    'wed-c1-title':'Euer Hochzeitscocktail',
+    'wed-c1-text':'Wir kreieren einen individuellen Maßcocktail speziell für euren Tag. Benannt nach euch, abgestimmt auf euren Geschmack, und ein garantiertes Gesprächsthema.',
+    'wed-c2-title':'Von Sektempfang bis Mitternacht',
+    'wed-c2-text':'Ob Sektempfang nach der Trauung, Cocktailbar beim Dinner oder Late-Night-Bar bis in die frühen Morgenstunden: Wir sind so lange dabei, wie ihr es wünscht.',
+    'wed-c3-title':'Stilvolle Mobile Bar',
+    'wed-c3-text':'Unsere mobile Bar ist ein echter Hingucker und fügt sich harmonisch in jede Hochzeitslocation ein. Vollständig ausgestattet, professionell und stilvoll.',
+    'wed-c4-title':'Rundum-Sorglos',
+    'wed-c4-text':'Von der ersten Beratung über die Kostenprobe bis zum Abbau nach der Feier. Wir kümmern uns um alles, damit ihr euren Tag in vollen Zügen genießen könnt.',
+    'wed-quote':'„Wir kreieren Drinks, die so einzigartig sind wie euer Tag."',
+    'wed-cta':'Hochzeitsanfrage stellen',
+
+    /* geburtstage.html */
+    'bday-h1':'Geburts','bday-h1-em':'tage',
+    'bday-hero-sub':'Ob 30., 40., 50. oder mehr: Mach deinen Geburtstag zum Event. Mit einer professionellen Cocktailbar, die deine Gäste begeistert und den Abend unvergesslich macht.',
+    'bday-srv-label':'Dein besonderer Tag',
+    'bday-srv-h2':'Geburtstags-Cocktails','bday-srv-h2-em':'die begeistern',
+    'bday-srv-sub':'Ein runder Geburtstag verdient mehr als Sekt vom Tablett. Mit Billy\'s Cocktails bekommt deine Feier eine professionelle Cocktailbar, die zum echten Highlight des Abends wird. Wir kommen mit allem, was wir brauchen, direkt zu dir.',
+    'bday-c1-title':'Dein individueller Geburtstagsdrink',
+    'bday-c1-text':'Wir kreieren einen Hauscocktail speziell für dich. Benannt nach dir, abgestimmt auf deinen Geschmack, und ein garantiertes Gesprächsthema bei deinen Gästen.',
+    'bday-c2-title':'Für jede Location',
+    'bday-c2-text':'Ob zu Hause, im Garten oder in einer gemieteten Location: Unsere mobile Cocktailbar kommt überall hin. Alles inklusive, nichts extra.',
+    'bday-c3-title':'Cocktails für jeden Geschmack',
+    'bday-c3-text':'Von frischen Sommercocktails bis hin zu eleganten Klassikern. Wir haben die passenden Drinks für jede Stimmung und bieten auch alkoholfreie Alternativen an.',
+    'bday-c4-title':'Kurzfristig buchbar',
+    'bday-c4-text':'Spontan entschieden? Kein Problem. Bei freien Kapazitäten sind auch kurzfristige Buchungen möglich. Einfach anfragen.',
+    'bday-quote':'„Dein Geburtstag, deine Drinks. Wir machen den Abend unvergesslich."',
+
+    /* sommerfeste.html */
+    'sum-h1':'Sommer','sum-h1-em':'feste',
+    'sum-hero-sub':'Erfrischende Cocktails unter freiem Himmel. Wir bringen Sommer-Vibes, frische Zutaten und professionellen Service direkt zu eurem Outdoor-Event.',
+    'sum-srv-label':'Sommer, Sonne, Cocktails',
+    'sum-srv-h2':'Frische Drinks für','sum-srv-h2-em':'euer Sommer-Event',
+    'sum-srv-sub':'Ein Sommerfest lebt von Atmosphäre. Mit unserer mobilen Cocktailbar sorgen wir für das gewisse Extra: frische Mojitos, bunte Spritz-Variationen und kühle Gin Tonics, die perfekt zur warmen Jahreszeit passen.',
+    'sum-c1-title':'Sommerliche Cocktailkarte',
+    'sum-c1-text':'Von Mojito über Aperol bis hin zu frischen Spritz-Kreationen. Wir stellen gemeinsam mit euch die perfekte Sommercocktailkarte zusammen.',
+    'sum-c2-title':'Outdoor-geeignet',
+    'sum-c2-text':'Unsere mobile Bar ist für den Outdoor-Einsatz konzipiert. Ob Garten, Terrasse, Park oder Veranstaltungsgelände, wir kommen überall hin.',
+    'sum-c3-title':'Alkoholfrei & für alle',
+    'sum-c3-text':'Wir bieten immer auch erfrischende alkoholfreie Alternativen an. Damit kommt jeder Gast auf seine Kosten.',
+    'sum-c4-title':'Betriebsfest oder Privatfeier',
+    'sum-c4-text':'Ob Betriebssommerfest, Gartenparty oder privates BBQ: Wir passen uns an eure Veranstaltung an und skalieren mit eurer Gästezahl.',
+    'sum-quote':'„Sommer in jedem Glas. Wir bringen die Vibes zu eurem Fest."',
+
+    /* messen.html */
+    'fair-h1':'Messen &','fair-h1-em':'Großevents',
+    'fair-hero-sub':'Heb dich ab. Unsere mobile Cocktailbar zieht Besucher an deinen Stand und macht dein Unternehmen zum Gesprächsthema der Messe.',
+    'fair-srv-label':'Standout auf der Messe',
+    'fair-srv-h2':'Die Cocktailbar als','fair-srv-h2-em':'Eyecatcher',
+    'fair-srv-sub':'Auf Messen und Großevents kämpfen alle um Aufmerksamkeit. Mit einer professionellen Cocktailbar an eurem Stand schaffen wir einen natürlichen Magneteffekt. Besucher kommen für den Drink und bleiben für das Gespräch. Unser Team ist mehrsprachig und kommuniziert fließend auf Englisch, ideal für internationale Messen und globale Unternehmen.',
+    'fair-c1-title':'Marken-Cocktails',
+    'fair-c1-text':'Wir kreieren individuelle Drinks in euren Unternehmensfarben oder mit eurem Branding. Der Drink wird zum Teil eurer Markenkommunikation.',
+    'fair-c2-title':'Hoher Durchsatz',
+    'fair-c2-text':'Unser eingespieltes Team ist auf Effizienz trainiert. Auch bei hohem Besucheraufkommen bleibt die Qualität konstant und die Wartezeiten kurz.',
+    'fair-c3-title':'Kompakt & flexibel',
+    'fair-c3-text':'Unsere mobile Bar ist auf jedes Standraumformat anpassbar. Ob kleiner Stand oder große Messehalle, wir finden eine Lösung.',
+    'fair-c4-title':'Mehrsprachiger Service',
+    'fair-c4-text':'Unser Team kommuniziert fließend auf Deutsch und Englisch. Für internationale Messen und globale Unternehmen sind wir der perfekte Partner.',
+    'fair-quote':'„Die Cocktailbar, die Gespräche startet und Kunden anzieht."',
+
+    /* private-feiern.html */
+    'priv-h1':'Private','priv-h1-em':'Feiern',
+    'priv-hero-sub':'Jubiläen, Housewarmings, Gartenpartys oder einfach Lust auf eine unvergessliche Party. Wir bringen die professionelle Cocktailbar direkt zu dir.',
+    'priv-srv-label':'Für deinen persönlichen Anlass',
+    'priv-srv-h2':'Cocktail Catering','priv-srv-h2-em':'für zu Hause',
+    'priv-srv-sub':'Du musst nicht in eine Bar, wir kommen zu dir. Egal ob bei dir zu Hause, im Garten oder in einer privaten Location: Billy\'s macht aus deiner Feier ein Erlebnis, das deine Gäste lange in Erinnerung behalten werden.',
+    'priv-c1-title':'Auch für kleine Gruppen',
+    'priv-c1-text':'Private Feiern müssen nicht groß sein. Wir sind auch für kleinere Runden dabei und bringen trotzdem den gleichen professionellen Service.',
+    'priv-c2-title':'Dein Wunsch-Cocktail',
+    'priv-c2-text':'Sag uns, was du magst, und wir kreieren etwas Individuelles für dich und deine Gäste. Von Klassikern bis hin zu exklusiven Eigenkreationen.',
+    'priv-c3-title':'Alles inklusive',
+    'priv-c3-text':'Bar, Spirituosen, Gläser, Verbrauchsmaterial, Auf- und Abbau: Du musst dich um nichts kümmern. Wir kommen, machen, gehen, und du genießt.',
+    'priv-c4-title':'Flexibel & unkompliziert',
+    'priv-c4-text':'Kein bürokratischer Aufwand, keine komplizierten Verträge. Wir sind unkompliziert und finden immer eine Lösung, die zu dir passt.',
+    'priv-quote':'„Deine Party, unsere Bar. Wir sind dabei."',
   },
 
   en: {
@@ -377,6 +491,120 @@ const TRANSLATIONS = {
     'opt-firma':'Corporate event','opt-hochzeit':'Wedding','opt-geburtstag':'Birthday',
     'opt-messe':'Trade fair / Large event','opt-sommer':'Summer party',
     'opt-privat':'Private party','opt-sonstiges':'Other',
+
+    /* Shared sub-page */
+    'page-hero-label':'Cocktail Catering for',
+    'footer-cookie':'Cookie Settings',
+
+    /* index — Bar section */
+    'bar-label':'The Mobile Bar',
+    'bar-h2':'Our','bar-h2-em':'Mobile Cocktail Bar',
+    'bar-p1':'Our <strong>mobile bar</strong> is the centrepiece of every event. Compact in build but packed with full professional equipment: from the ice machine to fresh ingredients and premium spirits — everything is on board. Whether you\'re hiring a <strong>mobile bar for a corporate event</strong>, a <strong>wedding</strong>, or a <strong>private party</strong> — we deliver, set up, and break down.',
+    'bar-p2':'The bar sets up and breaks down in under 30 minutes and is suitable for both <strong>indoor and outdoor events</strong>. Thanks to its compact footprint, it fits into virtually any venue across <strong>Hamburg, Berlin and NRW</strong> — from corporate offices to event gardens to exhibition halls.',
+    'bar-feat1':'Setup in under 30 minutes',
+    'bar-feat2':'Suitable for 20 to 500+ guests',
+    'bar-feat3':'Indoor & outdoor use',
+    'bar-feat4':'Includes bartenders, glassware & ingredients',
+    'bar-feat5':'Hamburg · Berlin · NRW & surrounding areas',
+    'bar-spec-w':'Width','bar-spec-d':'Depth','bar-spec-h':'Height',
+    'bar-slider-l':'Setup','bar-slider-r':'In Action',
+
+    /* firmenevents.html */
+    'firm-h1':'Corporate','firm-h1-em':'Events',
+    'firm-hero-sub':'Christmas parties, kick-offs, team days. We make sure your next company event is remembered for all the right reasons.',
+    'firm-srv-label':'What we bring',
+    'firm-srv-h2':'Cocktail Catering that','firm-srv-h2-em':'impresses',
+    'firm-srv-sub':'From small team gatherings to large-scale corporate events: Billy\'s brings the professional bar straight to you. With experienced bartenders, top-quality ingredients, and a full-service package that covers everything from planning to breakdown.',
+    'firm-c1-title':'Bespoke Cocktail Menu',
+    'firm-c1-text':'We create custom cocktails in your company colours or themed to your event. An unforgettable detail that leaves a lasting impression.',
+    'firm-c2-title':'Professional Bartenders',
+    'firm-c2-text':'Our team is personable, reliable, and completely at home behind the bar. We keep the atmosphere going and the service running smoothly so you can focus on your guests.',
+    'firm-c3-title':'All-Inclusive',
+    'firm-c3-text':'Full setup, breakdown, premium spirits, and consumables all included. You don\'t have to lift a finger.',
+    'firm-c4-title':'Flexible Booking',
+    'firm-c4-text':'From small groups to large events. Last-minute bookings are possible when availability allows.',
+    'firm-quote':'"We bring the bar to your company event — you handle the rest."',
+
+    /* hochzeiten.html */
+    'wed-h1':'Wed','wed-h1-em':'dings',
+    'wed-hero-sub':'Your day, your drinks. We craft bespoke cocktails tailored to your wedding, from the welcome reception to the last dance.',
+    'wed-srv-label':'For your special day',
+    'wed-srv-h2':'Unforgettable drinks','wed-srv-h2-em':'for your wedding',
+    'wed-srv-sub':'A wedding lives and breathes through its details. We work with you to create a cocktail menu that feels personal to you as a couple — with signature creations that tell your story and a service your guests will still be talking about.',
+    'wed-c1-title':'Your signature wedding cocktail',
+    'wed-c1-text':'We craft a bespoke cocktail just for your day. Named after you, built around your taste, and guaranteed to be a talking point.',
+    'wed-c2-title':'Welcome drinks to the last round',
+    'wed-c2-text':'Welcome drinks after the ceremony, cocktails at dinner, or a late-night bar until the early hours — we stay as long as you need us.',
+    'wed-c3-title':'Stylish Mobile Bar',
+    'wed-c3-text':'Our mobile bar is a real showpiece that fits beautifully into any wedding venue. Fully equipped, professional, and elegant.',
+    'wed-c4-title':'Stress-free service',
+    'wed-c4-text':'From the first consultation and tasting to the final breakdown. We take care of everything so you can enjoy every moment of your day.',
+    'wed-quote':'"We craft drinks as unique as your day."',
+    'wed-cta':'Send wedding inquiry',
+
+    /* geburtstage.html */
+    'bday-h1':'Birth','bday-h1-em':'days',
+    'bday-hero-sub':'30th, 40th, 50th or beyond — make your birthday an event. A professional cocktail bar that wows your guests and makes the evening truly unforgettable.',
+    'bday-srv-label':'Your special day',
+    'bday-srv-h2':'Birthday cocktails','bday-srv-h2-em':'that wow',
+    'bday-srv-sub':'A milestone birthday deserves more than prosecco on a tray. With Billy\'s, your party gets a proper cocktail bar that becomes the highlight of the evening. We bring everything we need — straight to you.',
+    'bday-c1-title':'Your personal birthday drink',
+    'bday-c1-text':'We create a house cocktail just for you. Named after you, crafted to your taste, and guaranteed to be the talk of the party.',
+    'bday-c2-title':'Any location',
+    'bday-c2-text':'At home, in the garden, or at a hired venue — our mobile cocktail bar travels anywhere. Everything included, nothing extra.',
+    'bday-c3-title':'Drinks for every taste',
+    'bday-c3-text':'From fresh summer cocktails to timeless classics. We have the right drink for every mood and always offer non-alcoholic options.',
+    'bday-c4-title':'Last-minute bookings welcome',
+    'bday-c4-text':'Decided on a whim? No problem. Last-minute bookings are possible when availability allows. Just get in touch.',
+    'bday-quote':'"Your birthday, your drinks. We make the night unforgettable."',
+
+    /* sommerfeste.html */
+    'sum-h1':'Summer','sum-h1-em':'Parties',
+    'sum-hero-sub':'Refreshing cocktails under the open sky. We bring summer vibes, fresh ingredients, and professional service straight to your outdoor event.',
+    'sum-srv-label':'Summer, sun, cocktails',
+    'sum-srv-h2':'Fresh drinks for','sum-srv-h2-em':'your summer event',
+    'sum-srv-sub':'A summer party is all about atmosphere. Our mobile cocktail bar brings that something extra: fresh mojitos, colourful spritz creations, and ice-cold gin tonics made for the warmer months.',
+    'sum-c1-title':'Seasonal cocktail menu',
+    'sum-c1-text':'From Mojito to Aperol to fresh spritz variations — we put together the perfect summer menu with you.',
+    'sum-c2-title':'Built for outdoors',
+    'sum-c2-text':'Our mobile bar is designed for outdoor use. Garden, terrace, park, or event grounds — we come to you wherever you are.',
+    'sum-c3-title':'Non-alcoholic options for everyone',
+    'sum-c3-text':'We always offer a range of refreshing non-alcoholic alternatives so every guest is well looked after.',
+    'sum-c4-title':'Company event or private party',
+    'sum-c4-text':'Whether it\'s a company summer party, garden get-together, or a private BBQ: we adapt to your event and scale with your guest numbers.',
+    'sum-quote':'"Summer in every glass. We bring the vibes to your party."',
+
+    /* messen.html */
+    'fair-h1':'Trade Fairs &','fair-h1-em':'Large Events',
+    'fair-hero-sub':'Stand out. Our mobile cocktail bar draws visitors to your stand and puts your company on everyone\'s lips at the show.',
+    'fair-srv-label':'Stand out on the floor',
+    'fair-srv-h2':'The cocktail bar as','fair-srv-h2-em':'your showstopper',
+    'fair-srv-sub':'At trade fairs and large events, everyone is competing for attention. A professional cocktail bar at your stand creates a natural draw. Visitors come for the drink and stay for the conversation. Our team is multilingual and fluent in English — ideal for international trade fairs and global companies.',
+    'fair-c1-title':'Branded cocktails',
+    'fair-c1-text':'We create custom drinks in your brand colours or featuring your branding. The cocktail becomes part of your brand communication.',
+    'fair-c2-title':'High throughput',
+    'fair-c2-text':'Our well-rehearsed team is trained for efficiency. Even during peak visitor times, quality stays consistent and wait times stay short.',
+    'fair-c3-title':'Compact & flexible',
+    'fair-c3-text':'Our mobile bar adapts to any stand size. Small booth or large exhibition hall — we find the right setup for you.',
+    'fair-c4-title':'Multilingual service',
+    'fair-c4-text':'Our team communicates fluently in both German and English. For international trade fairs and global companies, we\'re the ideal partner.',
+    'fair-quote':'"The cocktail bar that starts conversations and attracts customers."',
+
+    /* private-feiern.html */
+    'priv-h1':'Private','priv-h1-em':'Parties',
+    'priv-hero-sub':'Anniversaries, housewarmings, garden parties, or just the urge for an unforgettable night. We bring the professional cocktail bar straight to you.',
+    'priv-srv-label':'For your personal occasion',
+    'priv-srv-h2':'Cocktail Catering','priv-srv-h2-em':'at home',
+    'priv-srv-sub':'You don\'t need to go to a bar — we come to you. Whether at your home, in the garden, or at a private venue: Billy\'s turns your gathering into an experience your guests will be talking about for a long time.',
+    'priv-c1-title':'Even for smaller groups',
+    'priv-c1-text':'Private parties don\'t need to be big. We show up for smaller gatherings too and bring the same professional standard every time.',
+    'priv-c2-title':'Your dream cocktail',
+    'priv-c2-text':'Tell us what you like and we\'ll create something personal for you and your guests. From classics to exclusive bespoke creations.',
+    'priv-c3-title':'All-inclusive',
+    'priv-c3-text':'Bar, spirits, glassware, consumables, setup and breakdown: we handle it all. We arrive, we deliver, we leave — and you enjoy.',
+    'priv-c4-title':'Flexible & fuss-free',
+    'priv-c4-text':'No complex admin, no complicated contracts. We keep things simple and always find a solution that works for you.',
+    'priv-quote':'"Your party, our bar. We\'re there."',
   }
 };
 
@@ -385,6 +613,10 @@ function applyLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const k = el.dataset.i18n;
     if (t[k] !== undefined) el.textContent = t[k];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const k = el.dataset.i18nHtml;
+    if (t[k] !== undefined) el.innerHTML = t[k];
   });
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     const k = el.dataset.i18nPh;

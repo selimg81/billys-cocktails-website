@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO & GEO Bericht – Billy's Cocktail Catering 2026</title>
+<style>
+  :root {
+    --petrol: #1a6e73;
+    --petrol-light: #e8f4f5;
+    --dark: #1a1a2e;
+    --gray: #6b7280;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --yellow: #d97706;
+    --yellow-bg: #fffbeb;
+    --red: #dc2626;
+    --red-bg: #fef2f2;
+    --blue: #2563eb;
+    --blue-bg: #eff6ff;
+    --radius: 12px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: var(--dark); line-height: 1.6; }
+
+  /* HEADER */
+  .report-header {
+    background: linear-gradient(135deg, var(--petrol) 0%, #0f4a4e 100%);
+    color: #fff;
+    padding: 60px 40px 50px;
+    text-align: center;
+  }
+  .report-header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 100px;
+    padding: 6px 18px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .report-header h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; margin-bottom: 12px; }
+  .report-header p { font-size: 16px; opacity: 0.8; max-width: 560px; margin: 0 auto 30px; }
+  .header-meta { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .header-meta-item { text-align: center; }
+  .header-meta-item .val { font-size: 28px; font-weight: 700; }
+  .header-meta-item .lbl { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* SCORE BAR */
+  .score-section { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 32px 40px; }
+  .score-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .score-card { text-align: center; }
+  .score-circle { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin: 0 auto 10px; }
+  .score-circle.good { background: var(--green-bg); color: var(--green); }
+  .score-circle.ok { background: var(--yellow-bg); color: var(--yellow); }
+  .score-circle.bad { background: var(--red-bg); color: var(--red); }
+  .score-card .name { font-size: 13px; font-weight: 600; color: var(--dark); }
+  .score-card .sub { font-size: 11px; color: var(--gray); margin-top: 2px; }
+
+  /* MAIN LAYOUT */
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+
+  /* SECTION */
+  .section { margin-bottom: 40px; }
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--petrol);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+
+  /* CARD */
+  .card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .card-header {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .card-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .card-icon.green { background: var(--green-bg); }
+  .card-icon.yellow { background: var(--yellow-bg); }
+  .card-icon.red { background: var(--red-bg); }
+  .card-icon.blue { background: var(--blue-bg); }
+  .card-title { font-weight: 600; font-size: 15px; }
+  .card-subtitle { font-size: 12px; color: var(--gray); margin-top: 2px; }
+  .status-pill {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .status-pill.gut { background: var(--green-bg); color: var(--green); }
+  .status-pill.action { background: var(--yellow-bg); color: var(--yellow); }
+  .status-pill.kritisch { background: var(--red-bg); color: var(--red); }
+  .status-pill.info { background: var(--blue-bg); color: var(--blue); }
+
+  .card-body { padding: 20px 24px; }
+  .card-body p { font-size: 14px; color: var(--gray); margin-bottom: 12px; line-height: 1.7; }
+  .card-body p:last-child { margin-bottom: 0; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist .icon { font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+  .checklist .text { flex: 1; }
+  .checklist .text strong { color: var(--dark); display: block; font-size: 14px; }
+  .checklist .text span { color: var(--gray); font-size: 13px; }
+
+  /* ACTION TABLE */
+  .action-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .action-table th { text-align: left; padding: 10px 14px; background: #f8fafc; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); border-bottom: 1px solid #e5e7eb; }
+  .action-table td { padding: 12px 14px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+  .action-table tr:last-child td { border-bottom: none; }
+  .prio { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
+  .prio.hoch { background: var(--red-bg); color: var(--red); }
+  .prio.mittel { background: var(--yellow-bg); color: var(--yellow); }
+  .prio.niedrig { background: var(--green-bg); color: var(--green); }
+
+  /* KW GRID */
+  .kw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .kw-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px; }
+  .kw-card .kw { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
+  .kw-card .kw-meta { font-size: 11px; color: var(--gray); display: flex; gap: 8px; }
+  .kw-tag { background: var(--petrol-light); color: var(--petrol); font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+
+  /* PRIORITY ROADMAP */
+  .roadmap { list-style: none; }
+  .roadmap-item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid #f3f4f6; }
+  .roadmap-item:last-child { border-bottom: none; }
+  .roadmap-num { width: 32px; height: 32px; background: var(--petrol); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .roadmap-content { flex: 1; }
+  .roadmap-content strong { font-size: 15px; color: var(--dark); display: block; margin-bottom: 4px; }
+  .roadmap-content p { font-size: 13px; color: var(--gray); margin: 0; }
+  .roadmap-content .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .roadmap-content .tag { font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 500; }
+  .roadmap-content .tag.sofort { background: var(--red-bg); color: var(--red); }
+  .roadmap-content .tag.monat { background: var(--yellow-bg); color: var(--yellow); }
+  .roadmap-content .tag.langfristig { background: var(--blue-bg); color: var(--blue); }
+
+  /* FOOTER */
+  .report-footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: center; padding: 30px; font-size: 13px; margin-top: 40px; }
+  .report-footer strong { color: #fff; }
+
+  @media (max-width: 640px) {
+    .report-header { padding: 40px 20px; }
+    .header-meta { gap: 24px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+    .score-section { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="report-header">
+  <div class="badge">SEO & GEO Analyse · März 2026</div>
+  <h1>Billy's Cocktail Catering<br>SEO & Local SEO Bericht</h1>
+  <p>Vollständige Analyse der Website billys-cocktails.de — was bereits gut ist, was fehlt, und wie Billy's die #1 für Cocktail Catering wird.</p>
+  <div class="header-meta">
+    <div class="header-meta-item">
+      <div class="val">16</div>
+      <div class="lbl">Seiten analysiert</div>
+    </div>
+    <div class="header-meta-item">
+      <div class="val">8</div>
+      <div class="lbl">Sofort-Maßnahmen</div>
+    </div>
+    <div class="header-meta-item">
+      <div class="val">3</div>
+      <div class="lbl">Zielregionen</div>
+    </div>
+    <div class="header-meta-item">
+      <div class="val">∞</div>
+      <div class="lbl">Potenzial</div>
+    </div>
+  </div>
+</div>
+
+<!-- SCORE -->
+<div class="score-section">
+  <div class="score-grid">
+    <div class="score-card">
+      <div class="score-circle good">82</div>
+      <div class="name">Technisches SEO</div>
+      <div class="sub">Gut aufgestellt</div>
+    </div>
+    <div class="score-card">
+      <div class="score-circle good">78</div>
+      <div class="name">On-Page SEO</div>
+      <div class="sub">Solide Basis</div>
+    </div>
+    <div class="score-card">
+      <div class="score-circle ok">45</div>
+      <div class="name">Local SEO</div>
+      <div class="sub">Ausbaubedarf</div>
+    </div>
+    <div class="score-card">
+      <div class="score-circle bad">20</div>
+      <div class="name">Off-Page / Links</div>
+      <div class="sub">Kritisch</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ── TECHNISCHES SEO ── -->
+  <div class="section">
+    <div class="section-title">Technisches SEO</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon green">✅</div>
+        <div>
+          <div class="card-title">Was bereits gut ist</div>
+          <div class="card-subtitle">Starke technische Grundlage</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul class="checklist">
+          <li><span class="icon">✅</span><div class="text"><strong>Canonical Tags</strong><span>Auf jeder Seite korrekt gesetzt — verhindert Duplicate-Content-Probleme</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>Schema.org LocalBusiness</strong><span>Strukturierte Daten vorhanden inkl. AggregateRating (5.0 ⭐, 41 Bewertungen) und FAQPage</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>Open Graph Tags</strong><span>Vollständig auf allen Seiten — Facebook & WhatsApp-Vorschau funktioniert</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>WebP-Bilder</strong><span>Alle Bilder als WebP mit JPG-Fallback — perfekt für Ladezeit</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>Sitemap.xml + robots.txt</strong><span>Beide vorhanden und korrekt konfiguriert</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>Clean URLs</strong><span>Keine .html-Endungen dank Netlify — saubere, professionelle URLs</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>Lazy Loading</strong><span>Bilder unterhalb des Folds haben loading="lazy" — spart Ladezeit</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>Mobile First</strong><span>Responsive Design, Bottom-Dock Navigation, Hamburger-Menü</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>HTTPS via Netlify</strong><span>SSL automatisch — wichtiges Ranking-Signal</span></div></li>
+          <li><span class="icon">✅</span><div class="text"><strong>Google Tag Manager</strong><span>GTM-NMH4QK2 korrekt eingebunden</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon yellow">⚠️</div>
+        <div>
+          <div class="card-title">Was fehlt / verbessert werden sollte</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul class="checklist">
+          <li><span class="icon">⚠️</span><div class="text"><strong>GeoCoordinates fehlen im Schema</strong><span>Längen-/Breitengrad im LocalBusiness-Schema eintragen → stärkt lokales Ranking erheblich</span></div></li>
+          <li><span class="icon">⚠️</span><div class="text"><strong>OpeningHoursSpecification fehlt</strong><span>Öffnungszeiten im Schema ergänzen — erscheint in Google-Suchergebnissen</span></div></li>
+          <li><span class="icon">⚠️</span><div class="text"><strong>CSS/JS nicht minifiziert</strong><span>style.css (58KB) und main.js (18KB) — Minifizierung würde ~30% sparen. Netlify kann das automatisch übernehmen.</span></div></li>
+          <li><span class="icon">⚠️</span><div class="text"><strong>Kein hreflang-Tag</strong><span>Die Seite hat DE/EN-Inhalte aber kein hreflang — Google weiß nicht welche Sprache für welches Land gilt</span></div></li>
+          <li><span class="icon">⚠️</span><div class="text"><strong>Kein Preload für Hero-Bild/Video</strong><span>&lt;link rel="preload"&gt; für das Hero-Medienelement verbessert LCP (Largest Contentful Paint)</span></div></li>
+          <li><span class="icon">⚠️</span><div class="text"><strong>Sitemap lastmod veraltet</strong><span>lastmod-Datum in sitemap.xml auf aktuelles Datum aktualisieren nach Go-Live</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ON-PAGE SEO ── -->
+  <div class="section">
+    <div class="section-title">On-Page SEO</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon yellow">📝</div>
+        <div>
+          <div class="card-title">H1-Tag Optimierung</div>
+          <div class="card-subtitle">Aktuell: "Dein Event. Unsere Cocktails." — zu wenig keywordstark</div>
+        </div>
+        <span class="status-pill action">Empfohlen</span>
+      </div>
+      <div class="card-body">
+        <p>Der H1 auf der Startseite ist kreativ aber für Google zu wenig aussagekräftig. Google nutzt den H1 als starkes Ranking-Signal. Empfehlung:</p>
+        <p><strong>Aktuell:</strong> "Dein Event. Unsere Cocktails."<br>
+        <strong>Besser:</strong> "Cocktail Catering Hamburg · Berlin · NRW — Billy's Cocktails"</p>
+        <p>Alternativ: H1 bleibt kreativ, aber ein <code>&lt;h2&gt;</code> direkt darunter mit dem Keyword "Mobiles Cocktail Catering Hamburg" ergänzen.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon green">🔑</div>
+        <div>
+          <div class="card-title">Keywords — Zielkeywords für Billy's</div>
+          <div class="card-subtitle">Primäre und sekundäre Suchbegriffe nach Priorität</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p style="margin-bottom:16px;">Diese Keywords sollten auf den jeweiligen Seiten prominent in Überschriften, Fließtext und Meta-Tags vorkommen:</p>
+        <div class="kw-grid">
+          <div class="kw-card"><div class="kw">Cocktail Catering Hamburg</div><div class="kw-meta"><span class="kw-tag">Prio 1</span><span>Hauptkeyword</span></div></div>
+          <div class="kw-card"><div class="kw">Mobile Bar mieten Hamburg</div><div class="kw-meta"><span class="kw-tag">Prio 1</span><span>Hoch</span></div></div>
+          <div class="kw-card"><div class="kw">Barkeeper mieten Hamburg</div><div class="kw-meta"><span class="kw-tag">Prio 1</span><span>Hoch</span></div></div>
+          <div class="kw-card"><div class="kw">Cocktail Catering Hochzeit</div><div class="kw-meta"><span class="kw-tag">Prio 1</span><span>Hoch</span></div></div>
+          <div class="kw-card"><div class="kw">Cocktail Catering Firmenevent</div><div class="kw-meta"><span class="kw-tag">Prio 1</span><span>Hoch</span></div></div>
+          <div class="kw-card"><div class="kw">Mobile Cocktailbar Berlin</div><div class="kw-meta"><span class="kw-tag">Prio 2</span><span>Mittel</span></div></div>
+          <div class="kw-card"><div class="kw">Cocktail Catering NRW</div><div class="kw-meta"><span class="kw-tag">Prio 2</span><span>Mittel</span></div></div>
+          <div class="kw-card"><div class="kw">Barkeeper Hochzeit Hamburg</div><div class="kw-meta"><span class="kw-tag">Prio 2</span><span>Mittel</span></div></div>
+          <div class="kw-card"><div class="kw">Mobile Bar Firmenevent</div><div class="kw-meta"><span class="kw-tag">Prio 2</span><span>Mittel</span></div></div>
+          <div class="kw-card"><div class="kw">Cocktail Catering Geburtstag</div><div class="kw-meta"><span class="kw-tag">Prio 2</span><span>Mittel</span></div></div>
+          <div class="kw-card"><div class="kw">Barkeeper mieten Hochzeit</div><div class="kw-meta"><span class="kw-tag">Prio 3</span><span>Long-tail</span></div></div>
+          <div class="kw-card"><div class="kw">Cocktailbar mieten NRW</div><div class="kw-meta"><span class="kw-tag">Prio 3</span><span>Long-tail</span></div></div>
+          <div class="kw-card"><div class="kw">Mobiles Cocktail Catering Köln</div><div class="kw-meta"><span class="kw-tag">Prio 3</span><span>Long-tail</span></div></div>
+          <div class="kw-card"><div class="kw">Signature Drinks Hochzeit</div><div class="kw-meta"><span class="kw-tag">Prio 3</span><span>Long-tail</span></div></div>
+          <div class="kw-card"><div class="kw">Mocktail Catering Hamburg</div><div class="kw-meta"><span class="kw-tag">Prio 3</span><span>Nische</span></div></div>
+          <div class="kw-card"><div class="kw">Barkeeper Sommerfest</div><div class="kw-meta"><span class="kw-tag">Prio 3</span><span>Saisonal</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon blue">📄</div>
+        <div>
+          <div class="card-title">Fehlende Stadtseiten</div>
+          <div class="card-subtitle">Enormes ungenutztes Ranking-Potenzial</div>
+        </div>
+        <span class="status-pill action">Empfohlen</span>
+      </div>
+      <div class="card-body">
+        <p>Billy's ist laut eigener Aussage in Hamburg, Berlin, NRW, Kiel, Hannover, Köln und Düsseldorf aktiv — aber eigene Seiten für diese Städte fehlen noch. Für lokale Suchanfragen wie "Cocktail Catering Köln" rankt die Website aktuell nicht.</p>
+        <p><strong>Empfehlung:</strong> Dedizierte Landingpages für jede Zielstadt erstellen:</p>
+        <ul class="checklist" style="margin-top: 12px;">
+          <li><span class="icon">📍</span><div class="text"><strong>/cocktail-catering-koeln</strong><span>Hohe Nachfrage, weniger Konkurrenz als Hamburg</span></div></li>
+          <li><span class="icon">📍</span><div class="text"><strong>/cocktail-catering-duesseldorf</strong><span>Messe-Stadt — viele Firmenevent-Anfragen</span></div></li>
+          <li><span class="icon">📍</span><div class="text"><strong>/cocktail-catering-hannover</strong><span>Wenig Konkurrenz, gutes Ranking-Potenzial</span></div></li>
+          <li><span class="icon">📍</span><div class="text"><strong>/cocktail-catering-berlin</strong><span>Eigene Seite statt nur Erwähnung auf der Homepage</span></div></li>
+          <li><span class="icon">📍</span><div class="text"><strong>/cocktail-catering-kiel</strong><span>Norddeutschland — Alleinstellungsmerkmal</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LOCAL SEO / GEO ── -->
+  <div class="section">
+    <div class="section-title">Local SEO & GEO — Das Wichtigste überhaupt</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon red">🔴</div>
+        <div>
+          <div class="card-title">Google Business Profile (GMB)</div>
+          <div class="card-subtitle">Ohne das ist lokales Ranking kaum möglich</div>
+        </div>
+        <span class="status-pill kritisch">Kritisch</span>
+      </div>
+      <div class="card-body">
+        <p>Das <strong>Google Business Profile</strong> ist der wichtigste Hebel für lokales SEO. Wer "Cocktail Catering Hamburg" googelt, sieht zuerst die Google Maps Box ("Local Pack") — dort taucht Billy's ohne GMB nicht auf, egal wie gut die Website ist.</p>
+        <p><strong>Was zu tun ist:</strong></p>
+        <ul class="checklist">
+          <li><span class="icon">1️⃣</span><div class="text"><strong>GMB-Eintrag anlegen / beanspruchen</strong><span>business.google.com aufrufen und "Billy's Cocktail Catering" anlegen oder bestehendes Profil beanspruchen</span></div></li>
+          <li><span class="icon">2️⃣</span><div class="text"><strong>Kategorie: "Catering" + "Cocktailbar"</strong><span>Primärkategorie: Catering-Unternehmen. Sekundär: Eventplanung</span></div></li>
+          <li><span class="icon">3️⃣</span><div class="text"><strong>NAP konsistent eintragen</strong><span>Name, Adresse, Telefon EXAKT so wie auf der Website: Billy's Cocktail Catering, +49 173 9927773, info@billys-cocktails.de</span></div></li>
+          <li><span class="icon">4️⃣</span><div class="text"><strong>Alle Fotos hochladen</strong><span>Mindestens 10 Fotos: Bar, Barkeeper, Events, Logo. Fotos erhöhen die Klickrate massiv.</span></div></li>
+          <li><span class="icon">5️⃣</span><div class="text"><strong>Servicebereich definieren</strong><span>Hamburg, Berlin, NRW, Schleswig-Holstein, Hannover, Köln, Düsseldorf eintragen</span></div></li>
+          <li><span class="icon">6️⃣</span><div class="text"><strong>Website verlinken</strong><span>billys-cocktails.de als Website eintragen</span></div></li>
+          <li><span class="icon">7️⃣</span><div class="text"><strong>Leistungen eintragen</strong><span>Cocktail Catering, Mobile Bar mieten, Barkeeper buchen, Hochzeits-Catering als separate Services</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon red">⭐</div>
+        <div>
+          <div class="card-title">Google-Bewertungen aktiv einholen</div>
+          <div class="card-subtitle">Aktuell 41 Bewertungen — Ziel: 100+ in 6 Monaten</div>
+        </div>
+        <span class="status-pill kritisch">Sehr wichtig</span>
+      </div>
+      <div class="card-body">
+        <p>Bewertungen sind der <strong>stärkste Vertrauensfaktor</strong> und ein direktes Ranking-Signal für den Local Pack. Das Schema.org-Markup zeigt bereits 5.0 ⭐ mit 41 Bewertungen — das ist eine tolle Basis.</p>
+        <p><strong>Strategie um auf 100+ Bewertungen zu kommen:</strong></p>
+        <ul class="checklist">
+          <li><span class="icon">💬</span><div class="text"><strong>Nach jedem Event persönlich fragen</strong><span>"Hat alles geklappt? Wir freuen uns über eine kurze Bewertung bei Google!" — mit direktem Link</span></div></li>
+          <li><span class="icon">📱</span><div class="text"><strong>QR-Code auf Visitenkarte/Rechnung</strong><span>QR-Code zum Google-Bewertungslink — Kunden können es direkt vor Ort scannen</span></div></li>
+          <li><span class="icon">📧</span><div class="text"><strong>Follow-up E-Mail 2 Tage nach Event</strong><span>"Wir hoffen euer Event war unvergesslich — ein kurzes Feedback würde uns sehr helfen"</span></div></li>
+          <li><span class="icon">💡</span><div class="text"><strong>Auf jede Bewertung antworten</strong><span>Google wertet aktive Kommunikation positiv. Auch negative Bewertungen professionell beantworten.</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon yellow">🗺️</div>
+        <div>
+          <div class="card-title">NAP-Konsistenz & lokale Verzeichnisse</div>
+          <div class="card-subtitle">Name, Adresse, Telefon überall gleich</div>
+        </div>
+        <span class="status-pill action">Wichtig</span>
+      </div>
+      <div class="card-body">
+        <p>Google vergleicht NAP-Daten (Name, Adresse, Telefon) über alle Plattformen hinweg. Inkonsistenz schadet dem lokalen Ranking. Billy's sollte in folgenden Verzeichnissen eingetragen sein:</p>
+        <ul class="checklist">
+          <li><span class="icon">📋</span><div class="text"><strong>Gelbe Seiten (gelbeseiten.de)</strong><span>Kostenlos, hohe Autorität, wichtig für deutsches Local SEO</span></div></li>
+          <li><span class="icon">📋</span><div class="text"><strong>Das Örtliche (dasoertliche.de)</strong><span>Kostenloser Eintrag mit Link zur Website</span></div></li>
+          <li><span class="icon">📋</span><div class="text"><strong>Yelp (yelp.de)</strong><span>International bekannt, oft auf Seite 1 für lokale Suchen</span></div></li>
+          <li><span class="icon">📋</span><div class="text"><strong>11880.com</strong><span>Großes deutsches Branchenverzeichnis</span></div></li>
+          <li><span class="icon">📋</span><div class="text"><strong>Hochzeitsplaner-Portale</strong><span>matrimonio.de, hochzeitsguide.com — perfekte Zielgruppe</span></div></li>
+          <li><span class="icon">📋</span><div class="text"><strong>Event-Portale</strong><span>eveosblog.de, eventinc.de — für Firmenevents</span></div></li>
+        </ul>
+        <p style="margin-top: 12px;"><strong>Wichtig:</strong> Überall exakt denselben Namen "Billy's Cocktail Catering", dieselbe Telefonnummer und E-Mail verwenden.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon yellow">📍</div>
+        <div>
+          <div class="card-title">GeoCoordinates im Schema ergänzen</div>
+          <div class="card-subtitle">Stärkt lokales Ranking direkt</div>
+        </div>
+        <span class="status-pill action">Schnell umsetzbar</span>
+      </div>
+      <div class="card-body">
+        <p>Das aktuelle LocalBusiness-Schema hat keine Koordinaten. Diese sollten ergänzt werden:</p>
+        <pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:16px;font-size:12px;overflow-x:auto;margin-top:8px;">"geo": {
+  "@type": "GeoCoordinates",
+  "latitude": "53.5753",
+  "longitude": "10.0153"
+},
+"openingHoursSpecification": {
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+  "opens": "09:00",
+  "closes": "22:00"
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OFF-PAGE SEO ── -->
+  <div class="section">
+    <div class="section-title">Off-Page SEO & Backlinks</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon red">🔗</div>
+        <div>
+          <div class="card-title">Backlinks — größte Schwachstelle</div>
+          <div class="card-subtitle">Neue Domain = keine externen Links = schwache Autorität</div>
+        </div>
+        <span class="status-pill kritisch">Kritisch</span>
+      </div>
+      <div class="card-body">
+        <p>Backlinks (externe Websites die auf billys-cocktails.de verlinken) sind nach wie vor der stärkste Ranking-Faktor. Als neue Website hat Billy's aktuell praktisch keine Backlinks — das ist der wichtigste Bereich zum Aufbauen.</p>
+        <ul class="checklist">
+          <li><span class="icon">🤝</span><div class="text"><strong>Kooperationen mit Eventlocations</strong><span>Hochzeitslocations, Eventlofts, Firmenveranstaltungsorte — gegenseitige Verlinkung als "Empfohlener Partner"</span></div></li>
+          <li><span class="icon">📸</span><div class="text"><strong>Fotograf-Kooperationen</strong><span>Hochzeitsfotografen verlinken oft ihre Vendor-Partner — Fotos von gemeinsamen Events teilen</span></div></li>
+          <li><span class="icon">🏆</span><div class="text"><strong>Branchen-Verzeichnisse mit Verlinkung</strong><span>Hochzeitsguide, Eventinc, matrimonio.de — kostenpflichtige Premium-Einträge oft mit DoFollow-Link</span></div></li>
+          <li><span class="icon">📰</span><div class="text"><strong>Lokale Presse / Blogs</strong><span>Hamburger Morgenpost, lokale Lifestyle-Blogger anfragen für Features</span></div></li>
+          <li><span class="icon">🎯</span><div class="text"><strong>Sponsoring von lokalen Events</strong><span>Events sponsern → Erwähnung und Link auf der Event-Website</span></div></li>
+          <li><span class="icon">💼</span><div class="text"><strong>Kundenwebsites</strong><span>Bei zufriedenen Firmenkunden anfragen ob ein "Wir arbeiten mit Billy's" Link möglich ist</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CONTENT STRATEGIE ── -->
+  <div class="section">
+    <div class="section-title">Content-Strategie für langfristiges Ranking</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon blue">✍️</div>
+        <div>
+          <div class="card-title">Blog / Ratgeber-Sektion aufbauen</div>
+          <div class="card-subtitle">Langfristiger Traffic durch informative Inhalte</div>
+        </div>
+        <span class="status-pill info">Langfristig</span>
+      </div>
+      <div class="card-body">
+        <p>Wer nach "Cocktail Catering" sucht, sucht auch nach Ratgeberartikeln. Diese ranken oft leichter als kommerzielle Seiten und bringen qualifizierten Traffic. <strong>Artikel-Ideen mit hohem Suchvolumen:</strong></p>
+        <ul class="checklist">
+          <li><span class="icon">📖</span><div class="text"><strong>"Was kostet ein Barkeeper für eine Hochzeit?"</strong><span>Sehr häufig gesucht — perfekter Lead-Magnet</span></div></li>
+          <li><span class="icon">📖</span><div class="text"><strong>"Cocktails für Hochzeiten: Die 10 beliebtesten Drinks 2026"</strong><span>Saisonaler Traffic, gut für Bildsuche</span></div></li>
+          <li><span class="icon">📖</span><div class="text"><strong>"Mobile Bar mieten: Was muss ich beachten?"</strong><span>Informational Intent — Kunden früh in der Recherche abholen</span></div></li>
+          <li><span class="icon">📖</span><div class="text"><strong>"Weihnachtsfeier Ideen: Cocktailbar als Highlight"</strong><span>Saisonal stark (Oktober–Dezember)</span></div></li>
+          <li><span class="icon">📖</span><div class="text"><strong>"Alkoholfreie Cocktails: Mocktail-Trends 2026"</strong><span>Wachsender Markt, gute Nische</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── INSTAGRAM / SOCIAL ── -->
+  <div class="section">
+    <div class="section-title">Social Media & Instagram — indirekter SEO-Faktor</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon blue">📱</div>
+        <div>
+          <div class="card-title">Instagram @billyscocktails</div>
+          <div class="card-subtitle">Social Signals stärken Markenbekanntheit und indirektes Ranking</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>Instagram ist kein direkter SEO-Faktor, aber Markenbekanntheit und Traffic von Social Media stärken indirekt das Ranking. Außerdem rankt Instagram selbst oft auf Seite 1 für Markennamen.</p>
+        <ul class="checklist">
+          <li><span class="icon">📌</span><div class="text"><strong>Link in Bio auf billys-cocktails.de</strong><span>Prüfen ob der Link aktuell und korrekt ist</span></div></li>
+          <li><span class="icon">🏷️</span><div class="text"><strong>Location-Tags bei jedem Post</strong><span>Hamburg, Berlin, Köln etc. taggen — erhöht lokale Sichtbarkeit</span></div></li>
+          <li><span class="icon">#️⃣</span><div class="text"><strong>Relevante Hashtags</strong><span>#cocktailcatering #mobilebar #barkeeper #hochzeit #firmenevent #hamburg</span></div></li>
+          <li><span class="icon">🎥</span><div class="text"><strong>Reels von Events</strong><span>Video-Content hat bis zu 3x mehr Reichweite als Bilder</span></div></li>
+          <li><span class="icon">⭐</span><div class="text"><strong>Kundenrezensionen als Stories</strong><span>Screenshots von Google-Bewertungen als Story → Vertrauen aufbauen</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SOFORT-MASSNAHMEN ROADMAP ── -->
+  <div class="section">
+    <div class="section-title">Priorisierte Maßnahmen — Was als nächstes tun</div>
+
+    <div class="card">
+      <div class="card-body" style="padding: 24px;">
+        <ol class="roadmap">
+          <li class="roadmap-item">
+            <div class="roadmap-num">1</div>
+            <div class="roadmap-content">
+              <strong>Google Business Profile anlegen</strong>
+              <p>business.google.com → Profil anlegen, verifizieren (Postkarte oder Telefon), alle Infos eintragen, 10+ Fotos hochladen</p>
+              <div class="tags"><span class="tag sofort">Sofort</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">2</div>
+            <div class="roadmap-content">
+              <strong>Google Search Console einrichten + Sitemap einreichen</strong>
+              <p>search.google.com/search-console → Domain eintragen → Sitemap https://billys-cocktails.de/sitemap.xml einreichen → Indexierung anstoßen</p>
+              <div class="tags"><span class="tag sofort">Sofort nach Go-Live</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">3</div>
+            <div class="roadmap-content">
+              <strong>GeoCoordinates + OpeningHours ins Schema eintragen</strong>
+              <p>In index.html das LocalBusiness-Schema um geo und openingHoursSpecification erweitern</p>
+              <div class="tags"><span class="tag sofort">Diese Woche</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">4</div>
+            <div class="roadmap-content">
+              <strong>Verzeichnisse eintragen</strong>
+              <p>Gelbe Seiten, Das Örtliche, Yelp, 11880 — überall mit identischem NAP (Name, Adresse, Telefon)</p>
+              <div class="tags"><span class="tag sofort">Diese Woche</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">5</div>
+            <div class="roadmap-content">
+              <strong>Google Maps in kontakt.html einbetten</strong>
+              <p>Eine eingebettete Google Maps Karte auf der Kontaktseite stärkt das lokale Signal und verbessert UX</p>
+              <div class="tags"><span class="tag sofort">Diese Woche</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">6</div>
+            <div class="roadmap-content">
+              <strong>Bewertungsstrategie starten</strong>
+              <p>QR-Code zum Google-Review-Link erstellen, nach jedem Event aktiv um Bewertungen bitten. Ziel: 100 Bewertungen in 6 Monaten.</p>
+              <div class="tags"><span class="tag monat">Laufend</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">7</div>
+            <div class="roadmap-content">
+              <strong>Stadtseiten für Köln, Düsseldorf, Berlin, Hannover anlegen</strong>
+              <p>Je eine dedizierte Seite pro Stadt mit lokalem Content — Riesenpotenzial für lange Suchbegriffe</p>
+              <div class="tags"><span class="tag monat">Nächster Monat</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">8</div>
+            <div class="roadmap-content">
+              <strong>Erste 3 Blogartikel schreiben</strong>
+              <p>"Was kostet ein Barkeeper für eine Hochzeit?", "Mobile Bar mieten: Was beachten?", "Cocktails für Firmenevents"</p>
+              <div class="tags"><span class="tag monat">Nächste 2 Monate</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">9</div>
+            <div class="roadmap-content">
+              <strong>Backlink-Aufbau: Eventlocations & Fotografen ansprechen</strong>
+              <p>5 Hochzeitslocations und 5 Fotografen in Hamburg kontaktieren für gegenseitige Partnerschaft</p>
+              <div class="tags"><span class="tag langfristig">Langfristig</span></div>
+            </div>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-num">10</div>
+            <div class="roadmap-content">
+              <strong>Netlify Asset Optimization aktivieren</strong>
+              <p>In Netlify-Einstellungen: Build & Deploy → Post Processing → CSS/JS Minification aktivieren</p>
+              <div class="tags"><span class="tag sofort">Schnell erledigt</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TABELLE ── -->
+  <div class="section">
+    <div class="section-title">Maßnahmen auf einen Blick</div>
+    <div class="card">
+      <div class="card-body" style="padding: 0;">
+        <table class="action-table">
+          <thead>
+            <tr>
+              <th>Maßnahme</th>
+              <th>Aufwand</th>
+              <th>Wirkung</th>
+              <th>Priorität</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Google Business Profile</td><td>1–2h</td><td>Sehr hoch (Local Pack)</td><td><span class="prio hoch">Hoch</span></td></tr>
+            <tr><td>Search Console + Sitemap</td><td>30min</td><td>Hoch (Indexierung)</td><td><span class="prio hoch">Hoch</span></td></tr>
+            <tr><td>GeoCoordinates im Schema</td><td>15min</td><td>Mittel (Local Ranking)</td><td><span class="prio hoch">Hoch</span></td></tr>
+            <tr><td>Verzeichnisse eintragen</td><td>2–3h</td><td>Mittel (Autorität)</td><td><span class="prio hoch">Hoch</span></td></tr>
+            <tr><td>Google Maps auf Kontaktseite</td><td>30min</td><td>Mittel (Local Signal)</td><td><span class="prio mittel">Mittel</span></td></tr>
+            <tr><td>Bewertungsstrategie</td><td>Laufend</td><td>Sehr hoch (Vertrauen)</td><td><span class="prio hoch">Hoch</span></td></tr>
+            <tr><td>Stadtseiten anlegen</td><td>1–2 Tage</td><td>Hoch (Long-tail Traffic)</td><td><span class="prio mittel">Mittel</span></td></tr>
+            <tr><td>Blogartikel</td><td>Laufend</td><td>Hoch (organic Traffic)</td><td><span class="prio mittel">Mittel</span></td></tr>
+            <tr><td>Backlink-Aufbau</td><td>Laufend</td><td>Sehr hoch (Autorität)</td><td><span class="prio mittel">Mittel</span></td></tr>
+            <tr><td>Netlify Minification</td><td>5min</td><td>Niedrig (Speed)</td><td><span class="prio niedrig">Niedrig</span></td></tr>
+            <tr><td>hreflang-Tags</td><td>1h</td><td>Niedrig (International)</td><td><span class="prio niedrig">Niedrig</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="report-footer">
+  <strong>Billy's Cocktail Catering</strong> · SEO & GEO Bericht März 2026 · erstellt mit Claude Code
+</div>
+
+</body>
+</html>

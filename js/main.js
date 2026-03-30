@@ -159,12 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
             result.textContent = 'Vielen Dank! Wir melden uns so schnell wie möglich bei dir.';
           }
           form.reset();
-          setTimeout(() => {
-            btn.innerHTML = origText;
-            btn.disabled = false;
-            btn.style.background = '';
-            if (result) result.style.display = 'none';
-          }, 6000);
+          const redirectInput = form.querySelector('input[name="redirect"]');
+          const redirectUrl = redirectInput ? redirectInput.value : 'danke.html';
+          setTimeout(() => { window.location.href = redirectUrl; }, 1500);
         } else {
           throw new Error(json.message || 'Fehler beim Senden');
         }

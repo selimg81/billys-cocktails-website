@@ -270,7 +270,7 @@ const TRANSLATIONS = {
     'sum-c3-text':'Wir bieten immer auch erfrischende alkoholfreie Alternativen an. Damit kommt jeder Gast auf seine Kosten.',
     'sum-c4-title':'Betriebsfest oder Privatfeier',
     'sum-c4-text':'Ob Betriebssommerfest, Gartenparty oder privates BBQ: Wir passen uns an eure Veranstaltung an und skalieren mit eurer Gästezahl.',
-    'sum-quote':'„Sommer in jedem Glas. Wir bringen die Vibes zu eurem Fest."',
+    'sum-quote':'„Sommer in jedem Glas. Ihr feiert, wir kümmern uns um die Drinks."',
 
     /* messen.html */
     'fair-h1':'Messen &','fair-h1-em':'Großevents',

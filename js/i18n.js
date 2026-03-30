@@ -221,7 +221,7 @@ const TRANSLATIONS = {
     'firm-c3-text':'Vollständige Ausstattung, Auf- und Abbau, Marken-Spirituosen und Verbrauchsmaterial inklusive. Ihr müsst euch um nichts kümmern.',
     'firm-c4-title':'Flexible Buchung',
     'firm-c4-text':'Von der Kleingruppe bis zum Großevent. Kurzfristige Buchungen sind bei freien Kapazitäten möglich.',
-    'firm-quote':'„Wir bringen die Bar zu deinem Firmenevent, du kümmerst dich um den Rest."',
+    'firm-quote':'„Wir bringen die Bar zu deinem Firmenevent, du genießt deine Veranstaltung."',
 
     /* hochzeiten.html */
     'wed-h1':'Hoch','wed-h1-em':'zeiten',

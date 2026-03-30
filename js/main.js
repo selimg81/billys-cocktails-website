@@ -18,6 +18,77 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
 
+  // ── MOBILE HAMBURGER MENU ──
+  const hdrActions = document.querySelector('.hdr-actions');
+  if (hdrActions) {
+    // Inject hamburger button
+    const menuBtn = document.createElement('button');
+    menuBtn.className = 'mob-menu-btn';
+    menuBtn.id = 'mob-menu-btn';
+    menuBtn.setAttribute('aria-label', 'Menü öffnen');
+    menuBtn.innerHTML = '<span></span><span></span><span></span>';
+    hdrActions.prepend(menuBtn);
+
+    // Detect active page
+    const path = window.location.pathname.split('/').pop() || 'index.html';
+
+    // Nav items
+    const navItems = [
+      { href: 'index.html', label: 'Home', icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>' },
+      { href: 'leistungen.html', label: 'Leistungen', icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>' },
+      { href: 'cocktails.html', label: 'Cocktails', icon: '<path d="M8 22h8m-4 0v-8m-7-10h18l-9 9-9-9z"/>' },
+      { href: 'about.html', label: 'Über uns', icon: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>' },
+      { href: 'referenzen.html', label: 'Referenzen', icon: '<circle cx="12" cy="8" r="6"/><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>' },
+    ];
+
+    // Build drawer HTML
+    const logoSrc = document.querySelector('.hdr-logo')?.src || 'Website Bilder/Logo/billys-logo-petrol.png';
+    const overlay = document.createElement('div');
+    overlay.className = 'mob-menu-overlay';
+    overlay.id = 'mob-menu-overlay';
+
+    const drawer = document.createElement('div');
+    drawer.className = 'mob-menu-drawer';
+    drawer.id = 'mob-menu-drawer';
+    drawer.innerHTML = `
+      <div class="mob-menu-head">
+        <img src="${logoSrc}" alt="Billy's Cocktails" class="mob-menu-logo" />
+        <button class="mob-menu-close" id="mob-menu-close" aria-label="Menü schließen">✕</button>
+      </div>
+      <nav class="mob-menu-nav">
+        ${navItems.map(item => `
+          <a href="${item.href}" ${path === item.href ? 'class="active"' : ''}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${item.icon}</svg>
+            ${item.label}
+          </a>`).join('')}
+        <div class="mob-menu-divider"></div>
+        <a href="impressum.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Impressum</a>
+        <a href="datenschutz.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Datenschutz</a>
+      </nav>
+      <div class="mob-menu-cta"><a href="kontakt.html">Jetzt anfragen</a></div>`;
+
+    document.body.appendChild(overlay);
+    document.body.appendChild(drawer);
+
+    const openMenu = () => {
+      menuBtn.classList.add('open');
+      overlay.classList.add('open');
+      drawer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeMenu = () => {
+      menuBtn.classList.remove('open');
+      overlay.classList.remove('open');
+      drawer.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+
+    menuBtn.addEventListener('click', openMenu);
+    overlay.addEventListener('click', closeMenu);
+    document.getElementById('mob-menu-close').addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  }
+
   // ── FIXED CTA ──
   const fab = document.querySelector('.fixed-cta');
   const showFab = () => fab?.classList.toggle('show', window.scrollY > window.innerHeight * 0.5);

@@ -198,13 +198,13 @@ const TRANSLATIONS = {
     'bar-label':'Die mobile Bar',
     'bar-h2':'Unsere','bar-h2-em':'Mobile Cocktailbar',
     'bar-p1':'Unsere <strong>mobile Bar</strong> ist das Herzstück jedes Events. Kompakt gebaut, aber mit vollem Profi-Equipment ausgestattet: von frischen Eiswürfeln über frische Zutaten bis hin zu hochwertigen Markenspirituosen ist alles an Bord. Ob du eine <strong>mobile Bar für ein Firmenevent</strong>, eine <strong>Hochzeit</strong> oder eine <strong>private Feier</strong> mietest, wir liefern, bauen auf und räumen ab.',
-    'bar-p2':'Die Bar lässt sich in weniger als 30 Minuten auf und abbauen und ist sowohl für <strong>Indoor als auch Outdoor Events</strong> geeignet. Dank kompakter Maße passt sie in nahezu jede Location in <strong>Hamburg, Berlin und NRW</strong>, vom Firmengebäude über den Eventgarten bis zur Messehalle.',
+    'bar-p2':'Die Bar ist modular aufgebaut: Die Breite ist von <strong>1,60 m bis 4,00 m</strong> in 60-cm-Schritten erweiterbar und passt sich so perfekt an jede Location an. Aufbau und Abbau in unter 30 Minuten, geeignet für <strong>Indoor als auch Outdoor Events</strong> in <strong>Hamburg, Berlin und NRW</strong>.',
     'bar-feat1':'Aufbau in unter 30 Minuten',
     'bar-feat2':'Geeignet für 20 bis 500+ Gäste',
     'bar-feat3':'Indoor & Outdoor einsetzbar',
     'bar-feat4':'Inklusive Barkeeper, Gläser & Zutaten',
     'bar-feat5':'Hamburg · Berlin · NRW & Umgebung',
-    'bar-spec-w':'Breite','bar-spec-d':'Tiefe','bar-spec-h':'Höhe',
+    'bar-spec-w':'Breite','bar-spec-w-val':'1,60 – 4,00 m','bar-spec-h':'Höhe',
     'bar-slider-l':'Aufbau','bar-slider-r':'In Aktion',
 
     /* firmenevents.html */
@@ -500,13 +500,13 @@ const TRANSLATIONS = {
     'bar-label':'The Mobile Bar',
     'bar-h2':'Our','bar-h2-em':'Mobile Cocktail Bar',
     'bar-p1':'Our <strong>mobile bar</strong> is the centrepiece of every event. Compact in build but packed with full professional equipment: from fresh ice cubes to fresh ingredients and premium spirits, everything is on board. Whether you\'re hiring a <strong>mobile bar for a corporate event</strong>, a <strong>wedding</strong>, or a <strong>private party</strong>, we deliver, set up, and break down.',
-    'bar-p2':'The bar sets up and breaks down in under 30 minutes and is suitable for both <strong>indoor and outdoor events</strong>. Thanks to its compact footprint, it fits into virtually any venue across <strong>Hamburg, Berlin and NRW</strong>, from corporate offices to event gardens to exhibition halls.',
+    'bar-p2':'The bar is modular in design: the width is expandable from <strong>1.60 m to 4.00 m</strong> in 60 cm steps, adapting perfectly to any venue. Setup and breakdown in under 30 minutes, suitable for both <strong>indoor and outdoor events</strong> across <strong>Hamburg, Berlin and NRW</strong>.',
     'bar-feat1':'Setup in under 30 minutes',
     'bar-feat2':'Suitable for 20 to 500+ guests',
     'bar-feat3':'Indoor & outdoor use',
     'bar-feat4':'Includes bartenders, glassware & ingredients',
     'bar-feat5':'Hamburg · Berlin · NRW & surrounding areas',
-    'bar-spec-w':'Width','bar-spec-d':'Depth','bar-spec-h':'Height',
+    'bar-spec-w':'Width','bar-spec-w-val':'1.60 – 4.00 m','bar-spec-h':'Height',
     'bar-slider-l':'Setup','bar-slider-r':'In Action',
 
     /* firmenevents.html */

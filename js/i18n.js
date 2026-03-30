@@ -197,8 +197,8 @@ const TRANSLATIONS = {
     /* index — Bar section */
     'bar-label':'Die mobile Bar',
     'bar-h2':'Unsere','bar-h2-em':'Mobile Cocktailbar',
-    'bar-p1':'Unsere <strong>mobile Bar</strong> ist das Herzstück jedes Events. Kompakt gebaut, aber mit vollem Profi-Equipment ausgestattet: von der Eismaschine über frische Zutaten bis hin zu hochwertigen Markenspirituosen ist alles an Bord. Ob du eine <strong>mobile Bar für ein Firmenevent</strong>, eine <strong>Hochzeit</strong> oder eine <strong>private Feier</strong> mietest – wir liefern, bauen auf und räumen ab.',
-    'bar-p2':'Die Bar lässt sich in weniger als 30 Minuten auf- und abbauen und ist sowohl für <strong>Indoor- als auch Outdoor-Events</strong> geeignet. Dank kompakter Maße passt sie in nahezu jede Location in <strong>Hamburg, Berlin und NRW</strong> – vom Firmengebäude über den Eventgarten bis zur Messehalle.',
+    'bar-p1':'Unsere <strong>mobile Bar</strong> ist das Herzstück jedes Events. Kompakt gebaut, aber mit vollem Profi-Equipment ausgestattet: von frischen Eiswürfeln über frische Zutaten bis hin zu hochwertigen Markenspirituosen ist alles an Bord. Ob du eine <strong>mobile Bar für ein Firmenevent</strong>, eine <strong>Hochzeit</strong> oder eine <strong>private Feier</strong> mietest, wir liefern, bauen auf und räumen ab.',
+    'bar-p2':'Die Bar lässt sich in weniger als 30 Minuten auf und abbauen und ist sowohl für <strong>Indoor als auch Outdoor Events</strong> geeignet. Dank kompakter Maße passt sie in nahezu jede Location in <strong>Hamburg, Berlin und NRW</strong>, vom Firmengebäude über den Eventgarten bis zur Messehalle.',
     'bar-feat1':'Aufbau in unter 30 Minuten',
     'bar-feat2':'Geeignet für 20 bis 500+ Gäste',
     'bar-feat3':'Indoor & Outdoor einsetzbar',
@@ -225,7 +225,7 @@ const TRANSLATIONS = {
 
     /* hochzeiten.html */
     'wed-h1':'Hoch','wed-h1-em':'zeiten',
-    'wed-hero-sub':'Euer Tag, eure Drinks. Wir kreieren individuelle Kreationen speziell für eure Hochzeit, von der Sektempfangung bis zum letzten Tanz.',
+    'wed-hero-sub':'Euer Tag, eure Drinks. Individuelle Kreationen für den schönsten Tag eures Lebens, persönlich abgestimmt, unvergesslich serviert.',
     'wed-srv-label':'Für euren besonderen Tag',
     'wed-srv-h2':'Unvergessliche Drinks','wed-srv-h2-em':'für eure Hochzeit',
     'wed-srv-sub':'Eine Hochzeit ist ein einzigartiger Moment, der von allen Details lebt. Wir entwickeln gemeinsam mit euch eine Cocktailkarte, die zu euch als Paar passt. Mit individuellen Kreationen, die eure Geschichte erzählen, und einem Service, der euren Gästen in Erinnerung bleibt.',
@@ -499,8 +499,8 @@ const TRANSLATIONS = {
     /* index — Bar section */
     'bar-label':'The Mobile Bar',
     'bar-h2':'Our','bar-h2-em':'Mobile Cocktail Bar',
-    'bar-p1':'Our <strong>mobile bar</strong> is the centrepiece of every event. Compact in build but packed with full professional equipment: from the ice machine to fresh ingredients and premium spirits — everything is on board. Whether you\'re hiring a <strong>mobile bar for a corporate event</strong>, a <strong>wedding</strong>, or a <strong>private party</strong> — we deliver, set up, and break down.',
-    'bar-p2':'The bar sets up and breaks down in under 30 minutes and is suitable for both <strong>indoor and outdoor events</strong>. Thanks to its compact footprint, it fits into virtually any venue across <strong>Hamburg, Berlin and NRW</strong> — from corporate offices to event gardens to exhibition halls.',
+    'bar-p1':'Our <strong>mobile bar</strong> is the centrepiece of every event. Compact in build but packed with full professional equipment: from fresh ice cubes to fresh ingredients and premium spirits, everything is on board. Whether you\'re hiring a <strong>mobile bar for a corporate event</strong>, a <strong>wedding</strong>, or a <strong>private party</strong>, we deliver, set up, and break down.',
+    'bar-p2':'The bar sets up and breaks down in under 30 minutes and is suitable for both <strong>indoor and outdoor events</strong>. Thanks to its compact footprint, it fits into virtually any venue across <strong>Hamburg, Berlin and NRW</strong>, from corporate offices to event gardens to exhibition halls.',
     'bar-feat1':'Setup in under 30 minutes',
     'bar-feat2':'Suitable for 20 to 500+ guests',
     'bar-feat3':'Indoor & outdoor use',
@@ -527,7 +527,7 @@ const TRANSLATIONS = {
 
     /* hochzeiten.html */
     'wed-h1':'Wed','wed-h1-em':'dings',
-    'wed-hero-sub':'Your day, your drinks. We craft bespoke cocktails tailored to your wedding, from the welcome reception to the last dance.',
+    'wed-hero-sub':'Your day, your drinks. Bespoke creations for the most beautiful day of your lives, personally tailored, unforgettably served.',
     'wed-srv-label':'For your special day',
     'wed-srv-h2':'Unforgettable drinks','wed-srv-h2-em':'for your wedding',
     'wed-srv-sub':'A wedding lives and breathes through its details. We work with you to create a cocktail menu that feels personal to you as a couple — with signature creations that tell your story and a service your guests will still be talking about.',

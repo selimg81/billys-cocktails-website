@@ -523,7 +523,7 @@ const TRANSLATIONS = {
     'firm-c3-text':'Full setup, breakdown, premium spirits, and consumables all included. You don\'t have to lift a finger.',
     'firm-c4-title':'Flexible Booking',
     'firm-c4-text':'From small groups to large events. Last-minute bookings are possible when availability allows.',
-    'firm-quote':'"We bring the bar to your company event — you handle the rest."',
+    'firm-quote':'"We bring the bar to your company event, you enjoy your celebration."',
 
     /* hochzeiten.html */
     'wed-h1':'Wed','wed-h1-em':'dings',
@@ -572,7 +572,7 @@ const TRANSLATIONS = {
     'sum-c3-text':'We always offer a range of refreshing non-alcoholic alternatives so every guest is well looked after.',
     'sum-c4-title':'Company event or private party',
     'sum-c4-text':'Whether it\'s a company summer party, garden get-together, or a private BBQ: we adapt to your event and scale with your guest numbers.',
-    'sum-quote':'"Summer in every glass. We bring the vibes to your party."',
+    'sum-quote':'"Summer in every glass. You celebrate, we take care of the drinks."',
 
     /* messen.html */
     'fair-h1':'Trade Fairs &','fair-h1-em':'Large Events',

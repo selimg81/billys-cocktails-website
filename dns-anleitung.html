@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DNS-Anleitung – billys-cocktails.de</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1a1a2e; line-height: 1.6; }
+
+  .page { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
+
+  .header { text-align: center; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 2px solid #e5e7eb; }
+  .header .logo-text { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1a6e73; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header p { color: #6b7280; font-size: 15px; }
+
+  .alert { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 10px; padding: 16px 20px; margin-bottom: 32px; display: flex; gap: 12px; align-items: flex-start; }
+  .alert .icon { font-size: 20px; flex-shrink: 0; }
+  .alert p { font-size: 14px; color: #92400e; }
+  .alert strong { color: #78350f; }
+
+  .step { background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px; overflow: hidden; }
+  .step-header { display: flex; align-items: center; gap: 16px; padding: 20px 24px; border-bottom: 1px solid #f3f4f6; }
+  .step-num { width: 36px; height: 36px; background: #1a6e73; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+  .step-title { font-size: 17px; font-weight: 600; }
+  .step-body { padding: 20px 24px; }
+  .step-body p { font-size: 14px; color: #4b5563; margin-bottom: 12px; }
+  .step-body p:last-child { margin-bottom: 0; }
+
+  .dns-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  .dns-table th { background: #f8fafc; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; border-bottom: 1px solid #e5e7eb; }
+  .dns-table td { padding: 12px 14px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+  .dns-table tr:last-child td { border-bottom: none; }
+  .dns-table .val { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; font-weight: 600; color: #1a6e73; background: #e8f4f5; padding: 3px 8px; border-radius: 4px; }
+
+  .code-block { background: #1a1a2e; color: #e2e8f0; border-radius: 8px; padding: 16px 20px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; margin: 12px 0; }
+  .code-block .comment { color: #6b7280; }
+
+  .info-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px 16px; margin-top: 12px; font-size: 13px; color: #1e40af; }
+  .info-box strong { color: #1e3a8a; }
+
+  .success-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 14px 16px; margin-top: 12px; font-size: 13px; color: #166534; }
+
+  .checklist { list-style: none; margin-top: 12px; }
+  .checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 14px; color: #4b5563; border-bottom: 1px solid #f3f4f6; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist .icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+  .footer { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #e5e7eb; font-size: 13px; color: #9ca3af; }
+  .footer strong { color: #6b7280; }
+
+  @media print {
+    body { background: #fff; }
+    .page { padding: 20px; }
+    .step { box-shadow: none; border: 1px solid #e5e7eb; }
+    .alert { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="logo-text">Billy's Cocktail Catering</div>
+    <h1>DNS-Umstellung auf Netlify</h1>
+    <p>Anleitung für den Provider · billys-cocktails.de · April 2026</p>
+  </div>
+
+  <div class="alert">
+    <span class="icon">⚠️</span>
+    <p><strong>Bitte vor der Änderung lesen:</strong> Die Umstellung dauert nach dem Speichern ca. 5–30 Minuten. Während dieser Zeit ist die Website kurz nicht erreichbar. Am besten abends oder nachts durchführen.</p>
+  </div>
+
+  <!-- SCHRITT 1 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">Im KAS von All-Inkl einloggen</div>
+    </div>
+    <div class="step-body">
+      <p>Unter <strong>kas.all-inkl.com</strong> mit den Zugangsdaten einloggen.</p>
+      <p>Dann navigieren zu: <strong>Domains → billys-cocktails.de → DNS-Einträge</strong></p>
+    </div>
+  </div>
+
+  <!-- SCHRITT 2 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">A-Record ändern (Hauptdomain)</div>
+    </div>
+    <div class="step-body">
+      <p>Den bestehenden <strong>A-Record</strong> für <code>@</code> (oder <code>billys-cocktails.de</code>) auf folgende IP-Adresse ändern:</p>
+      <table class="dns-table">
+        <thead>
+          <tr>
+            <th>Typ</th>
+            <th>Name / Host</th>
+            <th>Wert / Ziel</th>
+            <th>TTL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A</strong></td>
+            <td><span class="val">@</span></td>
+            <td><span class="val">75.2.60.5</span></td>
+            <td>300</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="info-box">
+        <strong>Hinweis:</strong> <code>@</code> steht für die Hauptdomain (billys-cocktails.de ohne www). Falls das Feld anders benannt ist, einfach leer lassen oder billys-cocktails.de eintragen.
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHRITT 3 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div class="step-title">CNAME-Record für www setzen</div>
+    </div>
+    <div class="step-body">
+      <p>Zusätzlich einen <strong>CNAME-Record</strong> für <code>www</code> eintragen, damit auch <code>www.billys-cocktails.de</code> funktioniert:</p>
+      <table class="dns-table">
+        <thead>
+          <tr>
+            <th>Typ</th>
+            <th>Name / Host</th>
+            <th>Wert / Ziel</th>
+            <th>TTL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CNAME</strong></td>
+            <td><span class="val">www</span></td>
+            <td><span class="val">billyscocktailcatering.netlify.app</span></td>
+            <td>300</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SCHRITT 4 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <div class="step-title">Speichern & warten</div>
+    </div>
+    <div class="step-body">
+      <p>Änderungen speichern. Die Umstellung propagiert sich automatisch weltweit — bei TTL 300 dauert das <strong>ca. 5–30 Minuten</strong>.</p>
+      <div class="success-box">
+        ✅ Sobald die Änderung aktiv ist, öffnet <strong>billys-cocktails.de</strong> automatisch die neue Website. HTTPS wird von Netlify automatisch eingerichtet — kein weiterer Schritt nötig.
+      </div>
+    </div>
+  </div>
+
+  <!-- ZUSAMMENFASSUNG -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">✓</div>
+      <div class="step-title">Zusammenfassung — alle Einträge auf einen Blick</div>
+    </div>
+    <div class="step-body">
+      <table class="dns-table">
+        <thead>
+          <tr>
+            <th>Typ</th>
+            <th>Name</th>
+            <th>Wert</th>
+            <th>TTL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A</strong></td>
+            <td><span class="val">@</span></td>
+            <td><span class="val">75.2.60.5</span></td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td><strong>CNAME</strong></td>
+            <td><span class="val">www</span></td>
+            <td><span class="val">billyscocktailcatering.netlify.app</span></td>
+            <td>300</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="checklist" style="margin-top: 16px;">
+        <li><span class="icon">📌</span>Bestehende MX-Records (E-Mail) <strong>nicht anfassen</strong> — nur A und CNAME ändern</li>
+        <li><span class="icon">📌</span>TTL kann dauerhaft auf 300 bleiben — kein Nachteil</li>
+        <li><span class="icon">📌</span>Nach der Umstellung meldet sich Selim zur Bestätigung</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>Bei Fragen:</strong> Selim Gürel · Diese Anleitung wurde speziell für billys-cocktails.de erstellt · April 2026
+  </div>
+
+</div>
+</body>
+</html>

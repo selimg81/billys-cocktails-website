@@ -812,6 +812,54 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .gal-item { transition: box-shadow 0.4s ease; }
 .gal-item:hover { box-shadow: 0 28px 56px rgba(0,0,0,0.5); z-index: 3; }
 
+/* ── CHAMPAGNER TOWER ── */
+.tower-variants {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.tower-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tower-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.14); }
+.tower-card picture img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.tower-card:hover picture img { transform: scale(1.04); }
+.tower-card-body { padding: 24px; }
+.tower-card-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--petrol);
+  margin-bottom: 8px;
+}
+.tower-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+.tower-card-text {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+@media (max-width: 640px) {
+  .tower-variants { grid-template-columns: 1fr; }
+}
+
 /* ── SECTION PETROL ── */
 .sec-petrol { background: var(--petrol); }
 .sec-petrol .label { color: rgba(255,255,255,0.55); border-color: rgba(255,255,255,0.2); }

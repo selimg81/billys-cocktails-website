@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { href: 'index.html', label: 'Home', icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>' },
       { href: 'leistungen.html', label: 'Leistungen', icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>' },
       { href: 'cocktails.html', label: 'Cocktails', icon: '<path d="M8 22h8m-4 0v-8m-7-10h18l-9 9-9-9z"/>' },
+      { href: 'champagner-tower.html', label: 'Champagner Tower', icon: '<path d="M7 3h10l-2 8H9L7 3z"/><path d="M12 11v7"/><path d="M8 22h8"/><circle cx="10" cy="6" r="0.5" fill="currentColor" stroke="none"/><circle cx="14" cy="5" r="0.5" fill="currentColor" stroke="none"/>' },
       { href: 'about.html', label: 'Über uns', icon: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>' },
       { href: 'referenzen.html', label: 'Referenzen', icon: '<circle cx="12" cy="8" r="6"/><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>' },
     ];

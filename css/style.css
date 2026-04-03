@@ -1198,6 +1198,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .footer-cookie-link:hover { color: rgba(255,255,255,0.7); }
 
+@media (max-width: 840px) {
+  /* Push cookie banner above the tube-bottom nav (bottom: 20px + ~58px height) */
+  #bc-cookie-banner { bottom: 90px; border-radius: 16px 16px 0 0; }
+}
 @media (max-width: 640px) {
   .bc-inner { gap: 20px; }
   .bc-actions { width: 100%; justify-content: flex-end; }

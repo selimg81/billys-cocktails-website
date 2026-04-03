@@ -390,6 +390,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })();
 
+  // ── HERO VIDEO: autoplay retry (iOS Low Data Mode / background tab) ──
+  (function() {
+    var v = document.querySelector('.hero-video');
+    if (!v) return;
+    var tryPlay = function() { v.play().catch(function(){}); };
+    tryPlay();
+    document.addEventListener('visibilitychange', function() {
+      if (!document.hidden) tryPlay();
+    });
+    v.addEventListener('pause', function() {
+      if (!document.hidden) tryPlay();
+    });
+  })();
+
   // ── DARK MODE (deaktiviert) ──
   localStorage.removeItem('billys-dark');
   document.documentElement.classList.remove('dark');

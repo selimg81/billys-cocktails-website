@@ -6,6 +6,7 @@ const TRANSLATIONS = {
   de: {
     /* Navigation */
     'nav-home':'Home','nav-services':'Leistungen','nav-cocktails':'Cocktails',
+    'nav-tower':'Champagner Tower',
     'nav-about':'Über uns','nav-ref':'Referenzen','nav-contact':'Anfragen',
     'mob-home':'Home','mob-services':'Leistungen','mob-cocktails':'Cocktails',
     'mob-about':'Über uns','mob-ref':'Referenzen','mob-contact':'Kontakt',
@@ -351,6 +352,7 @@ const TRANSLATIONS = {
   en: {
     /* Navigation */
     'nav-home':'Home','nav-services':'Services','nav-cocktails':'Cocktails',
+    'nav-tower':'Champagne Tower',
     'nav-about':'About us','nav-ref':'References','nav-contact':'Inquire',
     'mob-home':'Home','mob-services':'Services','mob-cocktails':'Cocktails',
     'mob-about':'About us','mob-ref':'References','mob-contact':'Contact',

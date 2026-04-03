@@ -282,13 +282,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── TUBE NAV ──
   (function() {
-    var path = window.location.pathname;
-    var page = path === '/' || path.endsWith('index.html') ? 'index'
-      : path.endsWith('leistungen.html') ? 'leistungen'
-      : path.endsWith('cocktails.html') ? 'cocktails'
-      : path.endsWith('about.html') ? 'about'
-      : path.endsWith('referenzen.html') ? 'referenzen'
-      : path.endsWith('kontakt.html') || path.endsWith('firmenevents.html') || path.endsWith('hochzeiten.html') ? 'kontakt'
+    var path = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+    var page = (path === '/' || path === '/index') ? 'index'
+      : path.endsWith('/leistungen') ? 'leistungen'
+      : path.endsWith('/cocktails') ? 'cocktails'
+      : path.endsWith('/champagner-tower') ? 'champagner-tower'
+      : path.endsWith('/about') ? 'about'
+      : path.endsWith('/referenzen') ? 'referenzen'
+      : path.endsWith('/kontakt') || path.endsWith('/firmenevents') || path.endsWith('/hochzeiten') || path.endsWith('/barkeeper-mieten') ? 'kontakt'
       : 'index';
 
     function initTube(innerEl, pillEl) {

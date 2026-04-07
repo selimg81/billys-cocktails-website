@@ -167,7 +167,7 @@ const TRANSLATIONS = {
     'abt-p3':'Aus dieser Erfahrung, meiner Liebe zum Kundenkontakt und einer ordentlichen Portion Gründergeist ist Billy\'s Cocktail Catering entstanden. Heute sorgen wir mit unserem Team auf Events jeder Größe für richtig gute Drinks und noch bessere Stimmung.',
     'abt-quote':'„Unser Anspruch: Jeder Gast soll den Abend mit einem Lächeln verlassen."',
     'abt-cite':'Vassili, Gründer',
-    'abt-stat1':'Events','abt-stat2':'Städte','abt-stat3':'Gute-Laune-Garantie',
+    'abt-stat1':'Events','abt-stat2':'Deutschlandweit','abt-stat3':'Gute-Laune-Garantie',
 
     /* referenzen.html */
     'ref-page-label':'Portfolio','ref-page-h1':'Unsere','ref-page-h1-em':'Referenzen',
@@ -544,7 +544,7 @@ const TRANSLATIONS = {
     'abt-p3':'That experience — combined with a genuine love for people and a drive to build something of my own — became Billy\'s Cocktail Catering. Today, our team brings quality drinks and real energy to events of all shapes and sizes.',
     'abt-quote':'"Our goal is simple: every guest should leave with a smile."',
     'abt-cite':'Vassili, Founder',
-    'abt-stat1':'Events','abt-stat2':'Cities','abt-stat3':'Good vibes, guaranteed',
+    'abt-stat1':'Events','abt-stat2':'Nationwide','abt-stat3':'Good vibes, guaranteed',
 
     /* referenzen.html */
     'ref-page-label':'Portfolio','ref-page-h1':'Our','ref-page-h1-em':'References',

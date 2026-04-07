@@ -878,6 +878,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sec-petrol .srv-title { color: #fff; }
 .sec-petrol .srv-text { color: rgba(255,255,255,0.7); }
 
+/* ── SRV-CARDS ON WARM/CREAM BACKGROUND ── */
+.sec-warm .srv-card { background: var(--petrol); border-color: rgba(255,255,255,0.08); }
+.sec-warm .srv-card:hover { background: #0a3d40; box-shadow: 0 20px 60px rgba(8,50,53,0.3); border-color: rgba(255,255,255,0.18); }
+.sec-warm .srv-num { color: rgba(255,255,255,0.07); }
+.sec-warm .srv-title { color: #fff; }
+.sec-warm .srv-text { color: rgba(255,255,255,0.7); }
+
 /* ── MOB LINK ICON ── */
 .mob-link-icon { width: 28px; height: 28px; display: inline-block; vertical-align: middle; margin-right: 18px; opacity: 0.65; flex-shrink: 0; }
 

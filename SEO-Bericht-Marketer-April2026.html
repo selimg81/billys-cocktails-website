@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO & GEO Bericht — billys-cocktails.de | April 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #1a1a1a;
+      background: #f5f5f3;
+      padding: 40px 20px 80px;
+    }
+    .doc {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    /* Cover */
+    .cover {
+      background: #083235;
+      padding: 56px 48px 48px;
+      color: #fff;
+    }
+    .cover-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+    }
+    .cover h1 {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .cover h1 em { font-style: italic; color: #c8a96e; }
+    .cover-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 16px;
+    }
+    .cover-meta {
+      margin-top: 40px;
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .cover-meta-item { font-size: 13px; }
+    .cover-meta-item strong { display: block; color: rgba(255,255,255,0.45); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
+    .cover-meta-item span { color: #fff; font-weight: 500; }
+
+    /* Body */
+    .body { padding: 48px; }
+
+    /* Section */
+    .section { margin-bottom: 52px; }
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #1a6e73;
+      margin-bottom: 10px;
+    }
+    .section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #083235;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #f0ebe3;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #083235;
+      margin: 28px 0 10px;
+    }
+    p { margin-bottom: 12px; color: #333; }
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { margin-bottom: 6px; color: #333; }
+    a { color: #1a6e73; }
+    strong { font-weight: 700; }
+    code {
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 12px;
+      background: #f0f0ee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #083235;
+    }
+
+    /* Status tags */
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 100px;
+      margin-right: 6px;
+    }
+    .tag-done  { background: #dcf5e7; color: #1a7a3a; }
+    .tag-red   { background: #fde8e8; color: #b91c1c; }
+    .tag-orange{ background: #fef3cd; color: #92400e; }
+    .tag-yellow{ background: #fefce8; color: #78350f; }
+
+    /* Checklist table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: #f5f5f3;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #666;
+      border-bottom: 2px solid #e8e4dc;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f0ede8;
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fafaf8; }
+
+    /* Priority block */
+    .prio-block {
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .prio-block.red    { background: #fff5f5; border-left: 4px solid #e53e3e; }
+    .prio-block.orange { background: #fffaf0; border-left: 4px solid #d97706; }
+    .prio-block.yellow { background: #fefce8; border-left: 4px solid #ca8a04; }
+    .prio-block h3     { margin-top: 0; }
+    .prio-block.red h3    { color: #b91c1c; }
+    .prio-block.orange h3 { color: #92400e; }
+    .prio-block.yellow h3 { color: #78350f; }
+
+    /* Keyword table */
+    .kw-table td:last-child { font-size: 13px; color: #666; }
+
+    /* Summary boxes */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .summary-box {
+      background: #f5f5f3;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .summary-box .num {
+      font-size: 32px;
+      font-weight: 300;
+      color: #083235;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .summary-box .num em { font-style: normal; color: #1a6e73; }
+    .summary-box .lbl { font-size: 12px; color: #888; }
+
+    /* Top 3 CTA */
+    .top3 {
+      background: #083235;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      color: #fff;
+    }
+    .top3 h3 { color: #c8a96e; margin-top: 0; margin-bottom: 16px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .top3 ol { padding-left: 20px; }
+    .top3 li { color: rgba(255,255,255,0.9); margin-bottom: 10px; font-size: 15px; }
+    .top3 li strong { color: #fff; }
+
+    /* NAP box */
+    .nap-box {
+      background: #f0ebe3;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .nap-box strong { display: block; margin-bottom: 8px; color: #083235; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* Divider */
+    .divider { border: none; border-top: 2px solid #f0ebe3; margin: 40px 0; }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .doc { box-shadow: none; border-radius: 0; }
+      .body { padding: 32px 40px; }
+      .prio-block { break-inside: avoid; }
+      .section { break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+      .cover { padding: 36px 24px 32px; }
+      .body { padding: 28px 20px; }
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .cover h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+<div class="doc">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-label">Vertraulich · Intern</div>
+    <h1>SEO & GEO Bericht<br><em>billys-cocktails.de</em></h1>
+    <p class="cover-sub">Analyse, offene Maßnahmen und Handlungsempfehlungen für den Marketer</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><strong>Domain</strong><span>billys-cocktails.de</span></div>
+      <div class="cover-meta-item"><strong>Bericht-Datum</strong><span>April 2026</span></div>
+      <div class="cover-meta-item"><strong>Zielmarkt</strong><span>Hamburg · Berlin · NRW</span></div>
+      <div class="cover-meta-item"><strong>Technologie</strong><span>Netlify / Static HTML</span></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- SUMMARY -->
+    <div class="section">
+      <div class="section-label">Übersicht</div>
+      <h2>Status auf einen Blick</h2>
+
+      <div class="summary-grid">
+        <div class="summary-box">
+          <div class="num"><em>15</em></div>
+          <div class="lbl">Indexierbare Seiten</div>
+        </div>
+        <div class="summary-box">
+          <div class="num"><em>3</em></div>
+          <div class="lbl">Seiten mit Schema.org</div>
+        </div>
+        <div class="summary-box">
+          <div class="num"><em>41</em></div>
+          <div class="lbl">Google Bewertungen (Ø 5.0)</div>
+        </div>
+      </div>
+
+      <div class="top3">
+        <h3>Die 3 wichtigsten Maßnahmen</h3>
+        <ol>
+          <li><strong>Google Business Profile</strong> anlegen & optimieren — sofortiger Effekt auf Local Pack (Maps)</li>
+          <li><strong>Bewertungen</strong> nach jedem Event aktiv einsammeln — stärkstes lokales Rankingsignal</li>
+          <li><strong>Branchenverzeichnisse</strong> mit konsistenten NAP-Daten eintragen — passive Backlinks, dauerhafter Effekt</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- WAS BEREITS ERLEDIGT IST -->
+    <div class="section">
+      <div class="section-label">Technischer Stand</div>
+      <h2>Was bereits fertig implementiert ist</h2>
+      <p>Diese Punkte sind vom Entwickler umgesetzt und müssen <strong>nicht</strong> vom Marketer bearbeitet werden.</p>
+
+      <table>
+        <thead>
+          <tr><th>Bereich</th><th>Status</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Clean URLs</td><td><span class="tag tag-done">Fertig</span></td><td>Keine .html-Endungen in URLs, 301-Redirects aktiv</td></tr>
+          <tr><td>301-Redirects (alte WordPress-URLs)</td><td><span class="tag tag-done">Fertig</span></td><td>/ueber-uns, /beratung, /danke-formular etc. → neue Seiten</td></tr>
+          <tr><td>Sitemap.xml</td><td><span class="tag tag-done">Fertig</span></td><td>15 URLs, korrekte Prioritäten, aktuelles Datum</td></tr>
+          <tr><td>LocalBusiness Schema (Homepage)</td><td><span class="tag tag-done">Fertig</span></td><td>Adresse, Koordinaten, Öffnungszeiten, Bewertungen, Founder</td></tr>
+          <tr><td>Service + FAQPage Schema</td><td><span class="tag tag-done">Fertig</span></td><td>Champagner Tower + Barkeeper mieten je mit 5 FAQs</td></tr>
+          <tr><td>Canonical Tags</td><td><span class="tag tag-done">Fertig</span></td><td>Alle 15 Seiten auf Clean URLs korrigiert (April 2026)</td></tr>
+          <tr><td>hreflang Tags</td><td><span class="tag tag-done">Fertig</span></td><td>Jede Seite zeigt auf sich selbst (korrekt)</td></tr>
+          <tr><td>OG Tags / Twitter Cards</td><td><span class="tag tag-done">Fertig</span></td><td>Title, Description, Image, URL auf allen Seiten</td></tr>
+          <tr><td>Meta Titles & Descriptions</td><td><span class="tag tag-done">Fertig</span></td><td>Alle Seiten mit keyword-optimierten Texten</td></tr>
+          <tr><td>Google Tag Manager</td><td><span class="tag tag-done">Fertig</span></td><td>GTM-NMH4QK2 aktiv auf allen Seiten</td></tr>
+          <tr><td>noindex auf richtigen Seiten</td><td><span class="tag tag-done">Fertig</span></td><td>/danke, /datenschutz, /404 korrekt ausgeschlossen</td></tr>
+          <tr><td>Bildoptimierung</td><td><span class="tag tag-done">Fertig</span></td><td>WebP + JPG Fallback, Alt-Texte gesetzt</td></tr>
+          <tr><td>Mehrsprachigkeit DE/EN</td><td><span class="tag tag-done">Fertig</span></td><td>Alle Texte per Klick schaltbar</td></tr>
+          <tr><td>Neue SEO-Landing-Pages</td><td><span class="tag tag-done">Fertig</span></td><td>/champagner-tower, /barkeeper-mieten live</td></tr>
+          <tr><td>areaServed in Schema</td><td><span class="tag tag-done">Fertig</span></td><td>Hamburg, Berlin, Nordrhein-Westfalen eingetragen</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- MARKETER AUFGABEN -->
+    <div class="section">
+      <div class="section-label">Handlungsempfehlungen</div>
+      <h2>Was der Marketer jetzt tun muss</h2>
+
+      <!-- PRIO 1 -->
+      <div class="prio-block red">
+        <h3>Priorität 1 — Sofort (blockiert lokale Sichtbarkeit)</h3>
+
+        <h3 style="color:#b91c1c;font-size:15px;margin-top:16px;">1. Google Business Profile anlegen & optimieren</h3>
+        <p>Das ist der <strong>einzeln wichtigste Hebel</strong> für lokales SEO. Bei Suchanfragen wie „Cocktail Catering Hamburg" erscheint das Local Pack (Maps-Ergebnisse) <em>vor</em> den organischen Suchergebnissen. Ohne GBP-Eintrag ist Billy's dort komplett unsichtbar.</p>
+        <p><strong>URL:</strong> <a href="https://business.google.com" target="_blank">business.google.com</a></p>
+        <ul>
+          <li><strong>Name:</strong> exakt <code>Billy's Cocktail Catering</code></li>
+          <li><strong>Hauptkategorie:</strong> Catering-Unternehmen</li>
+          <li><strong>Zusatzkategorie:</strong> Cocktail-Bar, Partyservice</li>
+          <li><strong>Telefon:</strong> +49 173 9927773</li>
+          <li><strong>Website:</strong> https://billys-cocktails.de</li>
+          <li><strong>Öffnungszeiten:</strong> Mo–So 09:00–22:00 Uhr</li>
+          <li><strong>Beschreibung (max. 750 Zeichen):</strong> Keywords einbauen — „Cocktail Catering Hamburg", „Mobile Bar mieten", „Barkeeper mieten Hamburg", „Champagner Tower"</li>
+          <li><strong>Leistungen eintragen:</strong> Mobile Bar, Cocktail Catering, Barkeeper mieten, Champagner Tower, Firmenevents, Hochzeiten</li>
+          <li><strong>Fotos hochladen:</strong> Mindestens 10 Bilder — Bar, Barkeeper in Aktion, Events, Champagner Tower. Format: JPG/PNG, min. 720×540 px</li>
+          <li><strong>Google Posts:</strong> Wöchentlich 1 Post mit aktuellem Event-Foto und kurzem Text — wirkt sich messbar auf Rankings aus</li>
+        </ul>
+
+        <h3 style="color:#b91c1c;font-size:15px;margin-top:20px;">2. Bewertungen aktiv einsammeln</h3>
+        <p>Die 41 Bewertungen im System sind ein gutes Fundament. <strong>Ziel: 100+ Bewertungen in 3 Monaten.</strong></p>
+        <ul>
+          <li>Nach jedem Event: kurze WhatsApp oder E-Mail an Kunden mit direktem Google-Bewertungslink</li>
+          <li>Link generieren: GBP Dashboard → „Kundenbewertungen" → „Weiterleitungslink abrufen"</li>
+          <li>Auf <em>alle</em> Bewertungen antworten — auch kurz, signalisiert Aktivität an Google</li>
+          <li><strong>Niemals</strong> Bewertungen kaufen oder anreizen — Google erkennt das und kann das Profil sperren</li>
+        </ul>
+      </div>
+
+      <!-- PRIO 2 -->
+      <div class="prio-block orange">
+        <h3>Priorität 2 — Innerhalb 4 Wochen</h3>
+
+        <h3 style="color:#92400e;font-size:15px;margin-top:16px;">3. Google Search Console einrichten</h3>
+        <p>Damit werden Crawling-Fehler, Indexierungs-Status und Keywords sichtbar.</p>
+        <ul>
+          <li>URL: <a href="https://search.google.com/search-console" target="_blank">search.google.com/search-console</a></li>
+          <li>Property <code>billys-cocktails.de</code> anlegen (Domain-Property, nicht URL-Prefix)</li>
+          <li>Verifizierung per DNS-TXT-Record → den Code an den Entwickler weitergeben, der trägt ihn in Netlify ein</li>
+          <li>Sitemap einreichen: <code>https://billys-cocktails.de/sitemap.xml</code></li>
+          <li>Wöchentlich: Crawl-Fehler prüfen, Klick-Daten beobachten, Core Web Vitals checken</li>
+        </ul>
+
+        <h3 style="color:#92400e;font-size:15px;margin-top:20px;">4. Branchenverzeichnisse — NAP konsistent eintragen</h3>
+        <p>Jeder Eintrag ist ein kostenloser Backlink und stärkt das lokale Vertrauen bei Google. <strong>Wichtig: exakt dieselben Daten überall verwenden (NAP = Name, Address, Phone).</strong></p>
+
+        <div class="nap-box">
+          <strong>NAP-Daten für alle Einträge</strong>
+          Name: Billy's Cocktail Catering<br />
+          Adresse: [Hamburger Adresse eintragen]<br />
+          Telefon: +49 173 9927773<br />
+          Website: https://billys-cocktails.de<br />
+          Kategorie: Cocktail Catering / Partyservice / Mobile Bar
+        </div>
+
+        <table>
+          <thead>
+            <tr><th>Verzeichnis</th><th>URL</th><th>Priorität</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Yelp Deutschland</td><td>yelp.de</td><td><span class="tag tag-red">Hoch</span></td></tr>
+            <tr><td>Gelbe Seiten</td><td>gelbeseiten.de</td><td><span class="tag tag-red">Hoch</span></td></tr>
+            <tr><td>Das Örtliche</td><td>dasoertliche.de</td><td><span class="tag tag-red">Hoch</span></td></tr>
+            <tr><td>catering.de</td><td>catering.de</td><td><span class="tag tag-red">Hoch</span></td></tr>
+            <tr><td>hochzeit.de</td><td>hochzeit.de</td><td><span class="tag tag-red">Hoch</span></td></tr>
+            <tr><td>heiraten.de</td><td>heiraten.de</td><td><span class="tag tag-red">Hoch</span></td></tr>
+            <tr><td>eventplaner.de</td><td>eventplaner.de</td><td><span class="tag tag-red">Hoch</span></td></tr>
+            <tr><td>Branchenbuch.de</td><td>branchenbuch.de</td><td><span class="tag tag-orange">Mittel</span></td></tr>
+            <tr><td>WLW (Wer liefert was)</td><td>wlw.de</td><td><span class="tag tag-orange">Mittel</span></td></tr>
+            <tr><td>Stadtbranchenbuch</td><td>stadtbranchenbuch.de</td><td><span class="tag tag-orange">Mittel</span></td></tr>
+            <tr><td>the-knot.de</td><td>the-knot.de</td><td><span class="tag tag-orange">Mittel</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PRIO 3 -->
+      <div class="prio-block yellow">
+        <h3>Priorität 3 — Mittelfristig (1–3 Monate)</h3>
+
+        <h3 style="color:#78350f;font-size:15px;margin-top:16px;">5. Stadt-Landing-Pages vorbereiten (mit Entwickler abstimmen)</h3>
+        <p>Die Seiten für Berlin und NRW/Köln sind in Planung. Damit diese ranken, braucht der Marketer:</p>
+        <ul>
+          <li>3–5 konkrete lokale Referenzen oder Event-Berichte für die jeweilige Stadt (Glaub­würdigkeit)</li>
+          <li>Stadtspezifische Google-Bewertungen einsammeln — Kunden aus Berlin/Köln/Düsseldorf gezielt bitten</li>
+          <li>Lokale Backlinks aus Berlin/NRW-Eventportalen oder Hochzeitsblogs</li>
+        </ul>
+        <p><strong>Geplante Seiten:</strong> <code>/cocktail-catering-berlin</code> · <code>/cocktail-catering-nrw</code></p>
+
+        <h3 style="color:#78350f;font-size:15px;margin-top:20px;">6. Content-Strategie (Blog / Ratgeber)</h3>
+        <p>Longtail-Keywords lassen sich über Blogartikel abgreifen. Vorgeschlagene Themen (je 800–1.200 Wörter):</p>
+        <ul>
+          <li>„Cocktail Catering Kosten: Was kostet eine mobile Bar 2026?"</li>
+          <li>„Barkeeper mieten vs. Getränkepauschale – was lohnt sich wirklich?"</li>
+          <li>„Champagner Tower planen: So läuft euer Hochzeitsturm perfekt"</li>
+          <li>„Die 10 beliebtesten Cocktails für Firmenevents"</li>
+          <li>„Mobile Bar mieten Hamburg: Der ultimative Guide"</li>
+        </ul>
+        <p>Umsetzung durch Texteragentur oder KI-unterstützt, finale Freigabe durch Vassili.</p>
+
+        <h3 style="color:#78350f;font-size:15px;margin-top:20px;">7. Instagram & Social Signals</h3>
+        <ul>
+          <li>Jeden Post mit Hashtags versehen: <code>#CocktailCateringHamburg</code> <code>#MobileBarHamburg</code> <code>#EventCateringHH</code> <code>#HochzeitHamburg</code></li>
+          <li>Reels mit Geo-Tag Hamburg posten — erhöht lokale Sichtbarkeit in Instagram-Suche</li>
+          <li>Instagram-Link in GBP-Profil eintragen</li>
+          <li>User-generated Content (Kunden-Posts) re-posten und verlinken</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- KEYWORD TRACKING -->
+    <div class="section">
+      <div class="section-label">Keyword-Strategie</div>
+      <h2>Rankings überwachen</h2>
+      <p>Diese Keywords sollten wöchentlich in Google Search Console oder einem Tracking-Tool überwacht werden:</p>
+
+      <table class="kw-table">
+        <thead>
+          <tr><th>Keyword</th><th>Ziel-Seite</th><th>Priorität</th><th>Ziel-Position</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cocktail Catering Hamburg</td><td>/</td><td><span class="tag tag-red">Hoch</span></td><td>Top 3</td></tr>
+          <tr><td>Mobile Bar mieten Hamburg</td><td>/leistungen</td><td><span class="tag tag-red">Hoch</span></td><td>Top 5</td></tr>
+          <tr><td>Barkeeper mieten Hamburg</td><td>/barkeeper-mieten</td><td><span class="tag tag-red">Hoch</span></td><td>Top 3</td></tr>
+          <tr><td>Champagner Tower Hamburg</td><td>/champagner-tower</td><td><span class="tag tag-red">Hoch</span></td><td>Top 3</td></tr>
+          <tr><td>Cocktail Catering Firmenevent Hamburg</td><td>/firmenevents</td><td><span class="tag tag-red">Hoch</span></td><td>Top 5</td></tr>
+          <tr><td>Cocktail Catering Hochzeit Hamburg</td><td>/hochzeiten</td><td><span class="tag tag-orange">Mittel</span></td><td>Top 5</td></tr>
+          <tr><td>Mobile Bar Hochzeit Hamburg</td><td>/hochzeiten</td><td><span class="tag tag-orange">Mittel</span></td><td>Top 5</td></tr>
+          <tr><td>Cocktail Catering Kosten Hamburg</td><td>/ (FAQ)</td><td><span class="tag tag-orange">Mittel</span></td><td>Top 10</td></tr>
+          <tr><td>Barkeeper Stundenlohn Hamburg</td><td>/barkeeper-mieten</td><td><span class="tag tag-orange">Mittel</span></td><td>Top 5</td></tr>
+          <tr><td>Cocktail Catering Berlin</td><td>(geplante Seite)</td><td><span class="tag tag-yellow">Langfristig</span></td><td>Top 10</td></tr>
+          <tr><td>Mobile Bar Köln mieten</td><td>(geplante Seite)</td><td><span class="tag tag-yellow">Langfristig</span></td><td>Top 10</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Empfohlene Tools</h3>
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Kosten</th><th>Wofür</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Google Search Console</td><td>Kostenlos</td><td>Ranking-Daten, Crawl-Fehler, Index-Status — Pflicht</td></tr>
+          <tr><td>Google Analytics 4</td><td>Kostenlos</td><td>Traffic, Konversionen, Nutzerverhalten — Pflicht</td></tr>
+          <tr><td>Ubersuggest</td><td>ab ~29 €/Monat</td><td>Keyword-Tracking, Mitbewerber-Analyse</td></tr>
+          <tr><td>Sistrix</td><td>ab ~99 €/Monat</td><td>Deutschsprachiges SEO, Sichtbarkeitsindex</td></tr>
+          <tr><td>Screaming Frog</td><td>Kostenlos bis 500 URLs</td><td>Technisches Crawling, Broken Links finden</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- OFFENE TECHNISCHE PUNKTE -->
+    <div class="section">
+      <div class="section-label">Für den Entwickler</div>
+      <h2>Noch offene technische Punkte</h2>
+      <p>Diese Aufgaben sind Developer-seitig — zur Information für den Marketer, damit er bei Bedarf nachfragen kann:</p>
+
+      <table>
+        <thead>
+          <tr><th>Aufgabe</th><th>Priorität</th><th>Aufwand</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Schema.org (Service + FAQPage) auf hochzeiten.html + firmenevents.html</td><td><span class="tag tag-orange">Mittel</span></td><td>Klein</td></tr>
+          <tr><td>Schema.org (LocalBusiness ContactPoint) auf kontakt.html</td><td><span class="tag tag-orange">Mittel</span></td><td>Klein</td></tr>
+          <tr><td>Stadt-Landing-Pages Berlin & NRW/Köln anlegen</td><td><span class="tag tag-orange">Mittel</span></td><td>Mittel</td></tr>
+          <tr><td>OG-Image: eigenes Event-Foto statt Logo einsetzen</td><td><span class="tag tag-yellow">Niedrig</span></td><td>Klein</td></tr>
+          <tr><td>Google Analytics 4 via GTM konfigurieren (falls noch nicht aktiv)</td><td><span class="tag tag-red">Hoch</span></td><td>Klein</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FOOTER -->
+    <hr class="divider" />
+    <p style="font-size:12px;color:#aaa;text-align:center;">
+      SEO & GEO Bericht · billys-cocktails.de · April 2026 · Vertraulich
+    </p>
+
+  </div>
+</div>
+</body>
+</html>

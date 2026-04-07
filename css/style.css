@@ -856,6 +856,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--gray);
   line-height: 1.7;
 }
+/* Tower cards on petrol background */
+.sec-petrol .tower-card { background: rgba(255,255,255,0.07); box-shadow: 0 4px 24px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); }
+.sec-petrol .tower-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.35); border-color: rgba(255,255,255,0.2); }
+.sec-petrol .tower-card-label { color: var(--sand); }
+.sec-petrol .tower-card-title { color: #fff; }
+.sec-petrol .tower-card-text { color: rgba(255,255,255,0.7); }
 @media (max-width: 640px) {
   .tower-variants { grid-template-columns: 1fr; }
 }
@@ -865,6 +871,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sec-petrol .label { color: rgba(255,255,255,0.55); border-color: rgba(255,255,255,0.2); }
 .sec-petrol .sec-h2 { color: #fff; }
 .sec-petrol .sec-h2 em { color: rgba(255,255,255,0.75); }
+.sec-petrol .sec-sub { color: rgba(255,255,255,0.65); }
+.sec-petrol .srv-card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
+.sec-petrol .srv-card:hover { background: rgba(255,255,255,0.13); box-shadow: 0 20px 60px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.2); }
+.sec-petrol .srv-num { color: rgba(255,255,255,0.08); }
+.sec-petrol .srv-title { color: #fff; }
+.sec-petrol .srv-text { color: rgba(255,255,255,0.7); }
 
 /* ── MOB LINK ICON ── */
 .mob-link-icon { width: 28px; height: 28px; display: inline-block; vertical-align: middle; margin-right: 18px; opacity: 0.65; flex-shrink: 0; }

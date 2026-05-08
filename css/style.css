@@ -1051,9 +1051,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 @media (max-width: 840px) {
   .tube-nav { display: none; }
-  .tube-bottom { display: flex; }
+  .tube-bottom { display: none; }
   .fixed-cta { display: none; }
-  body { padding-bottom: 80px; }
   .srv-grid { grid-template-columns: 1fr 1fr; }
   .footer-links { gap: 40px; }
 }
@@ -1224,9 +1223,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .footer-cookie-link:hover { color: rgba(255,255,255,0.7); }
 
 @media (max-width: 840px) {
-  /* Floating card above tube-bottom nav */
   #bc-cookie-banner {
-    bottom: 112px;
+    bottom: 20px;
     left: 12px; right: 12px;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);

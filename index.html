@@ -12,7 +12,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta http-equiv="content-language" content="de" />
   <link rel="alternate" hreflang="de" href="https://billys-cocktails.de/" />
   <link rel="alternate" hreflang="x-default" href="https://billys-cocktails.de/" />
-  <link rel="preload" as="video" href="Website Video/Website Slowmo.mp4" type="video/mp4" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Billy's Cocktails | Mobiles Cocktail Catering Hamburg · Berlin · NRW</title>
   <meta name="description" content="Billy's Cocktail Catering: Professionelles mobiles Cocktail-Catering für Firmenevents, Hochzeiten, Messen und private Feiern. Jetzt anfragen!" />
@@ -256,7 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <!-- Video (links auf Desktop, Hintergrund auf Mobile) -->
   <div class="hero-video-col">
-    <video class="hero-video" autoplay muted loop playsinline>
+    <video class="hero-video" autoplay muted loop playsinline preload="none" poster="Website Bilder/hero-poster.webp">
       <source src="Website Video/Website Slowmo.mp4" type="video/mp4" />
     </video>
   </div>
@@ -467,8 +468,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <a href="cocktails.html" class="ck-card rv" style="--rv-transform:translate3d(80px,0,0)">
         <div class="ck-img-wrap">
-          <picture><source srcset="Website Bilder/Cocktails/Peach Dreams1.webp" type="image/webp" /><img class="ck-img-1" src="Website Bilder/Cocktails/Peach Dreams1.jpg" alt="Peach Dreams" loading="eager" /></picture>
-          <picture><source srcset="Website Bilder/Cocktails/Peach Dreams2.webp" type="image/webp" /><img class="ck-img-2" src="Website Bilder/Cocktails/Peach Dreams2.jpg" alt="Peach Dreams" loading="eager" /></picture>
+          <picture><source srcset="Website Bilder/Cocktails/Peach Dreams1.webp" type="image/webp" /><img class="ck-img-1" src="Website Bilder/Cocktails/Peach Dreams1.jpg" alt="Peach Dreams" loading="lazy" /></picture>
+          <picture><source srcset="Website Bilder/Cocktails/Peach Dreams2.webp" type="image/webp" /><img class="ck-img-2" src="Website Bilder/Cocktails/Peach Dreams2.jpg" alt="Peach Dreams" loading="lazy" /></picture>
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Peach Dreams</h3>
@@ -478,8 +479,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <a href="cocktails.html" class="ck-card rv" style="--rv-transform:translate3d(80px,0,0);--rv-delay:80ms">
         <div class="ck-img-wrap">
-          <picture><source srcset="Website Bilder/Cocktails/Classic Margarita1.webp" type="image/webp" /><img class="ck-img-1" src="Website Bilder/Cocktails/Classic Margarita1.jpg" alt="Classic Margarita" loading="eager" /></picture>
-          <picture><source srcset="Website Bilder/Cocktails/Classic Margarita2.webp" type="image/webp" /><img class="ck-img-2" src="Website Bilder/Cocktails/Classic Margarita2.jpg" alt="Classic Margarita" loading="eager" /></picture>
+          <picture><source srcset="Website Bilder/Cocktails/Classic Margarita1.webp" type="image/webp" /><img class="ck-img-1" src="Website Bilder/Cocktails/Classic Margarita1.jpg" alt="Classic Margarita" loading="lazy" /></picture>
+          <picture><source srcset="Website Bilder/Cocktails/Classic Margarita2.webp" type="image/webp" /><img class="ck-img-2" src="Website Bilder/Cocktails/Classic Margarita2.jpg" alt="Classic Margarita" loading="lazy" /></picture>
         </div>
         <div class="ck-info">
           <h3 class="ck-name">Classic Margarita</h3>
@@ -911,8 +912,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
-<script src="js/cookie-consent.js"></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/cookie-consent.js" defer></script>
 </body>
 </html>

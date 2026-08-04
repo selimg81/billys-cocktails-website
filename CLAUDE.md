@@ -18,7 +18,17 @@
 - Bold, distinctive Design-Choices
 - Performance-optimiert (Core Web Vitals)
 
+## Tracking & Cookies
+- Jede Seite setzt im `<head>` Consent Mode auf "denied" und nur `window.BC_GTM_ID`
+- Google Tag Manager (`GTM-NMH4QK2`) wird erst von `js/cookie-consent.js` nachgeladen,
+  wenn der Besucher Analyse-Cookies erlaubt. Seiten ohne `BC_GTM_ID` laden gar kein GTM.
+- Im GTM-Container hängt zusätzlich CookieYes als zweites Consent-Tool. Solange das
+  drin ist, schreibt `syncCookieYes()` dessen Cookie mit, damit kein zweiter Banner erscheint.
+
 ## Bekannte offene Punkte
 - Web3Forms API Key fehlt noch in `kontakt.html` (Platzhalter: `DEIN-WEB3FORMS-KEY-HIER`)
-- GTM-ID in `index.html` ist noch Platzhalter (`GTM-XXXXXXX`) – echte ID eintragen oder GTM entfernen
+- CookieYes-Tag im GTM-Container löschen (Tag "cookieyes-consent"), danach kann
+  `syncCookieYes()` aus `js/cookie-consent.js` raus
+- `datenschutz.html` hat keinen Abschnitt zu Google Analytics / Tag Manager, obwohl GA4 läuft
+- Calendly-Widget auf `kontakt.html` lädt ohne Einwilligung
 - OG-Image-URL hat Leerzeichen im Pfad – URL-Encoding oder Pfad umbenennen

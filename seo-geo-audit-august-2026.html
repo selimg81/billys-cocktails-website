@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#1A6E73" />
+<title>SEO- und GEO-Audit August 2026 | Billy's Cocktail Catering</title>
+<style>
+  :root {
+    --petrol: #1a6e73; --petrol-dark: #0f4a4e; --petrol-light: #e8f4f5;
+    --ink: #16212b; --gray: #5b6b78; --line: #e3e8ec; --bg: #f6f8f9;
+    --red: #c02626; --red-bg: #fdf2f2; --amber: #b45309; --amber-bg: #fffaeb;
+    --green: #15803d; --green-bg: #f0fdf4; --blue: #1d4ed8; --blue-bg: #eff6ff;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         background: var(--bg); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+  header.top { background: linear-gradient(140deg, var(--petrol) 0%, var(--petrol-dark) 100%); color: #fff; padding: 56px 0 44px; }
+  .badge { display: inline-block; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
+           border-radius: 100px; padding: 5px 16px; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  header.top h1 { font-size: clamp(28px, 4.2vw, 42px); line-height: 1.15; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
+  header.top .sub { opacity: .82; max-width: 620px; font-size: 16px; }
+  .facts { display: flex; gap: 36px; flex-wrap: wrap; margin-top: 32px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.2); }
+  .fact .v { font-size: 26px; font-weight: 700; line-height: 1.2; }
+  .fact .l { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; opacity: .72; }
+
+  .scores { background: #fff; border-bottom: 1px solid var(--line); padding: 26px 0; }
+  .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+  .score { text-align: center; }
+  .ring { width: 66px; height: 66px; border-radius: 50%; margin: 0 auto 9px; display: flex; align-items: center;
+          justify-content: center; font-size: 19px; font-weight: 700; border: 3px solid; }
+  .ring.good { background: var(--green-bg); color: var(--green); border-color: #bbf7d0; }
+  .ring.ok   { background: var(--amber-bg); color: var(--amber); border-color: #fde68a; }
+  .ring.bad  { background: var(--red-bg); color: var(--red); border-color: #fecaca; }
+  .score .n { font-size: 13.5px; font-weight: 650; }
+  .score .d { font-size: 11.5px; color: var(--gray); }
+
+  main { padding: 44px 0 70px; }
+  section { margin-bottom: 46px; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--petrol); margin-bottom: 8px; }
+  h2 { font-size: 25px; letter-spacing: -0.015em; margin-bottom: 6px; }
+  h2 + .lead { color: var(--gray); margin-bottom: 22px; max-width: 720px; }
+  h3 { font-size: 17px; margin: 26px 0 10px; }
+
+  .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 14px; }
+  .card.crit { border-left: 4px solid var(--red); }
+  .card.high { border-left: 4px solid var(--amber); }
+  .card.med  { border-left: 4px solid var(--blue); }
+  .card.win  { border-left: 4px solid var(--green); }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 8px; }
+  .card-head h4 { font-size: 16.5px; font-weight: 650; }
+  .tag { flex-shrink: 0; font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+         padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
+  .tag.crit { background: var(--red-bg); color: var(--red); }
+  .tag.high { background: var(--amber-bg); color: var(--amber); }
+  .tag.med  { background: var(--blue-bg); color: var(--blue); }
+  .tag.win  { background: var(--green-bg); color: var(--green); }
+  .card p { font-size: 14.5px; margin-bottom: 8px; }
+  .card p:last-child { margin-bottom: 0; }
+  .meta-line { font-size: 13px; color: var(--gray); background: var(--bg); border-radius: 8px; padding: 9px 12px; margin-top: 10px; }
+  .meta-line strong { color: var(--ink); }
+  .fix { border-left: 3px solid var(--petrol); background: var(--petrol-light); border-radius: 0 8px 8px 0;
+         padding: 10px 14px; margin-top: 10px; font-size: 14px; }
+  .fix strong { display: block; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--petrol); margin-bottom: 3px; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line);
+          border-radius: var(--radius); overflow: hidden; font-size: 13.5px; }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  th { background: #f2f5f6; text-align: left; padding: 11px 13px; font-size: 11.5px; letter-spacing: .05em;
+       text-transform: uppercase; color: var(--gray); font-weight: 700; white-space: nowrap; }
+  td { padding: 10px 13px; border-top: 1px solid var(--line); vertical-align: top; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 650; padding: 2px 8px; border-radius: 100px; white-space: nowrap; }
+  .pill.g { background: var(--green-bg); color: var(--green); }
+  .pill.a { background: var(--amber-bg); color: var(--amber); }
+  .pill.r { background: var(--red-bg); color: var(--red); }
+  .pill.n { background: #eef1f3; color: var(--gray); }
+
+  ul.clean { list-style: none; }
+  ul.clean li { padding-left: 22px; position: relative; margin-bottom: 7px; font-size: 14.5px; }
+  ul.clean li::before { content: ""; position: absolute; left: 6px; top: 10px; width: 6px; height: 6px;
+                        border-radius: 50%; background: var(--petrol); }
+  ol.steps { counter-reset: s; list-style: none; }
+  ol.steps li { counter-increment: s; position: relative; padding-left: 38px; margin-bottom: 12px; font-size: 14.5px; }
+  ol.steps li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 24px; height: 24px;
+        border-radius: 50%; background: var(--petrol); color: #fff; font-size: 12px; font-weight: 700;
+        display: flex; align-items: center; justify-content: center; }
+
+  .phase { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 14px; }
+  .phase-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  .phase-head .no { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--petrol); }
+  .phase-head h3 { margin: 0; font-size: 18px; }
+  .phase-head .when { font-size: 12.5px; color: var(--gray); margin-left: auto; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .two { grid-template-columns: 1fr; } .facts { gap: 22px; } }
+
+  footer.bottom { border-top: 1px solid var(--line); background: #fff; padding: 28px 0; color: var(--gray); font-size: 13px; }
+  code { background: #eef1f3; border-radius: 4px; padding: 1px 6px; font-size: 12.5px;
+         font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="badge">Audit · 3. August 2026</span>
+    <h1>SEO- und GEO-Bericht<br />Billy's Cocktail Catering</h1>
+    <p class="sub">Vollständige Prüfung von billys-cocktails.de: Technik, Inhalte, lokale Sichtbarkeit, Auffindbarkeit in KI-Suchen und eine Analyse dessen, was der Website noch fehlt.</p>
+    <div class="facts">
+      <div class="fact"><div class="v">21</div><div class="l">geprüfte Seiten</div></div>
+      <div class="fact"><div class="v">31</div><div class="l">Befunde</div></div>
+      <div class="fact"><div class="v">4</div><div class="l">davon kritisch</div></div>
+      <div class="fact"><div class="v">0,58 s</div><div class="l">LCP mobil</div></div>
+      <div class="fact"><div class="v">17</div><div class="l">URLs in der Sitemap</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="scores">
+  <div class="wrap score-grid">
+    <div class="score"><div class="ring good">88</div><div class="n">Technik</div><div class="d">schnell, sauber gebaut</div></div>
+    <div class="score"><div class="ring ok">64</div><div class="n">On-Page</div><div class="d">Titel und Alt-Texte</div></div>
+    <div class="score"><div class="ring bad">41</div><div class="n">Inhalt</div><div class="d">zu dünn für Rankings</div></div>
+    <div class="score"><div class="ring ok">58</div><div class="n">Lokal</div><div class="d">Adresse unvollständig</div></div>
+    <div class="score"><div class="ring bad">39</div><div class="n">GEO / KI-Suche</div><div class="d">kaum zitierfähig</div></div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section>
+  <div class="kicker">Zusammenfassung</div>
+  <h2>Die Technik trägt, der Inhalt bremst</h2>
+  <p class="lead">Die Website ist technisch besser als die meisten Wettbewerber im mobilen Cocktail-Catering. Sie lädt schnell, verschiebt beim Laden nichts und ist sauber ausgezeichnet. Was fehlt, ist Substanz: Elf von 21 Seiten haben unter 300 Wörter. Damit gewinnt man keine umkämpften Suchbegriffe, und KI-Suchmaschinen finden nichts, was sie zitieren könnten.</p>
+
+  <div class="two">
+    <div class="card win">
+      <div class="card-head"><h4>Das läuft gut</h4><span class="tag win">Stärken</span></div>
+      <ul class="clean">
+        <li>LCP unter einer Sekunde, CLS bei 0. Beide Core Web Vitals im grünen Bereich, auch mobil.</li>
+        <li>Saubere URLs, HTTPS mit HSTS, korrekte Weiterleitungen von www und http, echte 404-Seite.</li>
+        <li>Bilder durchgängig als WebP mit <code>&lt;picture&gt;</code> und Lazy Loading, Schriften selbst gehostet.</li>
+        <li>FAQ-Auszeichnung auf sechs Seiten, LocalBusiness auf der Startseite, Service-Schema auf den Städteseiten.</li>
+        <li>Bei einer Websuche nach "Cocktail Catering Hamburg mobile Cocktailbar mieten" erscheint Billy's unter den ersten Treffern, zwischen Portalen wie heycater und mobile-cocktailbars.com. Das ist keine gemessene Google-Position, zeigt aber, dass die Seite grundsätzlich gefunden wird.</li>
+      </ul>
+    </div>
+    <div class="card crit">
+      <div class="card-head"><h4>Die fünf größten Hebel</h4><span class="tag crit">Prioritär</span></div>
+      <ol class="steps">
+        <li><strong>Bewertungs-Auszeichnung entfernen.</strong> Sie verstößt gegen Googles Richtlinien und riskiert eine manuelle Abstrafung.</li>
+        <li><strong>Die sechs Anlass-Seiten ausbauen.</strong> 200 bis 250 Wörter reichen für kein Ranking.</li>
+        <li><strong>Städteseiten von der Startseite verlinken.</strong> Berlin, NRW und Hannover bekommen aktuell keinen Link von der stärksten Seite.</li>
+        <li><strong>Preisseite bauen.</strong> "Was kostet Cocktail Catering" ist die meistgestellte Frage und ihr beantwortet sie nirgends vollständig.</li>
+        <li><strong>Zitierfähig werden.</strong> Ohne Zahlen, Tabellen und Datumsangaben nennt euch keine KI-Suche.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Sofort</div>
+  <h2>Kritische Befunde</h2>
+  <p class="lead">Vier Punkte, die in den nächsten Tagen erledigt werden sollten. Der erste ist ein echtes Risiko, die anderen drei kosten euch täglich Sichtbarkeit.</p>
+
+  <div class="card crit">
+    <div class="card-head"><h4>1. Sternebewertung im Schema ist nicht regelkonform</h4><span class="tag crit">Kritisch</span></div>
+    <p>Die Startseite meldet im LocalBusiness-Schema <code>aggregateRating: 5.0</code> bei <code>reviewCount: 41</code>. Dazu gibt es keine einzige ausgezeichnete Einzelbewertung, und die sichtbaren Bewertungen auf der Seite stammen von Google, nicht von eurer eigenen Website.</p>
+    <p>Google erlaubt keine selbstbezogenen Bewertungen im Schema und keine Übernahme fremder Bewertungsdaten. Solche Auszeichnungen sind entweder wirkungslos oder ziehen eine manuelle Maßnahme wegen "Spammy Structured Markup" nach sich. Dann verschwinden auch die berechtigten Rich Results.</p>
+    <div class="meta-line"><strong>Gefunden in:</strong> index.html, JSON-LD Block 1</div>
+    <div class="fix"><strong>Lösung</strong>Den Block <code>aggregateRating</code> aus dem LocalBusiness-Schema löschen. Die Sterne im Suchergebnis kommen ohnehin aus dem Google-Unternehmensprofil, dort sind sie richtig aufgehoben. Die Bewertungs-Kacheln auf der Seite bleiben unverändert, sie sind reine Gestaltung.</div>
+  </div>
+
+  <div class="card crit">
+    <div class="card-head"><h4>2. Die Startseite verlinkt die Städteseiten nicht</h4><span class="tag crit">Kritisch</span></div>
+    <p>Berlin, NRW und Hannover bekommen jeweils 15 interne Links, aber keinen einzigen von der Startseite. Die Startseite ist die stärkste Seite der Domain. Was sie nicht verlinkt, bekommt kaum Gewicht weitergereicht.</p>
+    <p>Der Regionen-Block im Footer existiert auf den Unterseiten, fehlt aber ausgerechnet auf der Startseite.</p>
+    <div class="meta-line"><strong>Messung:</strong> Footer der Startseite enthält 9 interne Links, keiner davon auf eine Städteseite.</div>
+    <div class="fix"><strong>Lösung</strong>Den Regionen-Block aus dem Unterseiten-Footer auch auf der Startseite einsetzen und zusätzlich im Fließtext auf die drei Städteseiten verlinken, mit Ankertext wie "Cocktail Catering in Berlin".</div>
+  </div>
+
+  <div class="card crit">
+    <div class="card-head"><h4>3. Elf Seiten sind zu dünn, um zu ranken</h4><span class="tag crit">Kritisch</span></div>
+    <p>Die Anlass-Seiten liegen zwischen 203 und 255 Wörtern. Referenzen kommt auf 81 Wörter bei 37 Bildern. Für Suchbegriffe wie "Cocktail Catering Hochzeit Hamburg" stehen dort Seiten mit 800 bis 1500 Wörtern, Preisbeispielen und Bildergalerien mit Beschreibung.</p>
+    <div class="scroll" style="margin-top:12px">
+      <table>
+        <tr><th>Seite</th><th class="num">Wörter</th><th class="num">H2</th><th>Schema</th><th class="num">Interne Links</th></tr>
+        <tr><td>referenzen</td><td class="num"><span class="pill r">81</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">19</td></tr>
+        <tr><td>about</td><td class="num"><span class="pill r">190</span></td><td class="num">0</td><td><span class="pill n">keins</span></td><td class="num">18</td></tr>
+        <tr><td>kontakt</td><td class="num"><span class="pill r">193</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">19</td></tr>
+        <tr><td>sommerfeste</td><td class="num"><span class="pill r">203</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">2</td></tr>
+        <tr><td>geburtstage</td><td class="num"><span class="pill r">221</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">2</td></tr>
+        <tr><td>private-feiern</td><td class="num"><span class="pill r">222</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">2</td></tr>
+        <tr><td>messen</td><td class="num"><span class="pill r">223</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">2</td></tr>
+        <tr><td>cocktails</td><td class="num"><span class="pill r">231</span></td><td class="num">0</td><td><span class="pill n">keins</span></td><td class="num">19</td></tr>
+        <tr><td>firmenevents</td><td class="num"><span class="pill r">232</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">2</td></tr>
+        <tr><td>leistungen</td><td class="num"><span class="pill r">245</span></td><td class="num">2</td><td><span class="pill n">keins</span></td><td class="num">18</td></tr>
+        <tr><td>hochzeiten</td><td class="num"><span class="pill r">255</span></td><td class="num">1</td><td><span class="pill n">keins</span></td><td class="num">2</td></tr>
+      </table>
+    </div>
+    <div class="fix"><strong>Lösung</strong>Die sechs Anlass-Seiten auf je 700 bis 900 Wörter bringen: Ablauf, Beispielpakete mit Preisspanne, drei bis fünf typische Fragen als FAQ mit Auszeichnung, ein echtes Kundenbeispiel, Empfehlung zur Getränkemenge pro Gast. Danach dieselbe Behandlung für Referenzen, dort mit drei ausführlichen Fallbeispielen statt einer reinen Galerie.</div>
+  </div>
+
+  <div class="card crit">
+    <div class="card-head"><h4>4. Das Hero-Video lädt auch auf dem Handy</h4><span class="tag crit">Kritisch</span></div>
+    <p>Die Startseite überträgt 6,8 MB, davon 6,2 MB Video. Das passiert im Mobiltest genauso wie am Desktop, weil <code>autoplay</code> das <code>preload="none"</code> aushebelt. Auf dem schnellen Testanschluss fällt das nicht auf, im Mobilfunknetz sind es mehrere Sekunden und spürbar Datenvolumen.</p>
+    <p>Zusätzlich liegt im Deploy-Ordner die Datei <code>Website Slowmo.mov</code> mit 29,9 MB. Sie wird nirgends eingebunden, ist aber öffentlich abrufbar und bläht jedes Deployment auf.</p>
+    <div class="meta-line"><strong>Messung mobil (iPhone-Profil):</strong> 35 Requests, 6862 KB, davon 6216 KB video/mp4</div>
+    <div class="fix"><strong>Lösung</strong>Das Video unter etwa 900 Kilobyte drücken (kürzer schneiden, 720p, CRF höher, ohne Tonspur) und auf Bildschirmen unter 768 Pixeln nur das Poster zeigen. Die MOV-Datei aus dem Repository nehmen.</div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Technik</div>
+  <h2>Technisches SEO</h2>
+  <p class="lead">Das Fundament stimmt. Die offenen Punkte sind Feinschliff, keine Baustellen.</p>
+
+  <div class="scroll">
+    <table>
+      <tr><th>Prüfpunkt</th><th>Ergebnis</th><th>Bewertung</th></tr>
+      <tr><td>LCP Desktop / Mobil (Startseite)</td><td>216 ms / 584 ms</td><td><span class="pill g">gut</span></td></tr>
+      <tr><td>CLS alle geprüften Seiten</td><td>0,000</td><td><span class="pill g">gut</span></td></tr>
+      <tr><td>TTFB</td><td>57 bis 289 ms</td><td><span class="pill g">gut</span></td></tr>
+      <tr><td>HTTPS, HSTS, Weiterleitungen</td><td>vollständig, je ein 301-Sprung</td><td><span class="pill g">gut</span></td></tr>
+      <tr><td>Komprimierung</td><td>Brotli für HTML, CSS, JS</td><td><span class="pill g">gut</span></td></tr>
+      <tr><td>robots.txt</td><td>alles erlaubt, Sitemap referenziert</td><td><span class="pill g">gut</span></td></tr>
+      <tr><td>Sitemap</td><td>17 URLs, alle korrekt, keine Ausschlüsse fehlen</td><td><span class="pill g">gut</span></td></tr>
+      <tr><td>Canonicals</td><td>fehlten auf vier Anlass-Seiten, am 4. August ergänzt</td><td><span class="pill g">erledigt</span></td></tr>
+      <tr><td>Social-Tags (Open Graph, Twitter)</td><td>zeigten auf das Logo, seit 4. August eigene Vorschaukarte</td><td><span class="pill g">erledigt</span></td></tr>
+      <tr><td>Übertragene Datenmenge Startseite</td><td>6,8 MB</td><td><span class="pill r">zu viel</span></td></tr>
+      <tr><td>Caching statischer Dateien</td><td><code>max-age=0, must-revalidate</code></td><td><span class="pill a">schwach</span></td></tr>
+      <tr><td>lastmod in der Sitemap</td><td>letzte Änderung 3. April 2026</td><td><span class="pill a">veraltet</span></td></tr>
+      <tr><td>JavaScript-Größe</td><td>371 KB unminifiziert</td><td><span class="pill a">schwach</span></td></tr>
+      <tr><td>Kontaktseite</td><td>80 Requests, 2,5 MB, davon 1,1 MB Calendly</td><td><span class="pill a">schwach</span></td></tr>
+      <tr><td>Breadcrumbs</td><td>weder sichtbar noch als Schema vorhanden</td><td><span class="pill a">fehlt</span></td></tr>
+      <tr><td>Favicon</td><td>fehlte komplett, am 3. August gebaut und verlinkt</td><td><span class="pill g">erledigt</span></td></tr>
+    </table>
+  </div>
+
+  <div class="card high">
+    <div class="card-head"><h4>Caching für statische Dateien</h4><span class="tag high">Hoch</span></div>
+    <p>CSS, JavaScript, Schriften und Bilder werden mit <code>max-age=0, must-revalidate</code> ausgeliefert. Jeder Seitenaufruf fragt für jede Datei beim Server nach, ob sie sich geändert hat. Das kostet bei 35 Requests spürbar Zeit, besonders auf mobilen Verbindungen mit hoher Latenz.</p>
+    <div class="fix"><strong>Lösung</strong>In der <code>netlify.toml</code> Regeln für <code>/css/*</code>, <code>/js/*</code>, <code>/fonts/*</code> und die Bilderordner ergänzen. Schriften und Bilder vertragen ein Jahr, CSS und JS eine Woche mit <code>stale-while-revalidate</code>. Bei Änderungen dann einen Versionsparameter an die CSS- und JS-Pfade hängen.</div>
+  </div>
+
+  <div class="card med">
+    <div class="card-head"><h4>Breadcrumbs fehlen komplett</h4><span class="tag med">Mittel</span></div>
+    <p>Bei 21 Seiten mit drei Ebenen ist eine Brotkrumen-Navigation sinnvoll, sowohl für Besucher als auch für die Darstellung im Suchergebnis. Mit <code>BreadcrumbList</code> zeigt Google statt der nackten URL den Pfad an, das erhöht die Klickrate.</p>
+    <div class="fix"><strong>Lösung</strong>Auf allen Unterseiten eine schlichte Brotkrume unter dem Header einbauen (Start › Leistungen › Hochzeiten) und dazu <code>BreadcrumbList</code> ausgeben.</div>
+  </div>
+
+  <div class="card med">
+    <div class="card-head"><h4>Englische Fassung ist für Suchmaschinen unsichtbar</h4><span class="tag med">Mittel</span></div>
+    <p>Die Sprachumschaltung übersetzt 652 Textbausteine per JavaScript, ohne eigene URLs. Google indexiert nur die deutsche Variante. <code>hreflang</code> nennt folgerichtig nur <code>de</code> und <code>x-default</code>. Damit ist die englische Fassung ein reines Bedienkomfort-Feature.</p>
+    <div class="fix"><strong>Lösung</strong>Bewusst entscheiden. Wenn englischsprachige Kundschaft relevant ist (Firmenevents internationaler Unternehmen, Messen in Hamburg und Berlin), braucht es <code>/en/</code>-URLs mit eigenen Titeln, sonst kann es so bleiben.</div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">On-Page</div>
+  <h2>Titel, Überschriften, Bilder</h2>
+  <p class="lead">Die Grundlagen sind gesetzt, aber an drei Stellen wird Wirkung verschenkt.</p>
+
+  <div class="card high">
+    <div class="card-head"><h4>13 von 21 Titeln werden im Suchergebnis abgeschnitten</h4><span class="tag high">Hoch</span></div>
+    <p>Google zeigt etwa 60 Zeichen. Alles darüber wird gekürzt, meist trifft es den Markennamen am Ende. Spitzenreiter ist die NRW-Seite mit 72 Zeichen, die Startseite hat 68.</p>
+    <div class="scroll" style="margin-top:12px">
+      <table>
+        <tr><th>Seite</th><th class="num">Zeichen</th><th>Vorschlag</th></tr>
+        <tr><td>cocktail-catering-nrw</td><td class="num"><span class="pill r">72</span></td><td>Cocktail Catering NRW | Mobile Bar Köln &amp; Düsseldorf (54)</td></tr>
+        <tr><td>index</td><td class="num"><span class="pill r">68</span></td><td>Cocktail Catering Hamburg, Berlin &amp; NRW | Billy's (51)</td></tr>
+        <tr><td>barkeeper-mieten</td><td class="num"><span class="pill r">66</span></td><td>Barkeeper mieten Hamburg, Berlin &amp; NRW | Billy's (49)</td></tr>
+        <tr><td>barkeeper-hannover</td><td class="num"><span class="pill r">65</span></td><td>Barkeeper mieten Hannover | Billy's Cocktails (45)</td></tr>
+        <tr><td>champagner-tower</td><td class="num"><span class="pill r">65</span></td><td>Champagner Tower mieten Hamburg | Billy's (41)</td></tr>
+        <tr><td>weitere acht Seiten</td><td class="num"><span class="pill a">61 bis 64</span></td><td>jeweils Markenzusatz kürzen</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card high">
+    <div class="card-head"><h4>28 Bilder ohne Alt-Text</h4><span class="tag high">Hoch</span></div>
+    <p>Acht auf der Startseite, neun auf der Referenzen-Seite, der Rest verteilt über die Unterseiten. Die Referenzen-Seite besteht fast nur aus Bildern. Ohne Alt-Text ist sie für Suchmaschinen und für Screenreader praktisch leer, was auch die 81 Wörter erklärt.</p>
+    <div class="fix"><strong>Lösung</strong>Beschreibende Alt-Texte mit Ort und Anlass statt Dateinamen: "Mobile Cocktailbar beim Firmenevent in der Hamburger Speicherstadt". Das zahlt gleichzeitig auf die Bildersuche ein, die im Event-Bereich echten Traffic bringt.</div>
+  </div>
+
+  <div class="card win">
+    <div class="card-head"><h4>Vier Seiten ohne Canonical, alle Seiten mit dem Logo als Vorschaubild</h4><span class="tag win">Erledigt</span></div>
+    <p>Geburtstage, Messen, Private Feiern und Sommerfeste hatten weder eine Canonical-Angabe noch Open-Graph-Tags. Elf weitere Seiten gaben als Vorschaubild das Logo an, ein PNG mit viel Weißraum. Beim Teilen über WhatsApp oder LinkedIn erschien deshalb nur ein Logo auf weißem Grund.</p>
+    <p>Am 4. August ergänzt: Canonical und Robots-Angabe auf den vier Seiten, dazu auf allen Seiten eine echte Vorschaukarte in 1200 mal 630 Pixeln, Twitter-Tags und drei Fotoformate in der LocalBusiness-Auszeichnung.</p>
+    <div class="meta-line"><strong>Wichtig:</strong> Das Vorschaubild steuert die Ansicht beim Teilen. Welches Bild Google im Suchergebnis anzeigt, entscheidet Google selbst anhand der Bilder auf der Seite.</div>
+  </div>
+
+  <div class="card med">
+    <div class="card-head"><h4>Überschriften tragen keine Suchbegriffe</h4><span class="tag med">Mittel</span></div>
+    <p>Die H2 der Startseite lauten "Vier Versprechen an dich", "Gemixt mit Leidenschaft", "Unsere Mobile Cocktailbar". Das klingt gut und passt zur Marke, sagt einer Suchmaschine aber nichts über Leistung, Ort oder Anlass. Zwei Seiten (about, cocktails) haben gar keine H2.</p>
+    <div class="fix"><strong>Lösung</strong>Den Charakter behalten, aber den Begriff dazunehmen: "Unsere mobile Cocktailbar für Hamburg, Berlin und NRW". Kein Keyword-Stopfen, ein präziser Zusatz pro Abschnitt reicht.</div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Lokal</div>
+  <h2>Lokale Sichtbarkeit</h2>
+  <p class="lead">Ein Dienstleister mit Anfahrt lebt von der lokalen Suche. Hier liegt der zweitgrößte ungenutzte Hebel.</p>
+
+  <div class="card high">
+    <div class="card-head"><h4>Die Adresse fehlt im Schema</h4><span class="tag high">Hoch</span></div>
+    <p>Das Impressum nennt Rebeccaweg 19b, 22043 Hamburg. Im LocalBusiness-Schema steht als Adresse nur <code>addressLocality: Hamburg</code>, ohne Straße und ohne Postleitzahl. Für Google ist die Adressangabe der Anker, über den Website und Unternehmensprofil zusammenfinden.</p>
+    <div class="fix"><strong>Lösung</strong><code>streetAddress</code> und <code>postalCode</code> ergänzen, exakt in der Schreibweise des Google-Unternehmensprofils. Wenn die Privatadresse nicht öffentlich stehen soll, im Profil ein Einzugsgebiet statt einer Ladenadresse führen und im Schema auf <code>areaServed</code> setzen, dann aber konsequent überall gleich.</div>
+  </div>
+
+  <div class="card high">
+    <div class="card-head"><h4>Nur eine einzige Profilverknüpfung</h4><span class="tag high">Hoch</span></div>
+    <p><code>sameAs</code> enthält ausschließlich Instagram. Es fehlen das Google-Unternehmensprofil, Facebook und vor allem die Branchenportale. Die Suche nach "Cocktail Catering Hamburg" wird von Portalen wie mobile-cocktailbars.com, heycater und ähnlichen Anbietern dominiert. Wer dort gelistet ist, bekommt Verweise, Verlinkungen und Anfragen.</p>
+    <div class="fix"><strong>Lösung</strong>Einträge in den drei bis fünf relevanten Portalen anlegen, überall identische Firmierung, Adresse und Telefonnummer verwenden, danach alle Profile in <code>sameAs</code> aufnehmen.</div>
+  </div>
+
+  <div class="card med">
+    <div class="card-head"><h4>Hamburg hat keine eigene Seite</h4><span class="tag med">Mittel</span></div>
+    <p>Für Berlin, NRW und Hannover gibt es Landingpages, für den Heimatmarkt Hamburg nicht. Hamburg wird über die Startseite abgedeckt, die gleichzeitig für Berlin und NRW mitranken soll. Das schwächt alle drei.</p>
+    <div class="fix"><strong>Lösung</strong>Eine eigene Seite <code>/cocktail-catering-hamburg</code> im Zuschnitt der Berlin-Seite, mit Stadtteilen, typischen Locations und Anfahrtsangaben. Die Startseite konzentriert sich danach auf die Marke und verteilt in die Regionen.</div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">GEO</div>
+  <h2>Auffindbarkeit in KI-Suchen</h2>
+  <p class="lead">ChatGPT, Perplexity, Google AI Overviews und Claude beantworten immer häufiger genau die Fragen, mit denen eure Kundschaft startet: Was kostet das, wer macht das in meiner Stadt, wie läuft das ab. Zitiert wird, was sich sauber entnehmen lässt. Genau daran hapert es.</p>
+
+  <div class="scroll" style="margin-bottom:16px">
+    <table>
+      <tr><th>Prüfpunkt</th><th>Status</th><th>Bedeutung</th></tr>
+      <tr><td>KI-Crawler in der robots.txt</td><td><span class="pill g">alle erlaubt</span></td><td>GPTBot, ClaudeBot, PerplexityBot dürfen lesen</td></tr>
+      <tr><td>FAQ-Auszeichnung</td><td><span class="pill g">6 Seiten</span></td><td>gute Grundlage, Format passt</td></tr>
+      <tr><td>llms.txt</td><td><span class="pill r">404</span></td><td>kein maschinenlesbarer Überblick</td></tr>
+      <tr><td>Preise strukturiert</td><td><span class="pill r">nein</span></td><td>Beträge stehen nur als Fließtext</td></tr>
+      <tr><td>Aktualitätssignale</td><td><span class="pill r">keine</span></td><td>kein Datum, kein <code>dateModified</code>, kein Blog</td></tr>
+      <tr><td>Autor und Fachlichkeit</td><td><span class="pill r">fehlt</span></td><td>Gründer nur als Name im Schema</td></tr>
+      <tr><td>Entnehmbare Fakten</td><td><span class="pill a">wenig</span></td><td>Marketingtext statt Zahlen und Tabellen</td></tr>
+      <tr><td>Erwähnungen auf Drittseiten</td><td><span class="pill a">dünn</span></td><td>Portale und Presse fehlen weitgehend</td></tr>
+    </table>
+  </div>
+
+  <div class="card high">
+    <div class="card-head"><h4>Es gibt nichts zu zitieren</h4><span class="tag high">Hoch</span></div>
+    <p>Sprachmodelle bevorzugen Passagen, die eine Frage in zwei bis drei Sätzen abschließend beantworten und dabei konkrete Zahlen nennen. Auf der Website steht zwar "ab 45 €", "ab 60 €", "ab 80 €" und "ab 450 €", aber nur auf zwei Seiten und ohne Zusammenhang, was diese Beträge umfassen.</p>
+    <p>Fragen wie "Wie viele Cocktails trinkt ein Gast pro Stunde", "Wie lange dauert der Aufbau", "Ab wie vielen Gästen lohnt sich eine mobile Bar" beantwortet die Seite gar nicht. Genau solche Sätze werden zitiert.</p>
+    <div class="fix"><strong>Lösung</strong>Pro Seite ein kurzer Faktenblock mit harten Angaben: Aufbauzeit unter 30 Minuten, Bar modular von 1,60 bis 4,00 Meter, Richtwert drei bis vier Cocktails pro Gast an vier Stunden, Mindestbestellwert, Anfahrtsradius. Solche Sätze werden übernommen, Adjektive nicht.</div>
+  </div>
+
+  <div class="card high">
+    <div class="card-head"><h4>Keine Aktualität erkennbar</h4><span class="tag high">Hoch</span></div>
+    <p>Auf keiner Seite steht ein Datum, es gibt kein <code>dateModified</code> und keinen fortlaufenden Bereich mit neuen Inhalten. Die <code>lastmod</code>-Angaben in der Sitemap stehen seit April still. KI-Systeme gewichten Aktualität stark, weil sie veraltete Preise und geschlossene Betriebe vermeiden wollen.</p>
+    <div class="fix"><strong>Lösung</strong><code>dateModified</code> in die Auszeichnung aufnehmen, die Sitemap bei jedem Deployment automatisch mit dem aktuellen Datum schreiben und auf den Preis- und Leistungsseiten sichtbar "Stand: August 2026" ergänzen.</div>
+  </div>
+
+  <div class="card med">
+    <div class="card-head"><h4>llms.txt fehlt</h4><span class="tag med">Mittel</span></div>
+    <p>Noch kein offizieller Standard, aber von mehreren KI-Anbietern bereits ausgewertet und mit fünf Minuten Aufwand erledigt. Eine Textdatei im Wurzelverzeichnis, die knapp erklärt, was das Unternehmen macht, welche Seiten wofür stehen und wie man Kontakt aufnimmt.</p>
+    <div class="fix"><strong>Lösung</strong><code>/llms.txt</code> anlegen: ein Absatz Beschreibung, Einzugsgebiet, Leistungen, Preisspannen, Kontaktdaten, dazu eine kommentierte Liste der wichtigsten URLs.</div>
+  </div>
+
+  <div class="card med">
+    <div class="card-head"><h4>Der Gründer ist keine Person im Netz</h4><span class="tag med">Mittel</span></div>
+    <p>Im Schema steht <code>founder: Vassili</code>, im Impressum Vassilios Natsidis. Die Über-uns-Seite hat 190 Wörter, keine Angabe zu Ausbildung, Jahren hinter der Bar oder besonderen Projekten. Erfahrung und Fachlichkeit sind bei Dienstleistungen ein Rankingfaktor und für KI-Antworten ein Vertrauenssignal.</p>
+    <div class="fix"><strong>Lösung</strong>Die Über-uns-Seite auf 500 bis 700 Wörter ausbauen: Werdegang, Stationen, Anzahl betreuter Events pro Jahr, Foto mit Namen im Alt-Text, dazu <code>Person</code>-Auszeichnung mit <code>jobTitle</code> und Verknüpfung zum Unternehmen.</div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Lückenanalyse</div>
+  <h2>Was der Website fehlt</h2>
+  <p class="lead">Nicht Fehler, sondern Leerstellen. Sortiert danach, was am schnellsten Anfragen bringt.</p>
+
+  <h3>Fehlende Seiten</h3>
+  <div class="scroll">
+    <table>
+      <tr><th>Seite</th><th>Warum</th><th>Wirkung</th><th>Aufwand</th></tr>
+      <tr><td><strong>Preise und Pakete</strong></td><td>"Was kostet Cocktail Catering" ist die häufigste Einstiegsfrage. Antworten stehen verstreut auf zwei Seiten.</td><td><span class="pill g">sehr hoch</span></td><td>mittel</td></tr>
+      <tr><td><strong>Cocktail Catering Hamburg</strong></td><td>Heimatmarkt ohne eigene Landingpage, obwohl Berlin, NRW und Hannover eine haben.</td><td><span class="pill g">sehr hoch</span></td><td>mittel</td></tr>
+      <tr><td><strong>FAQ als eigene Seite</strong></td><td>Bündelt die Fragen aller Seiten, wird häufig direkt als Antwortquelle herangezogen.</td><td><span class="pill g">hoch</span></td><td>gering</td></tr>
+      <tr><td><strong>So läuft es ab</strong></td><td>Anfrage, Angebot, Aufbau, Event, Abbau, Abrechnung. Nimmt die Unsicherheit vor der ersten Anfrage.</td><td><span class="pill g">hoch</span></td><td>gering</td></tr>
+      <tr><td><strong>Fallbeispiele statt Galerie</strong></td><td>Referenzen hat 81 Wörter. Drei ausführliche Beispiele mit Gästezahl, Location, Getränkekarte und Ergebnis wirken deutlich stärker.</td><td><span class="pill g">hoch</span></td><td>mittel</td></tr>
+      <tr><td><strong>Ratgeber-Bereich</strong></td><td>"Wie viele Cocktails pro Gast", "Hochzeitsbar planen", "Mobile Bar für 100 Gäste". Reine Informationssuche, die ihr heute nicht bedient.</td><td><span class="pill a">mittel, langfristig</span></td><td>hoch</td></tr>
+      <tr><td><strong>Weitere Städte</strong></td><td>Bremen, Kiel, Lübeck, Lüneburg im Zuschnitt der Hannover-Seite, sobald ihr dort wirklich fahrt.</td><td><span class="pill a">mittel</span></td><td>mittel</td></tr>
+      <tr><td><strong>Getränkekarte zum Download</strong></td><td>Wird angefragt, verteilt und weitergeleitet. Guter Anlass, eine E-Mail-Adresse zu bekommen.</td><td><span class="pill a">mittel</span></td><td>gering</td></tr>
+      <tr><td><strong>Barkeeper-Jobs</strong></td><td>Personal ist der Engpass in diesem Geschäft. Eine Seite dafür spart Vermittlungskosten.</td><td><span class="pill n">gering für SEO</span></td><td>gering</td></tr>
+    </table>
+  </div>
+
+  <h3>Fehlende Funktionen und Inhalte</h3>
+  <div class="two">
+    <div class="card">
+      <div class="card-head"><h4>Anfrage und Abschluss</h4></div>
+      <ul class="clean">
+        <li>Im Formular fehlen Eventdatum, Gästezahl und Ort als eigene Felder. Ohne sie kostet jedes Angebot eine Rückfrage.</li>
+        <li>Keine Verfügbarkeitsanzeige oder Hinweis auf Stoßzeiten, dabei ist die Vorlaufzeit im Sommer das entscheidende Argument.</li>
+        <li>Kein WhatsApp-Kontakt, obwohl die Zielgruppe genau dort erreichbar ist.</li>
+        <li>Keine Bestätigungsseite mit nächsten Schritten. <code>/danke</code> existiert, sagt aber nur danke.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head"><h4>Vertrauen</h4></div>
+      <ul class="clean">
+        <li>Keine Angaben zu Haftpflichtversicherung, Gewerbeanmeldung oder Hygieneschulung. Firmenkunden fragen das ab.</li>
+        <li>Kundenlogos sind eingebunden, aber ohne Zuordnung zu einem konkreten Event.</li>
+        <li>Google-Bewertungen werden gezeigt, aber nicht auf das Unternehmensprofil verlinkt.</li>
+        <li>Keine Angabe zu Stornierung, Zahlungsbedingungen oder Mindestbestellwert.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head"><h4>Messung</h4></div>
+      <ul class="clean">
+        <li>GA4 läuft, aber ohne Zielvorhaben. Absendungen des Formulars und Klicks auf Telefon und E-Mail werden nicht gezählt.</li>
+        <li>Keine Auswertung, welche Anlass- oder Städteseite tatsächlich Anfragen bringt.</li>
+        <li>Search Console: Zugang unklar, ohne ihn ist keine Ranking-Aussage möglich.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head"><h4>Recht und Datenschutz</h4></div>
+      <ul class="clean">
+        <li>Die Datenschutzerklärung hat keinen Abschnitt zu Google Analytics und Tag Manager, obwohl beides läuft.</li>
+        <li>Der Abschnitt zu Google Web Fonts ist überholt, die Schriften liegen längst auf dem eigenen Server.</li>
+        <li>Das Calendly-Widget auf der Kontaktseite lädt ohne Einwilligung.</li>
+        <li>Im GTM-Container hängt CookieYes als zweites Einwilligungswerkzeug. Heute entschärft, gehört aber gelöscht.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Fahrplan</div>
+  <h2>In welcher Reihenfolge</h2>
+
+  <div class="phase">
+    <div class="phase-head"><span class="no">Phase 1</span><h3>Risiko weg, Technik zu Ende bringen</h3><span class="when">diese Woche, etwa 4 Stunden</span></div>
+    <ol class="steps">
+      <li><code>aggregateRating</code> aus dem Schema der Startseite entfernen.</li>
+      <li>Regionen-Block in den Footer der Startseite, zusätzlich Textlinks auf Berlin, NRW und Hannover.</li>
+      <li>Hero-Video komprimieren und auf Mobilgeräten durch das Poster ersetzen, MOV-Datei löschen.</li>
+      <li>Straße und Postleitzahl ins LocalBusiness-Schema, Schreibweise mit dem Google-Profil abgleichen.</li>
+      <li>13 Titel auf unter 60 Zeichen kürzen.</li>
+      <li>Caching-Regeln in die <code>netlify.toml</code>, Sitemap-Datum beim Deployment automatisch setzen.</li>
+      <li>CookieYes-Tag im GTM-Container löschen.</li>
+    </ol>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="no">Phase 2</span><h3>Inhalte auf Wettbewerbsniveau</h3><span class="when">zwei bis vier Wochen</span></div>
+    <ol class="steps">
+      <li>Preisseite mit drei Paketen, Beispielrechnung für 50, 100 und 200 Gäste und klarer Angabe, was enthalten ist.</li>
+      <li>Die sechs Anlass-Seiten auf je 700 bis 900 Wörter ausbauen, jeweils mit eigenem FAQ-Block.</li>
+      <li>Landingpage für Hamburg im Zuschnitt der Berlin-Seite.</li>
+      <li>Referenzen zu drei echten Fallbeispielen umbauen, alle 28 fehlenden Alt-Texte nachtragen.</li>
+      <li>Über-uns-Seite ausbauen und mit <code>Person</code> auszeichnen.</li>
+      <li>Breadcrumbs sichtbar und als Schema.</li>
+      <li>Datenschutzerklärung um den Analytics-Abschnitt ergänzen, Web-Fonts-Passage streichen.</li>
+    </ol>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="no">Phase 3</span><h3>Sichtbarkeit außerhalb der eigenen Seite</h3><span class="when">laufend</span></div>
+    <ol class="steps">
+      <li>Google-Unternehmensprofil vollständig pflegen, Leistungen, Einzugsgebiet, Bilder, Beiträge, Bewertungen beantworten.</li>
+      <li>Einträge in den drei bis fünf relevanten Branchenportalen, danach alle Profile in <code>sameAs</code>.</li>
+      <li><code>llms.txt</code> anlegen und pflegen.</li>
+      <li>Ratgeber-Bereich starten, ein fundierter Artikel im Monat schlägt zehn dünne.</li>
+      <li>GA4-Zielvorhaben einrichten und monatlich gegen die Search Console lesen.</li>
+      <li>Weitere Städte erst dann, wenn Hamburg, Berlin und NRW jeweils Anfragen bringen.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Transparenz</div>
+  <h2>Was dieser Bericht nicht enthält</h2>
+  <div class="card">
+    <ul class="clean">
+      <li><strong>Echte Rankings und Suchanfragen.</strong> Dafür braucht es Zugang zur Google Search Console. Ohne ihn sind alle Aussagen zu Positionen und Klicks Schätzungen und bewusst weggelassen.</li>
+      <li><strong>Backlink-Profil.</strong> Eine Analyse der verweisenden Domains erfordert ein kostenpflichtiges Werkzeug wie Ahrefs oder Semrush.</li>
+      <li><strong>Suchvolumen je Begriff.</strong> Die Einschätzung im Abschnitt Lückenanalyse beruht auf der Struktur des Marktes und den sichtbaren Wettbewerbern, nicht auf Zahlen aus dem Keyword-Planer.</li>
+      <li><strong>Messwerte aus dem Feld.</strong> Die Ladezeiten stammen aus einer eigenen Messung über eine schnelle Verbindung. Die Werte echter Nutzer stehen in der Search Console unter Core Web Vitals.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    Audit vom 3. August 2026 · billys-cocktails.de · 21 Seiten geprüft, Messungen mit Chrome auf Desktop- und Mobilprofil, Auszeichnungen direkt im gerenderten Dokument gelesen.
+  </div>
+</footer>
+
+</body>
+</html>

@@ -11,6 +11,61 @@
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); } catch (e) {}
   }
 
+  function gtag() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(arguments);
+  }
+
+  function setCookie(name, value, days) {
+    document.cookie = name + '=' + value + ';path=/;max-age=' + (days * 86400) + ';SameSite=Lax';
+  }
+
+  // Google Tag Manager laedt erst, wenn der Besucher Analyse-Cookies erlaubt hat.
+  // Die ID setzt jede Seite selbst im <head> (window.BC_GTM_ID).
+  var gtmLoaded = false;
+  function loadGTM() {
+    var id = window.BC_GTM_ID;
+    if (gtmLoaded || !id) return;
+    gtmLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+    document.head.appendChild(s);
+  }
+
+  // Im GTM-Container haengt zusaetzlich CookieYes als Consent-Tool.
+  // Wir schreiben dessen Cookie selbst, damit es keinen zweiten Banner zeigt.
+  // Sobald das CookieYes-Tag aus dem GTM-Container geloescht ist, kann das hier weg.
+  function syncCookieYes(analytics) {
+    var existing = document.cookie.split('; ').find(function (c) {
+      return c.indexOf('cookieyes-consent=') === 0;
+    });
+    var match = existing && existing.match(/consentid:([^,]+)/);
+    var id = match ? match[1] : '';
+    if (!id) {
+      var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      for (var i = 0; i < 43; i++) id += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    var yn = analytics ? 'yes' : 'no';
+    setCookie('cookieyes-consent',
+      'consentid:' + id + ',consent:' + yn + ',action:yes,necessary:yes,functional:' + yn +
+      ',analytics:' + yn + ',performance:' + yn + ',advertisement:' + yn, 365);
+  }
+
+  // Nach einem Widerruf die bereits gesetzten Google-Cookies entfernen
+  function clearAnalyticsCookies() {
+    var host = location.hostname.replace(/^www\./, '');
+    document.cookie.split('; ').forEach(function (c) {
+      var name = c.split('=')[0];
+      if (name.indexOf('_ga') === 0 || name === '_gid' || name.indexOf('_gcl') === 0) {
+        document.cookie = name + '=;path=/;max-age=0';
+        document.cookie = name + '=;path=/;domain=.' + host + ';max-age=0';
+      }
+    });
+  }
+
   function hideBanner() {
     var b = document.getElementById('bc-cookie-banner');
     if (b) { b.classList.add('bc-hide'); setTimeout(function () { b.remove(); }, 400); }
@@ -28,9 +83,22 @@
 
   function applyConsent(consent) {
     setConsent(consent);
+    var state = consent.analytics ? 'granted' : 'denied';
+    gtag('consent', 'update', {
+      ad_storage: state,
+      ad_user_data: state,
+      ad_personalization: state,
+      analytics_storage: state
+    });
+    syncCookieYes(!!consent.analytics);
     if (consent.analytics) {
-      window.dataLayer = window.dataLayer || [];
+      loadGTM();
       window.dataLayer.push({ event: 'consent_granted' });
+    } else {
+      clearAnalyticsCookies();
+      // Widerruf auf einer Seite, auf der GTM schon laeuft: neu laden,
+      // damit wirklich nichts mehr mitgezaehlt wird.
+      if (gtmLoaded) { location.reload(); }
     }
   }
 

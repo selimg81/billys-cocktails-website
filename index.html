@@ -21,7 +21,7 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#1A6E73" />
-  <title>Billy's Cocktails | Mobiles Cocktail Catering Hamburg · Berlin · NRW</title>
+  <title>Cocktail Catering Hamburg, Berlin & NRW | Billy's</title>
   <meta name="description" content="Billy's Cocktail Catering: Professionelles mobiles Cocktail-Catering für Firmenevents, Hochzeiten, Messen und private Feiern. Jetzt anfragen!" />
   <link rel="canonical" href="https://billys-cocktails.de/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -56,6 +56,8 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
     "email": "info@billys-cocktails.de",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Rebeccaweg 19b",
+      "postalCode": "22043",
       "addressLocality": "Hamburg",
       "addressRegion": "Hamburg",
       "addressCountry": "DE"
@@ -82,13 +84,9 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
     ],
     "founder": {
       "@type": "Person",
-      "name": "Vassili"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "41",
-      "bestRating": "5"
+      "name": "Vassilios Natsidis",
+      "jobTitle": "Gr\u00fcnder und Head Barkeeper",
+      "worksFor": { "@type": "Organization", "name": "Billy's Cocktail Catering" }
     }
   }
   </script>
@@ -172,7 +170,7 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
     ]
   }
   </script>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20260804" />
 </head>
 <body>
 
@@ -199,7 +197,11 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <span data-i18n="nav-services">Leistungen</span>
         </a>
-        <a href="cocktails.html" class="tube-item" data-tube="cocktails">
+        <a href="preise.html" class="tube-item" data-tube="preise">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <span>Preise</span>
+    </a>
+    <a href="cocktails.html" class="tube-item" data-tube="cocktails">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8m-4 0v-8m-7-10h18l-9 9-9-9z"/></svg>
           <span data-i18n="nav-cocktails">Cocktails</span>
         </a>
@@ -236,6 +238,10 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       <span>Leistungen</span>
     </a>
+    <a href="preise.html" class="tube-item" data-tube="preise">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <span>Preise</span>
+    </a>
     <a href="cocktails.html" class="tube-item" data-tube="cocktails">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8m-4 0v-8m-7-10h18l-9 9-9-9z"/></svg>
       <span>Cocktails</span>
@@ -271,10 +277,25 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
 <section class="hero">
   <!-- Video (links auf Desktop, Hintergrund auf Mobile) -->
   <div class="hero-video-col">
-    <video class="hero-video" autoplay muted loop playsinline preload="none" poster="Website Bilder/hero-poster.webp">
-      <source src="Website Video/Website Slowmo.mp4" type="video/mp4" />
-    </video>
+    <!-- Das Video wiegt 6,2 MB. Auf schmalen Bildschirmen und bei aktiviertem
+         Datensparmodus bleibt es beim Poster, sonst laedt es autoplay trotz
+         preload="none" immer vollstaendig. -->
+    <video class="hero-video" autoplay muted loop playsinline preload="none"
+           poster="Website Bilder/hero-poster.webp"
+           data-src="Website Video/Website Slowmo.mp4"></video>
   </div>
+  <script>
+  (function () {
+    var v = document.querySelector('.hero-video');
+    if (!v || !v.dataset.src) return;
+    var c = navigator.connection || {};
+    var sparsam = c.saveData === true || /2g|slow-2g|3g/.test(c.effectiveType || '');
+    if (window.innerWidth < 768 || sparsam) return;
+    var s = document.createElement('source');
+    s.src = v.dataset.src; s.type = 'video/mp4';
+    v.appendChild(s); v.load();
+  })();
+  </script>
 
   <!-- Content (rechts auf Desktop, über Video auf Mobile) -->
   <div class="hero-content-col">
@@ -596,6 +617,10 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
           Die Bar ist modular aufgebaut: Die Breite ist von <strong>1,60 m bis 4,00 m</strong> in 60-cm-Schritten erweiterbar und passt sich so perfekt an jede Location an. Aufbau und Abbau in unter 30 Minuten, geeignet für <strong>Indoor als auch Outdoor Events</strong> in <strong>Hamburg, Berlin und NRW</strong>.
         </p>
 
+        <p class="bar-seo-p rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:170ms" data-i18n-html="bar-regionen">
+          Wir sind vor allem in <a href="cocktail-catering-hamburg.html">Hamburg</a> unterwegs, dazu regelmäßig in <a href="cocktail-catering-berlin.html">Berlin</a>, in <a href="cocktail-catering-nrw.html">NRW</a> mit Köln und Düsseldorf sowie in <a href="barkeeper-hannover.html">Hannover</a>. Was das kostet, steht auf der Seite <a href="preise.html">Preise und Pakete</a>.
+        </p>
+
         <ul class="bar-features rv" style="--rv-transform:translate3d(0,30px,0);--rv-delay:180ms">
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="bar-feat1">Aufbau in unter 30 Minuten</span></li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="bar-feat2">Geeignet für 20 bis 500+ Gäste</span></li>
@@ -897,10 +922,20 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
           <h4 class="footer-h4" data-i18n="footer-pages">Seiten</h4>
           <a href="index.html" class="footer-link" data-i18n="nav-home">Home</a>
           <a href="leistungen.html" class="footer-link" data-i18n="nav-services">Leistungen</a>
+          <a href="preise.html" class="footer-link">Preise</a>
           <a href="cocktails.html" class="footer-link" data-i18n="nav-cocktails">Cocktails</a>
+          <a href="ablauf.html" class="footer-link">So läuft es ab</a>
           <a href="about.html" class="footer-link" data-i18n="nav-about">Über uns</a>
           <a href="referenzen.html" class="footer-link" data-i18n="nav-ref">Referenzen</a>
+          <a href="faq.html" class="footer-link">FAQ</a>
           <a href="kontakt.html" class="footer-link" data-i18n="mob-contact">Kontakt</a>
+        </div>
+                <div>
+          <h4 class="footer-h4">Regionen</h4>
+          <a href="cocktail-catering-hamburg.html" class="footer-link">Cocktail Catering Hamburg</a>
+          <a href="cocktail-catering-berlin.html" class="footer-link">Cocktail Catering Berlin</a>
+          <a href="cocktail-catering-nrw.html" class="footer-link">Cocktail Catering NRW</a>
+          <a href="barkeeper-hannover.html" class="footer-link">Barkeeper Hannover</a>
           <a href="barkeeper-mieten.html" class="footer-link" data-i18n="bk-footer">Barkeeper mieten</a>
         </div>
         <div>
@@ -926,8 +961,8 @@ window.BC_GTM_ID = 'GTM-NMH4QK2';
   </div>
 </footer>
 
-<script src="js/i18n.js" defer></script>
-<script src="js/main.js" defer></script>
-<script src="js/cookie-consent.js" defer></script>
+<script src="js/i18n.js?v=20260804" defer></script>
+<script src="js/main.js?v=20260804" defer></script>
+<script src="js/cookie-consent.js?v=20260804" defer></script>
 </body>
 </html>

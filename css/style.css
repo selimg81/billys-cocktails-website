@@ -1376,3 +1376,94 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .legal-content ul li { margin-bottom: 4px; }
 .legal-content a { color: var(--petrol); text-decoration: underline; text-underline-offset: 3px; }
 .legal-content a:hover { color: var(--petrol-dark); }
+
+/* ═══════════════════════════════════════════════════════════════
+   NEUE SEITEN: Brotkrumen, Fakten, Schritte, Chips  (August 2026)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Brotkrumen ── */
+.crumbs {
+  background: var(--white);
+  border-bottom: 1px solid rgba(26,110,115,0.10);
+  font-size: 13.5px; color: var(--gray);
+  padding: 14px 0;
+}
+.crumbs .container { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.crumbs a { color: var(--petrol); transition: color 0.2s; }
+.crumbs a:hover { color: var(--petrol-dark); text-decoration: underline; }
+.crumbs [aria-current] { color: var(--gray); }
+.crumb-sep { color: rgba(26,110,115,0.35); }
+
+/* ── Faktenblock ── */
+.fact-box {
+  background: var(--white); border: 1px solid rgba(26,110,115,0.12);
+  border-radius: 20px; padding: 32px 34px;
+}
+.fact-h {
+  font-family: var(--f-display); font-size: 26px; font-weight: 700;
+  color: var(--dark); margin-bottom: 20px;
+}
+.fact-row {
+  display: flex; flex-wrap: wrap; gap: 6px 20px;
+  padding: 13px 0; border-top: 1px solid rgba(26,110,115,0.10);
+}
+.fact-row:first-of-type { border-top: none; padding-top: 0; }
+.fact-k { flex: 0 0 210px; font-weight: 500; color: var(--dark); font-size: 15px; }
+.fact-v { flex: 1 1 260px; color: var(--gray); font-size: 15px; line-height: 1.6; }
+
+/* ── Schritt-für-Schritt-Liste ── */
+.steps-list { counter-reset: schritt; list-style: none; }
+.steps-list li {
+  counter-increment: schritt; position: relative;
+  padding: 0 0 28px 68px; margin-bottom: 4px;
+}
+.steps-list li::before {
+  content: counter(schritt); position: absolute; left: 0; top: -4px;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--petrol-light); color: var(--petrol);
+  font-family: var(--f-display); font-size: 22px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.steps-list li::after {
+  content: ""; position: absolute; left: 23px; top: 46px; bottom: 6px;
+  width: 1px; background: rgba(26,110,115,0.18);
+}
+.steps-list li:last-child { padding-bottom: 0; }
+.steps-list li:last-child::after { display: none; }
+.steps-list h3 { font-family: var(--f-display); font-size: 23px; font-weight: 700; margin-bottom: 6px; }
+.steps-list p { font-size: 15px; color: var(--gray); line-height: 1.75; }
+
+/* ── Ortschaften-Chips ── */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; justify-content: center; }
+.chip {
+  background: var(--petrol); color: #fff; border-radius: 100px;
+  padding: 8px 18px; font-size: 14px; font-weight: 500;
+}
+
+/* ── Hinweiskasten ── */
+.hinweis {
+  margin-top: 26px; padding: 18px 22px;
+  background: var(--petrol-light); border-left: 3px solid var(--petrol);
+  border-radius: 0 12px 12px 0; font-size: 15px; color: var(--dark); line-height: 1.7;
+}
+
+/* ── Preis im Kartentitel ── */
+.preis {
+  display: block; font-family: var(--f-body); font-size: 15px;
+  font-weight: 500; color: var(--petrol); letter-spacing: 0.01em; margin-top: 2px;
+}
+
+/* ── Stand-der-Angaben-Zeile ── */
+.stand { background: var(--warm); padding: 22px 0 30px; font-size: 13px; color: var(--gray); text-align: center; }
+
+/* ── Links in Karten ── */
+.srv-text a { color: var(--petrol); text-decoration: underline; text-underline-offset: 2px; }
+.srv-text a:hover { color: var(--petrol-dark); }
+
+@media (max-width: 640px) {
+  .fact-box { padding: 24px 20px; }
+  .fact-k { flex: 1 1 100%; }
+  .steps-list li { padding-left: 56px; }
+  .steps-list li::before { width: 38px; height: 38px; font-size: 19px; }
+  .steps-list li::after { left: 19px; top: 38px; }
+}

@@ -111,13 +111,14 @@
 
 <header class="top">
   <div class="wrap">
-    <span class="badge">Audit · 3. August 2026</span>
+    <span class="badge">Audit 3. August · Umsetzung 4. August 2026</span>
     <h1>SEO- und GEO-Bericht<br />Billy's Cocktail Catering</h1>
     <p class="sub">Vollständige Prüfung von billys-cocktails.de: Technik, Inhalte, lokale Sichtbarkeit, Auffindbarkeit in KI-Suchen und eine Analyse dessen, was der Website noch fehlt.</p>
     <div class="facts">
       <div class="fact"><div class="v">21</div><div class="l">geprüfte Seiten</div></div>
       <div class="fact"><div class="v">31</div><div class="l">Befunde</div></div>
       <div class="fact"><div class="v">4</div><div class="l">davon kritisch</div></div>
+      <div class="fact"><div class="v">25</div><div class="l">bereits umgesetzt</div></div>
       <div class="fact"><div class="v">0,58 s</div><div class="l">LCP mobil</div></div>
       <div class="fact"><div class="v">17</div><div class="l">URLs in der Sitemap</div></div>
     </div>
@@ -126,11 +127,11 @@
 
 <div class="scores">
   <div class="wrap score-grid">
-    <div class="score"><div class="ring good">88</div><div class="n">Technik</div><div class="d">schnell, sauber gebaut</div></div>
-    <div class="score"><div class="ring ok">64</div><div class="n">On-Page</div><div class="d">Titel und Alt-Texte</div></div>
-    <div class="score"><div class="ring bad">41</div><div class="n">Inhalt</div><div class="d">zu dünn für Rankings</div></div>
-    <div class="score"><div class="ring ok">58</div><div class="n">Lokal</div><div class="d">Adresse unvollständig</div></div>
-    <div class="score"><div class="ring bad">39</div><div class="n">GEO / KI-Suche</div><div class="d">kaum zitierfähig</div></div>
+    <div class="score"><div class="ring good">94</div><div class="n">Technik</div><div class="d">88 → 94</div></div>
+    <div class="score"><div class="ring good">90</div><div class="n">On-Page</div><div class="d">64 → 90</div></div>
+    <div class="score"><div class="ring ok">72</div><div class="n">Inhalt</div><div class="d">41 → 72</div></div>
+    <div class="score"><div class="ring ok">78</div><div class="n">Lokal</div><div class="d">58 → 78</div></div>
+    <div class="score"><div class="ring ok">74</div><div class="n">GEO / KI-Suche</div><div class="d">39 → 74</div></div>
   </div>
 </div>
 
@@ -162,6 +163,59 @@
         <li><strong>Zitierfähig werden.</strong> Ohne Zahlen, Tabellen und Datumsangaben nennt euch keine KI-Suche.</li>
       </ol>
     </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="kicker">Umsetzung</div>
+  <h2>Was am 4. August umgesetzt wurde</h2>
+  <p class="lead">25 der 31 Befunde sind erledigt und live. Was offen bleibt, braucht entweder Zugänge oder Angaben, die nur ihr habt. Das steht unten.</p>
+
+  <div class="two">
+    <div class="card win">
+      <div class="card-head"><h4>Technik und Auszeichnung</h4><span class="tag win">Erledigt</span></div>
+      <ul class="clean">
+        <li>Sternebewertung aus dem Schema entfernt, damit kein Verstoß gegen Googles Richtlinien mehr vorliegt.</li>
+        <li>Straße und Postleitzahl im LocalBusiness-Schema ergänzt, Gründer als vollständige <code>Person</code> ausgezeichnet.</li>
+        <li>Alle 13 zu langen Titel gekürzt, jetzt liegt keiner mehr über 60 Zeichen.</li>
+        <li>Brotkrumen sichtbar plus <code>BreadcrumbList</code> auf allen 21 indexierbaren Seiten.</li>
+        <li>Hero-Video lädt auf Bildschirmen unter 768 Pixeln und im Datensparmodus nicht mehr. Die ungenutzte MOV-Datei mit 29,9 MB ist raus.</li>
+        <li>Caching-Regeln für Schriften, Bilder, CSS und JS in der <code>netlify.toml</code>, dazu ein Versionsparameter für CSS und JS.</li>
+        <li>Sitemap neu geschrieben: 21 URLs, aktuelles Datum, alle neuen Seiten drin.</li>
+        <li>Auf vier Seiten fehlten Canonical und Social-Tags, ergänzt. Alle Seiten haben jetzt eine eigene Vorschaukarte.</li>
+        <li>Favicon-Satz aus der Glas-Marke, Vorschaubild 1200 mal 630, echte Fotos in drei Formaten im Schema.</li>
+        <li>Geburtstage, Messen, Private Feiern und Sommerfeste hatten gar keine Navigation im Kopfbereich. Jetzt eingesetzt.</li>
+        <li>Kaputter Logo-Pfad auf der 404-Seite repariert.</li>
+      </ul>
+    </div>
+    <div class="card win">
+      <div class="card-head"><h4>Inhalt und Auffindbarkeit</h4><span class="tag win">Erledigt</span></div>
+      <ul class="clean">
+        <li>Vier neue Seiten: <strong>Preise und Pakete</strong>, <strong>Cocktail Catering Hamburg</strong>, <strong>So läuft es ab</strong> und <strong>FAQ</strong>.</li>
+        <li>Die sechs Anlass-Seiten liegen jetzt zwischen 715 und 838 Wörtern statt bei 203 bis 255. Jede mit eigenem FAQ-Block und Faktenkasten.</li>
+        <li>Leistungen, Cocktails und Über uns ebenfalls ausgebaut, mit FAQ beziehungsweise Personen-Auszeichnung.</li>
+        <li>Die Startseite verlinkt jetzt alle vier Regionen, im Footer und im Fließtext.</li>
+        <li>Faktenkästen mit harten Zahlen auf zehn Seiten. Genau solche Sätze zitieren KI-Suchen.</li>
+        <li><code>llms.txt</code> angelegt, mit Eckdaten, Preisen, Bardaten und Planungsrichtwerten.</li>
+        <li>Preise als <code>Offer</code> mit <code>PriceSpecification</code> ausgezeichnet, statt nur im Fließtext.</li>
+        <li>Sichtbare Stand-Angabe „August 2026" auf den neuen Seiten.</li>
+        <li>Datenschutzerklärung um Tag Manager, Analytics, Google Ads, Consent Mode, Calendly, Web3Forms und Hosting ergänzt. Die überholte Web-Fonts-Passage ist raus.</li>
+        <li>Gesamtumfang der Website: von rund 8.900 auf 15.150 Wörter.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card high">
+    <div class="card-head"><h4>Was offen bleibt und warum</h4><span class="tag high">Braucht euch</span></div>
+    <ul class="clean">
+      <li><strong>CookieYes-Tag im GTM-Container löschen.</strong> Dafür braucht es Zugriff auf das GTM-Konto. Bis dahin hält die Cookie-Brücke im eigenen Banner den zweiten Dialog zurück.</li>
+      <li><strong>Referenzen als echte Fallbeispiele.</strong> Dafür brauche ich pro Projekt Kunde, Gästezahl, Location und was besonders war. Erfinden kommt nicht infrage, dafür sind es reale Firmen.</li>
+      <li><strong>Über uns mit persönlicher Tiefe.</strong> Die Zahlen stehen jetzt drin. Für Stationen, Jahre hinter der Bar und besondere Projekte brauche ich Angaben von Vassilios.</li>
+      <li><strong>Profile für <code>sameAs</code>.</strong> Sobald das Google-Unternehmensprofil und die Portaleinträge stehen, trage ich die URLs nach.</li>
+      <li><strong>Hero-Video komprimieren.</strong> Auf diesem Rechner ist kein ffmpeg installiert. Mobil lädt es jetzt gar nicht mehr, für Desktop wären unter 900 Kilobyte statt 6,2 MB der nächste Schritt.</li>
+      <li><strong>GA4-Zielvorhaben.</strong> Ohne GTM-Zugang nicht einzurichten. Formularabsendungen und Klicks auf Telefon und E-Mail werden weiterhin nicht gezählt.</li>
+    </ul>
   </div>
 </section>
 
@@ -284,10 +338,11 @@
     </div>
   </div>
 
-  <div class="card high">
-    <div class="card-head"><h4>28 Bilder ohne Alt-Text</h4><span class="tag high">Hoch</span></div>
-    <p>Acht auf der Startseite, neun auf der Referenzen-Seite, der Rest verteilt über die Unterseiten. Die Referenzen-Seite besteht fast nur aus Bildern. Ohne Alt-Text ist sie für Suchmaschinen und für Screenreader praktisch leer, was auch die 81 Wörter erklärt.</p>
-    <div class="fix"><strong>Lösung</strong>Beschreibende Alt-Texte mit Ort und Anlass statt Dateinamen: "Mobile Cocktailbar beim Firmenevent in der Hamburger Speicherstadt". Das zahlt gleichzeitig auf die Bildersuche ein, die im Event-Bereich echten Traffic bringt.</div>
+  <div class="card win">
+    <div class="card-head"><h4>Korrektur: die Alt-Texte sind in Ordnung</h4><span class="tag win">Fehlalarm</span></div>
+    <p>Im ersten Durchgang hatte ich 28 Bilder ohne Alt-Text gemeldet. Die Nachprüfung zeigt: Kein einziges Bild auf der Website hat ein fehlendes <code>alt</code>-Attribut. Die 32 leeren Alt-Texte sitzen alle auf dekorativen Bildern, entweder auf den gespiegelten Logos im Endlos-Laufband (dort korrekt mit <code>aria-hidden="true"</code>) oder auf den versteckten Fallback-Bildern der Hero-Bereiche.</p>
+    <p>Leerer Alt-Text ist an diesen Stellen die richtige Auszeichnung, nicht der Fehler. Mein Prüfskript hatte beides nicht unterschieden. Die Meldung war falsch.</p>
+    <div class="meta-line"><strong>Bleibt offen:</strong> Die Hero-Bilder liegen als CSS-Hintergrund vor, nicht als <code>&lt;img&gt;</code>. Damit tauchen sie nicht in der Google-Bildersuche auf. Das umzubauen wäre ein Eingriff ins Layout und lohnt nur, wenn Bildersuche ein Ziel ist.</div>
   </div>
 
   <div class="card win">
